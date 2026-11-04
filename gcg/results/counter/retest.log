@@ -8,3 +8,5 @@ CTR_GP_S4_g14_GB: counter wins 40.5% vs GP_S4_g14 (n=200, {"K":4,"N":6}, CI 34-4
 CTR_GP_S4_g14_GP: counter wins 54.5% vs GP_S4_g14 (n=200, {"K":4,"N":6}, CI 48-61); in-search 60.0% (n=40)
 CTR_GP_S4_g14_RW: counter wins 58.5% vs GP_S4_g14 (n=200, {"K":4,"N":6}, CI 52-65); in-search 70.0% (n=120)
 CTR_GP_S4_g14_BR: counter wins 57.0% vs GP_S4_g14 (n=200, {"K":4,"N":6}, CI 50-64); in-search 62.5% (n=40)
+CTR_GP_S4_g14_GW: counter wins 45.5% vs GP_S4_g14 (n=200, {"K":4,"N":6}, CI 39-52); in-search 62.5% (n=40)
+CTR_GP_S4_g14_PR: counter wins 41.0% vs GP_S4_g14 (n=200, {"K":4,"N":6}, CI 34-48); in-search 47.5% (n=80)

@@ -12,6 +12,34 @@ Every number in this report comes from both seats playing the same AI. The "judg
 ## counter
 The counter-deck GA evolves decks of one colour pair against a single target, seeded with the tournament lists of that pair. It uses K2N2 on both sides, 15 generations, 40 games per evaluation. The best counter of each pair was then re-tested on fresh seeds with K4N6 at 200 games. The GA's own estimate is inflated by selection (picking the luckiest of many kids), and the re-tests show it: 6 to 17 points high.
 
+Against the finalist, two counters clearly beat it after re-testing (K4N6, 200 games each): a **Blue/Purple** list wins 62.5% (95% CI 56–69) and a **Red/White** list 58.5% (52–65). The Blue/Purple one is a refined version of the SFIBO tournament lists (68–72% card overlap) that adds 4 Widespread Annihilation (destroy all Lv.4-or-lower Units, which is the whole Green/Purple deck). Blue/Red (57.0%) is next. The remaining pairs did not clearly beat it (Green/Purple 54.5, Blue/White 52.5, Green/White 45.5, Purple/Red 41.0, Green/Blue 40.5). So the finalist drops to 37.5% against its best counter-deck, and it already sits at 46–47% against three tournament lists. An opponent who expects Green/Purple can prepare a deck that beats it.
+
+## guide J_SFIBO_Chiba
+**Plan: win the first four turns.** This Blue/Purple Tekkadan + Strike Freedom list is the closest thing to a mirror in speed, and it is the matchup least affected by who goes first (54 / 46). Their dangerous draws are cheap Purple bodies that come down early: Graze Custom (2/2 for 1), Gusion Rebake (Blocker; Deploy: 1 damage to one of your Units), Flauros (Ryusei-Go) (Deploy/Attack: destroy a Lv.2-or-lower Unit) and, late, Barbatos Lupus (exiles Tekkadan from trash for 2 damage).
+- Mulligan any hand without two Lv.1–3 Units. In this matchup the cheap Zeon/IBO units decide it: games where Zaku II, Char's Zaku II or Barbatos Adapt show up were won 85–89%, games where they did not about 30–34%.
+- Your Lv.2 Zaku IIs are Flauros targets. Once they have 4 resources, prefer adding Lv.3 bodies (Char's Zaku II, Rick Dom, Barbatos 1st Form).
+- Use Barbatos Adapt / Mikazuki pings to finish a 2-HP Graze Custom, or to set up Exia Repair: it destroys an unpaired Lv.4-or-lower Unit it damages in battle.
+- Push shields before Barbatos Lupus (Lv.7) comes online. Long games favour them.
+
+## guide J_SFIBO_alt
+Same plan as against J_SFIBO_Chiba, with more Axis (base: shield to hand, then recursion) in their list. Axis showed up in 170 of 200 games and swings their win rate +16 points, so expect one extra shield and plan the lethal turn a turn later. Gusion Rebake's Blocker is the card that stops the race: attack with your biggest Unit into it, or ping it first.
+
+## guide W_BRIS_RWAcademy
+**The worst matchup (46.5% here, 46.8% over 400 validation games), and badly seat-dependent (59 first / 34 second).** Red/White blockers plus removal: Gundam Lfrith (2/4 Blocker), Overflowing Affection (draw 2, discard 1), Darkness Finger (2 damage at instant speed), Gundam Aerial (pings on attack and as an Action) and Aegis/Justice. They win the long game (15.9 turns on average).
+- Do not play into a stalled board. Rick Dom's Breach 2 and Char Aznable's High-Maneuver on a Link Unit (Char's Zaku II) are how damage gets past Lfrith.
+- Lfrith has 4 HP. A Barbatos Adapt or Mikazuki ping plus a 3-AP attacker kills it in one turn.
+- Keep the 4-AP+ attackers (Efreet Schneid, Zaku II attacking for 3) for the turn you can attack the player with two or more Units, so Darkness Finger cannot stop all the damage.
+
+## guide W_MKE_ZGok
+**Fine going first (75%), poor going second (36%).** Blue/Purple Marines: Char's Z'Gok (Deploy: bottoms a Lv.2-or-lower Unit if another Marine is in play; untargetable with two other Marines), Guntank (1 damage to a rested Unit), Gundam Leopard (4/3 for 2) and Kapool.
+- Kill the cheap Marine enablers (Kapool, Leopard, Daughseat, Zock) before Z'Gok lands. Otherwise Z'Gok both removes a Zaku and cannot be attacked.
+- Rested Units die to Guntank. Going second, attack only when the attack trades or reaches the player; don't leave a 2-HP Unit rested for nothing.
+
+## guide W_MEX_GPZeon
+**A tempo mirror (Green/Purple Zeon).** The same cheap Zeon units decide both sides. Barbatos 1st Form (Attack: if damaged, draw 1) was the biggest swing card for us: every game in which it was seen was won (30 games).
+- Trade early and keep attacking with a damaged Barbatos 1st Form to draw. Card advantage, not board size, breaks the mirror.
+- Their Char's Zaku II tokens (from Falmel and Char's Zaku II) are 3/1s: any ping kills them.
+
 ## caveats
 - **Simulator, not the real game.** Card effects are implemented by hand (full or simplified) or compiled from the official text. Finalist cards were hand-checked against cards.json (see cardcheck_*.md). The AIs make mistakes no strong human would. A real expert pilot could change any matchup by more than the noise level.
 - **Noise.** At 100 games per list a field mean has sd about 1.6 points (four seeds of GB_GA2 at K2N2: 59.5 / 59.3 / 58.9 / 62.4). At 200 per list it is about 1.1 points. A single matchup at 200 games has a 95% interval of about ±7 points. Differences between decks under 3 points of field mean are not meaningful.
