@@ -42,7 +42,10 @@ Session-1 Omni outputs are in results/omni_v1/ (decks OMNI0_GB, OMNI0_GR).
   Fresh seed GP_S4_g14 65.3 -> pooled 65.4 over 400/list. Working finalist: GP_S4_g14.
 - Counter-deck GA vs GP_S4_g14, re-tests K4N6 200 (seed 8282000): BP 62.5 [56-69], RW 58.5 [52-65], GP 54.5, BW 52.5,
   GB 40.5 (PR/BR/GW re-tests running). The BP counter is an SFIBO-style list + 4 Widespread Annihilation.
-- Extension (results/omni/run_extra.sh): after COMPLETE, OMNI_TOP=7 reruns the driver -> pure GA for GR and MP too.
+- Extension: the full-scale OMNI_TOP=7 rerun (results/omni/run_extra.sh) was replaced at 23:45 by a reduced-scale screen
+  on the spare core (results/omni/run_screen.sh: gens 12 kids 10 elite 4 sn 24 -> screen_GR/MP.json, decks SCR_*).
+  Neither pair has a strong field list to refine (G/P's gain came from refining J_CharIBO). Promote to full scale if > ~63.
+- MG validations (K4N6 / mlp2): OMNIP_MG_e0 57.0 / 58.0, OMNIP_MG_e1 56.6.
 - Third K4N6 seed (9595000): GP_S4_g14 63.4, OMNIP_GP_e1 64.4 -> pooled 600/list 64.76 vs 64.79 (tie). Counters evolved vs
   GP_S4_g14 hit OMNIP_GP_e1 harder (BP 70.5 vs 62.5; avg of 8: 53.5 vs 51.5) -> **finalist GP_S4_g14**, alternative OMNIP_GP_e1.
 - Validation queue: results/final/val_queue.sh reads results/final/queue.txt (one deck per line; STOP ends it).
