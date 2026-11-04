@@ -1,0 +1,8 @@
+gen 0 top f 0.631 B 47.5 A 47.8 b5 31.0 min 30.0 W_MKE_ZGok (23s)
+gen 1 top f 0.636 B 50.0 A 50.2 b5 27.0 min 25.0 W_MEX_GPZeon (43s)
+gen 2 top f 0.708 B 52.4 A 53.8 b5 35.5 min 32.5 W_MKE_ZGok (63s)
+gen 3 top f 0.688 B 51.3 A 52.3 b5 34.0 min 25.0 J_EFFBanshee (84s)
+gen 4 fresh: B 53.0 A 53.8 b5 34.0 | B 51.2 A 52.0 b5 33.8 | B 54.6 A 55.1 b5 35.8  best-so-far B 54.6 A 55.1
+gen 4 top f 0.779 B 57.8 A 58.4 b5 39.5 min 25.0 J_SFIBO_alt (119s)
+gen 5 top f 0.723 B 54.2 A 54.8 b5 35.5 min 27.5 W_MKE_ZGok (142s)
+gen 6 top f 0.690 B 51.3 A 52.3 b5 34.5 min 30.0 J_SFIBO_alt (158s)
