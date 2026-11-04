@@ -4,3 +4,12 @@ gcg/results/learn/*.i32
 *.cpuprofile
 gcg/results/learn/*.i16
 __pycache__/
+# live, per-generation files of running searches (force-added with git add -f once the runs finish)
+gcg/results/**/*.tmp
+gcg/results/**/*.ck
+gcg/results/omni/island_*.log
+gcg/results/omni/pure_*.log
+gcg/results/omni/census.log
+gcg/results/omni/check.log
+gcg/results/counter/*_*.log
+gcg/results/learnga/*.log
