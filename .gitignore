@@ -13,3 +13,4 @@ gcg/results/omni/census.log
 gcg/results/omni/check.log
 gcg/results/counter/*_*.log
 gcg/results/learnga/*.log
+gcg/results/omni/island_*.json
