@@ -1,0 +1,155 @@
+{
+ "name": "k4n6d3_vs_k4n6",
+ "X": {
+  "K": 4,
+  "N": 6,
+  "D": 3
+ },
+ "Y": {
+  "K": 4,
+  "N": 6
+ },
+ "nPerDeck": 16,
+ "seed": 4040000,
+ "games": 416,
+ "wins": 191,
+ "draws": 1,
+ "score": 0.46033653846153844,
+ "ci95": [
+  0.41302068202095216,
+  0.5083782455745981
+ ],
+ "per": {
+  "W_DC_SF": {
+   "wr": 0.375,
+   "n": 16,
+   "draw": 0
+  },
+  "W_BRIS_RWAcademy": {
+   "wr": 0.4375,
+   "n": 16,
+   "draw": 1
+  },
+  "W_LILLE_Nu": {
+   "wr": 0.4375,
+   "n": 16,
+   "draw": 0
+  },
+  "W_MKE_ZGok": {
+   "wr": 0.4375,
+   "n": 16,
+   "draw": 0
+  },
+  "W_DUS_Shining": {
+   "wr": 0.4375,
+   "n": 16,
+   "draw": 0
+  },
+  "W_TKY1_BarbSF": {
+   "wr": 0.625,
+   "n": 16,
+   "draw": 0
+  },
+  "W_MNL_GPZeon": {
+   "wr": 0.5,
+   "n": 16,
+   "draw": 0
+  },
+  "W_JKT_Nu": {
+   "wr": 0.4375,
+   "n": 16,
+   "draw": 0
+  },
+  "W_TOR_SF": {
+   "wr": 0.3125,
+   "n": 16,
+   "draw": 0
+  },
+  "W_MEX_GPZeon": {
+   "wr": 0.3125,
+   "n": 16,
+   "draw": 0
+  },
+  "W_MEL_SFVictory": {
+   "wr": 0.5625,
+   "n": 16,
+   "draw": 0
+  },
+  "W_TKY3_Shining": {
+   "wr": 0.5625,
+   "n": 16,
+   "draw": 0
+  },
+  "J_MobileFighter": {
+   "wr": 0.5,
+   "n": 16,
+   "draw": 0
+  },
+  "J_CharIBO": {
+   "wr": 0.375,
+   "n": 16,
+   "draw": 0
+  },
+  "J_NuAggro": {
+   "wr": 0.375,
+   "n": 16,
+   "draw": 0
+  },
+  "J_SFBlockers": {
+   "wr": 0.5,
+   "n": 16,
+   "draw": 0
+  },
+  "J_SFIBO_Chiba": {
+   "wr": 0.1875,
+   "n": 16,
+   "draw": 0
+  },
+  "J_SFIBO_alt": {
+   "wr": 0.5625,
+   "n": 16,
+   "draw": 0
+  },
+  "J_KshatriyaBanshee": {
+   "wr": 0.625,
+   "n": 16,
+   "draw": 0
+  },
+  "J_EFFBanshee": {
+   "wr": 0.5,
+   "n": 16,
+   "draw": 0
+  },
+  "J_BGOYW": {
+   "wr": 0.5,
+   "n": 16,
+   "draw": 0
+  },
+  "J_JusticeAerial": {
+   "wr": 0.5625,
+   "n": 16,
+   "draw": 0
+  },
+  "J_Wing_Omiya": {
+   "wr": 0.375,
+   "n": 16,
+   "draw": 0
+  },
+  "J_MF_Kichijoji": {
+   "wr": 0.375,
+   "n": 16,
+   "draw": 0
+  },
+  "J_BGOYW_Chelmo": {
+   "wr": 0.5625,
+   "n": 16,
+   "draw": 0
+  },
+  "J_MF_Machida": {
+   "wr": 0.5,
+   "n": 16,
+   "draw": 0
+  }
+ },
+ "sec": 36.077
+}

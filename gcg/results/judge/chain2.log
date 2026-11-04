@@ -1,0 +1,3 @@
+mcts30_vs_k4n6: X {"mcts":true,"I":30} vs Y {"K":4,"N":6}: X scores 49.8% [45.0-54.5] over 416 games (206W 2D) (34s)
+mcts60_vs_k4n6: X {"mcts":true,"I":60} vs Y {"K":4,"N":6}: X scores 48.4% [43.7-53.2] over 416 games (201W 1D) (51s)
+k4n6_vs_legacy: X {"K":4,"N":6} vs Y {"K":3,"N":3,"legacy":true}: X scores 57.9% [54.9-60.9] over 1040 games (602W 0D) (40s)

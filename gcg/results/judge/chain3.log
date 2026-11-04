@@ -1,0 +1,3 @@
+mcts60c15_vs_k4n6: X {"mcts":true,"I":60,"C":0.15,"scale":4} vs Y {"K":4,"N":6}: X scores 53.6% [48.8-58.3] over 416 games (223W 0D) (52s)
+mcts60c15m6_vs_k4n6: X {"mcts":true,"I":60,"C":0.15,"scale":4,"M":6} vs Y {"K":4,"N":6}: X scores 54.4% [49.6-59.2] over 416 games (226W 1D) (48s)
+mcts120c3m8_vs_k4n6: X {"mcts":true,"I":120,"C":0.3,"scale":4,"M":8} vs Y {"K":4,"N":6}: X scores 50.8% [46.1-55.6] over 416 games (211W 1D) (80s)

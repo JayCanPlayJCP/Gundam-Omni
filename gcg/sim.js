@@ -3,13 +3,13 @@
 const eng = require('./engine');
 const EFX = require('./effects');
 eng.setEffects(EFX);
-const { AI } = require('./ai'); const { SearchAI } = require('./searchai');
+const { makeAI } = require('./searchai');
 const DECKS = require('./decks.json');
 
 function deckList(d) { return typeof d === 'string' ? DECKS[d].cards : d; }
 function playGame(deckA, deckB, seed, aFirst, opts = {}) {
   const A = deckList(deckA), B = deckList(deckB);
-  const aiA = opts.searchA ? new SearchAI(opts.aiA, opts.searchA) : new AI(opts.aiA), aiB = opts.searchB ? new SearchAI(opts.aiB, opts.searchB) : new AI(opts.aiB);
+  const aiA = makeAI(opts.aiA, opts.searchA), aiB = makeAI(opts.aiB, opts.searchB);
   const g = aFirst ? new eng.Game(A, B, seed, [aiA, aiB], opts) : new eng.Game(B, A, seed, [aiB, aiA], opts);
   g.play(opts.maxTurns || 40);
   const ai = aFirst ? 0 : 1; // index of deck A
