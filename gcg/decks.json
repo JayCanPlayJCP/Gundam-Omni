@@ -11540,7 +11540,7 @@
   ]
  },
  "CTR_GP_S4_g14_BP": {
-  "label": "Counter-deck GA (BP) vs OMNIP_GP_e1, elite 0; in-search 65.0% over 160 games",
+  "label": "Counter-deck GA (BP) vs GP_S4_g14, elite 0; in-search 65.0% over 160 games",
   "cards": [
    {
     "n": 1,
@@ -11633,7 +11633,7 @@
   ]
  },
  "CTR_GP_S4_g14_BW": {
-  "label": "Counter-deck GA (BW) vs OMNIP_GP_e1, elite 0; in-search 63.3% over 120 games",
+  "label": "Counter-deck GA (BW) vs GP_S4_g14, elite 0; in-search 63.3% over 120 games",
   "cards": [
    {
     "n": 2,
@@ -11953,7 +11953,7 @@
   ]
  },
  "CTR_GP_S4_g14_BR": {
-  "label": "Counter-deck GA (BR) vs OMNIP_GP_e1, elite 0; in-search 62.5% over 40 games",
+  "label": "Counter-deck GA (BR) vs GP_S4_g14, elite 0; in-search 62.5% over 40 games",
   "cards": [
    {
     "n": 1,

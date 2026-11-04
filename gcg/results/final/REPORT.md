@@ -8,10 +8,11 @@ _pending: written when the pure-search GAs and the final validations finish._
 
 | judge (both sides use it) | games/list | field mean % | Metric A % | worst % | first % | second % | lists ≥75% |
 |---|---|---|---|---|---|---|---|
-| K4N6 search, hand evaluator (all seeds pooled) | 400 | 65.4 | 66.7 | 46.3 (J_SFIBO_Chiba) | 79.8 | 51.1 | 7/26 |
+| K4N6 search, hand evaluator (all seeds pooled) | 600 | 64.8 | 66.1 | 45.5 (W_BRIS_RWAcademy) | 78.6 | 50.9 | 6/26 |
 | K4N6 search + learned evaluator (mlp2) | 200 | 67.8 | 68.9 | 46.5 (J_CharIBO) | 80.0 | 55.7 | 8/26 |
 | K4N6 search, hand evaluator | 200 | 65.5 | 67.0 | 43.5 (J_SFIBO_alt) | 79.1 | 52.0 | 8/26 |
 | K4N6 search, hand evaluator, fresh seed | 200 | 65.3 | 66.4 | 45.5 (W_BRIS_RWAcademy) | 80.4 | 50.2 | 5/26 |
+| K4N6 search, hand evaluator, third seed | 200 | 63.4 | 64.8 | 43.0 (W_BRIS_RWAcademy) | 76.2 | 50.7 | 3/26 |
 | K3N3 search | 200 | 64.5 | 66.1 | 43.5 (W_BRIS_RWAcademy) | 77.7 | 51.3 | 6/26 |
 | K2N2 search | 200 | 65.1 | 66.4 | 46.0 (W_BRIS_RWAcademy) | 77.3 | 53.0 | 6/26 |
 | fast heuristic AI | 1000 | 61.9 | 63.2 | 26.4 (W_BRIS_RWAcademy) | 68.9 | 54.9 | 7/26 |
@@ -60,36 +61,57 @@ Resource deck (separate): 10 x R-001.
 
 | opponent | real share % | k4n6x2 win % | k4n6x2 95% CI | mlp2 win % | mlp2 95% CI | k4n6x2 first % | k4n6x2 second % |
 |---|---|---|---|---|---|---|---|
-| J_SFIBO_Chiba | 3.9 | 46.3 | 41–51 | 48.5 | 42–55 | 54 | 39 |
-| J_SFIBO_alt | 3.9 | 46.3 | 41–51 | 49.5 | 43–56 | 52 | 41 |
-| W_BRIS_RWAcademy | 2.2 | 46.8 | 42–52 | 51.0 | 44–58 | 62 | 32 |
-| W_MKE_ZGok | 1.4 | 49.0 | 44–54 | 59.0 | 52–66 | 76 | 23 |
-| W_MEX_GPZeon | 5.2 | 51.7 | 47–57 | 55.5 | 49–62 | 73 | 31 |
-| J_CharIBO | 5.2 | 52.0 | 47–57 | 46.5 | 40–53 | 72 | 33 |
-| W_MEL_SFVictory | 1.4 | 52.5 | 48–57 | 60.5 | 54–67 | 69 | 37 |
-| W_TKY1_BarbSF | 3.9 | 58.8 | 54–63 | 66.0 | 59–72 | 67 | 51 |
-| J_BGOYW_Chelmo | 2.2 | 60.8 | 56–65 | 56.0 | 49–63 | 81 | 41 |
-| W_MNL_GPZeon | 5.2 | 64.3 | 59–69 | 71.0 | 64–77 | 72 | 57 |
-| J_EFFBanshee | 3.7 | 65.5 | 61–70 | 68.5 | 62–75 | 84 | 47 |
-| W_LILLE_Nu | 3.7 | 67.0 | 62–71 | 76.0 | 70–81 | 86 | 49 |
-| J_JusticeAerial | 2.2 | 68.8 | 64–73 | 71.5 | 65–77 | 87 | 51 |
-| W_DUS_Shining | 4.7 | 69.5 | 65–74 | 67.5 | 61–74 | 84 | 55 |
-| W_DC_SF | 5.4 | 70.0 | 65–74 | 69.0 | 62–75 | 84 | 56 |
-| J_Wing_Omiya | 3.0 | 71.5 | 67–76 | 63.0 | 56–69 | 80 | 64 |
-| J_BGOYW | 2.2 | 72.3 | 68–76 | 66.5 | 60–73 | 87 | 58 |
-| J_KshatriyaBanshee | 3.7 | 72.5 | 68–77 | 72.0 | 65–78 | 90 | 55 |
-| J_MobileFighter | 4.7 | 74.0 | 69–78 | 80.5 | 74–85 | 88 | 60 |
-| W_TOR_SF | 5.4 | 75.0 | 71–79 | 74.0 | 68–80 | 90 | 61 |
-| J_MF_Machida | 4.7 | 76.0 | 72–80 | 75.0 | 69–80 | 91 | 61 |
-| W_JKT_Nu | 3.7 | 76.3 | 72–80 | 85.0 | 79–89 | 87 | 66 |
-| W_TKY3_Shining | 4.7 | 77.3 | 73–81 | 83.5 | 78–88 | 91 | 64 |
-| J_NuAggro | 3.7 | 77.8 | 73–82 | 86.0 | 81–90 | 90 | 66 |
-| J_MF_Kichijoji | 4.7 | 78.3 | 74–82 | 80.5 | 74–85 | 93 | 64 |
-| J_SFBlockers | 5.4 | 81.5 | 77–85 | 81.5 | 76–86 | 91 | 73 |
+| W_BRIS_RWAcademy | 2.2 | 45.5 | 42–50 | 51.0 | 44–58 | 59 | 32 |
+| J_SFIBO_alt | 3.9 | 46.2 | 42–50 | 49.5 | 43–56 | 54 | 39 |
+| J_SFIBO_Chiba | 3.9 | 46.5 | 43–51 | 48.5 | 42–55 | 54 | 39 |
+| W_MKE_ZGok | 1.4 | 49.8 | 46–54 | 59.0 | 52–66 | 74 | 25 |
+| W_MEL_SFVictory | 1.4 | 52.0 | 48–56 | 60.5 | 54–67 | 68 | 36 |
+| J_CharIBO | 5.2 | 52.3 | 48–56 | 46.5 | 40–53 | 71 | 33 |
+| W_MEX_GPZeon | 5.2 | 53.3 | 49–57 | 55.5 | 49–62 | 73 | 33 |
+| W_TKY1_BarbSF | 3.9 | 58.3 | 54–62 | 66.0 | 59–72 | 67 | 50 |
+| J_BGOYW_Chelmo | 2.2 | 59.3 | 55–63 | 56.0 | 49–63 | 79 | 40 |
+| W_MNL_GPZeon | 5.2 | 63.7 | 60–67 | 71.0 | 64–77 | 70 | 57 |
+| J_EFFBanshee | 3.7 | 63.7 | 60–67 | 68.5 | 62–75 | 83 | 44 |
+| W_LILLE_Nu | 3.7 | 65.0 | 61–69 | 76.0 | 70–81 | 84 | 46 |
+| J_JusticeAerial | 2.2 | 67.7 | 64–71 | 71.5 | 65–77 | 84 | 51 |
+| W_DUS_Shining | 4.7 | 68.5 | 65–72 | 67.5 | 61–74 | 83 | 54 |
+| W_DC_SF | 5.4 | 68.8 | 65–72 | 69.0 | 62–75 | 82 | 56 |
+| J_BGOYW | 2.2 | 70.8 | 67–74 | 66.5 | 60–73 | 86 | 55 |
+| J_KshatriyaBanshee | 3.7 | 71.3 | 68–75 | 72.0 | 65–78 | 88 | 54 |
+| J_Wing_Omiya | 3.0 | 71.7 | 68–75 | 63.0 | 56–69 | 78 | 65 |
+| W_TOR_SF | 5.4 | 72.8 | 69–76 | 74.0 | 68–80 | 86 | 60 |
+| J_MobileFighter | 4.7 | 74.3 | 71–78 | 80.5 | 74–85 | 87 | 62 |
+| W_JKT_Nu | 3.7 | 75.2 | 72–78 | 85.0 | 79–89 | 87 | 63 |
+| J_MF_Machida | 4.7 | 75.3 | 72–79 | 75.0 | 69–80 | 89 | 62 |
+| J_NuAggro | 3.7 | 75.8 | 72–79 | 86.0 | 81–90 | 89 | 63 |
+| J_MF_Kichijoji | 4.7 | 77.0 | 73–80 | 80.5 | 74–85 | 90 | 64 |
+| W_TKY3_Shining | 4.7 | 77.5 | 74–81 | 83.5 | 78–88 | 89 | 66 |
+| J_SFBlockers | 5.4 | 81.3 | 78–84 | 81.5 | 76–86 | 89 | 74 |
 
 ## Play guide: the five hardest matchups
 
-### J_SFIBO_Chiba — 46.3% (k4n6x2, 400 games)
+### W_BRIS_RWAcademy — 45.5% (k4n6x2, 600 games)
+
+- Guide sample: 200 games ({"K":4,"N":6} both sides, seed 6161000): 46.5% overall, 59% going first, 34% going second, 15.9 turns on average. Game ends: battle damage 200.
+- Cards that win it for us (win rate when seen minus when not seen): Zaku Ⅱ (ST03-008) +69; Char's Zaku Ⅱ (GD01-026) +64; Gundam Barbatos Adapt (GD03-056) +60; Rick Dom (GD01-030) +59.
+- Their cards to play around: Gundam Lfrith (GD01-086) +39 for them; Overflowing Affection (GD01-118) +35 for them; Darkness Finger (GD05-110) +33 for them; Gundam Aerial (ST13-006) +32 for them.
+
+**The worst matchup (46.5% here, 46.8% over 400 validation games), and badly seat-dependent (59 first / 34 second).** Red/White blockers plus removal: Gundam Lfrith (2/4 Blocker), Overflowing Affection (draw 2, discard 1), Darkness Finger (2 damage at instant speed), Gundam Aerial (pings on attack and as an Action) and Aegis/Justice. They win the long game (15.9 turns on average).
+- Do not play into a stalled board. Rick Dom's Breach 2 and Char Aznable's High-Maneuver on a Link Unit (Char's Zaku II) are how damage gets past Lfrith.
+- Lfrith has 4 HP. A Barbatos Adapt or Mikazuki ping plus a 3-AP attacker kills it in one turn.
+- Keep the 4-AP+ attackers (Efreet Schneid, Zaku II attacking for 3) for the turn you can attack the player with two or more Units, so Darkness Finger cannot stop all the damage.
+
+
+### J_SFIBO_alt — 46.2% (k4n6x2, 600 games)
+
+- Guide sample: 200 games ({"K":4,"N":6} both sides, seed 6161000): 49.5% overall, 52% going first, 47% going second, 14.9 turns on average. Game ends: battle damage 200.
+- Cards that win it for us (win rate when seen minus when not seen): Zaku Ⅱ (GD01-035) +66; Zaku Ⅱ (ST03-008) +64; Char's Zaku Ⅱ (GD01-026) +62; Gundam Barbatos Adapt (GD03-056) +54.
+- Their cards to play around: Gundam Gusion Rebake (GD02-055) +35 for them; Gundam Barbatos Adapt (GD03-056) +33 for them; Graze Custom (ST05-004) +26 for them; Axis (GD05-129) +16 for them.
+
+Same plan as against J_SFIBO_Chiba, with more Axis (base: shield to hand, then recursion) in their list. Axis showed up in 170 of 200 games and swings their win rate +16 points, so expect one extra shield and plan the lethal turn a turn later. Gusion Rebake's Blocker is the card that stops the race: attack with your biggest Unit into it, or ping it first.
+
+
+### J_SFIBO_Chiba — 46.5% (k4n6x2, 600 games)
 
 - Guide sample: 200 games ({"K":4,"N":6} both sides, seed 6161000): 50.0% overall, 54% going first, 46% going second, 14.8 turns on average. Game ends: battle damage 200.
 - Cards that win it for us (win rate when seen minus when not seen): Zaku Ⅱ (ST03-008) +59; Gundam Barbatos Adapt (GD03-056) +55; Zaku Ⅱ (GD01-035) +55; Char's Zaku Ⅱ (GD01-026) +52.
@@ -102,28 +124,7 @@ Resource deck (separate): 10 x R-001.
 - Push shields before Barbatos Lupus (Lv.7) comes online. Long games favour them.
 
 
-### J_SFIBO_alt — 46.3% (k4n6x2, 400 games)
-
-- Guide sample: 200 games ({"K":4,"N":6} both sides, seed 6161000): 49.5% overall, 52% going first, 47% going second, 14.9 turns on average. Game ends: battle damage 200.
-- Cards that win it for us (win rate when seen minus when not seen): Zaku Ⅱ (GD01-035) +66; Zaku Ⅱ (ST03-008) +64; Char's Zaku Ⅱ (GD01-026) +62; Gundam Barbatos Adapt (GD03-056) +54.
-- Their cards to play around: Gundam Gusion Rebake (GD02-055) +35 for them; Gundam Barbatos Adapt (GD03-056) +33 for them; Graze Custom (ST05-004) +26 for them; Axis (GD05-129) +16 for them.
-
-Same plan as against J_SFIBO_Chiba, with more Axis (base: shield to hand, then recursion) in their list. Axis showed up in 170 of 200 games and swings their win rate +16 points, so expect one extra shield and plan the lethal turn a turn later. Gusion Rebake's Blocker is the card that stops the race: attack with your biggest Unit into it, or ping it first.
-
-
-### W_BRIS_RWAcademy — 46.8% (k4n6x2, 400 games)
-
-- Guide sample: 200 games ({"K":4,"N":6} both sides, seed 6161000): 46.5% overall, 59% going first, 34% going second, 15.9 turns on average. Game ends: battle damage 200.
-- Cards that win it for us (win rate when seen minus when not seen): Zaku Ⅱ (ST03-008) +69; Char's Zaku Ⅱ (GD01-026) +64; Gundam Barbatos Adapt (GD03-056) +60; Rick Dom (GD01-030) +59.
-- Their cards to play around: Gundam Lfrith (GD01-086) +39 for them; Overflowing Affection (GD01-118) +35 for them; Darkness Finger (GD05-110) +33 for them; Gundam Aerial (ST13-006) +32 for them.
-
-**The worst matchup (46.5% here, 46.8% over 400 validation games), and badly seat-dependent (59 first / 34 second).** Red/White blockers plus removal: Gundam Lfrith (2/4 Blocker), Overflowing Affection (draw 2, discard 1), Darkness Finger (2 damage at instant speed), Gundam Aerial (pings on attack and as an Action) and Aegis/Justice. They win the long game (15.9 turns on average).
-- Do not play into a stalled board. Rick Dom's Breach 2 and Char Aznable's High-Maneuver on a Link Unit (Char's Zaku II) are how damage gets past Lfrith.
-- Lfrith has 4 HP. A Barbatos Adapt or Mikazuki ping plus a 3-AP attacker kills it in one turn.
-- Keep the 4-AP+ attackers (Efreet Schneid, Zaku II attacking for 3) for the turn you can attack the player with two or more Units, so Darkness Finger cannot stop all the damage.
-
-
-### W_MKE_ZGok — 49.0% (k4n6x2, 400 games)
+### W_MKE_ZGok — 49.8% (k4n6x2, 600 games)
 
 - Guide sample: 200 games ({"K":4,"N":6} both sides, seed 6161000): 55.5% overall, 75% going first, 36% going second, 13.7 turns on average. Game ends: battle damage 200.
 - Cards that win it for us (win rate when seen minus when not seen): Zaku Ⅱ (GD01-035) +62; Char's Zaku Ⅱ (GD01-026) +61; Zaku Ⅱ (ST03-008) +60; Gundam Barbatos Adapt (GD03-056) +55.
@@ -134,15 +135,7 @@ Same plan as against J_SFIBO_Chiba, with more Axis (base: shield to hand, then r
 - Rested Units die to Guntank. Going second, attack only when the attack trades or reaches the player; don't leave a 2-HP Unit rested for nothing.
 
 
-### W_MEX_GPZeon — 51.7% (k4n6x2, 400 games)
-
-- Guide sample: 200 games ({"K":4,"N":6} both sides, seed 6161000): 51.0% overall, 66% going first, 36% going second, 13.3 turns on average. Game ends: battle damage 200.
-- Cards that win it for us (win rate when seen minus when not seen): Gundam Barbatos 1st Form (GD02-054) +58; Zaku Ⅱ (GD01-035) +48; Char's Zaku Ⅱ (ST03-006) +48; Gundam Barbatos Adapt (GD03-056) +46.
-- Their cards to play around: Char's Zaku Ⅱ (GD01-026) +45 for them; Char's Zaku Ⅱ (ST03-006) +45 for them; Zaku Ⅰ (ST03-007) +43 for them; Gundam Barbatos Adapt (GD03-056) +43 for them.
-
-**A tempo mirror (Green/Purple Zeon).** The same cheap Zeon units decide both sides. Barbatos 1st Form (Attack: if damaged, draw 1) was the biggest swing card for us: every game in which it was seen was won (30 games).
-- Trade early and keep attacking with a damaged Barbatos 1st Form to draw. Card advantage, not board size, breaks the mirror.
-- Their Char's Zaku II tokens (from Falmel and Char's Zaku II) are 3/1s: any ping kills them.
+### W_MEL_SFVictory — 52.0% (k4n6x2, 600 games)
 
 
 
@@ -150,17 +143,19 @@ Same plan as against J_SFIBO_Chiba, with more Axis (base: shield to hand, then r
 
 | deck | judge | games/list | field mean % | Metric A % | worst % | first % | second % |
 |---|---|---|---|---|---|---|---|
-| GP_S4_g14 | K4N6 search, hand evaluator (all seeds pooled) | 400 | 65.4 | 66.7 | 46.3 (J_SFIBO_Chiba) | 79.8 | 51.1 |
+| GP_S4_g14 | K4N6 search, hand evaluator (all seeds pooled) | 600 | 64.8 | 66.1 | 45.5 (W_BRIS_RWAcademy) | 78.6 | 50.9 |
 | GP_S4_g14 | K4N6 search + learned evaluator (mlp2) | 200 | 67.8 | 68.9 | 46.5 (J_CharIBO) | 80.0 | 55.7 |
 | GP_S4_g14 | K4N6 search, hand evaluator | 200 | 65.5 | 67.0 | 43.5 (J_SFIBO_alt) | 79.1 | 52.0 |
 | GP_S4_g14 | K4N6 search, hand evaluator, fresh seed | 200 | 65.3 | 66.4 | 45.5 (W_BRIS_RWAcademy) | 80.4 | 50.2 |
+| GP_S4_g14 | K4N6 search, hand evaluator, third seed | 200 | 63.4 | 64.8 | 43.0 (W_BRIS_RWAcademy) | 76.2 | 50.7 |
 | GP_S4_g14 | K3N3 search | 200 | 64.5 | 66.1 | 43.5 (W_BRIS_RWAcademy) | 77.7 | 51.3 |
 | GP_S4_g14 | K2N2 search | 200 | 65.1 | 66.4 | 46.0 (W_BRIS_RWAcademy) | 77.3 | 53.0 |
 | GP_S4_g14 | fast heuristic AI | 1000 | 61.9 | 63.2 | 26.4 (W_BRIS_RWAcademy) | 68.9 | 54.9 |
-| OMNIP_GP_e1 | K4N6 search, hand evaluator (all seeds pooled) | 400 | 65.0 | 66.4 | 45.5 (W_BRIS_RWAcademy) | 78.6 | 51.3 |
+| OMNIP_GP_e1 | K4N6 search, hand evaluator (all seeds pooled) | 600 | 64.8 | 66.2 | 45.3 (W_BRIS_RWAcademy) | 78.1 | 51.5 |
 | OMNIP_GP_e1 | K4N6 search + learned evaluator (mlp2) | 200 | 69.0 | 70.4 | 46.5 (W_BRIS_RWAcademy) | 82.2 | 55.8 |
 | OMNIP_GP_e1 | K4N6 search, hand evaluator | 200 | 65.1 | 66.7 | 42.5 (W_BRIS_RWAcademy) | 78.4 | 51.9 |
 | OMNIP_GP_e1 | K4N6 search, hand evaluator, fresh seed | 200 | 64.8 | 66.1 | 43.5 (J_SFIBO_Chiba) | 78.8 | 50.8 |
+| OMNIP_GP_e1 | K4N6 search, hand evaluator, third seed | 200 | 64.4 | 65.7 | 45.0 (W_BRIS_RWAcademy) | 77.0 | 51.8 |
 | OMNIP_GP_e1 | K3N3 search | 200 | 65.6 | 67.0 | 44.0 (W_BRIS_RWAcademy) | 78.8 | 52.4 |
 | OMNIP_GP_e1 | K2N2 search | 200 | 67.2 | 68.5 | 43.0 (W_BRIS_RWAcademy) | 78.2 | 56.1 |
 | OMNIP_GP_e1 | fast heuristic AI | 1000 | 62.9 | 64.2 | 23.9 (W_BRIS_RWAcademy) | 70.0 | 55.7 |
@@ -225,22 +220,22 @@ The counter-deck GA evolves decks of one colour pair against a single target, se
 
 Against the finalist, two counters clearly beat it after re-testing (K4N6, 200 games each): a **Blue/Purple** list wins 62.5% (95% CI 56–69) and a **Red/White** list 58.5% (52–65). The Blue/Purple one is a refined version of the SFIBO tournament lists (68–72% card overlap) that adds 4 Widespread Annihilation (destroy all Lv.4-or-lower Units, which is the whole Green/Purple deck). Blue/Red (57.0%) is next. The remaining pairs did not clearly beat it (Green/Purple 54.5, Blue/White 52.5, Green/White 45.5, Purple/Red 41.0, Green/Blue 40.5). So the finalist drops to 37.5% against its best counter-deck, and it already sits at 46–47% against three tournament lists. An opponent who expects Green/Purple can prepare a deck that beats it.
 
-| target | counter colours | best counter win % (GA, biased up) | best counter re-tested |
-|---|---|---|---|
-| GB_S2_e1 | BP | 57.1 (240 games, in-search) | 47.0 (200 games, fresh seeds, {"K":4,"N":6}) |
-| GB_S2_e1 | BW | 43.0 (200 games, in-search) | 36.5 (200 games, fresh seeds, {"K":4,"N":6}) |
-| GB_S2_e1 | GB | 55.0 (40 games, in-search) | 46.0 (200 games, fresh seeds, {"K":4,"N":6}) |
-| GB_S2_e1 | GP | 65.0 (40 games, in-search) | 56.5 (200 games, fresh seeds, {"K":4,"N":6}) |
-| GB_S2_e1 | PR | 57.5 (40 games, in-search) | 40.5 (200 games, fresh seeds, {"K":4,"N":6}) |
-| GB_S2_e1 | RW | 50.0 (40 games, in-search) | 40.5 (200 games, fresh seeds, {"K":4,"N":6}) |
-| GP_S4_g14 | BP | 65.0 (160 games, in-search) | 62.5 (200 games, fresh seeds, {"K":4,"N":6}) |
-| GP_S4_g14 | BR | 62.5 (40 games, in-search) | 57.0 (200 games, fresh seeds, {"K":4,"N":6}) |
-| GP_S4_g14 | BW | 63.3 (120 games, in-search) | 52.5 (200 games, fresh seeds, {"K":4,"N":6}) |
-| GP_S4_g14 | GB | 52.5 (40 games, in-search) | 40.5 (200 games, fresh seeds, {"K":4,"N":6}) |
-| GP_S4_g14 | GP | 60.0 (40 games, in-search) | 54.5 (200 games, fresh seeds, {"K":4,"N":6}) |
-| GP_S4_g14 | GW | 62.5 (40 games, in-search) | 45.5 (200 games, fresh seeds, {"K":4,"N":6}) |
-| GP_S4_g14 | PR | 47.5 (80 games, in-search) | 41.0 (200 games, fresh seeds, {"K":4,"N":6}) |
-| GP_S4_g14 | RW | 70.0 (120 games, in-search) | 58.5 (200 games, fresh seeds, {"K":4,"N":6}) |
+| target | counter colours | best counter win % (GA, biased up) | best counter re-tested vs target | same counter vs other decks |
+|---|---|---|---|---|
+| GB_S2_e1 | BP | 57.1 (240 games, in-search) | 47.0 (200 games, fresh seeds, {"K":4,"N":6}) | — |
+| GB_S2_e1 | BW | 43.0 (200 games, in-search) | 36.5 (200 games, fresh seeds, {"K":4,"N":6}) | — |
+| GB_S2_e1 | GB | 55.0 (40 games, in-search) | 46.0 (200 games, fresh seeds, {"K":4,"N":6}) | — |
+| GB_S2_e1 | GP | 65.0 (40 games, in-search) | 56.5 (200 games, fresh seeds, {"K":4,"N":6}) | — |
+| GB_S2_e1 | PR | 57.5 (40 games, in-search) | 40.5 (200 games, fresh seeds, {"K":4,"N":6}) | — |
+| GB_S2_e1 | RW | 50.0 (40 games, in-search) | 40.5 (200 games, fresh seeds, {"K":4,"N":6}) | — |
+| GP_S4_g14 | BP | 65.0 (160 games, in-search) | 62.5 (200 games, fresh seeds, {"K":4,"N":6}) | 70.5 vs OMNIP_GP_e1 |
+| GP_S4_g14 | BR | 62.5 (40 games, in-search) | 57.0 (200 games, fresh seeds, {"K":4,"N":6}) | 61.0 vs OMNIP_GP_e1 |
+| GP_S4_g14 | BW | 63.3 (120 games, in-search) | 52.5 (200 games, fresh seeds, {"K":4,"N":6}) | 52.5 vs OMNIP_GP_e1 |
+| GP_S4_g14 | GB | 52.5 (40 games, in-search) | 40.5 (200 games, fresh seeds, {"K":4,"N":6}) | 34.5 vs OMNIP_GP_e1 |
+| GP_S4_g14 | GP | 60.0 (40 games, in-search) | 54.5 (200 games, fresh seeds, {"K":4,"N":6}) | 59.0 vs OMNIP_GP_e1 |
+| GP_S4_g14 | GW | 62.5 (40 games, in-search) | 45.5 (200 games, fresh seeds, {"K":4,"N":6}) | 50.5 vs OMNIP_GP_e1 |
+| GP_S4_g14 | PR | 47.5 (80 games, in-search) | 41.0 (200 games, fresh seeds, {"K":4,"N":6}) | 40.5 vs OMNIP_GP_e1 |
+| GP_S4_g14 | RW | 70.0 (120 games, in-search) | 58.5 (200 games, fresh seeds, {"K":4,"N":6}) | 59.5 vs OMNIP_GP_e1 |
 
 ## Card census highlights per colour pair
 

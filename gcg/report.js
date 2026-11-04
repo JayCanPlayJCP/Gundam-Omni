@@ -112,8 +112,8 @@ if (J0) {
 }
 // 9. counter-decks
 {
-  const rows = []; for (const f of fs.existsSync('results/counter') ? fs.readdirSync('results/counter').filter(f => /_vs_[A-Z]+\.json$/.test(f)) : []) { const j = rd('results/counter/' + f); if (!j || !j.elites) continue; const m = f.match(/^(.*)_vs_([A-Z]+)\.json$/); const e = j.elites[0]; const rt = rd(`results/counter/retest_${m[1]}_vs_${m[2]}.json`); rows.push([m[1], m[2], `${pct(e.search.B)} (${e.search.n.toFixed(0)} games, in-search)`, rt ? `${pct(rt.wr)} (${rt.n} games, fresh seeds${rt.S ? ', ' + JSON.stringify(rt.S) : ''})` : '—']); }
-  if (rows.length) { const [th, tm] = both(['target', 'counter colours', 'best counter win % (GA, biased up)', 'best counter re-tested'], rows); sec('counter', 'Counter-deck search against the finalist', `${md(notes.counter || '')}${th}`, (notes.counter || '') + '\n\n' + tm); }
+  const rows = []; for (const f of fs.existsSync('results/counter') ? fs.readdirSync('results/counter').filter(f => /_vs_[A-Z]+\.json$/.test(f)) : []) { const j = rd('results/counter/' + f); if (!j || !j.elites) continue; const m = f.match(/^(.*)_vs_([A-Z]+)\.json$/); const e = j.elites[0]; const rt = rd(`results/counter/retest_${m[1]}_vs_${m[2]}.json`); const cross = fs.readdirSync('results/counter').filter(g => g.startsWith('retest_') && g.endsWith(`_from_${m[1]}_vs_${m[2]}.json`)).map(g => { const x = rd('results/counter/' + g); return `${pct(x.wr)} vs ${x.target}`; }).join('; '); rows.push([m[1], m[2], `${pct(e.search.B)} (${e.search.n.toFixed(0)} games, in-search)`, rt ? `${pct(rt.wr)} (${rt.n} games, fresh seeds${rt.S ? ', ' + JSON.stringify(rt.S) : ''})` : '—', cross || '—']); }
+  if (rows.length) { const [th, tm] = both(['target', 'counter colours', 'best counter win % (GA, biased up)', 'best counter re-tested vs target', 'same counter vs other decks'], rows); sec('counter', 'Counter-deck search against the finalist', `${md(notes.counter || '')}${th}`, (notes.counter || '') + '\n\n' + tm); }
 }
 // 10. census
 {
