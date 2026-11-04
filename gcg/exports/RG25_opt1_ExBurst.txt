@@ -1,0 +1,57 @@
+RG25_opt1 | piloting style: aggro
+MAIN DECK (50) — paste only this section into ExBurst
+1 x GD06-126
+3 x ST03-015
+1 x GD04-109
+4 x GD05-110
+3 x GD06-105
+3 x GD05-085
+2 x GD05-086
+1 x GD05-089
+2 x GD06-090
+2 x EB01-032
+2 x GD01-030
+2 x GD01-039
+1 x GD04-038
+3 x GD05-017
+2 x GD05-019
+2 x GD05-020
+2 x GD05-025
+4 x GD05-027
+3 x GD05-029
+1 x GD06-018
+2 x GD06-036
+4 x ST03-008
+
+RESOURCE DECK (10, separate): 10 x R-001
+STARTING TOKENS: EXB-001 EX Base; EXR-001 EX Resource (Player Two)
+UNIT TOKENS this list can create: Gundam Calibarn, Gundam Aerial Rebuild
+
+READABLE LIST
+UNIT (30)
+  2x EB01-032 Gundam Ez8 High Mobility Custom
+  2x GD01-030 Rick Dom
+  2x GD01-039 Dopp
+  1x GD04-038 Gundam Exia
+  3x GD05-017 Nu Gundam
+  2x GD05-019 Re-GZ
+  2x GD05-020 Nu Gundam
+  2x GD05-025 Demi Barding
+  4x GD05-027 Jegan
+  3x GD05-029 Kayra's Re-GZ
+  1x GD06-018 Elpeo Ple's Qubeley Mk-Ⅱ
+  2x GD06-036 Gundam Vidar
+  4x ST03-008 Zaku Ⅱ
+PILOT (8)
+  3x GD05-085 Amuro Ray
+  2x GD05-086 Kayra Su
+  1x GD05-089 Master Asia
+  2x GD06-090 Vidar
+COMMAND (8)
+  1x GD04-109 Overwhelming Pressure
+  4x GD05-110 Darkness Finger
+  3x GD06-105 Grace Under Pressure
+BASE (4)
+  1x GD06-126 Skipjack-class Warship
+  3x ST03-015 Rewloola
+

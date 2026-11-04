@@ -1,0 +1,3 @@
+const { runMatrix } = require('./run');
+const a = process.argv[2], bs = process.argv[3].split(','), n = +(process.argv[4] || 400);
+runMatrix(bs.map(b => ({ a, b })), n, 5000, 2).then(r => { for (const k in r) { const s = r[k]; console.log(k.padEnd(32), 'WR', (s.wr * 100).toFixed(1).padStart(5), `[${(s.ci95[0] * 100).toFixed(1)}-${(s.ci95[1] * 100).toFixed(1)}]`, 'draw', s.draw, 'turns', s.avgTurns.toFixed(1), '1st', (s.firstWR * 100).toFixed(0), '2nd', (s.secondWR * 100).toFixed(0), 'h6', (s.avgHandAt6plus || 0).toFixed(2), 'conv2', s.twoShieldConversion === null ? '-' : (s.twoShieldConversion * 100).toFixed(0)); } });

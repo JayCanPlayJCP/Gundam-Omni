@@ -1,0 +1,59 @@
+RG418_opt1 | piloting style: hyper
+MAIN DECK (50) — paste only this section into ExBurst
+1 x ST03-015
+4 x ST03-016
+4 x GD05-110
+2 x GD05-111
+3 x GD06-105
+2 x GD06-113
+1 x ST03-014
+3 x GD05-085
+2 x GD06-084
+1 x GD06-090
+3 x GD01-030
+3 x GD01-039
+1 x GD04-047
+1 x GD05-017
+2 x GD05-019
+1 x GD05-020
+1 x GD05-025
+4 x GD05-027
+2 x GD05-029
+2 x GD06-036
+2 x GD06-048
+4 x ST03-008
+1 x ST03-009
+
+RESOURCE DECK (10, separate): 10 x R-001
+STARTING TOKENS: EXB-001 EX Base; EXR-001 EX Resource (Player Two)
+UNIT TOKENS this list can create: Char's Zaku Ⅱ, Gundam Calibarn, Gundam Aerial Rebuild, Zaku Ⅱ
+
+READABLE LIST
+UNIT (27)
+  3x GD01-030 Rick Dom
+  3x GD01-039 Dopp
+  1x GD04-047 Gundam Virtue
+  1x GD05-017 Nu Gundam
+  2x GD05-019 Re-GZ
+  1x GD05-020 Nu Gundam
+  1x GD05-025 Demi Barding
+  4x GD05-027 Jegan
+  2x GD05-029 Kayra's Re-GZ
+  2x GD06-036 Gundam Vidar
+  2x GD06-048 Helmwige Reincar
+  4x ST03-008 Zaku Ⅱ
+  1x ST03-009 Gouf
+PILOT (6)
+  3x GD05-085 Amuro Ray
+  2x GD06-084 Elpeo Ple
+  1x GD06-090 Vidar
+COMMAND (12)
+  4x GD05-110 Darkness Finger
+  2x GD05-111 Airframe​ Seizure
+  3x GD06-105 Grace Under Pressure
+  2x GD06-113 Unsanctioned Ordnance
+  1x ST03-014 The Blue Giant
+BASE (5)
+  1x ST03-015 Rewloola
+  4x ST03-016 Falmel
+

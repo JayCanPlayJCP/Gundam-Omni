@@ -1,0 +1,57 @@
+BG74_opt1 | piloting style: hyper
+MAIN DECK (50) — paste only this section into ExBurst
+1 x GD04-121
+1 x ST02-016
+1 x ST11-016
+2 x GD05-102
+4 x GD05-105
+1 x GD06-104
+4 x GD06-105
+1 x ST11-013
+1 x GD06-084
+4 x ST01-010
+1 x GD01-001
+4 x GD01-008
+3 x GD01-018
+2 x GD01-026
+2 x GD01-030
+1 x GD01-039
+3 x GD05-025
+4 x GD05-027
+3 x GD05-029
+2 x GD06-014
+1 x GD06-018
+4 x ST03-008
+
+RESOURCE DECK (10, separate): 10 x R-001
+STARTING TOKENS: EXB-001 EX Base; EXR-001 EX Resource (Player Two)
+UNIT TOKENS this list can create: Parts, Tallgeese, Leo, Gundam Calibarn, Gundam Aerial Rebuild, Char's Zaku Ⅱ
+
+READABLE LIST
+UNIT (30)
+  1x GD01-001 Gundam
+  4x GD01-008 Guntank
+  3x GD01-018 ReZEL
+  2x GD01-026 Char's Zaku Ⅱ
+  2x GD01-030 Rick Dom
+  1x GD01-039 Dopp
+  3x GD05-025 Demi Barding
+  4x GD05-027 Jegan
+  3x GD05-029 Kayra's Re-GZ
+  2x GD06-014 GM Type C
+  1x GD06-018 Elpeo Ple's Qubeley Mk-Ⅱ
+  4x ST03-008 Zaku Ⅱ
+PILOT (5)
+  1x GD06-084 Elpeo Ple
+  4x ST01-010 Amuro Ray
+COMMAND (12)
+  2x GD05-102 Wings of Light
+  4x GD05-105 Exclusively Defense-Oriented Policy
+  1x GD06-104 Steady Support
+  4x GD06-105 Grace Under Pressure
+  1x ST11-013 Poorly Planned Offensive
+BASE (3)
+  1x GD04-121 Reineforce Jr.
+  1x ST02-016 Corsica Base
+  1x ST11-016 Mad Angler
+

@@ -1,0 +1,49 @@
+BPSF_opt1 | piloting style: tempo
+MAIN DECK (50) — paste only this section into ExBurst
+4 x GD05-129
+1 x ST02-016
+4 x GD01-100
+4 x GD05-081
+2 x GD05-093
+4 x ST05-010
+4 x GD01-018
+2 x GD02-054
+4 x GD02-055
+2 x GD03-050
+4 x GD03-056
+3 x GD05-005
+1 x GD05-010
+1 x GD05-015
+1 x GD05-049
+1 x GD05-060
+4 x ST05-004
+4 x ST05-006
+
+RESOURCE DECK (10, separate): 10 x R-001
+STARTING TOKENS: EXB-001 EX Base; EXR-001 EX Resource (Player Two)
+UNIT TOKENS this list can create: Tallgeese, Leo
+
+READABLE LIST
+UNIT (31)
+  4x GD01-018 ReZEL
+  2x GD02-054 Gundam Barbatos 1st Form
+  4x GD02-055 Gundam Gusion Rebake
+  2x GD03-050 Gundam Barbatos Lupus
+  4x GD03-056 Gundam Barbatos Adapt
+  3x GD05-005 Strike Rouge (Ootori)
+  1x GD05-010 Kira's Strike Rouge
+  1x GD05-015 M1 Astray Shrike
+  1x GD05-049 Sazabi
+  1x GD05-060 Gundam Flauros (Ryusei-Go)
+  4x ST05-004 Graze Custom
+  4x ST05-006 Hyakuren
+PILOT (10)
+  4x GD05-081 Kira Yamato
+  2x GD05-093 Char Aznable
+  4x ST05-010 Mikazuki Augus
+COMMAND (4)
+  4x GD01-100 A Show of Resolve
+BASE (5)
+  4x GD05-129 Axis
+  1x ST02-016 Corsica Base
+

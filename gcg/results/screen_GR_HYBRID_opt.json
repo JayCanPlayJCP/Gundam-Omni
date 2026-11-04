@@ -1,0 +1,2593 @@
+{
+ "base": "GR_HYBRID_opt",
+ "N": 40,
+ "COPIES": 3,
+ "baseE": {
+  "mean": 0.591346153846154,
+  "b5": 0.395,
+  "per": {
+   "W_DC_SF": 0.5,
+   "W_BRIS_RWAcademy": 0.625,
+   "W_LILLE_Nu": 0.5,
+   "W_MKE_ZGok": 0.575,
+   "W_DUS_Shining": 0.675,
+   "W_TKY1_BarbSF": 0.6,
+   "W_MNL_GPZeon": 0.725,
+   "W_JKT_Nu": 0.7,
+   "W_TOR_SF": 0.625,
+   "W_MEX_GPZeon": 0.35,
+   "W_MEL_SFVictory": 0.65,
+   "W_TKY3_Shining": 0.75,
+   "J_MobileFighter": 0.825,
+   "J_CharIBO": 0.425,
+   "J_NuAggro": 0.675,
+   "J_SFBlockers": 0.55,
+   "J_SFIBO_Chiba": 0.5,
+   "J_SFIBO_alt": 0.35,
+   "J_KshatriyaBanshee": 0.65,
+   "J_EFFBanshee": 0.525,
+   "J_BGOYW": 0.575,
+   "J_JusticeAerial": 0.675,
+   "J_Wing_Omiya": 0.425,
+   "J_MF_Kichijoji": 0.75,
+   "J_BGOYW_Chelmo": 0.425,
+   "J_MF_Machida": 0.75
+  }
+ },
+ "slot": [
+  {
+   "id": "EB01-032",
+   "name": "Gundam Ez8 High Mobility Custom",
+   "n": 2,
+   "loss": -0.029807692307692257
+  },
+  {
+   "id": "GD04-018",
+   "name": "Gundam Pharact",
+   "n": 1,
+   "loss": -0.028846153846153855
+  },
+  {
+   "id": "ST03-015",
+   "name": "Rewloola",
+   "n": 3,
+   "loss": -0.02836538461538457
+  },
+  {
+   "id": "GD05-085",
+   "name": "Amuro Ray",
+   "n": 3,
+   "loss": -0.024519230769230738
+  },
+  {
+   "id": "GD05-017",
+   "name": "Nu Gundam",
+   "n": 3,
+   "loss": -0.023557692307692224
+  },
+  {
+   "id": "GD05-086",
+   "name": "Kayra Su",
+   "n": 3,
+   "loss": -0.023076923076922995
+  },
+  {
+   "id": "ST03-008",
+   "name": "Zaku Ⅱ",
+   "n": 4,
+   "loss": -0.021634615384615252
+  },
+  {
+   "id": "GD06-105",
+   "name": "Grace Under Pressure",
+   "n": 4,
+   "loss": -0.021153846153846134
+  },
+  {
+   "id": "GD06-018",
+   "name": "Elpeo Ple's Qubeley Mk-Ⅱ",
+   "n": 1,
+   "loss": -0.02115384615384608
+  },
+  {
+   "id": "GD06-036",
+   "name": "Gundam Vidar",
+   "n": 3,
+   "loss": -0.01971153846153839
+  },
+  {
+   "id": "GD05-019",
+   "name": "Re-GZ",
+   "n": 3,
+   "loss": -0.01971153846153839
+  },
+  {
+   "id": "GD05-126",
+   "name": "Quiet Zero",
+   "n": 1,
+   "loss": -0.016346153846153788
+  },
+  {
+   "id": "GD06-090",
+   "name": "Vidar",
+   "n": 2,
+   "loss": -0.016346153846153733
+  },
+  {
+   "id": "GD01-030",
+   "name": "Rick Dom",
+   "n": 2,
+   "loss": -0.01538461538461533
+  },
+  {
+   "id": "GD05-110",
+   "name": "Darkness Finger",
+   "n": 3,
+   "loss": -0.00961538461538447
+  },
+  {
+   "id": "GD04-038",
+   "name": "Gundam Exia",
+   "n": 3,
+   "loss": -0.006730769230769151
+  },
+  {
+   "id": "GD05-029",
+   "name": "Kayra's Re-GZ",
+   "n": 4,
+   "loss": -0.004807692307692291
+  },
+  {
+   "id": "GD05-020",
+   "name": "Nu Gundam",
+   "n": 1,
+   "loss": -0.0028846153846152633
+  }
+ ],
+ "victims": [
+  [
+   "EB01-032",
+   2
+  ],
+  [
+   "GD04-018",
+   1
+  ]
+ ],
+ "res": [
+  {
+   "id": "GD06-048",
+   "name": "Helmwige Reincar",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.07788461538461533,
+   "db5": 0.1100000000000001
+  },
+  {
+   "id": "EB01-031",
+   "name": "Oggo",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.07211538461538447,
+   "db5": 0.10499999999999998
+  },
+  {
+   "id": "GD03-044",
+   "name": "Daughtress Flyer",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.0807692307692307,
+   "db5": 0.08500000000000008
+  },
+  {
+   "id": "ST03-007",
+   "name": "Zaku Ⅰ",
+   "lv": 1,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.06346153846153846,
+   "db5": 0.11499999999999999
+  },
+  {
+   "id": "GD01-062",
+   "name": "GOOhN",
+   "lv": 1,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.06346153846153846,
+   "db5": 0.11499999999999999
+  },
+  {
+   "id": "GD02-030",
+   "name": "Genoace",
+   "lv": 1,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.06346153846153846,
+   "db5": 0.11499999999999999
+  },
+  {
+   "id": "ST03-005",
+   "name": "Dra-C (Sleeves)",
+   "lv": 1,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.06346153846153846,
+   "db5": 0.11499999999999999
+  },
+  {
+   "id": "ST13-008",
+   "name": "Gundam Throne Zwei",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.07307692307692304,
+   "db5": 0.09499999999999992
+  },
+  {
+   "id": "ST08-005",
+   "name": "Messer Type-F02 Minelayer",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.07307692307692304,
+   "db5": 0.09499999999999992
+  },
+  {
+   "id": "GD01-033",
+   "name": "Gundam Deathscythe",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.07307692307692304,
+   "db5": 0.08999999999999997
+  },
+  {
+   "id": "GD01-031",
+   "name": "Gelgoog",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.07211538461538458,
+   "db5": 0.08499999999999996
+  },
+  {
+   "id": "EB01-026",
+   "name": "Gundam Astaroth Origin",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.07211538461538458,
+   "db5": 0.08499999999999996
+  },
+  {
+   "id": "GD03-031",
+   "name": "Gundam AGE-1 Flat",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.07211538461538458,
+   "db5": 0.08499999999999996
+  },
+  {
+   "id": "GD05-032",
+   "name": "Desultor",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.07211538461538458,
+   "db5": 0.08499999999999996
+  },
+  {
+   "id": "ST02-004",
+   "name": "Gundam Sandrock",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.07211538461538458,
+   "db5": 0.08499999999999996
+  },
+  {
+   "id": "ST08-003",
+   "name": "Messer (Type-F Naked) (Commander Type)",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.07211538461538458,
+   "db5": 0.08499999999999996
+  },
+  {
+   "id": "ST14-010",
+   "name": "Perfect Strike Gundam",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.07211538461538458,
+   "db5": 0.08499999999999996
+  },
+  {
+   "id": "GD04-040",
+   "name": "Schuzrum-Galluss",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.07115384615384612,
+   "db5": 0.08499999999999996
+  },
+  {
+   "id": "GD05-028",
+   "name": "Kayra's Jegan",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.06153846153846132,
+   "db5": 0.09999999999999998
+  },
+  {
+   "id": "GD05-047",
+   "name": "Exass",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.05865384615384617,
+   "db5": 0.10499999999999998
+  },
+  {
+   "id": "GD06-025",
+   "name": "Re-GZ",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.07211538461538447,
+   "db5": 0.07
+  },
+  {
+   "id": "GD03-048",
+   "name": "GFreD",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.06538461538461515,
+   "db5": 0.07999999999999996
+  },
+  {
+   "id": "GD02-039",
+   "name": "Haman Karn's Gaza C",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.06346153846153846,
+   "db5": 0.07999999999999996
+  },
+  {
+   "id": "GD01-026",
+   "name": "Char's Zaku Ⅱ",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.058653846153845834,
+   "db5": 0.08499999999999996
+  },
+  {
+   "id": "ST03-009",
+   "name": "Gouf",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.06538461538461537,
+   "db5": 0.07
+  },
+  {
+   "id": "GD05-023",
+   "name": "Re-GZ BWS",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.059615384615384404,
+   "db5": 0.07999999999999996
+  },
+  {
+   "id": "GD04-047",
+   "name": "Gundam Virtue",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.05673076923076903,
+   "db5": 0.07999999999999996
+  },
+  {
+   "id": "GD01-034",
+   "name": "Gundam Heavyarms",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.06153846153846143,
+   "db5": 0.07
+  },
+  {
+   "id": "GD06-020",
+   "name": "Hamma-Hamma",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "simplified",
+   "d": 0.06153846153846132,
+   "db5": 0.07
+  },
+  {
+   "id": "GD01-036",
+   "name": "Gouf",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.06153846153846121,
+   "db5": 0.06500000000000006
+  },
+  {
+   "id": "GD01-064",
+   "name": "DINN",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.06153846153846121,
+   "db5": 0.06500000000000006
+  },
+  {
+   "id": "GD02-052",
+   "name": "Guncannon (GQ)",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.06153846153846121,
+   "db5": 0.06500000000000006
+  },
+  {
+   "id": "GD04-031",
+   "name": "Heindree",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.06153846153846121,
+   "db5": 0.06500000000000006
+  },
+  {
+   "id": "GD05-043",
+   "name": "Neros Gundam",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.06153846153846121,
+   "db5": 0.06500000000000006
+  },
+  {
+   "id": "GD06-031",
+   "name": "Zssan",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.06153846153846121,
+   "db5": 0.06500000000000006
+  },
+  {
+   "id": "ST02-005",
+   "name": "Maganac",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.06153846153846121,
+   "db5": 0.06500000000000006
+  },
+  {
+   "id": "ST03-016",
+   "name": "Falmel",
+   "lv": 3,
+   "type": "BASE",
+   "fid": "full",
+   "d": 0.053846153846153655,
+   "db5": 0.07999999999999996
+  },
+  {
+   "id": "ST13-009",
+   "name": "Gundam Pharact",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.05865384615384617,
+   "db5": 0.06999999999999995
+  },
+  {
+   "id": "GD06-032",
+   "name": "Bellona",
+   "lv": 1,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.03749999999999998,
+   "db5": 0.1100000000000001
+  },
+  {
+   "id": "GD02-126",
+   "name": "Shuji's Hideout",
+   "lv": 3,
+   "type": "BASE",
+   "fid": "full",
+   "d": 0.04999999999999982,
+   "db5": 0.08500000000000008
+  },
+  {
+   "id": "ST06-005",
+   "name": "Red Gundam",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.053846153846153655,
+   "db5": 0.07500000000000001
+  },
+  {
+   "id": "GD06-030",
+   "name": "Mahiroo",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.05865384615384617,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "GD02-050",
+   "name": "Ga-Zowmn (Sleeves)",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.058653846153845834,
+   "db5": 0.06500000000000006
+  },
+  {
+   "id": "GD01-056",
+   "name": "Geara Doga (Sleeves)",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.054807692307692224,
+   "db5": 0.07
+  },
+  {
+   "id": "GD01-041",
+   "name": "Shenlong Gundam",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.05192307692307685,
+   "db5": 0.07500000000000001
+  },
+  {
+   "id": "GD02-028",
+   "name": "Abdul's Maganac",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.05673076923076914,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "GD02-029",
+   "name": "Gundam AGE-1 Normal",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.05673076923076914,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "GD02-032",
+   "name": "White Gundam",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.05673076923076914,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "GD03-027",
+   "name": "Z’Gok E",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.05673076923076914,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "GD06-044",
+   "name": "Core Top",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.05673076923076914,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "ST06-008",
+   "name": "Sugai's Gelgoog (GQ)",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.05673076923076914,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "ST07-006",
+   "name": "Gundam Dynames",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.05673076923076914,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "ST13-005",
+   "name": "GFreD",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.053846153846153766,
+   "db5": 0.06999999999999995
+  },
+  {
+   "id": "GD06-029",
+   "name": "Elpeo Ple's Qubeley Mk-Ⅱ",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.05096153846153828,
+   "db5": 0.07500000000000001
+  },
+  {
+   "id": "GD06-045",
+   "name": "Core Base",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.06249999999999989,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "GD02-042",
+   "name": "Gundam Ashtaron (MA Mode)",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.054807692307692224,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "GD01-051",
+   "name": "Kshatriya",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.05673076923076914,
+   "db5": 0.05999999999999994
+  },
+  {
+   "id": "GD03-047",
+   "name": "DINN (Commander Type)",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.05673076923076914,
+   "db5": 0.05999999999999994
+  },
+  {
+   "id": "GD06-040",
+   "name": "Gundam Mk-Ⅱ",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.05673076923076914,
+   "db5": 0.05999999999999994
+  },
+  {
+   "id": "ST06-006",
+   "name": "Red Gundam",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.05673076923076914,
+   "db5": 0.05999999999999994
+  },
+  {
+   "id": "ST13-003",
+   "name": "Bertigo",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.05673076923076914,
+   "db5": 0.05999999999999994
+  },
+  {
+   "id": "ST03-006",
+   "name": "Char's Zaku Ⅱ",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.05288461538461531,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "GD03-108",
+   "name": "How Many Miles to the Battlefield?",
+   "lv": 3,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": 0.053846153846153544,
+   "db5": 0.06000000000000005
+  },
+  {
+   "id": "GD02-031",
+   "name": "Gundam AGE-1 Titus",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.0461538461538461,
+   "db5": 0.07500000000000001
+  },
+  {
+   "id": "GD02-048",
+   "name": "Zaku Ⅲ (Sleeves)",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.03749999999999998,
+   "db5": 0.08999999999999997
+  },
+  {
+   "id": "GD01-043",
+   "name": "Rasid's Maganac",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.04711538461538456,
+   "db5": 0.06999999999999995
+  },
+  {
+   "id": "ST12-004",
+   "name": "Gundam Exia",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.04711538461538467,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "GD05-045",
+   "name": "Chaos Gundam (MA Mode)",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.04711538461538467,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "ST04-007",
+   "name": "Aegis Gundam (MA Mode)",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.04711538461538467,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "GD04-030",
+   "name": "Chuchu's Demi Trainer",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.05192307692307674,
+   "db5": 0.05499999999999999
+  },
+  {
+   "id": "GD03-028",
+   "name": "Auda's Maganac",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.049038461538461364,
+   "db5": 0.05499999999999999
+  },
+  {
+   "id": "GD03-024",
+   "name": "Hy-Gogg",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.05096153846153828,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "GD06-041",
+   "name": "Neo Lorrnoke's Windam (Jet Striker)",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.05288461538461531,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "ST06-007",
+   "name": "Ortega's Rick Dom (GQ)",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.04999999999999993,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "ST12-005",
+   "name": "GQuuuuuuX (Omega Psycommu)",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.04999999999999993,
+   "db5": 0.04999999999999993
+  },
+  {
+   "id": "GD05-025",
+   "name": "Demi Barding",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.044230769230769074,
+   "db5": 0.05999999999999994
+  },
+  {
+   "id": "GD02-021",
+   "name": "Gundam AGE-1 Normal",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.044230769230769074,
+   "db5": 0.05999999999999994
+  },
+  {
+   "id": "GD06-027",
+   "name": "Mashymre's Zssa",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.04807692307692313,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "ST03-003",
+   "name": "Geara Zulu",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.048076923076922906,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "GD01-042",
+   "name": "Duo's Leo",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.04038461538461524,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "GD01-061",
+   "name": "ZuOOT",
+   "lv": 1,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.03749999999999998,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "EB01-034",
+   "name": "Gundam Lfrith Ur",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.04230769230769216,
+   "db5": 0.05499999999999999
+  },
+  {
+   "id": "GD03-017",
+   "name": "Kämpfer",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.04230769230769216,
+   "db5": 0.05499999999999999
+  },
+  {
+   "id": "GD04-091",
+   "name": "Deux Murasame",
+   "lv": 4,
+   "type": "PILOT",
+   "fid": "full",
+   "d": 0.033653846153846034,
+   "db5": 0.07
+  },
+  {
+   "id": "GD06-085",
+   "name": "Gym Ghingnham",
+   "lv": 5,
+   "type": "PILOT",
+   "fid": "full",
+   "d": 0.04326923076923084,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "GD04-085",
+   "name": "Suletta Mercury",
+   "lv": 5,
+   "type": "PILOT",
+   "fid": "simplified",
+   "d": 0.04326923076923084,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "GD05-089",
+   "name": "Master Asia",
+   "lv": 6,
+   "type": "PILOT",
+   "fid": "full",
+   "d": 0.04038461538461524,
+   "db5": 0.05499999999999999
+  },
+  {
+   "id": "ST14-009",
+   "name": "Duel Gundam (Assault Shroud)",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.037499999999999756,
+   "db5": 0.05999999999999994
+  },
+  {
+   "id": "GD02-026",
+   "name": "Genoace Custom",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.03653846153846141,
+   "db5": 0.05999999999999994
+  },
+  {
+   "id": "ST04-006",
+   "name": "Aegis Gundam",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.0413461538461537,
+   "db5": 0.04999999999999993
+  },
+  {
+   "id": "ST02-002",
+   "name": "Wing Gundam (Bird Mode)",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.04038461538461524,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "GD01-032",
+   "name": "Gyan",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.04038461538461513,
+   "db5": 0.04999999999999993
+  },
+  {
+   "id": "GD06-109",
+   "name": "God of War Ghingnham",
+   "lv": 4,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": 0.032692307692307576,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "GD01-052",
+   "name": "Geara Zulu (Guards Type)",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.039423076923076894,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "GD01-059",
+   "name": "Zee Zulu",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.033653846153846034,
+   "db5": 0.05999999999999994
+  },
+  {
+   "id": "GD06-046",
+   "name": "Hyaku-Shiki",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.038461538461538325,
+   "db5": 0.04999999999999993
+  },
+  {
+   "id": "GD06-110",
+   "name": "Familial Love",
+   "lv": 2,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": 0.03461538461538449,
+   "db5": 0.05499999999999999
+  },
+  {
+   "id": "ST03-011",
+   "name": "Char Aznable",
+   "lv": 3,
+   "type": "PILOT",
+   "fid": "full",
+   "d": 0.026923076923076827,
+   "db5": 0.06999999999999995
+  },
+  {
+   "id": "GD01-037",
+   "name": "Gogg",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.03942307692307678,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "GD02-051",
+   "name": "01 Gundam",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.03942307692307678,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "GD03-046",
+   "name": "CGUE",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.03942307692307678,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "GD06-087",
+   "name": "Merrybell Gadget",
+   "lv": 4,
+   "type": "PILOT",
+   "fid": "full",
+   "d": 0.028846153846153633,
+   "db5": 0.06500000000000006
+  },
+  {
+   "id": "GD01-057",
+   "name": "Dreissen (Sleeves)",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.037499999999999756,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "GD05-040",
+   "name": "Abyss Gundam",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.034615384615384714,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "GD01-040",
+   "name": "Wing Gundam",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.031730769230768896,
+   "db5": 0.05499999999999999
+  },
+  {
+   "id": "ST13-016",
+   "name": "Sodon",
+   "lv": 2,
+   "type": "BASE",
+   "fid": "full",
+   "d": 0.028846153846153744,
+   "db5": 0.05999999999999994
+  },
+  {
+   "id": "GD01-111",
+   "name": "Battle of Aces",
+   "lv": 3,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": 0.028846153846153855,
+   "db5": 0.05499999999999999
+  },
+  {
+   "id": "GD06-026",
+   "name": "Stero's Mahiroo",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.033653846153846034,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "GD04-027",
+   "name": "Bigro",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.027884615384615175,
+   "db5": 0.05499999999999999
+  },
+  {
+   "id": "GD03-035",
+   "name": "GFreD",
+   "lv": 6,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.03461538461538449,
+   "db5": 0.039999999999999925
+  },
+  {
+   "id": "GD03-109",
+   "name": "Improved Technique",
+   "lv": 3,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": 0.03942307692307678,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD02-043",
+   "name": "Daughtress Weapon",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.03173076923076923,
+   "db5": 0.04499999999999993
+  },
+  {
+   "id": "GD05-020",
+   "name": "Nu Gundam",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.028846153846153744,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "ST08-014",
+   "name": "Valiant",
+   "lv": 2,
+   "type": "BASE",
+   "fid": "full",
+   "d": 0.02115384615384608,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "ST13-007",
+   "name": "Gyunei's Jagd Doga",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.033653846153846034,
+   "db5": 0.039999999999999925
+  },
+  {
+   "id": "GD02-044",
+   "name": "Daughtress Command",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.03557692307692284,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "ST14-012",
+   "name": "Banagher Links",
+   "lv": 4,
+   "type": "PILOT",
+   "fid": "auto",
+   "d": 0.027884615384615175,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "GD02-089",
+   "name": "Lalah Sune",
+   "lv": 3,
+   "type": "PILOT",
+   "fid": "auto",
+   "d": 0.02019230769230762,
+   "db5": 0.06499999999999995
+  },
+  {
+   "id": "GD06-113",
+   "name": "Unsanctioned Ordnance",
+   "lv": 5,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": 0.0249999999999998,
+   "db5": 0.05499999999999999
+  },
+  {
+   "id": "GD01-093",
+   "name": "Marida Cruz",
+   "lv": 4,
+   "type": "PILOT",
+   "fid": "full",
+   "d": 0.026923076923076827,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "ST13-012",
+   "name": "Suletta Mercury",
+   "lv": 4,
+   "type": "PILOT",
+   "fid": "full",
+   "d": 0.026923076923076827,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "EB01-066",
+   "name": "Reiji",
+   "lv": 4,
+   "type": "PILOT",
+   "fid": "auto",
+   "d": 0.026923076923076827,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "GD03-090",
+   "name": "Mikhail Kaminsky",
+   "lv": 4,
+   "type": "PILOT",
+   "fid": "auto",
+   "d": 0.026923076923076827,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "GD04-092",
+   "name": "Michael Trinity",
+   "lv": 4,
+   "type": "PILOT",
+   "fid": "auto",
+   "d": 0.026923076923076827,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "GD06-091",
+   "name": "Roux Louka",
+   "lv": 4,
+   "type": "PILOT",
+   "fid": "auto",
+   "d": 0.026923076923076827,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "ST02-010",
+   "name": "Heero Yuy",
+   "lv": 4,
+   "type": "PILOT",
+   "fid": "full",
+   "d": 0.026923076923076827,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "ST04-011",
+   "name": "Athrun Zala",
+   "lv": 4,
+   "type": "PILOT",
+   "fid": "full",
+   "d": 0.028846153846153744,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "EB01-065",
+   "name": "Meir Siva",
+   "lv": 4,
+   "type": "PILOT",
+   "fid": "auto",
+   "d": 0.028846153846153744,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "GD02-092",
+   "name": "Shagia Frost",
+   "lv": 4,
+   "type": "PILOT",
+   "fid": "auto",
+   "d": 0.028846153846153744,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "ST06-010",
+   "name": "Shuji Itō",
+   "lv": 4,
+   "type": "PILOT",
+   "fid": "auto",
+   "d": 0.028846153846153744,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "GD04-087",
+   "name": "Elan Ceres (Enhanced Person Number 5)",
+   "lv": 4,
+   "type": "PILOT",
+   "fid": "simplified",
+   "d": 0.028846153846153744,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "GD01-128",
+   "name": "Mining Asteroid Palau",
+   "lv": 2,
+   "type": "BASE",
+   "fid": "full",
+   "d": 0.021153846153845968,
+   "db5": 0.05999999999999994
+  },
+  {
+   "id": "ST13-011",
+   "name": "Haman Karn",
+   "lv": 6,
+   "type": "PILOT",
+   "fid": "full",
+   "d": 0.02596153846153826,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "ST03-010",
+   "name": "Full Frontal",
+   "lv": 6,
+   "type": "PILOT",
+   "fid": "full",
+   "d": 0.03076923076923077,
+   "db5": 0.039999999999999925
+  },
+  {
+   "id": "GD01-126",
+   "name": "Underground Desert Base",
+   "lv": 2,
+   "type": "BASE",
+   "fid": "full",
+   "d": 0.02019230769230751,
+   "db5": 0.05999999999999994
+  },
+  {
+   "id": "GD01-092",
+   "name": "M'Quve",
+   "lv": 3,
+   "type": "PILOT",
+   "fid": "auto",
+   "d": 0.02019230769230751,
+   "db5": 0.05999999999999994
+  },
+  {
+   "id": "GD01-039",
+   "name": "Dopp",
+   "lv": 1,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.0346153846153846,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD05-111",
+   "name": "Airframe​ Seizure",
+   "lv": 1,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": 0.019230769230769162,
+   "db5": 0.05999999999999994
+  },
+  {
+   "id": "GD02-025",
+   "name": "Gundam Heavyarms",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.028846153846153744,
+   "db5": 0.039999999999999925
+  },
+  {
+   "id": "ST03-013",
+   "name": "Close Combat",
+   "lv": 2,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": 0.02980769230769198,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "GD01-055",
+   "name": "BuCUE",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.03173076923076923,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD01-095",
+   "name": "Dearka Elthman",
+   "lv": 3,
+   "type": "PILOT",
+   "fid": "auto",
+   "d": 0.018269230769230593,
+   "db5": 0.05499999999999999
+  },
+  {
+   "id": "GD05-092",
+   "name": "Auel Neider",
+   "lv": 3,
+   "type": "PILOT",
+   "fid": "auto",
+   "d": 0.018269230769230593,
+   "db5": 0.05499999999999999
+  },
+  {
+   "id": "GD03-022",
+   "name": "Gundam Kyrios",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.03076923076923055,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD06-019",
+   "name": "Turn X",
+   "lv": 8,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.023076923076922884,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "EB01-038",
+   "name": "G-Self",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.0249999999999998,
+   "db5": 0.039999999999999925
+  },
+  {
+   "id": "GD02-035",
+   "name": "Police Zaku (Armored RRU Type)",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.017307692307692246,
+   "db5": 0.05499999999999999
+  },
+  {
+   "id": "GD05-087",
+   "name": "Lauda Neill",
+   "lv": 3,
+   "type": "PILOT",
+   "fid": "full",
+   "d": 0.017307692307692135,
+   "db5": 0.05499999999999999
+  },
+  {
+   "id": "ST13-004",
+   "name": "GX-Bit",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.022115384615384426,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "ST13-002",
+   "name": "Elmeth",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.022115384615384426,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "GD04-033",
+   "name": "Neo Zeong",
+   "lv": 9,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.02403846153846123,
+   "db5": 0.040000000000000036
+  },
+  {
+   "id": "GD03-034",
+   "name": "GQuuuuuuX (Omega Psycommu)",
+   "lv": 8,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.02403846153846123,
+   "db5": 0.040000000000000036
+  },
+  {
+   "id": "GD04-032",
+   "name": "Xavier's Gyan Hakuji-Packs (GQ)",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.028846153846153744,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD05-125",
+   "name": "Ra Cailum",
+   "lv": 3,
+   "type": "BASE",
+   "fid": "simplified",
+   "d": 0.021153846153845968,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "GD03-018",
+   "name": "Altron Gundam",
+   "lv": 8,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.023076923076922995,
+   "db5": 0.040000000000000036
+  },
+  {
+   "id": "GD01-023",
+   "name": "Char's Gelgoog",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.02019230769230762,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "GD06-084",
+   "name": "Elpeo Ple",
+   "lv": 3,
+   "type": "PILOT",
+   "fid": "full",
+   "d": 0.012499999999999956,
+   "db5": 0.05999999999999994
+  },
+  {
+   "id": "GD03-026",
+   "name": "Gundam Dynames",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.0249999999999998,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "ST14-007",
+   "name": "Full Armor Unicorn Gundam (Unicorn Mode)",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.0249999999999998,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "GD01-116",
+   "name": "Stealth Stratagem",
+   "lv": 2,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": 0.017307692307692135,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "GD01-028",
+   "name": "Gundam Sandrock",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.024038461538461453,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "GD02-024",
+   "name": "Red Gundam",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.024038461538461453,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "GD05-031",
+   "name": "Guel's Dilanza",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.024038461538461453,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "GD01-027",
+   "name": "Big Zam",
+   "lv": 7,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.028846153846153633,
+   "db5": 0.025000000000000022
+  },
+  {
+   "id": "GD05-030",
+   "name": "Michaelis",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.016346153846153566,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "ST13-006",
+   "name": "Gundam Aerial",
+   "lv": 6,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.021153846153845968,
+   "db5": 0.039999999999999925
+  },
+  {
+   "id": "GD02-041",
+   "name": "Sugai's Gelgoog (GQ)",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.021153846153845968,
+   "db5": 0.039999999999999925
+  },
+  {
+   "id": "GD06-021",
+   "name": "Turn X (Top)",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.018269230769230593,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "GD01-115",
+   "name": "Zeon Remnant Forces",
+   "lv": 2,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": 0.023076923076923106,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "ST02-001",
+   "name": "Wing Gundam",
+   "lv": 6,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.027884615384615175,
+   "db5": 0.025000000000000022
+  },
+  {
+   "id": "GD05-033",
+   "name": "Master Gundam",
+   "lv": 7,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.0249999999999998,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD04-048",
+   "name": "Hambrabi (GQ)",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.0249999999999998,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD02-049",
+   "name": "Daughtress",
+   "lv": 1,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.017307692307692246,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "GD06-126",
+   "name": "Skipjack-class Warship",
+   "lv": 3,
+   "type": "BASE",
+   "fid": "full",
+   "d": 0.017307692307692135,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "GD04-018",
+   "name": "Gundam Pharact",
+   "lv": 6,
+   "type": "UNIT",
+   "fid": "simplified",
+   "d": 0.022115384615384537,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "ST14-008",
+   "name": "Gundam Heavyarms Custom (EW)",
+   "lv": 6,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.023076923076922995,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD04-109",
+   "name": "Overwhelming Pressure",
+   "lv": 5,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": 0.023076923076922884,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD02-027",
+   "name": "Gundam AGE-1 Titus",
+   "lv": 7,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.022115384615384426,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD06-124",
+   "name": "Aspite",
+   "lv": 3,
+   "type": "BASE",
+   "fid": "full",
+   "d": 0.016346153846153788,
+   "db5": 0.040000000000000036
+  },
+  {
+   "id": "GD04-124",
+   "name": "9th Tactical Testing Sector",
+   "lv": 3,
+   "type": "BASE",
+   "fid": "simplified",
+   "d": 0.016346153846153788,
+   "db5": 0.040000000000000036
+  },
+  {
+   "id": "GD03-043",
+   "name": "Messer Type-F02",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.016346153846153677,
+   "db5": 0.039999999999999925
+  },
+  {
+   "id": "GD06-086",
+   "name": "Mashymre Cello",
+   "lv": 3,
+   "type": "PILOT",
+   "fid": "simplified",
+   "d": 0.015384615384615219,
+   "db5": 0.040000000000000036
+  },
+  {
+   "id": "GD01-125",
+   "name": "Zanzibar",
+   "lv": 4,
+   "type": "BASE",
+   "fid": "auto",
+   "d": 0.006730769230769207,
+   "db5": 0.05499999999999999
+  },
+  {
+   "id": "GD04-019",
+   "name": "GN Armor Type-D (Trans-Am)",
+   "lv": 6,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.016346153846153788,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "GD06-123",
+   "name": "Endra",
+   "lv": 4,
+   "type": "BASE",
+   "fid": "full",
+   "d": 0.008653846153846123,
+   "db5": 0.04999999999999999
+  },
+  {
+   "id": "ST03-002",
+   "name": "Angelo's Geara Zulu",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.013461538461538303,
+   "db5": 0.039999999999999925
+  },
+  {
+   "id": "GD01-025",
+   "name": "Gundam Deathscythe",
+   "lv": 6,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.019230769230769162,
+   "db5": 0.025000000000000022
+  },
+  {
+   "id": "GD01-029",
+   "name": "Shenlong Gundam",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.019230769230769162,
+   "db5": 0.025000000000000022
+  },
+  {
+   "id": "ST07-008",
+   "name": "Gundam Kyrios (Flight Mode)",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.01923076923076894,
+   "db5": 0.025000000000000022
+  },
+  {
+   "id": "GD05-018",
+   "name": "Gundam Calibarn",
+   "lv": 8,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.016346153846153677,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD02-125",
+   "name": "Gwadan",
+   "lv": 4,
+   "type": "BASE",
+   "fid": "full",
+   "d": 0.013461538461538414,
+   "db5": 0.03500000000000003
+  },
+  {
+   "id": "ST07-005",
+   "name": "Gundam Dynames",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.012499999999999734,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "GD04-024",
+   "name": "Gundam Aerial Rebuild",
+   "lv": 7,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.017307692307692246,
+   "db5": 0.025000000000000022
+  },
+  {
+   "id": "GD03-127",
+   "name": "Jachin Due",
+   "lv": 6,
+   "type": "BASE",
+   "fid": "auto",
+   "d": 0.01442307692307676,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD05-126",
+   "name": "Quiet Zero",
+   "lv": 6,
+   "type": "BASE",
+   "fid": "full",
+   "d": 0.01442307692307676,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD03-125",
+   "name": "Peacemillion",
+   "lv": 6,
+   "type": "BASE",
+   "fid": "simplified",
+   "d": 0.01442307692307676,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "ST08-002",
+   "name": "Ξ Gundam",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.01923076923076905,
+   "db5": 0.020000000000000018
+  },
+  {
+   "id": "GD01-106",
+   "name": "Fortress Defense",
+   "lv": 5,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": 0.016346153846153788,
+   "db5": 0.025000000000000022
+  },
+  {
+   "id": "GD05-022",
+   "name": "Gundam Schwarzette",
+   "lv": 6,
+   "type": "UNIT",
+   "fid": "simplified",
+   "d": 0.016346153846153788,
+   "db5": 0.025000000000000022
+  },
+  {
+   "id": "GD06-024",
+   "name": "R-Jarja",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.02019230769230762,
+   "db5": 0.015000000000000013
+  },
+  {
+   "id": "ST02-003",
+   "name": "Gundam Heavyarms",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.00961538461538447,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "ST13-001",
+   "name": "Qubeley",
+   "lv": 7,
+   "type": "UNIT",
+   "fid": "simplified",
+   "d": 0.019230769230769162,
+   "db5": 0.014999999999999958
+  },
+  {
+   "id": "GD03-040",
+   "name": "Gundam Virsago & Gundam Ashtaron",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.008653846153846012,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "ST03-004",
+   "name": "Gaza D (Sleeves)",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.018269230769230593,
+   "db5": 0.015000000000000013
+  },
+  {
+   "id": "ST06-003",
+   "name": "Gaia's Rick Dom (GQ)",
+   "lv": 2,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.018269230769230593,
+   "db5": 0.015000000000000013
+  },
+  {
+   "id": "GD04-089",
+   "name": "Nena Trinity",
+   "lv": 4,
+   "type": "PILOT",
+   "fid": "auto",
+   "d": 0.012499999999999956,
+   "db5": 0.025000000000000022
+  },
+  {
+   "id": "GD02-037",
+   "name": "Gundam Virsago",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.017307692307692246,
+   "db5": 0.015000000000000013
+  },
+  {
+   "id": "GD02-109",
+   "name": "Undying Persistence",
+   "lv": 4,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": 0.013461538461538303,
+   "db5": 0.020000000000000018
+  },
+  {
+   "id": "EB01-024",
+   "name": "GQuuuuuuX (Omega Psycommu)",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.014423076923076983,
+   "db5": 0.014999999999999958
+  },
+  {
+   "id": "GD03-126",
+   "name": "Cyclops Team",
+   "lv": 4,
+   "type": "BASE",
+   "fid": "full",
+   "d": 0.006730769230768985,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "ST02-013",
+   "name": "Peaceful Timbre",
+   "lv": 4,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": 0.005769230769230749,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD01-024",
+   "name": "Wing Gundam Zero",
+   "lv": 8,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.010576923076922928,
+   "db5": 0.019999999999999907
+  },
+  {
+   "id": "GD02-123",
+   "name": "Sodon",
+   "lv": 3,
+   "type": "BASE",
+   "fid": "full",
+   "d": -1.1102230246251565e-16,
+   "db5": 0.040000000000000036
+  },
+  {
+   "id": "GD03-021",
+   "name": "Gundam Deathscythe Hell",
+   "lv": 8,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.006730769230769096,
+   "db5": 0.025000000000000022
+  },
+  {
+   "id": "ST03-012",
+   "name": "Indignation",
+   "lv": 2,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": -0.0038461538461539435,
+   "db5": 0.04500000000000004
+  },
+  {
+   "id": "GD06-111",
+   "name": "Steely Loyalty",
+   "lv": 5,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": 0.008653846153846012,
+   "db5": 0.020000000000000018
+  },
+  {
+   "id": "GD04-086",
+   "name": "Garma Zabi",
+   "lv": 3,
+   "type": "PILOT",
+   "fid": "full",
+   "d": -2.220446049250313e-16,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "GD01-105",
+   "name": "Citizens, Take a Stand!",
+   "lv": 4,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": 0.0019230769230768052,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD04-023",
+   "name": "Gundam Kyrios (Tail Booster)",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.011538461538461497,
+   "db5": 0.009999999999999953
+  },
+  {
+   "id": "GD01-108",
+   "name": "Strategic Arms",
+   "lv": 6,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": -0.0009615384615385691,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "ST02-015",
+   "name": "Saint Gabriel Institute",
+   "lv": 2,
+   "type": "BASE",
+   "fid": "full",
+   "d": -0.004807692307692402,
+   "db5": 0.040000000000000036
+  },
+  {
+   "id": "GD06-022",
+   "name": "Merrybell's Bandit",
+   "lv": 6,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.012499999999999956,
+   "db5": 0.0050000000000000044
+  },
+  {
+   "id": "GD03-106",
+   "name": "M.A.V. Tactics",
+   "lv": 6,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": -2.220446049250313e-16,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD03-029",
+   "name": "Gundam Heavyarms Custom",
+   "lv": 6,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.00480769230769218,
+   "db5": 0.020000000000000018
+  },
+  {
+   "id": "GD05-036",
+   "name": "Haow Gundam",
+   "lv": 6,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.011538461538461497,
+   "db5": 0.0050000000000000044
+  },
+  {
+   "id": "GD01-107",
+   "name": "First Contact",
+   "lv": 3,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": 0.0038461538461537215,
+   "db5": 0.020000000000000018
+  },
+  {
+   "id": "GD06-035",
+   "name": "Zeta Gundam",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.010576923076922928,
+   "db5": 0.0050000000000000044
+  },
+  {
+   "id": "EB01-030",
+   "name": "Big-Rang",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.0028846153846153744,
+   "db5": 0.020000000000000018
+  },
+  {
+   "id": "GD06-106",
+   "name": "Presence Detected",
+   "lv": 4,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": 0.006730769230769096,
+   "db5": 0.009999999999999953
+  },
+  {
+   "id": "GD05-106",
+   "name": "Mutual Attraction",
+   "lv": 3,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": 0.0038461538461538325,
+   "db5": 0.014999999999999958
+  },
+  {
+   "id": "GD04-017",
+   "name": "Zeong",
+   "lv": 6,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.0038461538461537215,
+   "db5": 0.014999999999999958
+  },
+  {
+   "id": "GD03-111",
+   "name": "Infiltrator Present",
+   "lv": 3,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": -0.0038461538461539435,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "ST04-014",
+   "name": "The Magic Bullet of Dusk",
+   "lv": 3,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": -0.0038461538461539435,
+   "db5": 0.02999999999999997
+  },
+  {
+   "id": "GD03-107",
+   "name": "Over the River and Through the Woods",
+   "lv": 4,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": -2.220446049250313e-16,
+   "db5": 0.019999999999999907
+  },
+  {
+   "id": "GD01-110",
+   "name": "Rasid's Orders",
+   "lv": 3,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": -0.0028846153846153744,
+   "db5": 0.025000000000000022
+  },
+  {
+   "id": "GD01-044",
+   "name": "Kshatriya",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.011538461538461497,
+   "db5": -0.0050000000000000044
+  },
+  {
+   "id": "EB01-080",
+   "name": "Sturm Faust",
+   "lv": 4,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": -0.0009615384615385691,
+   "db5": 0.019999999999999907
+  },
+  {
+   "id": "ST02-012",
+   "name": "Simultaneous Fire",
+   "lv": 4,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": -0.0009615384615385691,
+   "db5": 0.019999999999999907
+  },
+  {
+   "id": "ST03-014",
+   "name": "The Blue Giant",
+   "lv": 4,
+   "type": "COMMAND",
+   "fid": "simplified",
+   "d": -0.0009615384615385691,
+   "db5": 0.019999999999999907
+  },
+  {
+   "id": "GD04-105",
+   "name": "Encounter",
+   "lv": 5,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": 0.0028846153846152633,
+   "db5": 0.009999999999999953
+  },
+  {
+   "id": "GD04-022",
+   "name": "Kikeroga (MS Mode) (GQ)",
+   "lv": 7,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.0028846153846152633,
+   "db5": 0.009999999999999953
+  },
+  {
+   "id": "GD03-036",
+   "name": "Ξ Gundam (Flight Form)",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.007692307692307554,
+   "db5": 0
+  },
+  {
+   "id": "GD06-108",
+   "name": "On Edge",
+   "lv": 4,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": -2.220446049250313e-16,
+   "db5": 0.014999999999999958
+  },
+  {
+   "id": "GD02-106",
+   "name": "White Wolf",
+   "lv": 3,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": -0.01153846153846172,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "GD01-113",
+   "name": "The Desert Tiger",
+   "lv": 3,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": -0.012500000000000067,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "GD06-107",
+   "name": "Wheel Spoke Formation",
+   "lv": 3,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": -0.012500000000000067,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "ST06-011",
+   "name": "Ruthless Tactics",
+   "lv": 3,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": -0.012500000000000067,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "ST08-012",
+   "name": "Words for Hathaway",
+   "lv": 3,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": -0.012500000000000067,
+   "db5": 0.034999999999999976
+  },
+  {
+   "id": "ST13-013",
+   "name": "I'm a Newtype",
+   "lv": 4,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": -0.0019230769230770273,
+   "db5": 0.009999999999999953
+  },
+  {
+   "id": "GD01-038",
+   "name": "Adzam",
+   "lv": 5,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.0009615384615383471,
+   "db5": 0
+  },
+  {
+   "id": "GD02-108",
+   "name": "That One Looks A Lot Stronger?",
+   "lv": 3,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": -0.012500000000000178,
+   "db5": 0.019999999999999907
+  },
+  {
+   "id": "ST06-012",
+   "name": "Schoolgirl and Smuggler",
+   "lv": 1,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": -0.012500000000000178,
+   "db5": 0.019999999999999907
+  },
+  {
+   "id": "ST07-014",
+   "name": "Tactical Visionary",
+   "lv": 1,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": -0.012500000000000178,
+   "db5": 0.019999999999999907
+  },
+  {
+   "id": "GD01-109",
+   "name": "The Path to Victory or Defeat",
+   "lv": 5,
+   "type": "COMMAND",
+   "fid": "auto",
+   "d": -0.01057692307692315,
+   "db5": 0.015000000000000013
+  },
+  {
+   "id": "GD06-018",
+   "name": "Elpeo Ple's Qubeley Mk-Ⅱ",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "simplified",
+   "d": -0.009615384615384692,
+   "db5": 0.0050000000000000044
+  },
+  {
+   "id": "GD03-105",
+   "name": "Bridge Crew",
+   "lv": 4,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": -0.018269230769230926,
+   "db5": 0.0050000000000000044
+  },
+  {
+   "id": "GD01-112",
+   "name": "Extreme Hatred",
+   "lv": 6,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": -0.028846153846154077,
+   "db5": 0
+  },
+  {
+   "id": "GD02-104",
+   "name": "Turning Point of History",
+   "lv": 1,
+   "type": "COMMAND",
+   "fid": "full",
+   "d": -0.045192307692307754,
+   "db5": -0.0050000000000000044
+  }
+ ],
+ "conf": [
+  {
+   "id": "GD03-044",
+   "name": "Daughtress Flyer",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.0807692307692307,
+   "db5": 0.08500000000000008,
+   "cd": 0.01995192307692306,
+   "cdb5": 0.0062500000000002
+  },
+  {
+   "id": "ST13-008",
+   "name": "Gundam Throne Zwei",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.07307692307692304,
+   "db5": 0.09499999999999992,
+   "cd": 0.0036057692307691624,
+   "cdb5": 0.007500000000000118
+  },
+  {
+   "id": "ST08-005",
+   "name": "Messer Type-F02 Minelayer",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.07307692307692304,
+   "db5": 0.09499999999999992,
+   "cd": 0.0036057692307691624,
+   "cdb5": 0.007500000000000118
+  },
+  {
+   "id": "GD01-033",
+   "name": "Gundam Deathscythe",
+   "lv": 4,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.07307692307692304,
+   "db5": 0.08999999999999997,
+   "cd": -0.004086538461538725,
+   "cdb5": 0.011250000000000204
+  },
+  {
+   "id": "GD06-048",
+   "name": "Helmwige Reincar",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.07788461538461533,
+   "db5": 0.1100000000000001,
+   "cd": -0.009375000000000133,
+   "cdb5": 0.0050000000000001155
+  },
+  {
+   "id": "ST03-007",
+   "name": "Zaku Ⅰ",
+   "lv": 1,
+   "type": "UNIT",
+   "fid": "full",
+   "d": 0.06346153846153846,
+   "db5": 0.11499999999999999,
+   "cd": -0.012500000000000289,
+   "cdb5": 1.1102230246251565e-16
+  },
+  {
+   "id": "GD01-062",
+   "name": "GOOhN",
+   "lv": 1,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.06346153846153846,
+   "db5": 0.11499999999999999,
+   "cd": -0.012500000000000289,
+   "cdb5": 1.1102230246251565e-16
+  },
+  {
+   "id": "GD02-030",
+   "name": "Genoace",
+   "lv": 1,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.06346153846153846,
+   "db5": 0.11499999999999999,
+   "cd": -0.012500000000000289,
+   "cdb5": 1.1102230246251565e-16
+  },
+  {
+   "id": "ST03-005",
+   "name": "Dra-C (Sleeves)",
+   "lv": 1,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.06346153846153846,
+   "db5": 0.11499999999999999,
+   "cd": -0.012740384615384848,
+   "cdb5": -0.0012499999999999178
+  },
+  {
+   "id": "EB01-031",
+   "name": "Oggo",
+   "lv": 3,
+   "type": "UNIT",
+   "fid": "auto",
+   "d": 0.07211538461538447,
+   "db5": 0.10499999999999998,
+   "cd": -0.01153846153846172,
+   "cdb5": -0.00374999999999992
+  }
+ ]
+}

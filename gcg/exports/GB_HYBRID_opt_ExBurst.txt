@@ -1,0 +1,55 @@
+GB_HYBRID_opt | piloting style: hyper
+MAIN DECK (50) — paste only this section into ExBurst
+2 x ST02-016
+1 x ST03-016
+1 x GD01-100
+4 x GD06-105
+4 x GD05-085
+1 x GD05-086
+3 x GD06-085
+3 x ST01-010
+3 x GD01-008
+3 x GD01-030
+4 x GD04-031
+1 x GD05-017
+2 x GD05-019
+2 x GD05-020
+4 x GD05-027
+1 x GD05-028
+2 x GD06-019
+1 x GD06-021
+3 x ST01-001
+4 x ST03-008
+1 x ST03-009
+
+RESOURCE DECK (10, separate): 10 x R-001
+STARTING TOKENS: EXB-001 EX Base; EXR-001 EX Resource (Player Two)
+UNIT TOKENS this list can create: Tallgeese, Leo, Char's Zaku Ⅱ, Gundam Calibarn, Gundam Aerial Rebuild, Turn X (Arms), Turn X (Legs), Zaku Ⅱ
+
+READABLE LIST
+UNIT (31)
+  3x GD01-008 Guntank
+  3x GD01-030 Rick Dom
+  4x GD04-031 Heindree
+  1x GD05-017 Nu Gundam
+  2x GD05-019 Re-GZ
+  2x GD05-020 Nu Gundam
+  4x GD05-027 Jegan
+  1x GD05-028 Kayra's Jegan
+  2x GD06-019 Turn X
+  1x GD06-021 Turn X (Top)
+  3x ST01-001 Gundam
+  4x ST03-008 Zaku Ⅱ
+  1x ST03-009 Gouf
+PILOT (11)
+  4x GD05-085 Amuro Ray
+  1x GD05-086 Kayra Su
+  3x GD06-085 Gym Ghingnham
+  3x ST01-010 Amuro Ray
+COMMAND (5)
+  1x GD01-100 A Show of Resolve
+  4x GD06-105 Grace Under Pressure
+BASE (3)
+  2x ST02-016 Corsica Base
+  1x ST03-016 Falmel
+

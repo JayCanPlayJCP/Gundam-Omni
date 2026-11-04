@@ -1,0 +1,45 @@
+GB_GA2 | piloting style: hyper
+MAIN DECK (50) — paste only this section into ExBurst
+2 x ST03-016
+4 x GD05-105
+3 x GD05-085
+4 x ST01-010
+4 x GD01-008
+3 x GD01-013
+3 x GD01-019
+4 x GD01-030
+3 x GD05-017
+3 x GD05-019
+4 x GD05-027
+1 x GD06-025
+2 x GD06-031
+3 x ST01-001
+3 x ST03-007
+4 x ST03-008
+
+RESOURCE DECK (10, separate): 10 x R-001
+STARTING TOKENS: EXB-001 EX Base; EXR-001 EX Resource (Player Two)
+UNIT TOKENS this list can create: Char's Zaku Ⅱ
+
+READABLE LIST
+UNIT (37)
+  4x GD01-008 Guntank
+  3x GD01-013 Gundam
+  3x GD01-019 Byarlant Custom
+  4x GD01-030 Rick Dom
+  3x GD05-017 Nu Gundam
+  3x GD05-019 Re-GZ
+  4x GD05-027 Jegan
+  1x GD06-025 Re-GZ
+  2x GD06-031 Zssan
+  3x ST01-001 Gundam
+  3x ST03-007 Zaku Ⅰ
+  4x ST03-008 Zaku Ⅱ
+PILOT (7)
+  3x GD05-085 Amuro Ray
+  4x ST01-010 Amuro Ray
+COMMAND (4)
+  4x GD05-105 Exclusively Defense-Oriented Policy
+BASE (2)
+  2x ST03-016 Falmel
+

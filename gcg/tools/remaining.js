@@ -1,0 +1,4 @@
+const eng=require('../engine');const EFX=require('../effects');
+const C=eng.CARDS;const col=process.argv[2];
+for(const id in C){const d=C[id]; if(id.startsWith('T-')||EFX[id])continue; if(d.color!==col||!['UNIT','PILOT','COMMAND','BASE'].includes(d.type))continue;
+ console.log(`${id}|${d.type[0]}|L${d.lv}c${d.cost}|${d.ap}/${d.hp}|${d.name}|${(d.traits||[]).join(',')}|lk:${(d.links||[]).map(l=>l.name||('('+l.trait+')')).join(',')}|${d.text.replace(/ \/  \/ \([^)]*\)/g,'').replace(/\(When this Unit's attack destroys[^)]*\)|\(This Unit can't be blocked\.\)|\(Rest this Unit to change the attack target to it\.\)|\(While this Unit is attacking, it deals damage before the enemy Unit\.\)|\(At the end of your turn, this Unit recovers the specified number of HP\.\)|\(Damage to Shields by an attack is dealt to the first 2 cards simultaneously\.\)/g,'')}`);}

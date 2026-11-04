@@ -1,0 +1,90 @@
+{
+ "W_DC_SF": {
+  "worst": 0.65,
+  "style": "control"
+ },
+ "W_BRIS_RWAcademy": {
+  "worst": 0.4766666666666667,
+  "style": "balanced"
+ },
+ "W_LILLE_Nu": {
+  "worst": 0.56,
+  "style": "aggro"
+ },
+ "W_MKE_ZGok": {
+  "worst": 0.5066666666666667,
+  "style": "tempo"
+ },
+ "W_DUS_Shining": {
+  "worst": 0.7133333333333334,
+  "style": "balanced"
+ },
+ "W_TKY1_BarbSF": {
+  "worst": 0.5566666666666666,
+  "style": "aggro"
+ },
+ "W_MNL_GPZeon": {
+  "worst": 0.5533333333333333,
+  "style": "tempo"
+ },
+ "W_JKT_Nu": {
+  "worst": 0.6833333333333333,
+  "style": "tempo"
+ },
+ "W_TOR_SF": {
+  "worst": 0.59,
+  "style": "control"
+ },
+ "W_MEX_GPZeon": {
+  "worst": 0.42333333333333334,
+  "style": "aggro"
+ },
+ "W_MEL_SFVictory": {
+  "worst": 0.4666666666666667,
+  "style": "control"
+ },
+ "W_TKY3_Shining": {
+  "worst": 0.73,
+  "style": "balanced"
+ },
+ "J_MobileFighter": {
+  "worst": 0.7833333333333333,
+  "style": "control"
+ },
+ "J_CharIBO": {
+  "worst": 0.4033333333333333,
+  "style": "aggro"
+ },
+ "J_NuAggro": {
+  "worst": 0.66,
+  "style": "balanced"
+ },
+ "J_SFBlockers": {
+  "worst": 0.6233333333333333,
+  "style": "control"
+ },
+ "J_SFIBO_Chiba": {
+  "worst": 0.49,
+  "style": "aggro"
+ },
+ "J_SFIBO_alt": {
+  "worst": 0.48333333333333334,
+  "style": "tempo"
+ },
+ "J_KshatriyaBanshee": {
+  "worst": 0.5933333333333334,
+  "style": "tempo"
+ },
+ "J_EFFBanshee": {
+  "worst": 0.5466666666666666,
+  "style": "aggro"
+ },
+ "J_BGOYW": {
+  "worst": 0.47333333333333333,
+  "style": "hyper"
+ },
+ "J_JusticeAerial": {
+  "worst": 0.6566666666666666,
+  "style": "tempo"
+ }
+}

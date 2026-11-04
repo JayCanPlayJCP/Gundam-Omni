@@ -1,0 +1,3 @@
+const C=require('../cards.json');const E=require('../effects');const t=process.argv[2];const w=+(process.argv[3]||120);
+const m=Object.values(C).filter(c=>(c.traits||[]).includes(t)&&['Green','Blue','Red'].includes(c.color)&&['UNIT','PILOT','COMMAND','BASE'].includes(c.type)).sort((a,b)=>a.color.localeCompare(b.color)||a.lv-b.lv);
+for(const c of m)console.log(c.id,c.color[0]+c.type[0],'L'+c.lv+'c'+c.cost,c.ap+'/'+c.hp,E[c.id]?'+':'-',c.name.slice(0,26).padEnd(26),c.text.replace(/\([^)]*specified[^)]*\)|\(This Unit can.t be blocked\.\)|\(Rest this Unit to change the attack target to it\.\)|\(While this Unit is attacking[^)]*\)/g,'').replace(/ \/  \/ /g,' / ').slice(0,w));

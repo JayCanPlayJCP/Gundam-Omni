@@ -1,0 +1,51 @@
+GR_HYBRID_opt | piloting style: hyper
+MAIN DECK (50) — paste only this section into ExBurst
+1 x GD05-126
+3 x ST03-015
+3 x GD05-110
+4 x GD06-105
+3 x GD05-085
+3 x GD05-086
+2 x GD06-090
+2 x EB01-032
+2 x GD01-030
+1 x GD04-018
+3 x GD04-038
+3 x GD05-017
+3 x GD05-019
+1 x GD05-020
+4 x GD05-027
+4 x GD05-029
+1 x GD06-018
+3 x GD06-036
+4 x ST03-008
+
+RESOURCE DECK (10, separate): 10 x R-001
+STARTING TOKENS: EXB-001 EX Base; EXR-001 EX Resource (Player Two)
+UNIT TOKENS this list can create: Gundnode, Gundam Calibarn, Gundam Aerial Rebuild
+
+READABLE LIST
+UNIT (31)
+  2x EB01-032 Gundam Ez8 High Mobility Custom
+  2x GD01-030 Rick Dom
+  1x GD04-018 Gundam Pharact
+  3x GD04-038 Gundam Exia
+  3x GD05-017 Nu Gundam
+  3x GD05-019 Re-GZ
+  1x GD05-020 Nu Gundam
+  4x GD05-027 Jegan
+  4x GD05-029 Kayra's Re-GZ
+  1x GD06-018 Elpeo Ple's Qubeley Mk-Ⅱ
+  3x GD06-036 Gundam Vidar
+  4x ST03-008 Zaku Ⅱ
+PILOT (8)
+  3x GD05-085 Amuro Ray
+  3x GD05-086 Kayra Su
+  2x GD06-090 Vidar
+COMMAND (7)
+  3x GD05-110 Darkness Finger
+  4x GD06-105 Grace Under Pressure
+BASE (4)
+  1x GD05-126 Quiet Zero
+  3x ST03-015 Rewloola
+

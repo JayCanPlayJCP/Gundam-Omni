@@ -1,0 +1,52 @@
+BGNU_opt2 | piloting style: hyper
+MAIN DECK (50) — paste only this section into ExBurst
+1 x ST01-015
+2 x ST02-016
+2 x ST03-016
+4 x GD05-085
+4 x GD05-086
+4 x ST01-010
+1 x GD01-001
+1 x GD01-006
+3 x GD01-008
+4 x GD01-030
+1 x GD04-016
+2 x GD05-017
+2 x GD05-019
+2 x GD05-020
+4 x GD05-027
+4 x GD05-029
+1 x GD06-009
+3 x ST01-001
+4 x ST03-008
+1 x ST03-009
+
+RESOURCE DECK (10, separate): 10 x R-001
+STARTING TOKENS: EXB-001 EX Base; EXR-001 EX Resource (Player Two)
+UNIT TOKENS this list can create: Gundam, Guncannon, Guntank, Tallgeese, Leo, Char's Zaku Ⅱ, Zaku Ⅱ
+
+READABLE LIST
+UNIT (33)
+  1x GD01-001 Gundam
+  1x GD01-006 Delta Plus
+  3x GD01-008 Guntank
+  4x GD01-030 Rick Dom
+  1x GD04-016 Zoloat (League Militaire)
+  2x GD05-017 Nu Gundam
+  2x GD05-019 Re-GZ
+  2x GD05-020 Nu Gundam
+  4x GD05-027 Jegan
+  4x GD05-029 Kayra's Re-GZ
+  1x GD06-009 GM Custom
+  3x ST01-001 Gundam
+  4x ST03-008 Zaku Ⅱ
+  1x ST03-009 Gouf
+PILOT (12)
+  4x GD05-085 Amuro Ray
+  4x GD05-086 Kayra Su
+  4x ST01-010 Amuro Ray
+BASE (5)
+  1x ST01-015 White Base
+  2x ST02-016 Corsica Base
+  2x ST03-016 Falmel
+

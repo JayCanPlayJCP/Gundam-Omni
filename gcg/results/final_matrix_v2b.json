@@ -1,0 +1,502 @@
+{
+ "GR_MERCURY_opt:hyper": {
+  "deck": "GR_MERCURY_opt",
+  "style": "hyper",
+  "mean": 0.49540909090909097,
+  "min": 0.229,
+  "n75": 0,
+  "nOpp": 22,
+  "hand6": 1.7382109370499754,
+  "low01": 0.4680239616837809,
+  "conv2": 0.5150502411297432,
+  "first": 0.5859090909090909,
+  "second": 0.4049090909090909,
+  "turns": 13.816772727272728,
+  "per": {
+   "W_DC_SF": {
+    "n": 1000,
+    "win": 551,
+    "loss": 449,
+    "draw": 0,
+    "wr": 0.551,
+    "ci95": [
+     0.5200345669542098,
+     0.5815750893899785
+    ],
+    "firstWR": 0.634,
+    "secondWR": 0.468,
+    "avgTurns": 17.939,
+    "avgHandAt6plus": 1.7263638960297059,
+    "pctMainPhases6plusHand0to1": 0.48814624393030565,
+    "reachedOpp2Shields": 0.839,
+    "twoShieldConversion": 0.3635280095351609,
+    "avgExtraCards": 2.506,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "W_BRIS_RWAcademy": {
+    "n": 1000,
+    "win": 501,
+    "loss": 499,
+    "draw": 0,
+    "wr": 0.501,
+    "ci95": [
+     0.4700652689060268,
+     0.5319270772968003
+    ],
+    "firstWR": 0.576,
+    "secondWR": 0.426,
+    "avgTurns": 18.877,
+    "avgHandAt6plus": 1.2470886075949368,
+    "pctMainPhases6plusHand0to1": 0.6263291139240507,
+    "reachedOpp2Shields": 0.817,
+    "twoShieldConversion": 0.36107711138310894,
+    "avgExtraCards": 2.52,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "W_LILLE_Nu": {
+    "n": 1000,
+    "win": 402,
+    "loss": 598,
+    "draw": 0,
+    "wr": 0.402,
+    "ci95": [
+     0.37204169195598835,
+     0.43270838016694435
+    ],
+    "firstWR": 0.514,
+    "secondWR": 0.29,
+    "avgTurns": 11.116,
+    "avgHandAt6plus": 2.235,
+    "pctMainPhases6plusHand0to1": 0.305,
+    "reachedOpp2Shields": 0.509,
+    "twoShieldConversion": 0.6581532416502947,
+    "avgExtraCards": 1.828,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "W_MKE_ZGok": {
+    "n": 1000,
+    "win": 421,
+    "loss": 579,
+    "draw": 0,
+    "wr": 0.421,
+    "ci95": [
+     0.39075838331540824,
+     0.45184626666124156
+    ],
+    "firstWR": 0.584,
+    "secondWR": 0.258,
+    "avgTurns": 12.495,
+    "avgHandAt6plus": 1.6008492569002124,
+    "pctMainPhases6plusHand0to1": 0.49363057324840764,
+    "reachedOpp2Shields": 0.612,
+    "twoShieldConversion": 0.5408496732026143,
+    "avgExtraCards": 1.929,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "W_DUS_Shining": {
+    "n": 1000,
+    "win": 640,
+    "loss": 360,
+    "draw": 0,
+    "wr": 0.64,
+    "ci95": [
+     0.6097656739752436,
+     0.6691627944205671
+    ],
+    "firstWR": 0.754,
+    "secondWR": 0.526,
+    "avgTurns": 14.184,
+    "avgHandAt6plus": 1.532576210400478,
+    "pctMainPhases6plusHand0to1": 0.5289898386132695,
+    "reachedOpp2Shields": 0.877,
+    "twoShieldConversion": 0.4640820980615735,
+    "avgExtraCards": 1.952,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "W_TKY1_BarbSF": {
+    "n": 1000,
+    "win": 466,
+    "loss": 534,
+    "draw": 0,
+    "wr": 0.466,
+    "ci95": [
+     0.4352704696798979,
+     0.49698975942397683
+    ],
+    "firstWR": 0.524,
+    "secondWR": 0.408,
+    "avgTurns": 13.654,
+    "avgHandAt6plus": 1.5211658570437196,
+    "pctMainPhases6plusHand0to1": 0.5322692574600971,
+    "reachedOpp2Shields": 0.735,
+    "twoShieldConversion": 0.40680272108843535,
+    "avgExtraCards": 2.064,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "W_MNL_GPZeon": {
+    "n": 1000,
+    "win": 566,
+    "loss": 434,
+    "draw": 0,
+    "wr": 0.566,
+    "ci95": [
+     0.5350860732775359,
+     0.5964087761090605
+    ],
+    "firstWR": 0.584,
+    "secondWR": 0.548,
+    "avgTurns": 13.27,
+    "avgHandAt6plus": 1.5298165137614679,
+    "pctMainPhases6plusHand0to1": 0.5114678899082569,
+    "reachedOpp2Shields": 0.853,
+    "twoShieldConversion": 0.4548651817116061,
+    "avgExtraCards": 1.965,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "W_JKT_Nu": {
+    "n": 1000,
+    "win": 572,
+    "loss": 428,
+    "draw": 0,
+    "wr": 0.572,
+    "ci95": [
+     0.541114629509388,
+     0.6023342970941716
+    ],
+    "firstWR": 0.654,
+    "secondWR": 0.49,
+    "avgTurns": 12.038,
+    "avgHandAt6plus": 1.8848396501457727,
+    "pctMainPhases6plusHand0to1": 0.40816326530612246,
+    "reachedOpp2Shields": 0.733,
+    "twoShieldConversion": 0.6493860845839018,
+    "avgExtraCards": 1.79,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "W_TOR_SF": {
+    "n": 1000,
+    "win": 580,
+    "loss": 420,
+    "draw": 0,
+    "wr": 0.58,
+    "ci95": [
+     0.5491598306141975,
+     0.61022786561198
+    ],
+    "firstWR": 0.64,
+    "secondWR": 0.52,
+    "avgTurns": 17.572,
+    "avgHandAt6plus": 1.9578313253012047,
+    "pctMainPhases6plusHand0to1": 0.43343373493975906,
+    "reachedOpp2Shields": 0.848,
+    "twoShieldConversion": 0.38207547169811323,
+    "avgExtraCards": 2.478,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "W_MEX_GPZeon": {
+    "n": 1000,
+    "win": 229,
+    "loss": 771,
+    "draw": 0,
+    "wr": 0.229,
+    "ci95": [
+     0.20402269076966784,
+     0.2560514882641559
+    ],
+    "firstWR": 0.294,
+    "secondWR": 0.164,
+    "avgTurns": 9.727,
+    "avgHandAt6plus": 2.193548387096774,
+    "pctMainPhases6plusHand0to1": 0.3548387096774194,
+    "reachedOpp2Shields": 0.291,
+    "twoShieldConversion": 0.6563573883161512,
+    "avgExtraCards": 1.653,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "W_MEL_SFVictory": {
+    "n": 1000,
+    "win": 445,
+    "loss": 555,
+    "draw": 0,
+    "wr": 0.445,
+    "ci95": [
+     0.4144664949706391,
+     0.47595446387386403
+    ],
+    "firstWR": 0.624,
+    "secondWR": 0.266,
+    "avgTurns": 18.767,
+    "avgHandAt6plus": 1.1039390088945362,
+    "pctMainPhases6plusHand0to1": 0.6759847522236341,
+    "reachedOpp2Shields": 0.875,
+    "twoShieldConversion": 0.304,
+    "avgExtraCards": 2.563,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "W_TKY3_Shining": {
+    "n": 1000,
+    "win": 719,
+    "loss": 281,
+    "draw": 0,
+    "wr": 0.719,
+    "ci95": [
+     0.690343117724889,
+     0.7459807006942719
+    ],
+    "firstWR": 0.836,
+    "secondWR": 0.602,
+    "avgTurns": 13.597,
+    "avgHandAt6plus": 1.6225875625446748,
+    "pctMainPhases6plusHand0to1": 0.5089349535382416,
+    "reachedOpp2Shields": 0.878,
+    "twoShieldConversion": 0.5603644646924829,
+    "avgExtraCards": 1.828,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "J_MobileFighter": {
+    "n": 1000,
+    "win": 738,
+    "loss": 262,
+    "draw": 0,
+    "wr": 0.738,
+    "ci95": [
+     0.709871862427285,
+     0.7643065338455931
+    ],
+    "firstWR": 0.848,
+    "secondWR": 0.628,
+    "avgTurns": 13.668,
+    "avgHandAt6plus": 1.5495810055865922,
+    "pctMainPhases6plusHand0to1": 0.5244413407821229,
+    "reachedOpp2Shields": 0.906,
+    "twoShieldConversion": 0.5684326710816777,
+    "avgExtraCards": 1.733,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "J_CharIBO": {
+    "n": 1000,
+    "win": 233,
+    "loss": 767,
+    "draw": 0,
+    "wr": 0.233,
+    "ci95": [
+     0.20785017685964133,
+     0.26019338698549127
+    ],
+    "firstWR": 0.308,
+    "secondWR": 0.158,
+    "avgTurns": 10.221,
+    "avgHandAt6plus": 2.010362694300518,
+    "pctMainPhases6plusHand0to1": 0.38860103626943004,
+    "reachedOpp2Shields": 0.362,
+    "twoShieldConversion": 0.5552486187845304,
+    "avgExtraCards": 1.719,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "J_NuAggro": {
+    "n": 1000,
+    "win": 556,
+    "loss": 444,
+    "draw": 0,
+    "wr": 0.556,
+    "ci95": [
+     0.5250485919968327,
+     0.5865227953614917
+    ],
+    "firstWR": 0.646,
+    "secondWR": 0.466,
+    "avgTurns": 12.136,
+    "avgHandAt6plus": 2.199442119944212,
+    "pctMainPhases6plusHand0to1": 0.33751743375174337,
+    "reachedOpp2Shields": 0.712,
+    "twoShieldConversion": 0.6643258426966292,
+    "avgExtraCards": 1.8,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "J_SFBlockers": {
+    "n": 1000,
+    "win": 533,
+    "loss": 467,
+    "draw": 0,
+    "wr": 0.533,
+    "ci95": [
+     0.5020099293217437,
+     0.5637374953715545
+    ],
+    "firstWR": 0.63,
+    "secondWR": 0.436,
+    "avgTurns": 17.783,
+    "avgHandAt6plus": 1.9714618520675598,
+    "pctMainPhases6plusHand0to1": 0.4207920792079208,
+    "reachedOpp2Shields": 0.815,
+    "twoShieldConversion": 0.37668711656441717,
+    "avgExtraCards": 2.459,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "J_SFIBO_Chiba": {
+    "n": 1000,
+    "win": 451,
+    "loss": 549,
+    "draw": 0,
+    "wr": 0.451,
+    "ci95": [
+     0.420404869897352,
+     0.4819701661641144
+    ],
+    "firstWR": 0.494,
+    "secondWR": 0.408,
+    "avgTurns": 14.069,
+    "avgHandAt6plus": 1.5003032140691328,
+    "pctMainPhases6plusHand0to1": 0.5482110369921165,
+    "reachedOpp2Shields": 0.741,
+    "twoShieldConversion": 0.3562753036437247,
+    "avgExtraCards": 2.132,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "J_SFIBO_alt": {
+    "n": 1000,
+    "win": 429,
+    "loss": 571,
+    "draw": 0,
+    "wr": 0.429,
+    "ci95": [
+     0.39865297244750164,
+     0.4598904471517659
+    ],
+    "firstWR": 0.47,
+    "secondWR": 0.388,
+    "avgTurns": 14.221,
+    "avgHandAt6plus": 1.4890552995391706,
+    "pctMainPhases6plusHand0to1": 0.5420506912442397,
+    "reachedOpp2Shields": 0.738,
+    "twoShieldConversion": 0.35907859078590787,
+    "avgExtraCards": 2.15,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "J_KshatriyaBanshee": {
+    "n": 1000,
+    "win": 467,
+    "loss": 533,
+    "draw": 0,
+    "wr": 0.467,
+    "ci95": [
+     0.4362625046284455,
+     0.4979900706782564
+    ],
+    "firstWR": 0.618,
+    "secondWR": 0.316,
+    "avgTurns": 11.371,
+    "avgHandAt6plus": 1.8204592901878915,
+    "pctMainPhases6plusHand0to1": 0.4091858037578288,
+    "reachedOpp2Shields": 0.65,
+    "twoShieldConversion": 0.6276923076923077,
+    "avgExtraCards": 1.784,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "J_EFFBanshee": {
+    "n": 1000,
+    "win": 396,
+    "loss": 604,
+    "draw": 0,
+    "wr": 0.396,
+    "ci95": [
+     0.36614091045737635,
+     0.426655084448593
+    ],
+    "firstWR": 0.504,
+    "secondWR": 0.288,
+    "avgTurns": 10.444,
+    "avgHandAt6plus": 2.0779220779220777,
+    "pctMainPhases6plusHand0to1": 0.36363636363636365,
+    "reachedOpp2Shields": 0.443,
+    "twoShieldConversion": 0.7629796839729119,
+    "avgExtraCards": 1.721,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "J_BGOYW": {
+    "n": 1000,
+    "win": 360,
+    "loss": 640,
+    "draw": 0,
+    "wr": 0.36,
+    "ci95": [
+     0.3308372055794329,
+     0.3902343260247565
+    ],
+    "firstWR": 0.444,
+    "secondWR": 0.276,
+    "avgTurns": 10.186,
+    "avgHandAt6plus": 2.0282485875706215,
+    "pctMainPhases6plusHand0to1": 0.3446327683615819,
+    "reachedOpp2Shields": 0.394,
+    "twoShieldConversion": 0.7360406091370558,
+    "avgExtraCards": 1.703,
+    "reasons": {
+     "battle damage": 1000
+    }
+   },
+   "J_JusticeAerial": {
+    "n": 1000,
+    "win": 644,
+    "loss": 356,
+    "draw": 0,
+    "wr": 0.644,
+    "ci95": [
+     0.6138233673784835,
+     0.673074485828636
+    ],
+    "firstWR": 0.71,
+    "secondWR": 0.578,
+    "avgTurns": 16.634,
+    "avgHandAt6plus": 1.4381981981981982,
+    "pctMainPhases6plusHand0to1": 0.5502702702702703,
+    "reachedOpp2Shields": 0.899,
+    "twoShieldConversion": 0.5228031145717463,
+    "avgExtraCards": 2.219,
+    "reasons": {
+     "battle damage": 1000
+    }
+   }
+  }
+ }
+}
