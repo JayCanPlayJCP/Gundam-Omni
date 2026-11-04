@@ -11,8 +11,8 @@ const rd = (f) => { try { return JSON.parse(fs.readFileSync(f)); } catch (e) { r
 const pct = (x, d = 1) => x == null ? '—' : (x * 100).toFixed(d);
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const wilson = (p, n, z = 1.96) => { const d = 1 + z * z / n, c = (p + z * z / (2 * n)) / d, h = z * Math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / d; return [Math.max(0, c - h), Math.min(1, c + h)]; };
-const JN = { k4n6: 'K4N6 search, hand evaluator', mlp2: 'K4N6 search + learned evaluator (mlp2)', k3n3: 'K3N3 search', k2n2: 'K2N2 search', fast: 'fast heuristic AI' };
-const JORDER = ['k4n6', 'mlp2', 'k3n3', 'k2n2', 'fast'];
+const JN = { k4n6: 'K4N6 search, hand evaluator', k4n6s2: 'K4N6 search, hand evaluator, fresh seed', mlp2: 'K4N6 search + learned evaluator (mlp2)', k3n3: 'K3N3 search', k2n2: 'K2N2 search', fast: 'fast heuristic AI' };
+const JORDER = ['k4n6', 'k4n6s2', 'mlp2', 'k3n3', 'k2n2', 'fast'];
 const sum = rd('results/final/summary.json') || { islands: [], judges: {}, finals: {}, census: {} };
 const finals = (d) => { const o = {}; for (const f of fs.readdirSync('results/final')) { const m = f.match(/^(.*)_([a-z0-9]+)_(\d+)\.json$/); if (!m || m[1] !== d) continue; const j = rd('results/final/' + f); if (j && j.per) o[m[2]] = { ...j, n: +m[3] }; } return Object.fromEntries(JORDER.filter(k => o[k]).map(k => [k, o[k]]).concat(Object.entries(o).filter(([k]) => !JORDER.includes(k)))); };
 const F = finals(deck); const judges = Object.keys(F); const J0 = judges[0];

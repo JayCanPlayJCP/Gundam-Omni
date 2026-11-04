@@ -32,6 +32,11 @@ Session-1 Omni outputs are in results/omni_v1/ (decks OMNI0_GB, OMNI0_GR).
   S4 continues GP, MG, WP, BP (~3.2 h each).
 - Learned-judge GA done 14:08: LGA_GB_e0 K4N6 61.4 / mlp2 63.0, LGA_GB_e1 K4N6 60.4 (200/list). Converges on the G/B core
   (92-98% card overlap with GB_S2_e1 / PURE_GB_e1 / OMNIP_GB_*).
+- G/B validations (K4N6 / mlp2, 200/list): OMNIP_GB_e0 60.1 / 62.1, OMNIP_GB_e1 60.5 / 61.3 -> G/B plateau ~60-61.
+- **G/P takes the lead**: provisional S4 G/P leader at gen 14 (deck GP_S4_g14) K4N6 65.5 (worst 43.5 J_SFIBO_alt,
+  first 79.1 / second 52.0, 8/26 lists >= 75%), K4N6+mlp2 67.8. The K2N2 island check ranked G/P only 2nd (58.5):
+  the check ranking does not predict what the pure GA reaches -> consider pure GAs for GR / MP after the top 5.
+  Fresh-seed re-test (seed 9494000) -> results/final/GP_S4_g14_k4n6s2_200.json.
 - Validation queue: results/final/val_queue.sh reads results/final/queue.txt (one deck per line; STOP ends it).
 - Reference decks, K4N6 both sides, 200/list, seed 9393000 (results/final/*_k4n6_200.json; *_mlp2_200.json = K4N6+mlp2):
   GB_S2_e1 60.6 / 59.8, PURE_GB_e1 59.2 / 61.1, GB_GA2 56.3 / 58.7, OMNI_GB 56.2 / 58.9, OMNI_GR 56.4 / 56.1, GR_GA1 50.4 / 49.9.
