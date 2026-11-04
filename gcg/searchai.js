@@ -28,8 +28,8 @@ class SearchAI extends AI {
   }
   life(g, p) { return p.shields.length + (p.base ? Math.max(0, p.base.def.hp - p.base.dmg) / 3 : 0); }
   evaluate(g, me) {
+    if (this.vf) return g.winner !== null ? (g.winner === me.i ? 10 : -10) : this.vf.score(g, me); // learned: 20*(p-0.5)
     if (g.winner !== null) return g.winner === me.i ? 1000 : -1000;
-    if (this.vf) return this.vf.score(g, me);
     return this.evaluateHand(g, me);
   }
   evaluateHand(g, me) {
@@ -145,7 +145,7 @@ class MCTSAI extends SearchAI {
     if (o.kind === 'atk') { p2.ai.preAttack(g2, p2, o.a, o.t); if (g2.alive(o.a) && g2.canAttackThisTurn(o.a) && (o.t === 'player' || g2.alive(o.t))) g2.attack(o.a, o.t); return true; }
     return true;
   }
-  value(g2, p2) { if (g2.winner !== null) return g2.winner === p2.i ? 1 : 0; const e = this.evaluate(g2, p2); return 1 / (1 + Math.exp(-e / this.scale)); }
+  value(g2, p2) { if (g2.winner !== null) return g2.winner === p2.i ? 1 : 0; if (this.vf) return this.vf.prob(g2, p2); const e = this.evaluate(g2, p2); return 1 / (1 + Math.exp(-e / this.scale)); }
   // run UCT from the real state (g, p) in phase ph; returns the key of the chosen root option
   search(g, p, ph) {
     const root = { N: 0, W: 0, ch: new Map() };

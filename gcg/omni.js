@@ -14,6 +14,9 @@ const PAIRS = [ // name, colours, chassis, extra seeds, needs White/Purple
   ['GW', 'Green,White', 'J_Wing_Omiya', [], 1], ['PR', 'Purple,Red', 'J_KshatriyaBanshee', [], 1], ['WP', 'White,Purple', 'MERGE_WP', [], 1],
 ];
 const MONO = ['Green', 'Blue', 'Red', 'White', 'Purple'];
+// Scale (session 2, 4-core machine): census 12->40 games/list, island GA gens15/pop12/n20 -> 40/20/40, checks 30->100,
+// pure stronger-AI GA gens8/sn16 -> 25/40, top 3 -> top 5. Units without White/Purple run first (they need no wp flag).
+const CENSUS_N = 40, GA_ARGS = '--gens 40 --pop 20 --n 40', CHECK_N = 100, PURE_ARGS = '--gens 25 --kids 14 --elite 6 --sn 40', TOP = 5;
 function addDeck(key, label, cards) { const D = JSON.parse(fs.readFileSync('decks.json')); D[key] = { label, cards }; fs.writeFileSync('decks.json', JSON.stringify(D, null, 1)); }
 function ensureMerged(key, cols) { const D = JSON.parse(fs.readFileSync('decks.json')); if (D[key]) return; const C = require('./cards.json'); const m = {};
   for (const k in D) { if (!(k.startsWith('W_') || k.startsWith('J_') || k.startsWith('PURE_') || k.startsWith('GB_GA') || k === 'GR_GA1')) continue; for (const { id, n } of D[k].cards) if (cols.includes(C[id].color)) m[id] = Math.max(m[id] || 0, n); }
@@ -21,32 +24,36 @@ function ensureMerged(key, cols) { const D = JSON.parse(fs.readFileSync('decks.j
   if (t === 50) addDeck(key, `merged seed ${cols.join('/')}`, out); }
 (async () => {
   log('start');
-  // S1 + S2 + S3 per pair
-  for (const [name, cols, chassis, extra, wp] of PAIRS) {
+  // S1 + S2 + S3 per pair, then mono islands. Order: pairs without White/Purple, mono G/B/R, then (after the wp flag)
+  // the White/Purple pairs and mono W/P.
+  const doPair = ([name, cols, chassis, extra, wp]) => {
     if (wp) waitWP(); if (name === 'WP') ensureMerged('MERGE_WP', ['White', 'Purple']);
-    const D = JSON.parse(fs.readFileSync('decks.json')); if (!D[chassis]) { log(`${name}: no chassis ${chassis}, skipped`); continue; }
-    if (!done('census_' + name)) { sh(`node census.js ${name} ${chassis} ${cols} 12 >> results/omni/census.log 2>&1`); set('census_' + name); log(`census ${name} done`); }
+    const D = JSON.parse(fs.readFileSync('decks.json')); if (!D[chassis]) { log(`${name}: no chassis ${chassis}, skipped`); return; }
+    if (!done('census_' + name)) { sh(`node census.js ${name} ${chassis} ${cols} ${CENSUS_N} >> results/omni/census.log 2>&1`); set('census_' + name); log(`census ${name} done`); }
     if (!done('island_' + name)) { const seeds = [chassis, ...extra.filter(s => D[s])].join(',');
-      sh(`node ga.js --colors ${cols} --seeds ${seeds} --prior results/prior_census_${name}.json --gens 15 --pop 12 --n 20 --rseed ${name.charCodeAt(0) * 31 + name.charCodeAt(1)} --out results/omni/island_${name}.json > results/omni/island_${name}.log 2>&1`);
+      sh(`node ga.js --colors ${cols} --seeds ${seeds} --prior results/prior_census_${name}.json ${GA_ARGS} --rseed ${name.charCodeAt(0) * 31 + name.charCodeAt(1)} --out results/omni/island_${name}.json > results/omni/island_${name}.log 2>&1`);
       const j = JSON.parse(fs.readFileSync(`results/omni/island_${name}.json`)); addDeck('OMNI_' + name, `Omni island ${name} (fresh B ${(j.best.B * 100).toFixed(1)})`, j.best.deck); set('island_' + name, { B: j.best.B }); log(`island ${name} heuristic B ${(j.best.B * 100).toFixed(1)}`); }
-    if (!done('check_' + name)) { sh(`SK=2 SN=2 node searchcheck.js OMNI_${name} 30 7373000 hyper both >> results/omni/check.log 2>&1`); const r = JSON.parse(fs.readFileSync(`results/search_both_OMNI_${name}_k2n2.json`)); set('check_' + name, { B: r.B, min: r.min, minOpp: r.minOpp }); log(`check ${name} stronger-AI B ${(r.B * 100).toFixed(1)}`); }
-  }
-  // mono-colour islands
-  for (const col of MONO) {
+    if (!done('check_' + name)) { sh(`SK=2 SN=2 node searchcheck.js OMNI_${name} ${CHECK_N} 7373000 hyper both >> results/omni/check.log 2>&1`); const r = JSON.parse(fs.readFileSync(`results/search_both_OMNI_${name}_k2n2.json`)); set('check_' + name, { B: r.B, min: r.min, minOpp: r.minOpp }); log(`check ${name} stronger-AI B ${(r.B * 100).toFixed(1)}`); }
+  };
+  const doMono = (col) => {
     const name = 'M' + col[0]; if (['White', 'Purple'].includes(col)) waitWP(); ensureMerged('MERGE_' + name, [col]);
-    const D = JSON.parse(fs.readFileSync('decks.json')); if (!D['MERGE_' + name]) { log(`${name}: no 50-card mono seed`); continue; }
-    if (!done('island_' + name)) { sh(`node ga.js --colors ${col} --seeds MERGE_${name} --gens 15 --pop 12 --n 20 --rseed ${col.length * 17} --out results/omni/island_${name}.json > results/omni/island_${name}.log 2>&1`);
+    const D = JSON.parse(fs.readFileSync('decks.json')); if (!D['MERGE_' + name]) { log(`${name}: no 50-card mono seed`); return; }
+    if (!done('island_' + name)) { sh(`node ga.js --colors ${col} --seeds MERGE_${name} ${GA_ARGS} --rseed ${col.length * 17} --out results/omni/island_${name}.json > results/omni/island_${name}.log 2>&1`);
       const j = JSON.parse(fs.readFileSync(`results/omni/island_${name}.json`)); addDeck('OMNI_' + name, `Omni mono ${col} (fresh B ${(j.best.B * 100).toFixed(1)})`, j.best.deck); set('island_' + name, { B: j.best.B }); log(`island ${name} heuristic B ${(j.best.B * 100).toFixed(1)}`); }
-    if (!done('check_' + name)) { sh(`SK=2 SN=2 node searchcheck.js OMNI_${name} 30 7373000 hyper both >> results/omni/check.log 2>&1`); const r = JSON.parse(fs.readFileSync(`results/search_both_OMNI_${name}_k2n2.json`)); set('check_' + name, { B: r.B, min: r.min, minOpp: r.minOpp }); log(`check ${name} stronger-AI B ${(r.B * 100).toFixed(1)}`); }
-  }
-  // S4: pure stronger-AI GA on the top 3 islands by stronger-AI check
+    if (!done('check_' + name)) { sh(`SK=2 SN=2 node searchcheck.js OMNI_${name} ${CHECK_N} 7373000 hyper both >> results/omni/check.log 2>&1`); const r = JSON.parse(fs.readFileSync(`results/search_both_OMNI_${name}_k2n2.json`)); set('check_' + name, { B: r.B, min: r.min, minOpp: r.minOpp }); log(`check ${name} stronger-AI B ${(r.B * 100).toFixed(1)}`); }
+  };
+  for (const p of PAIRS) if (!p[4]) doPair(p);
+  for (const col of ['Green', 'Blue', 'Red']) doMono(col);
+  for (const p of PAIRS) if (p[4]) doPair(p);
+  for (const col of ['White', 'Purple']) doMono(col);
+  // S4: pure stronger-AI GA on the top TOP islands by stronger-AI check
   const checks = [...PAIRS.map(p => p[0]), ...MONO.map(c => 'M' + c[0])].filter(n => done('check_' + n)).map(n => ({ n, ...JSON.parse(fs.readFileSync(mark('check_' + n))) })).sort((a, b) => b.B - a.B);
   log('ranking: ' + checks.map(c => `${c.n} ${(c.B * 100).toFixed(1)}`).join(', '));
-  for (const c of checks.slice(0, 3)) {
+  for (const c of checks.slice(0, TOP)) {
     if (done('pure_' + c.n)) continue; const p = PAIRS.find(x => x[0] === c.n); const cols = p ? p[1] : MONO.find(m => 'M' + m[0] === c.n);
     const D = JSON.parse(fs.readFileSync('decks.json')); const seeds = ['OMNI_' + c.n, ...(p ? [p[2], ...p[3]] : [])].filter(s => D[s]).join(',');
     const out = `results/omni/pure_${c.n}.json`; const sf = fs.existsSync(out + ".tmp") ? `--seedfiles ${out}.ck` : ""; if (sf) fs.copyFileSync(out + ".tmp", out + ".ck");
-    sh(`node ga2.js --pure 1 --colors ${cols} --seeds ${seeds} ${sf} --gens 8 --kids 14 --elite 6 --sn 16 --rseed ${c.n.charCodeAt(0) * 7} --out ${out}.tmp >> results/omni/pure_${c.n}.log 2>&1`);
+    sh(`node ga2.js --pure 1 --colors ${cols} --seeds ${seeds} ${sf} ${PURE_ARGS} --rseed ${c.n.charCodeAt(0) * 7} --out ${out}.tmp >> results/omni/pure_${c.n}.log 2>&1`);
     fs.renameSync(`${out}.tmp`, out); const j = JSON.parse(fs.readFileSync(out)); j.elites.slice(0, 2).forEach((e, i) => addDeck(`OMNIP_${c.n}_e${i}`, `Omni pure stronger-AI ${c.n} elite ${i}`, e.deck)); set('pure_' + c.n); log(`pure ${c.n} done: elite search B ${(j.elites[0].search.B * 100).toFixed(1)} n${j.elites[0].search.n}`);
   }
   // S5: validation of the pure elites + reference decks on a common stronger-AI check (K3N3, 100 games/list) and 1000 fast-AI games
