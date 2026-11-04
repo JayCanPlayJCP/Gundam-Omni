@@ -20,6 +20,12 @@ Session-1 Omni outputs are in results/omni_v1/ (decks OMNI0_GB, OMNI0_GR).
 - GB: census done (445 cards, chassis GB_GA2 base 66.0); island heuristic B 73.0; K2N2 check B 62.8 (100/list).
 - GR: island heuristic B 64.4; K2N2 check B 56.6.
 - BR: island heuristic B 62.9; K2N2 check B 44.8.
+- GP: island 65.6, check 58.5. BP: 69.6 / 56.7. BW: 71.2 / 52.2. RW: 69.1 / 52.1.
+- Reference decks, K4N6 both sides, 200/list, seed 9393000 (results/final/*_k4n6_200.json; *_mlp2_200.json = K4N6+mlp2):
+  GB_S2_e1 60.6 / 59.8, PURE_GB_e1 59.2 / 61.1, GB_GA2 56.3 / 58.7, OMNI_GB 56.2 / 58.9, OMNI_GR 56.4 / 56.1, GR_GA1 50.4 / 49.9.
+- Spare-core queue (SIM_WORKERS=1): results/counter/run_counter.sh GB_S2_e1 (counter-deck GA per field colour pair, step 4.5,
+  preliminary target = current best), then results/learnga/run_learnga.sh (pure GA with mlp2 judge both sides, G/B, step 4.4).
+  Both resumable: rerun the script (skips finished outputs).
 - Noise: GB_GA2 at K2N2 100/list on 4 seeds: B 59.5 / 59.3 / 58.9 / 62.4 (range 3.5, sd ~1.6).
 
 ## Judges (results/judge/*.json, mirror.js: same deck both sides over the 26 field lists, seat-balanced)
