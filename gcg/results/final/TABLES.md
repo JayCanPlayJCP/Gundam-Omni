@@ -2,21 +2,21 @@
 
 | unit | heuristic B | K2N2 check B | check worst | pure-search elite B (n/list) |
 |---|---|---|---|---|
-| GB | 73.0 | 62.8 | 38.0 J_CharIBO | — |
+| GB | 73.0 | 62.8 | 38.0 J_CharIBO | 65.7 (80) |
 | GR | 64.4 | 56.6 | 33.0 W_BRIS_RWAcademy | — |
 | BR | 62.9 | 44.8 | 22.0 J_SFIBO_alt | — |
 | MG | 64.3 | 58.4 | 27.0 J_CharIBO | — |
 | MB | 62.9 | 43.3 | 28.0 W_MEL_SFVictory | — |
 | MR | 57.5 | 47.2 | 34.0 J_SFBlockers | — |
-| GP | 65.6 | 58.5 | 36.0 J_CharIBO | — |
+| GP | 65.6 | 58.5 | 36.0 J_CharIBO | 68.8 (40) |
 | BP | 69.6 | 56.7 | 41.0 W_BRIS_RWAcademy | — |
 | BW | 71.2 | 52.2 | 40.0 W_MNL_GPZeon | — |
 | RW | 69.1 | 52.1 | 36.0 J_SFBlockers | — |
-| GW | — | — | —  | — |
-| PR | — | — | —  | — |
-| WP | — | — | —  | — |
-| MW | — | — | —  | — |
-| MP | — | — | —  | — |
+| GW | 71.9 | 51.2 | 34.0 W_MEX_GPZeon | — |
+| PR | 66.2 | 53.5 | 29.0 W_BRIS_RWAcademy | — |
+| WP | 75.5 | 57.8 | 38.0 W_BRIS_RWAcademy | — |
+| MW | 67.2 | 47.9 | 28.0 W_BRIS_RWAcademy | — |
+| MP | 64.2 | 56.1 | 33.0 W_BRIS_RWAcademy | — |
 
 ## Final validations (both sides searching; field = 26 lists)
 
@@ -26,8 +26,25 @@
 | GB_GA2 | mlp2 | 200 | 58.7 | 60.1 | 36.5 J_CharIBO | 72.6 | 44.9 |
 | GB_S2_e1 | k4n6 | 200 | 60.6 | 61.7 | 37.5 J_CharIBO | 73.1 | 48.1 |
 | GB_S2_e1 | mlp2 | 200 | 59.8 | 60.9 | 31.5 J_CharIBO | 73.5 | 46.0 |
+| GP_S4_g14 | k4n6 | 200 | 65.5 | 67.0 | 43.5 J_SFIBO_alt | 79.1 | 52.0 |
+| GP_S4_g14 | k4n6s2 | 200 | 65.3 | 66.4 | 45.5 W_BRIS_RWAcademy | 80.4 | 50.2 |
+| GP_S4_g14 | mlp2 | 200 | 67.8 | 68.9 | 46.5 J_CharIBO | 80.0 | 55.7 |
 | GR_GA1 | k4n6 | 200 | 50.4 | 51.2 | 34.5 W_MKE_ZGok | 67.6 | 33.2 |
 | GR_GA1 | mlp2 | 200 | 49.9 | 50.8 | 29.5 J_CharIBO | 67.6 | 32.2 |
+| J_CharIBO | k4n6 | 200 | 63.9 | 65.1 | 40.5 J_SFIBO_Chiba | 77.5 | 50.3 |
+| J_CharIBO | mlp2 | 200 | 66.5 | 67.6 | 42.5 J_SFIBO_alt | 80.6 | 52.4 |
+| LGA_GB_e0 | k4n6 | 200 | 61.4 | 62.5 | 39.0 J_CharIBO | 74.1 | 48.8 |
+| LGA_GB_e0 | mlp2 | 200 | 63.0 | 64.1 | 40.0 W_MEX_GPZeon | 76.3 | 49.8 |
+| LGA_GB_e1 | k4n6 | 200 | 60.4 | 61.6 | 32.0 J_CharIBO | 74.1 | 46.7 |
+| LGA_GB_e1 | mlp2 | 200 | 60.8 | 62.3 | 37.5 W_MEX_GPZeon | 73.0 | 48.6 |
+| OMNIP_GB_e0 | k4n6 | 200 | 60.1 | 61.4 | 38.0 J_CharIBO | 73.3 | 47.0 |
+| OMNIP_GB_e0 | mlp2 | 200 | 62.1 | 63.6 | 38.5 W_MEL_SFVictory | 75.1 | 49.0 |
+| OMNIP_GB_e1 | k4n6 | 200 | 60.5 | 61.6 | 37.5 W_MEX_GPZeon | 73.2 | 47.8 |
+| OMNIP_GB_e1 | mlp2 | 200 | 61.3 | 62.5 | 35.5 W_MEX_GPZeon | 73.9 | 48.6 |
+| OMNIP_GP_e0 | k4n6 | 200 | 63.1 | 64.8 | 41.0 W_BRIS_RWAcademy | 76.8 | 49.5 |
+| OMNIP_GP_e0 | mlp2 | 200 | 67.9 | 69.4 | 46.0 W_BRIS_RWAcademy | 79.8 | 55.9 |
+| OMNIP_GP_e1 | k4n6 | 200 | 65.1 | 66.7 | 42.5 W_BRIS_RWAcademy | 78.4 | 51.9 |
+| OMNIP_GP_e1 | mlp2 | 200 | 69.0 | 70.4 | 46.5 W_BRIS_RWAcademy | 82.2 | 55.8 |
 | OMNI_GB | k4n6 | 200 | 56.2 | 57.2 | 35.0 J_CharIBO | 69.7 | 42.7 |
 | OMNI_GB | mlp2 | 200 | 58.9 | 59.9 | 36.5 W_MEX_GPZeon | 71.9 | 46.0 |
 | OMNI_GR | k4n6 | 200 | 56.4 | 56.9 | 45.5 W_BRIS_RWAcademy | 71.8 | 41.0 |
@@ -72,3 +89,6 @@
 - **BP** (chassis W_MKE_ZGok, base 62.1): Nahel Argama (GD01-123) +4.7; Fatal Strike (ST05-014) +4.5; Byarlant Custom (GD01-019) +4.4; Exclusively Defense-Oriented Policy (GD05-105) +4.1; Pisces (GD01-021) +4.0; Jenice Custom (GD02-065) +4.0; Zaku Ⅱ F2 (EFSF) (GD06-013) +4.0; Armory One (GD04-128) +3.9; White Base (ST01-015) +3.9; GM Type C (GD06-014) +3.7
 - **BW** (chassis W_TOR_SF, base 53.6): GM (ST01-005) +2.8; Demi Garrison (GD01-085) +2.8; Hizack (GD02-013) +2.8; Nemo (GD02-080) +2.8; Borjarnon (GD04-078) +2.8; Javelin (GD05-014) +2.8; Leo (GD05-077) +2.8; Graze (ST05-009) +2.8; Nemo (ST10-005) +2.8; Royal Gundam (GD05-075) +2.5
 - **RW** (chassis W_BRIS_RWAcademy, base 56.8): Altron Gundam (EW) (GD06-064) +4.5; Gaplant TR-5 "Hrairoo" Unit 1 (EB01-054) +3.7; Cannon Illfuto (GD06-077) +3.7; Domon Kasshu (GD05-097) +2.8; Gundam Throne Zwei (ST13-008) +2.7; Gundam Geminass 01 (EB01-056) +2.7; Serpent (GD06-075) +2.7; Messer Type-F02 Minelayer (ST08-005) +2.7; Zaku Mariner (GD01-060) +2.5; Demi Garrison (GD01-085) +2.5
+- **GW** (chassis J_Wing_Omiya, base 55.4): Kayra's Re-GZ (GD05-029) +7.0; Rick Dom (GD01-030) +7.0; Gaplant TR-5 "Hrairoo" Unit 1 (EB01-054) +7.0; Cannon Illfuto (GD06-077) +7.0; Royal Gundam (GD05-075) +6.8; Zowort (ST01-009) +6.8; Gundam Ez8 High Mobility Custom (EB01-032) +6.5; Gundam Geminass 01 (EB01-056) +6.5; Flat (Militia) (GD04-077) +6.5; Serpent (GD06-075) +6.5
+- **PR** (chassis J_KshatriyaBanshee, base 56.7): GOOhN (GD01-062) +2.6; Jenice Custom (GD02-065) +2.6; Dra-C (Sleeves) (ST03-005) +2.6; Shuji's Hideout (GD02-126) +2.0; GN Armor Type-E (GD04-063) +1.7; Zaku Ⅱ F2 (GD06-060) +1.6; Libra (ST12-016) +1.6; Towards Destiny (GD03-116) +1.5; Armory One (GD04-128) +1.4; Gundam Exia (GD04-038) +1.3
+- **WP** (chassis MERGE_WP, base 62.5): Altron Gundam (EW) (GD06-064) +2.0; Mikazuki Augus (ST05-010) +1.3; Legend Gundam (GD06-050) +1.2; Zeheart Galette (GD03-094) +0.8; Gaplant TR-5 "Hrairoo" Unit 1 (EB01-054) +0.7; Cannon Illfuto (GD06-077) +0.7; Perfect Strike Gundam (GD01-068) +0.6; Char Aznable (GD05-093) +0.6; Harry Ord (GD06-097) +0.6; Gundam GP00 (EB01-053) +0.2
