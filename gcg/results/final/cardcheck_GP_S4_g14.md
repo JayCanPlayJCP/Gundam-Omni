@@ -22,3 +22,13 @@ Checked each card's implementation (`node tools/cardcheck.js GP_S4_g14 --src`) a
 
 Legality: 50 cards, Green/Purple, max 4 copies, no GD01-020, ST02-016 absent, ST05-010 present without ST01-010,
 GD01-008/GD05-015 absent, one vanilla 2/2 number (GD01-035). ExBurst: `node export.js GP_S4_g14`.
+
+## OMNIP_GP_e1 (final pick; 92% the same cards as GP_S4_g14)
+
+Same card numbers as GP_S4_g14 except: Exia Repair 3 -> 4, Zaku I 2 -> 4, + 1 GD06-031 Zssan, and no Efreet Schneid / God of War Ghingnham.
+
+| card | text | implementation | verdict |
+|---|---|---|---|
+| GD06-031 Zssan x1 | vanilla 3/2 (Lv2, cost 2, Ghingnham Fleet) | `{}` | ok (not a 2/2, so it does not count against the one-vanilla-2/2 rule) |
+
+All other cards are checked above. Legality: 50 cards, Green/Purple, max 4 copies, ST05-010 without ST01-010, one vanilla 2/2 number (GD01-035).
