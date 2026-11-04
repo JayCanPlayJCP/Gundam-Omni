@@ -12,3 +12,13 @@
 [11:54:07] GB_S2_e1 vs PR counter: target loses 57.5% to best counter, n=40
 [11:54:07] all done
 [19:16:52] start GP
+[19:28:15] GP_S4_g14 vs GP counter: target loses 60.0% to best counter, n=40
+[19:28:15] start BP
+[19:38:01] GP_S4_g14 vs BP counter: target loses 65.0% to best counter, n=160
+[19:38:01] start RW
+[19:49:14] GP_S4_g14 vs RW counter: target loses 70.0% to best counter, n=120
+[19:49:14] start BW
+[20:01:15] GP_S4_g14 vs BW counter: target loses 63.3% to best counter, n=120
+[20:01:15] start GB
+[20:11:37] GP_S4_g14 vs GB counter: target loses 52.5% to best counter, n=40
+[20:11:37] start PR
