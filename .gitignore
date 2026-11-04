@@ -2,3 +2,4 @@
 gcg/results/learn/*.f32
 gcg/results/learn/*.i32
 *.cpuprofile
+gcg/results/learn/*.i16

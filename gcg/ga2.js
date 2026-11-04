@@ -12,7 +12,8 @@ const GENS = +(args.gens || 12), KIDS = +(args.kids || 20), KEEP = +(args.keep |
 const OUT = args.out || 'results/ga2.json', PROF = args.prof || 'hyper'; const PURE = !!+(args.pure || 0); const S = args.sopts ? JSON.parse(args.sopts) : { K: +(args.k || 2), N: +(args.nr || 2) };
 const LOCK = Object.fromEntries((args.lock || '').split(',').filter(Boolean).map(x => { const [id, n] = x.split(':'); return [id, +n]; }));
 let rs = +(args.rseed || 7); const rnd = () => { rs = (rs * 1103515245 + 12345) & 0x7fffffff; return rs / 0x7fffffff; }; const pick = (a) => a[Math.floor(rnd() * a.length)];
-const opps = Object.keys(D).filter(k => k.startsWith('W_') || k.startsWith('J_'));
+const opps = args.opps ? args.opps.split(',') : Object.keys(D).filter(k => k.startsWith('W_') || k.startsWith('J_')); // --opps X: evolve against X only (co-evolution / counter-decks)
+const oppProf = (b) => P[args.oppprof || OPP[b] || 'hyper'];
 const VANILLA = new Set(Object.keys(C).filter(id => (C[id].legality || '').startsWith('Vanilla')));
 const POOL = Object.keys(EFX).filter(id => C[id] && COLORS.includes(C[id].color) && ['UNIT', 'PILOT', 'COMMAND', 'BASE'].includes(C[id].type) && id !== 'GD01-020' && !(C[id].legality || '').startsWith('Banned'));
 const POOLSET = new Set(POOL);
@@ -55,12 +56,12 @@ function crossover(a, b) { const m = {}; for (const id of new Set([...Object.key
 // accumulated evidence per deck: per opponent wins/games for heuristic (h) and search (s)
 const BOOK = new Map();
 const rec = (m) => { const k = key(m); if (!BOOK.has(k)) BOOK.set(k, { m, h: {}, s: {} }); return BOOK.get(k); };
-function stat(r, which) { const t = r[which]; let n = 0; const wr = []; for (const b of opps) { const x = t[b]; if (!x || !x.n) return null; wr.push(x.w / x.n); n += x.n; } const s = [...wr].sort((a, b) => a - b); return { B: wr.reduce((a, b) => a + b, 0) / wr.length, A: opps.reduce((a, b, i) => a + W[b] * wr[i], 0), b5: s.slice(0, 5).reduce((a, b) => a + b, 0) / 5, min: s[0], minOpp: opps[wr.indexOf(s[0])], n: n / opps.length }; }
+function stat(r, which) { const t = r[which]; let n = 0; const wr = []; for (const b of opps) { const x = t[b]; if (!x || !x.n) return null; wr.push(x.w / x.n); n += x.n; } const s = [...wr].sort((a, b) => a - b); return { B: wr.reduce((a, b) => a + b, 0) / wr.length, A: opps.reduce((a, b, i) => a + (W[b] || 1 / opps.length) * wr[i], 0), b5: s.slice(0, 5).reduce((a, b) => a + b, 0) / 5, min: s[0], minOpp: opps[wr.indexOf(s[0])], n: n / opps.length }; }
 function fitness(r) { const h = stat(r, 'h'), s = stat(r, 's'); if (PURE) return s ? s.B + 0.3 * s.b5 - 0.15 / Math.sqrt(s.n) : -1; if (!h) return -1; const hs = h.B + 0.3 * h.b5; if (!s) return (1 - WS) * hs + WS * (hs - 0.06); return WS * (s.B + 0.3 * s.b5) + (1 - WS) * hs; }
 let seedCtr = +(args.eseed || 1000000);
 async function evalBatch(list, which, n) {
   const pairs = []; const sd = seedCtr; seedCtr += 7919;
-  list.forEach((r, i) => { const deck = toList(r.m); for (const b of opps) pairs.push({ a: deck, b, key: i + '|' + b, seed: sd, opts: { aiA: P[PROF], aiB: P[OPP[b]], searchA: which === 's' ? S : null, searchB: which === 's' ? S : null } }); });
+  list.forEach((r, i) => { const deck = toList(r.m); for (const b of opps) pairs.push({ a: deck, b, key: i + '|' + b, seed: sd, opts: { aiA: P[PROF], aiB: oppProf(b), searchA: which === 's' ? S : null, searchB: which === 's' ? S : null } }); });
   const res = await runMatrix(pairs, n, sd, 2);
   list.forEach((r, i) => { for (const b of opps) { const x = res[i + '|' + b]; const t = r[which][b] || (r[which][b] = { w: 0, n: 0 }); t.w += x.win; t.n += x.n; } });
 }

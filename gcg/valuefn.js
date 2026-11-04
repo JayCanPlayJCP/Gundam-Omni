@@ -4,10 +4,21 @@
 //   load(path) -> { prob(g, me), score(g, me) } using a model JSON written by train_lr.js / train_mlp.py:
 //     { type: 'lr', names, mu, sd, w, b }  or  { type: 'mlp', names, mu, sd, layers: [{ W: [[...]], b: [...] }, ...] }
 //     (hidden layers ReLU, final layer one logit). Inputs are standardized with mu/sd.
+//     type 'mlpe' = mlp plus E: { index: [H1 floats] } card-identity embeddings summed into layer 1 (see sparse()).
 // In search leaves the searching player is always the one to move next (rollouts end after the opponent's turn),
 // so score() calls feats(g, me, true). Self-play data (selfplay.js) records both sides at every turn boundary.
-const { AI } = require('./ai'); const EFX = require('./effects');
+const { AI } = require('./ai'); const EFX = require('./effects'); const { CARDS } = require('./engine');
 const H = new AI({});
+// card-identity (sparse) features: slot 0 = my Units + their Pilots, slot 1 = enemy Units + Pilots, slot 2 = my hand
+// (the enemy hand is hidden, so only its size is a dense feature). Index = slot * NID + card index.
+const IDS = Object.keys(CARDS).sort(); const IDX = new Map(IDS.map((id, i) => [id, i])); const NID = IDS.length; const SW = 48;
+function sparse(g, me) {
+  const out = []; const add = (slot, id) => { const i = IDX.get(id); if (i !== undefined && out.length < SW) out.push(slot * NID + i); };
+  for (const u of me.units) { add(0, u.def.id); if (u.pilot) add(0, u.pilot.id); }
+  for (const u of me.opp.units) { add(1, u.def.id); if (u.pilot) add(1, u.pilot.id); }
+  for (const c of me.hand) add(2, c.id);
+  return out;
+}
 
 const SIDE = ['shields', 'base', 'baseHP', 'life', 'units', 'sumAP', 'sumHP', 'boardV', 'lv12', 'lv34', 'lv56', 'lv7', 'blockers', 'activeBlk', 'rested',
   'linked', 'paired', 'tokens', 'hm', 'supp', 'breach', 'repair', 'fs', 'maxAP', 'attackers', 'hand', 'hUnit', 'hPilot', 'hCmd', 'hBase', 'hRemoval',
@@ -58,10 +69,12 @@ function load0(path) {
     const z = new Float64Array(F); for (let i = 0; i < F; i++) z[i] = (x[i] - mu[i]) / sd[i];
     if (M.type === 'lr') { let s = M.b; for (let i = 0; i < F; i++) s += M.w[i] * z[i]; return s; }
     let h = z; for (let l = 0; l < M.layers.length; l++) { const { W, b } = M.layers[l]; const o = new Float64Array(b.length);
-      for (let j = 0; j < b.length; j++) { let s = b[j]; const Wj = W[j]; for (let i = 0; i < h.length; i++) s += Wj[i] * h[i]; o[j] = (l < M.layers.length - 1 && s < 0) ? 0 : s; } h = o; }
+      for (let j = 0; j < b.length; j++) { let s = b[j]; const Wj = W[j]; for (let i = 0; i < h.length; i++) s += Wj[i] * h[i]; if (l === 0 && sp) for (const k of sp) { const e = M.E[k]; if (e) s += e[j]; } o[j] = (l < M.layers.length - 1 && s < 0) ? 0 : s; } h = o; }
     return h[0];
   };
-  const prob = (g, me) => 1 / (1 + Math.exp(-logit(feats(g, me, true))));
+  let sp = null; // sparse indices of the position being scored (type 'mlpe': embedding rows E[index] added to layer 1)
+  if (M.type === 'mlpe' && M.nid !== NID) throw new Error('valuefn: card index size differs from model');
+  const prob = (g, me) => { sp = M.type === 'mlpe' ? sparse(g, me) : null; return 1 / (1 + Math.exp(-logit(feats(g, me, true)))); };
   return { M, prob, score: (g, me) => 20 * (prob(g, me) - 0.5) };
 }
-module.exports = { feats, load, NAMES };
+module.exports = { feats, sparse, load, NAMES, NID, SW };
