@@ -12,15 +12,16 @@ const pct = (x, d = 1) => x == null ? '—' : (x * 100).toFixed(d);
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const wilson = (p, n, z = 1.96) => { const d = 1 + z * z / n, c = (p + z * z / (2 * n)) / d, h = z * Math.sqrt(p * (1 - p) / n + z * z / (4 * n * n)) / d; return [Math.max(0, c - h), Math.min(1, c + h)]; };
 const JN = { k4n6: 'K4N6 search, hand evaluator', k4n6s2: 'K4N6 search, hand evaluator, fresh seed', mlp2: 'K4N6 search + learned evaluator (mlp2)', k3n3: 'K3N3 search', k2n2: 'K2N2 search', fast: 'fast heuristic AI' };
-const JORDER = ['k4n6x2', 'mlp2', 'k4n6', 'k4n6s2', 'k3n3', 'k2n2', 'fast'];
-JN.k4n6x2 = 'K4N6 search, hand evaluator (two seeds pooled)';
+const JORDER = ['k4n6x2', 'mlp2', 'k4n6', 'k4n6s2', 'k4n6s3', 'k3n3', 'k2n2', 'fast'];
+JN.k4n6x2 = 'K4N6 search, hand evaluator (all seeds pooled)'; JN.k4n6s3 = 'K4N6 search, hand evaluator, third seed';
 const sum = rd('results/final/summary.json') || { islands: [], judges: {}, finals: {}, census: {} };
 const mean = (a) => a.reduce((s, x) => s + x, 0) / a.length;
 // pool two equal-size results (same judge, different seeds) into one
-const pool2 = (a, b) => { const per = {}, first = {}, second = {}; for (const o of opps) { per[o] = (a.per[o] + b.per[o]) / 2; if (a.first && b.first) { first[o] = (a.first[o] + b.first[o]) / 2; second[o] = (a.second[o] + b.second[o]) / 2; } }
-  const wr = opps.map(o => per[o]); const mn = Math.min(...wr); return { deck: a.deck, n: a.n + b.n, per, first, second, B: mean(wr), A: opps.reduce((s, o) => s + (W[o] || 1 / opps.length) * per[o], 0), min: mn, minOpp: opps[wr.indexOf(mn)], S: a.S, seed: `${a.seed}+${b.seed}` }; };
+const poolN = (L) => { const per = {}, first = {}, second = {}; const N = L.reduce((t, x) => t + x.n, 0); const avg = (k, o) => L.reduce((t, x) => t + x[k][o] * x.n, 0) / N;
+  for (const o of opps) { per[o] = avg('per', o); if (L.every(x => x.first)) { first[o] = avg('first', o); second[o] = avg('second', o); } }
+  const wr = opps.map(o => per[o]); const mn = Math.min(...wr); return { deck: L[0].deck, n: N, per, first, second, B: mean(wr), A: opps.reduce((t, o) => t + (W[o] || 1 / opps.length) * per[o], 0), min: mn, minOpp: opps[wr.indexOf(mn)], S: L[0].S, seed: L.map(x => x.seed).join('+'), seeds: L.length }; };
 const finals = (d) => { const o = {}; for (const f of fs.readdirSync('results/final')) { const m = f.match(/^(.*)_([a-z0-9]+)_(\d+)\.json$/); if (!m || m[1] !== d) continue; const j = rd('results/final/' + f); if (j && j.per) o[m[2]] = { ...j, n: +m[3] }; }
-  if (o.k4n6 && o.k4n6s2) o.k4n6x2 = pool2(o.k4n6, o.k4n6s2);
+  const ks = ['k4n6', 'k4n6s2', 'k4n6s3', 'k4n6s4'].filter(k => o[k]); if (ks.length > 1) o.k4n6x2 = poolN(ks.map(k => o[k]));
   return Object.fromEntries(JORDER.filter(k => o[k]).map(k => [k, o[k]]).concat(Object.entries(o).filter(([k]) => !JORDER.includes(k)))); };
 const F = finals(deck); const judges = Object.keys(F); const J0 = judges[0];
 const firstSecond = (j) => [j.first ? mean(opps.map(b => j.first[b])) : null, j.second ? mean(opps.map(b => j.second[b])) : null];

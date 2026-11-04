@@ -8,10 +8,13 @@ _pending: written when the pure-search GAs and the final validations finish._
 
 | judge (both sides use it) | games/list | field mean % | Metric A % | worst % | first % | second % | lists ≥75% |
 |---|---|---|---|---|---|---|---|
-| K4N6 search, hand evaluator (two seeds pooled) | 400 | 65.4 | 66.7 | 46.3 (J_SFIBO_Chiba) | 79.8 | 51.1 | 7/26 |
+| K4N6 search, hand evaluator (all seeds pooled) | 400 | 65.4 | 66.7 | 46.3 (J_SFIBO_Chiba) | 79.8 | 51.1 | 7/26 |
 | K4N6 search + learned evaluator (mlp2) | 200 | 67.8 | 68.9 | 46.5 (J_CharIBO) | 80.0 | 55.7 | 8/26 |
 | K4N6 search, hand evaluator | 200 | 65.5 | 67.0 | 43.5 (J_SFIBO_alt) | 79.1 | 52.0 | 8/26 |
 | K4N6 search, hand evaluator, fresh seed | 200 | 65.3 | 66.4 | 45.5 (W_BRIS_RWAcademy) | 80.4 | 50.2 | 5/26 |
+| K3N3 search | 200 | 64.5 | 66.1 | 43.5 (W_BRIS_RWAcademy) | 77.7 | 51.3 | 6/26 |
+| K2N2 search | 200 | 65.1 | 66.4 | 46.0 (W_BRIS_RWAcademy) | 77.3 | 53.0 | 6/26 |
+| fast heuristic AI | 1000 | 61.9 | 63.2 | 26.4 (W_BRIS_RWAcademy) | 68.9 | 54.9 | 7/26 |
 
 ## Decklist: GP_S4_g14
 
@@ -61,11 +64,11 @@ Resource deck (separate): 10 x R-001.
 | J_SFIBO_alt | 3.9 | 46.3 | 41–51 | 49.5 | 43–56 | 52 | 41 |
 | W_BRIS_RWAcademy | 2.2 | 46.8 | 42–52 | 51.0 | 44–58 | 62 | 32 |
 | W_MKE_ZGok | 1.4 | 49.0 | 44–54 | 59.0 | 52–66 | 76 | 23 |
-| W_MEX_GPZeon | 5.2 | 51.8 | 47–57 | 55.5 | 49–62 | 73 | 31 |
+| W_MEX_GPZeon | 5.2 | 51.7 | 47–57 | 55.5 | 49–62 | 73 | 31 |
 | J_CharIBO | 5.2 | 52.0 | 47–57 | 46.5 | 40–53 | 72 | 33 |
 | W_MEL_SFVictory | 1.4 | 52.5 | 48–57 | 60.5 | 54–67 | 69 | 37 |
 | W_TKY1_BarbSF | 3.9 | 58.8 | 54–63 | 66.0 | 59–72 | 67 | 51 |
-| J_BGOYW_Chelmo | 2.2 | 60.7 | 56–65 | 56.0 | 49–63 | 81 | 41 |
+| J_BGOYW_Chelmo | 2.2 | 60.8 | 56–65 | 56.0 | 49–63 | 81 | 41 |
 | W_MNL_GPZeon | 5.2 | 64.3 | 59–69 | 71.0 | 64–77 | 72 | 57 |
 | J_EFFBanshee | 3.7 | 65.5 | 61–70 | 68.5 | 62–75 | 84 | 47 |
 | W_LILLE_Nu | 3.7 | 67.0 | 62–71 | 76.0 | 70–81 | 86 | 49 |
@@ -73,7 +76,7 @@ Resource deck (separate): 10 x R-001.
 | W_DUS_Shining | 4.7 | 69.5 | 65–74 | 67.5 | 61–74 | 84 | 55 |
 | W_DC_SF | 5.4 | 70.0 | 65–74 | 69.0 | 62–75 | 84 | 56 |
 | J_Wing_Omiya | 3.0 | 71.5 | 67–76 | 63.0 | 56–69 | 80 | 64 |
-| J_BGOYW | 2.2 | 72.2 | 68–76 | 66.5 | 60–73 | 87 | 58 |
+| J_BGOYW | 2.2 | 72.3 | 68–76 | 66.5 | 60–73 | 87 | 58 |
 | J_KshatriyaBanshee | 3.7 | 72.5 | 68–77 | 72.0 | 65–78 | 90 | 55 |
 | J_MobileFighter | 4.7 | 74.0 | 69–78 | 80.5 | 74–85 | 88 | 60 |
 | W_TOR_SF | 5.4 | 75.0 | 71–79 | 74.0 | 68–80 | 90 | 61 |
@@ -131,7 +134,7 @@ Same plan as against J_SFIBO_Chiba, with more Axis (base: shield to hand, then r
 - Rested Units die to Guntank. Going second, attack only when the attack trades or reaches the player; don't leave a 2-HP Unit rested for nothing.
 
 
-### W_MEX_GPZeon — 51.8% (k4n6x2, 400 games)
+### W_MEX_GPZeon — 51.7% (k4n6x2, 400 games)
 
 - Guide sample: 200 games ({"K":4,"N":6} both sides, seed 6161000): 51.0% overall, 66% going first, 36% going second, 13.3 turns on average. Game ends: battle damage 200.
 - Cards that win it for us (win rate when seen minus when not seen): Gundam Barbatos 1st Form (GD02-054) +58; Zaku Ⅱ (GD01-035) +48; Char's Zaku Ⅱ (ST03-006) +48; Gundam Barbatos Adapt (GD03-056) +46.
@@ -147,36 +150,20 @@ Same plan as against J_SFIBO_Chiba, with more Axis (base: shield to hand, then r
 
 | deck | judge | games/list | field mean % | Metric A % | worst % | first % | second % |
 |---|---|---|---|---|---|---|---|
-| GP_S4_g14 | K4N6 search, hand evaluator (two seeds pooled) | 400 | 65.4 | 66.7 | 46.3 (J_SFIBO_Chiba) | 79.8 | 51.1 |
+| GP_S4_g14 | K4N6 search, hand evaluator (all seeds pooled) | 400 | 65.4 | 66.7 | 46.3 (J_SFIBO_Chiba) | 79.8 | 51.1 |
 | GP_S4_g14 | K4N6 search + learned evaluator (mlp2) | 200 | 67.8 | 68.9 | 46.5 (J_CharIBO) | 80.0 | 55.7 |
 | GP_S4_g14 | K4N6 search, hand evaluator | 200 | 65.5 | 67.0 | 43.5 (J_SFIBO_alt) | 79.1 | 52.0 |
 | GP_S4_g14 | K4N6 search, hand evaluator, fresh seed | 200 | 65.3 | 66.4 | 45.5 (W_BRIS_RWAcademy) | 80.4 | 50.2 |
-| OMNIP_GP_e0 | K4N6 search + learned evaluator (mlp2) | 200 | 67.9 | 69.4 | 46.0 (W_BRIS_RWAcademy) | 79.8 | 55.9 |
-| OMNIP_GP_e0 | K4N6 search, hand evaluator | 200 | 63.1 | 64.8 | 41.0 (W_BRIS_RWAcademy) | 76.8 | 49.5 |
+| GP_S4_g14 | K3N3 search | 200 | 64.5 | 66.1 | 43.5 (W_BRIS_RWAcademy) | 77.7 | 51.3 |
+| GP_S4_g14 | K2N2 search | 200 | 65.1 | 66.4 | 46.0 (W_BRIS_RWAcademy) | 77.3 | 53.0 |
+| GP_S4_g14 | fast heuristic AI | 1000 | 61.9 | 63.2 | 26.4 (W_BRIS_RWAcademy) | 68.9 | 54.9 |
+| OMNIP_GP_e1 | K4N6 search, hand evaluator (all seeds pooled) | 400 | 65.0 | 66.4 | 45.5 (W_BRIS_RWAcademy) | 78.6 | 51.3 |
 | OMNIP_GP_e1 | K4N6 search + learned evaluator (mlp2) | 200 | 69.0 | 70.4 | 46.5 (W_BRIS_RWAcademy) | 82.2 | 55.8 |
 | OMNIP_GP_e1 | K4N6 search, hand evaluator | 200 | 65.1 | 66.7 | 42.5 (W_BRIS_RWAcademy) | 78.4 | 51.9 |
-| J_CharIBO | K4N6 search + learned evaluator (mlp2) | 200 | 66.5 | 67.6 | 42.5 (J_SFIBO_alt) | 80.6 | 52.4 |
-| J_CharIBO | K4N6 search, hand evaluator | 200 | 63.9 | 65.1 | 40.5 (J_SFIBO_Chiba) | 77.5 | 50.3 |
-| GB_S2_e1 | K4N6 search + learned evaluator (mlp2) | 200 | 59.8 | 60.9 | 31.5 (J_CharIBO) | 73.5 | 46.0 |
-| GB_S2_e1 | K4N6 search, hand evaluator | 200 | 60.6 | 61.7 | 37.5 (J_CharIBO) | 73.1 | 48.1 |
-| PURE_GB_e1 | K4N6 search + learned evaluator (mlp2) | 200 | 61.1 | 62.6 | 39.5 (W_MEL_SFVictory) | 74.0 | 48.3 |
-| PURE_GB_e1 | K4N6 search, hand evaluator | 200 | 59.2 | 60.6 | 35.5 (J_CharIBO) | 72.5 | 45.9 |
-| OMNIP_GB_e0 | K4N6 search + learned evaluator (mlp2) | 200 | 62.1 | 63.6 | 38.5 (W_MEL_SFVictory) | 75.1 | 49.0 |
-| OMNIP_GB_e0 | K4N6 search, hand evaluator | 200 | 60.1 | 61.4 | 38.0 (J_CharIBO) | 73.3 | 47.0 |
-| OMNIP_GB_e1 | K4N6 search + learned evaluator (mlp2) | 200 | 61.3 | 62.5 | 35.5 (W_MEX_GPZeon) | 73.9 | 48.6 |
-| OMNIP_GB_e1 | K4N6 search, hand evaluator | 200 | 60.5 | 61.6 | 37.5 (W_MEX_GPZeon) | 73.2 | 47.8 |
-| LGA_GB_e0 | K4N6 search + learned evaluator (mlp2) | 200 | 63.0 | 64.1 | 40.0 (W_MEX_GPZeon) | 76.3 | 49.8 |
-| LGA_GB_e0 | K4N6 search, hand evaluator | 200 | 61.4 | 62.5 | 39.0 (J_CharIBO) | 74.1 | 48.8 |
-| LGA_GB_e1 | K4N6 search + learned evaluator (mlp2) | 200 | 60.8 | 62.3 | 37.5 (W_MEX_GPZeon) | 73.0 | 48.6 |
-| LGA_GB_e1 | K4N6 search, hand evaluator | 200 | 60.4 | 61.6 | 32.0 (J_CharIBO) | 74.1 | 46.7 |
-| GB_GA2 | K4N6 search + learned evaluator (mlp2) | 200 | 58.7 | 60.1 | 36.5 (J_CharIBO) | 72.6 | 44.9 |
-| GB_GA2 | K4N6 search, hand evaluator | 200 | 56.3 | 57.6 | 36.0 (W_MEX_GPZeon) | 71.2 | 41.4 |
-| OMNI_GB | K4N6 search + learned evaluator (mlp2) | 200 | 58.9 | 59.9 | 36.5 (W_MEX_GPZeon) | 71.9 | 46.0 |
-| OMNI_GB | K4N6 search, hand evaluator | 200 | 56.2 | 57.2 | 35.0 (J_CharIBO) | 69.7 | 42.7 |
-| OMNI_GR | K4N6 search + learned evaluator (mlp2) | 200 | 56.1 | 56.3 | 37.5 (W_BRIS_RWAcademy) | 71.8 | 40.3 |
-| OMNI_GR | K4N6 search, hand evaluator | 200 | 56.4 | 56.9 | 45.5 (W_BRIS_RWAcademy) | 71.8 | 41.0 |
-| GR_GA1 | K4N6 search + learned evaluator (mlp2) | 200 | 49.9 | 50.8 | 29.5 (J_CharIBO) | 67.6 | 32.2 |
-| GR_GA1 | K4N6 search, hand evaluator | 200 | 50.4 | 51.2 | 34.5 (W_MKE_ZGok) | 67.6 | 33.2 |
+| OMNIP_GP_e1 | K4N6 search, hand evaluator, fresh seed | 200 | 64.8 | 66.1 | 43.5 (J_SFIBO_Chiba) | 78.8 | 50.8 |
+| OMNIP_GP_e1 | K3N3 search | 200 | 65.6 | 67.0 | 44.0 (W_BRIS_RWAcademy) | 78.8 | 52.4 |
+| OMNIP_GP_e1 | K2N2 search | 200 | 67.2 | 68.5 | 43.0 (W_BRIS_RWAcademy) | 78.2 | 56.1 |
+| OMNIP_GP_e1 | fast heuristic AI | 1000 | 62.9 | 64.2 | 23.9 (W_BRIS_RWAcademy) | 70.0 | 55.7 |
 
 ## Search islands (one per colour pair / mono colour)
 
