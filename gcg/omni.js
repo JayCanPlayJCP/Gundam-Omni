@@ -53,7 +53,8 @@ function ensureMerged(key, cols) { const D = JSON.parse(fs.readFileSync('decks.j
     if (done('pure_' + c.n)) continue; const p = PAIRS.find(x => x[0] === c.n); const cols = p ? p[1] : MONO.find(m => 'M' + m[0] === c.n);
     const D = JSON.parse(fs.readFileSync('decks.json')); const seeds = ['OMNI_' + c.n, ...(p ? [p[2], ...p[3]] : [])].filter(s => D[s]).join(',');
     const out = `results/omni/pure_${c.n}.json`; const sf = fs.existsSync(out + ".tmp") ? `--seedfiles ${out}.ck` : ""; if (sf) fs.copyFileSync(out + ".tmp", out + ".ck");
-    sh(`node ga2.js --pure 1 --colors ${cols} --seeds ${seeds} ${sf} ${PURE_ARGS} --rseed ${c.n.charCodeAt(0) * 7} --out ${out}.tmp >> results/omni/pure_${c.n}.log 2>&1`);
+    const pargs = sf ? PURE_ARGS.replace(/--gens (\d+)/, (m, g) => '--gens ' + Math.max(1, +g - 1 - JSON.parse(fs.readFileSync(out + '.tmp')).gen)) : PURE_ARGS; // resume: only the generations left
+    sh(`node ga2.js --pure 1 --colors ${cols} --seeds ${seeds} ${sf} ${pargs} --rseed ${c.n.charCodeAt(0) * 7} --out ${out}.tmp >> results/omni/pure_${c.n}.log 2>&1`);
     fs.renameSync(`${out}.tmp`, out); const j = JSON.parse(fs.readFileSync(out)); j.elites.slice(0, 2).forEach((e, i) => addDeck(`OMNIP_${c.n}_e${i}`, `Omni pure stronger-AI ${c.n} elite ${i}`, e.deck)); set('pure_' + c.n); log(`pure ${c.n} done: elite search B ${(j.elites[0].search.B * 100).toFixed(1)} n${j.elites[0].search.n}`);
   }
   // S5: validation of the pure elites + reference decks on a common stronger-AI check (K3N3, 100 games/list) and 1000 fast-AI games
