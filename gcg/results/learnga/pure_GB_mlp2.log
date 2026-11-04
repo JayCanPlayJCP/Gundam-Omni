@@ -1,0 +1,14 @@
+[0s] colors Green,Blue pool 469 seeds 4 lock {}
+[836s] gen 0 best f 0.756 | heur B 0.0 (n0) | search B 64.2 A 66.0 b5 45.4 min 35.4 W_MEL_SFVictory (n48)
+[1470s] gen 1 best f 0.797 | heur B 0.0 (n0) | search B 67.0 A 67.4 b5 52.5 min 41.7 W_MKE_ZGok (n24)
+[2090s] gen 2 best f 0.790 | heur B 0.0 (n0) | search B 66.0 A 67.3 b5 53.3 min 45.8 W_MKE_ZGok (n24)
+[2707s] gen 3 best f 0.786 | heur B 0.0 (n0) | search B 65.1 A 65.9 b5 52.5 min 50.0 J_CharIBO (n48)
+[3408s] gen 4 best f 0.771 | heur B 0.0 (n0) | search B 63.5 A 64.1 b5 51.1 min 48.6 J_CharIBO (n72)
+[4100s] gen 5 best f 0.806 | heur B 0.0 (n0) | search B 67.6 A 69.4 b5 53.3 min 45.8 W_JKT_Nu (n24)
+[4755s] gen 6 best f 0.800 | heur B 0.0 (n0) | search B 66.5 A 68.4 b5 52.1 min 45.8 W_MKE_ZGok (n48)
+[5488s] gen 7 best f 0.775 | heur B 0.0 (n0) | search B 63.5 A 64.7 b5 52.5 min 48.6 W_MKE_ZGok (n72)
+[6130s] gen 8 best f 0.791 | heur B 0.0 (n0) | search B 65.7 A 66.9 b5 55.0 min 50.0 W_MKE_ZGok (n24)
+[6760s] gen 9 best f 0.781 | heur B 0.0 (n0) | search B 64.6 A 66.2 b5 49.7 min 44.2 W_MEL_SFVictory (n120)
+[7378s] gen 10 best f 0.787 | heur B 0.0 (n0) | search B 64.8 A 66.4 b5 50.7 min 45.1 W_MEL_SFVictory (n144)
+[8028s] gen 11 best f 0.790 | heur B 0.0 (n0) | search B 64.8 A 66.4 b5 51.2 min 44.0 W_MKE_ZGok (n168)
+[8028s] done
