@@ -28,6 +28,11 @@ Session-1 Omni outputs are in results/omni_v1/ (decks OMNI0_GB, OMNI0_GR).
   RW 50.0, BW 43.0, GB 55.0, PR 57.5 in-search (re-tests running). Field lists already beat GB_S2_e1 harder:
   J_CharIBO 62.5, W_MEX_GPZeon 58.5 (K4N6 200).
 - Learned-judge GA (step 4.4) started 11:54: G/B, K2N2+mlp2 both sides, gens 12 kids 10 elite 4 sn 24 (~14 min/gen).
+- S4 GB pure GA done 15:24 (25 gens, 3.2 h): elite 0 65.7 (n80), elite 1 63.2 (n360) in-search K2N2 -> OMNIP_GB_e0/e1.
+  S4 continues GP, MG, WP, BP (~3.2 h each).
+- Learned-judge GA done 14:08: LGA_GB_e0 K4N6 61.4 / mlp2 63.0, LGA_GB_e1 K4N6 60.4 (200/list). Converges on the G/B core
+  (92-98% card overlap with GB_S2_e1 / PURE_GB_e1 / OMNIP_GB_*).
+- Validation queue: results/final/val_queue.sh reads results/final/queue.txt (one deck per line; STOP ends it).
 - Reference decks, K4N6 both sides, 200/list, seed 9393000 (results/final/*_k4n6_200.json; *_mlp2_200.json = K4N6+mlp2):
   GB_S2_e1 60.6 / 59.8, PURE_GB_e1 59.2 / 61.1, GB_GA2 56.3 / 58.7, OMNI_GB 56.2 / 58.9, OMNI_GR 56.4 / 56.1, GR_GA1 50.4 / 49.9.
 - Spare-core queue (SIM_WORKERS=1): results/counter/run_counter.sh GB_S2_e1 (counter-deck GA per field colour pair, step 4.5,
