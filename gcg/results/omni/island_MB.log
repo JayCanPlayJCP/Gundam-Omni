@@ -8,3 +8,5 @@ gen 5 top f 0.723 B 54.2 A 54.8 b5 35.5 min 27.5 W_MKE_ZGok (142s)
 gen 6 top f 0.690 B 51.3 A 52.3 b5 34.5 min 30.0 J_SFIBO_alt (158s)
 gen 7 top f 0.730 B 53.7 A 54.4 b5 38.0 min 35.0 J_KshatriyaBanshee (177s)
 gen 8 top f 0.704 B 52.8 A 53.5 b5 34.5 min 30.0 W_MEX_GPZeon (200s)
+gen 9 fresh: B 55.7 A 56.8 b5 43.6 | B 50.9 A 51.0 b5 41.0 | B 49.8 A 50.4 b5 33.4  best-so-far B 55.7 A 56.8
+gen 9 top f 0.811 B 58.4 A 58.8 b5 45.0 min 37.5 J_EFFBanshee (240s)

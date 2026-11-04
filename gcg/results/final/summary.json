@@ -1,0 +1,771 @@
+{
+ "islands": [
+  {
+   "unit": "GB",
+   "heurB": 0.7303846153846154,
+   "checkB": 0.6276923076923077,
+   "checkMin": 0.38,
+   "checkMinOpp": "J_CharIBO",
+   "pureB": null,
+   "pureN": null
+  },
+  {
+   "unit": "GR",
+   "heurB": 0.644230769230769,
+   "checkB": 0.5657692307692309,
+   "checkMin": 0.33,
+   "checkMinOpp": "W_BRIS_RWAcademy",
+   "pureB": null,
+   "pureN": null
+  },
+  {
+   "unit": "BR",
+   "heurB": 0.6288461538461539,
+   "checkB": 0.4484615384615384,
+   "checkMin": 0.22,
+   "checkMinOpp": "J_SFIBO_alt",
+   "pureB": null,
+   "pureN": null
+  },
+  {
+   "unit": "MG",
+   "heurB": 0.6434615384615386,
+   "checkB": 0.5842307692307693,
+   "checkMin": 0.27,
+   "checkMinOpp": "J_CharIBO",
+   "pureB": null,
+   "pureN": null
+  },
+  {
+   "unit": "MB",
+   "heurB": null,
+   "checkB": null,
+   "checkMin": null,
+   "checkMinOpp": null,
+   "pureB": null,
+   "pureN": null
+  },
+  {
+   "unit": "MR",
+   "heurB": null,
+   "checkB": null,
+   "checkMin": null,
+   "checkMinOpp": null,
+   "pureB": null,
+   "pureN": null
+  },
+  {
+   "unit": "GP",
+   "heurB": null,
+   "checkB": null,
+   "checkMin": null,
+   "checkMinOpp": null,
+   "pureB": null,
+   "pureN": null
+  },
+  {
+   "unit": "BP",
+   "heurB": null,
+   "checkB": null,
+   "checkMin": null,
+   "checkMinOpp": null,
+   "pureB": null,
+   "pureN": null
+  },
+  {
+   "unit": "BW",
+   "heurB": null,
+   "checkB": null,
+   "checkMin": null,
+   "checkMinOpp": null,
+   "pureB": null,
+   "pureN": null
+  },
+  {
+   "unit": "RW",
+   "heurB": null,
+   "checkB": null,
+   "checkMin": null,
+   "checkMinOpp": null,
+   "pureB": null,
+   "pureN": null
+  },
+  {
+   "unit": "GW",
+   "heurB": null,
+   "checkB": null,
+   "checkMin": null,
+   "checkMinOpp": null,
+   "pureB": null,
+   "pureN": null
+  },
+  {
+   "unit": "PR",
+   "heurB": null,
+   "checkB": null,
+   "checkMin": null,
+   "checkMinOpp": null,
+   "pureB": null,
+   "pureN": null
+  },
+  {
+   "unit": "WP",
+   "heurB": null,
+   "checkB": null,
+   "checkMin": null,
+   "checkMinOpp": null,
+   "pureB": null,
+   "pureN": null
+  },
+  {
+   "unit": "MW",
+   "heurB": null,
+   "checkB": null,
+   "checkMin": null,
+   "checkMinOpp": null,
+   "pureB": null,
+   "pureN": null
+  },
+  {
+   "unit": "MP",
+   "heurB": null,
+   "checkB": null,
+   "checkMin": null,
+   "checkMinOpp": null,
+   "pureB": null,
+   "pureN": null
+  }
+ ],
+ "judges": {
+  "heur_vs_k4n6": {
+   "X": null,
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 832,
+   "score": 0.24459134615384615,
+   "ci95": [
+    0.21660051518440795,
+    0.27492993747552186
+   ]
+  },
+  "k3n3_vs_legacy": {
+   "X": {
+    "K": 3,
+    "N": 3
+   },
+   "Y": {
+    "K": 3,
+    "N": 3,
+    "legacy": true
+   },
+   "games": 416,
+   "score": 0.5420673076923077,
+   "ci95": [
+    0.49402228854020835,
+    0.5893424852220868
+   ]
+  },
+  "k4n6_vs_k3n3": {
+   "X": {
+    "K": 4,
+    "N": 6
+   },
+   "Y": {
+    "K": 3,
+    "N": 3
+   },
+   "games": 416,
+   "score": 0.5300480769230769,
+   "ci95": [
+    0.48203066324881017,
+    0.5775156037242577
+   ]
+  },
+  "k4n6_vs_k3n3_832": {
+   "X": {
+    "K": 4,
+    "N": 6
+   },
+   "Y": {
+    "K": 3,
+    "N": 3
+   },
+   "games": 832,
+   "score": 0.5420673076923077,
+   "ci95": [
+    0.5080963752265509,
+    0.575651550217696
+   ]
+  },
+  "k4n6_vs_legacy": {
+   "X": {
+    "K": 4,
+    "N": 6
+   },
+   "Y": {
+    "K": 3,
+    "N": 3,
+    "legacy": true
+   },
+   "games": 1040,
+   "score": 0.5788461538461539,
+   "ci95": [
+    0.5486015466195752,
+    0.6085104136625213
+   ]
+  },
+  "k4n6d2_vs_k4n6": {
+   "X": {
+    "K": 4,
+    "N": 6,
+    "D": 2
+   },
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 416,
+   "score": 0.4639423076923077,
+   "ci95": [
+    0.4165675057089507,
+    0.5119769739233677
+   ]
+  },
+  "k4n6d3_vs_k4n6": {
+   "X": {
+    "K": 4,
+    "N": 6,
+    "D": 3
+   },
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 416,
+   "score": 0.46033653846153844,
+   "ci95": [
+    0.41302068202095216,
+    0.5083782455745981
+   ]
+  },
+  "k6n10_vs_k4n6": {
+   "X": {
+    "K": 6,
+    "N": 10
+   },
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 832,
+   "score": 0.5066105769230769,
+   "ci95": [
+    0.4726859230553684,
+    0.5404744652287274
+   ]
+  },
+  "lr0_vs_k4n6": {
+   "X": {
+    "K": 4,
+    "N": 6,
+    "ev": "results/learn/lr0.json"
+   },
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 832,
+   "score": 0.5132211538461539,
+   "ci95": [
+    0.47927496606887066,
+    0.5470458104993212
+   ]
+  },
+  "mcts120c3m8_vs_k4n6": {
+   "X": {
+    "mcts": true,
+    "I": 120,
+    "C": 0.3,
+    "scale": 4,
+    "M": 8
+   },
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 416,
+   "score": 0.5084134615384616,
+   "ci95": [
+    0.46051506360257993,
+    0.556157891149879
+   ]
+  },
+  "mcts30_vs_k4n6": {
+   "X": {
+    "mcts": true,
+    "I": 30
+   },
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 416,
+   "score": 0.49759615384615385,
+   "ci95": [
+    0.449790573571302,
+    0.5454457250708526
+   ]
+  },
+  "mcts60_vs_k4n6": {
+   "X": {
+    "mcts": true,
+    "I": 60
+   },
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 416,
+   "score": 0.484375,
+   "ci95": [
+    0.4367129926327744,
+    0.5323229485412302
+   ]
+  },
+  "mcts60c08m6": {
+   "X": {
+    "mcts": true,
+    "I": 60,
+    "C": 0.08,
+    "scale": 4,
+    "M": 6
+   },
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 832,
+   "score": 0.5012019230769231,
+   "ci95": [
+    0.4672992762249082,
+    0.5350935216449276
+   ]
+  },
+  "mcts60c15_vs_k4n6": {
+   "X": {
+    "mcts": true,
+    "I": 60,
+    "C": 0.15,
+    "scale": 4
+   },
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 416,
+   "score": 0.5360576923076923,
+   "ci95": [
+    0.48802302607663217,
+    0.5834324942910493
+   ]
+  },
+  "mcts60c15m6_832": {
+   "X": {
+    "mcts": true,
+    "I": 60,
+    "C": 0.15,
+    "scale": 4,
+    "M": 6
+   },
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 832,
+   "score": 0.5108173076923077,
+   "ci95": [
+    0.47687826758525503,
+    0.5446569132432657
+   ]
+  },
+  "mcts60c15m6_vs_k4n6": {
+   "X": {
+    "mcts": true,
+    "I": 60,
+    "C": 0.15,
+    "scale": 4,
+    "M": 6
+   },
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 416,
+   "score": 0.5444711538461539,
+   "ci95": [
+    0.4964239296670651,
+    0.5917045454530755
+   ]
+  },
+  "mcts60c25m6_832": {
+   "X": {
+    "mcts": true,
+    "I": 60,
+    "C": 0.25,
+    "scale": 4,
+    "M": 6
+   },
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 832,
+   "score": 0.5096153846153846,
+   "ci95": [
+    0.47568021102542324,
+    0.5434621719332617
+   ]
+  },
+  "mlp0_vs_k4n6": {
+   "X": {
+    "K": 4,
+    "N": 6,
+    "ev": "results/learn/mlp0.json"
+   },
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 832,
+   "score": 0.5180288461538461,
+   "ci95": [
+    0.48407070550635134,
+    0.551821262541183
+   ]
+  },
+  "mlp1_vs_k4n6": {
+   "X": {
+    "K": 4,
+    "N": 6,
+    "ev": "results/learn/mlp1.json"
+   },
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 832,
+   "score": 0.5408653846153846,
+   "ci95": [
+    0.5068932265378788,
+    0.5744619010365324
+   ]
+  },
+  "mlp2_vs_k4n6": {
+   "X": {
+    "K": 4,
+    "N": 6,
+    "ev": "results/learn/mlp2.json"
+   },
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 832,
+   "score": 0.5492788461538461,
+   "ci95": [
+    0.5153194098604095,
+    0.5827853028028511
+   ]
+  },
+  "mlp2_vs_k4n6_fresh": {
+   "X": {
+    "K": 4,
+    "N": 6,
+    "ev": "results/learn/mlp2.json"
+   },
+   "Y": {
+    "K": 4,
+    "N": 6
+   },
+   "games": 1664,
+   "score": 0.5357572115384616,
+   "ci95": [
+    0.5117396078574903,
+    0.5596100934570711
+   ]
+  },
+  "mlp2_vs_mlp1": {
+   "X": {
+    "K": 4,
+    "N": 6,
+    "ev": "results/learn/mlp2.json"
+   },
+   "Y": {
+    "K": 4,
+    "N": 6,
+    "ev": "results/learn/mlp1.json"
+   },
+   "games": 832,
+   "score": 0.48197115384615385,
+   "ci95": [
+    0.44817873745881703,
+    0.5159292944936487
+   ]
+  },
+  "smoke_mcts": {
+   "X": {
+    "mcts": true,
+    "I": 24
+   },
+   "Y": {
+    "K": 3,
+    "N": 3
+   },
+   "games": 4,
+   "score": 0.5,
+   "ci95": [
+    0.15003570882017145,
+    0.8499642911798285
+   ]
+  }
+ },
+ "finals": {},
+ "census": {
+  "GB": {
+   "chassis": "GB_GA2",
+   "base": 0.6600961538461539,
+   "top": [
+    {
+     "id": "ST08-008",
+     "name": "Gustav Karl Type-00",
+     "d": 0.038942307692307776
+    },
+    {
+     "id": "GD03-108",
+     "name": "How Many Miles to the Battlefield?",
+     "d": 0.03605769230769218
+    },
+    {
+     "id": "GD01-018",
+     "name": "ReZEL",
+     "d": 0.033173076923076805
+    },
+    {
+     "id": "EB01-032",
+     "name": "Gundam Ez8 High Mobility Custom",
+     "d": 0.033173076923076805
+    },
+    {
+     "id": "ST11-004",
+     "name": "ZnO",
+     "d": 0.028365384615384515
+    },
+    {
+     "id": "EB01-031",
+     "name": "Oggo",
+     "d": 0.027403846153846168
+    },
+    {
+     "id": "GD06-009",
+     "name": "GM Custom",
+     "d": 0.027403846153846168
+    },
+    {
+     "id": "GD06-014",
+     "name": "GM Type C",
+     "d": 0.02548076923076925
+    },
+    {
+     "id": "GD05-023",
+     "name": "Re-GZ BWS",
+     "d": 0.023557692307692335
+    },
+    {
+     "id": "ST13-005",
+     "name": "GFreD",
+     "d": 0.02067307692307696
+    }
+   ],
+   "bottom": [
+    {
+     "id": "GD06-025",
+     "loss": -0.0264423076923076
+    },
+    {
+     "id": "GD06-031",
+     "loss": -0.023076923076922995
+    },
+    {
+     "id": "GD01-013",
+     "loss": -0.022596153846153766
+    },
+    {
+     "id": "GD01-030",
+     "loss": -0.017788461538461475
+    },
+    {
+     "id": "GD05-017",
+     "loss": -0.014663461538461486
+    }
+   ]
+  },
+  "GR": {
+   "chassis": "GR_GA1",
+   "base": 0.595673076923077,
+   "top": [
+    {
+     "id": "GD04-038",
+     "name": "Gundam Exia",
+     "d": 0.006249999999999867
+    },
+    {
+     "id": "GD05-019",
+     "name": "Re-GZ",
+     "d": -0.006250000000000089
+    },
+    {
+     "id": "ST13-008",
+     "name": "Gundam Throne Zwei",
+     "d": -0.03221153846153857
+    },
+    {
+     "id": "EB01-032",
+     "name": "Gundam Ez8 High Mobility Custom",
+     "d": -0.03221153846153857
+    },
+    {
+     "id": "ST08-005",
+     "name": "Messer Type-F02 Minelayer",
+     "d": -0.03221153846153857
+    },
+    {
+     "id": "GD01-111",
+     "name": "Battle of Aces",
+     "d": -0.03701923076923086
+    },
+    {
+     "id": "ST03-013",
+     "name": "Close Combat",
+     "d": -0.04278846153846161
+    },
+    {
+     "id": "GD05-028",
+     "name": "Kayra's Jegan",
+     "d": -0.04567307692307698
+    },
+    {
+     "id": "GD03-109",
+     "name": "Improved Technique",
+     "d": -0.04567307692307698
+    },
+    {
+     "id": "GD06-025",
+     "name": "Re-GZ",
+     "d": -0.04567307692307698
+    }
+   ],
+   "bottom": [
+    {
+     "id": "GD05-110",
+     "loss": -0.020673076923076794
+    },
+    {
+     "id": "GD01-029",
+     "loss": -0.018269230769230704
+    },
+    {
+     "id": "GD06-105",
+     "loss": -0.01586538461538456
+    },
+    {
+     "id": "GD01-039",
+     "loss": -0.015144230769230604
+    },
+    {
+     "id": "GD05-086",
+     "loss": -0.013942307692307587
+    }
+   ]
+  },
+  "BR": {
+   "chassis": "W_MEL_SFVictory",
+   "base": 0.35432692307692304,
+   "top": [
+    {
+     "id": "GD02-006",
+     "name": "Forbidden Gundam",
+     "d": 0.0591346153846154
+    },
+    {
+     "id": "ST11-004",
+     "name": "ZnO",
+     "d": 0.05144230769230773
+    },
+    {
+     "id": "GD01-018",
+     "name": "ReZEL",
+     "d": 0.05144230769230762
+    },
+    {
+     "id": "ST13-008",
+     "name": "Gundam Throne Zwei",
+     "d": 0.05144230769230762
+    },
+    {
+     "id": "ST08-005",
+     "name": "Messer Type-F02 Minelayer",
+     "d": 0.05144230769230762
+    },
+    {
+     "id": "ST08-008",
+     "name": "Gustav Karl Type-00",
+     "d": 0.0475961538461539
+    },
+    {
+     "id": "GD01-019",
+     "name": "Byarlant Custom",
+     "d": 0.04375000000000001
+    },
+    {
+     "id": "GD05-035",
+     "name": "Dragon Gundam",
+     "d": 0.04278846153846155
+    },
+    {
+     "id": "GD05-009",
+     "name": "Gun Blaster",
+     "d": 0.03798076923076932
+    },
+    {
+     "id": "GD05-010",
+     "name": "Kira's Strike Rouge",
+     "d": 0.03701923076923075
+    }
+   ],
+   "bottom": [
+    {
+     "id": "GD01-100",
+     "loss": -0.043509615384615424
+    },
+    {
+     "id": "GD04-121",
+     "loss": -0.04326923076923084
+    },
+    {
+     "id": "GD05-111",
+     "loss": -0.04158653846153848
+    },
+    {
+     "id": "GD04-109",
+     "loss": -0.04086538461538461
+    },
+    {
+     "id": "GD03-109",
+     "loss": -0.04062500000000005
+    }
+   ]
+  }
+ }
+}
