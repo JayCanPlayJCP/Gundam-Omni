@@ -38,55 +38,55 @@
   },
   {
    "unit": "MB",
-   "heurB": null,
-   "checkB": null,
-   "checkMin": null,
-   "checkMinOpp": null,
+   "heurB": 0.6292307692307693,
+   "checkB": 0.4334615384615385,
+   "checkMin": 0.28,
+   "checkMinOpp": "W_MEL_SFVictory",
    "pureB": null,
    "pureN": null
   },
   {
    "unit": "MR",
-   "heurB": null,
-   "checkB": null,
-   "checkMin": null,
-   "checkMinOpp": null,
+   "heurB": 0.5746153846153846,
+   "checkB": 0.47192307692307706,
+   "checkMin": 0.34,
+   "checkMinOpp": "J_SFBlockers",
    "pureB": null,
    "pureN": null
   },
   {
    "unit": "GP",
-   "heurB": null,
-   "checkB": null,
-   "checkMin": null,
-   "checkMinOpp": null,
+   "heurB": 0.6557692307692309,
+   "checkB": 0.5850000000000001,
+   "checkMin": 0.36,
+   "checkMinOpp": "J_CharIBO",
    "pureB": null,
    "pureN": null
   },
   {
    "unit": "BP",
-   "heurB": null,
-   "checkB": null,
-   "checkMin": null,
-   "checkMinOpp": null,
+   "heurB": 0.6961538461538462,
+   "checkB": 0.566923076923077,
+   "checkMin": 0.41,
+   "checkMinOpp": "W_BRIS_RWAcademy",
    "pureB": null,
    "pureN": null
   },
   {
    "unit": "BW",
-   "heurB": null,
-   "checkB": null,
-   "checkMin": null,
-   "checkMinOpp": null,
+   "heurB": 0.7115384615384616,
+   "checkB": 0.5215384615384616,
+   "checkMin": 0.4,
+   "checkMinOpp": "W_MNL_GPZeon",
    "pureB": null,
    "pureN": null
   },
   {
    "unit": "RW",
-   "heurB": null,
-   "checkB": null,
-   "checkMin": null,
-   "checkMinOpp": null,
+   "heurB": 0.6911538461538462,
+   "checkB": 0.5211538461538461,
+   "checkMin": 0.36,
+   "checkMinOpp": "J_SFBlockers",
    "pureB": null,
    "pureN": null
   },
@@ -531,7 +531,464 @@
    ]
   }
  },
- "finals": {},
+ "finals": {
+  "GB_GA2": {
+   "k4n6": {
+    "n": 200,
+    "B": 0.5630769230769231,
+    "A": 0.5761478146013449,
+    "min": 0.36,
+    "minOpp": "W_MEX_GPZeon",
+    "first": 0.7119230769230769,
+    "second": 0.41423076923076924,
+    "per": {
+     "W_DC_SF": 0.63,
+     "W_BRIS_RWAcademy": 0.555,
+     "W_LILLE_Nu": 0.535,
+     "W_MKE_ZGok": 0.4,
+     "W_DUS_Shining": 0.64,
+     "W_TKY1_BarbSF": 0.6,
+     "W_MNL_GPZeon": 0.57,
+     "W_JKT_Nu": 0.55,
+     "W_TOR_SF": 0.685,
+     "W_MEX_GPZeon": 0.36,
+     "W_MEL_SFVictory": 0.45,
+     "W_TKY3_Shining": 0.64,
+     "J_MobileFighter": 0.685,
+     "J_CharIBO": 0.395,
+     "J_NuAggro": 0.575,
+     "J_SFBlockers": 0.73,
+     "J_SFIBO_Chiba": 0.515,
+     "J_SFIBO_alt": 0.495,
+     "J_KshatriyaBanshee": 0.57,
+     "J_EFFBanshee": 0.515,
+     "J_BGOYW": 0.5,
+     "J_JusticeAerial": 0.655,
+     "J_Wing_Omiya": 0.63,
+     "J_MF_Kichijoji": 0.685,
+     "J_BGOYW_Chelmo": 0.415,
+     "J_MF_Machida": 0.66
+    }
+   },
+   "mlp2": {
+    "n": 200,
+    "B": 0.5873076923076923,
+    "A": 0.601144572526417,
+    "min": 0.365,
+    "minOpp": "J_CharIBO",
+    "first": 0.7257692307692308,
+    "second": 0.4488461538461539,
+    "per": {
+     "W_DC_SF": 0.65,
+     "W_BRIS_RWAcademy": 0.56,
+     "W_LILLE_Nu": 0.6,
+     "W_MKE_ZGok": 0.435,
+     "W_DUS_Shining": 0.68,
+     "W_TKY1_BarbSF": 0.61,
+     "W_MNL_GPZeon": 0.61,
+     "W_JKT_Nu": 0.61,
+     "W_TOR_SF": 0.725,
+     "W_MEX_GPZeon": 0.39,
+     "W_MEL_SFVictory": 0.39,
+     "W_TKY3_Shining": 0.675,
+     "J_MobileFighter": 0.705,
+     "J_CharIBO": 0.365,
+     "J_NuAggro": 0.655,
+     "J_SFBlockers": 0.725,
+     "J_SFIBO_Chiba": 0.51,
+     "J_SFIBO_alt": 0.49,
+     "J_KshatriyaBanshee": 0.625,
+     "J_EFFBanshee": 0.52,
+     "J_BGOYW": 0.505,
+     "J_JusticeAerial": 0.72,
+     "J_Wing_Omiya": 0.685,
+     "J_MF_Kichijoji": 0.72,
+     "J_BGOYW_Chelmo": 0.435,
+     "J_MF_Machida": 0.675
+    }
+   }
+  },
+  "GB_S2_e1": {
+   "k4n6": {
+    "n": 200,
+    "B": 0.6061538461538463,
+    "A": 0.6168891690682035,
+    "min": 0.375,
+    "minOpp": "J_CharIBO",
+    "first": 0.731153846153846,
+    "second": 0.4811538461538462,
+    "per": {
+     "W_DC_SF": 0.61,
+     "W_BRIS_RWAcademy": 0.59,
+     "W_LILLE_Nu": 0.535,
+     "W_MKE_ZGok": 0.515,
+     "W_DUS_Shining": 0.745,
+     "W_TKY1_BarbSF": 0.72,
+     "W_MNL_GPZeon": 0.645,
+     "W_JKT_Nu": 0.595,
+     "W_TOR_SF": 0.685,
+     "W_MEX_GPZeon": 0.415,
+     "W_MEL_SFVictory": 0.45,
+     "W_TKY3_Shining": 0.75,
+     "J_MobileFighter": 0.73,
+     "J_CharIBO": 0.375,
+     "J_NuAggro": 0.635,
+     "J_SFBlockers": 0.715,
+     "J_SFIBO_Chiba": 0.56,
+     "J_SFIBO_alt": 0.52,
+     "J_KshatriyaBanshee": 0.625,
+     "J_EFFBanshee": 0.48,
+     "J_BGOYW": 0.485,
+     "J_JusticeAerial": 0.8,
+     "J_Wing_Omiya": 0.63,
+     "J_MF_Kichijoji": 0.765,
+     "J_BGOYW_Chelmo": 0.48,
+     "J_MF_Machida": 0.705
+    }
+   },
+   "mlp2": {
+    "n": 200,
+    "B": 0.5975,
+    "A": 0.609412824207493,
+    "min": 0.315,
+    "minOpp": "J_CharIBO",
+    "first": 0.7353846153846154,
+    "second": 0.4596153846153847,
+    "per": {
+     "W_DC_SF": 0.615,
+     "W_BRIS_RWAcademy": 0.605,
+     "W_LILLE_Nu": 0.555,
+     "W_MKE_ZGok": 0.45,
+     "W_DUS_Shining": 0.715,
+     "W_TKY1_BarbSF": 0.63,
+     "W_MNL_GPZeon": 0.64,
+     "W_JKT_Nu": 0.665,
+     "W_TOR_SF": 0.72,
+     "W_MEX_GPZeon": 0.355,
+     "W_MEL_SFVictory": 0.465,
+     "W_TKY3_Shining": 0.73,
+     "J_MobileFighter": 0.75,
+     "J_CharIBO": 0.315,
+     "J_NuAggro": 0.67,
+     "J_SFBlockers": 0.735,
+     "J_SFIBO_Chiba": 0.56,
+     "J_SFIBO_alt": 0.51,
+     "J_KshatriyaBanshee": 0.58,
+     "J_EFFBanshee": 0.47,
+     "J_BGOYW": 0.485,
+     "J_JusticeAerial": 0.75,
+     "J_Wing_Omiya": 0.65,
+     "J_MF_Kichijoji": 0.76,
+     "J_BGOYW_Chelmo": 0.435,
+     "J_MF_Machida": 0.72
+    }
+   }
+  },
+  "GR_GA1": {
+   "k4n6": {
+    "n": 200,
+    "B": 0.5038461538461539,
+    "A": 0.5124392411143132,
+    "min": 0.345,
+    "minOpp": "W_MKE_ZGok",
+    "first": 0.6761538461538462,
+    "second": 0.33153846153846156,
+    "per": {
+     "W_DC_SF": 0.51,
+     "W_BRIS_RWAcademy": 0.42,
+     "W_LILLE_Nu": 0.485,
+     "W_MKE_ZGok": 0.345,
+     "W_DUS_Shining": 0.53,
+     "W_TKY1_BarbSF": 0.485,
+     "W_MNL_GPZeon": 0.48,
+     "W_JKT_Nu": 0.53,
+     "W_TOR_SF": 0.57,
+     "W_MEX_GPZeon": 0.35,
+     "W_MEL_SFVictory": 0.42,
+     "W_TKY3_Shining": 0.65,
+     "J_MobileFighter": 0.625,
+     "J_CharIBO": 0.36,
+     "J_NuAggro": 0.545,
+     "J_SFBlockers": 0.575,
+     "J_SFIBO_Chiba": 0.485,
+     "J_SFIBO_alt": 0.385,
+     "J_KshatriyaBanshee": 0.51,
+     "J_EFFBanshee": 0.47,
+     "J_BGOYW": 0.485,
+     "J_JusticeAerial": 0.605,
+     "J_Wing_Omiya": 0.57,
+     "J_MF_Kichijoji": 0.65,
+     "J_BGOYW_Chelmo": 0.455,
+     "J_MF_Machida": 0.605
+    }
+   },
+   "mlp2": {
+    "n": 200,
+    "B": 0.49865384615384617,
+    "A": 0.5076233189241115,
+    "min": 0.295,
+    "minOpp": "J_CharIBO",
+    "first": 0.6757692307692308,
+    "second": 0.3215384615384615,
+    "per": {
+     "W_DC_SF": 0.5,
+     "W_BRIS_RWAcademy": 0.4,
+     "W_LILLE_Nu": 0.55,
+     "W_MKE_ZGok": 0.385,
+     "W_DUS_Shining": 0.515,
+     "W_TKY1_BarbSF": 0.485,
+     "W_MNL_GPZeon": 0.5,
+     "W_JKT_Nu": 0.605,
+     "W_TOR_SF": 0.56,
+     "W_MEX_GPZeon": 0.36,
+     "W_MEL_SFVictory": 0.41,
+     "W_TKY3_Shining": 0.64,
+     "J_MobileFighter": 0.58,
+     "J_CharIBO": 0.295,
+     "J_NuAggro": 0.605,
+     "J_SFBlockers": 0.595,
+     "J_SFIBO_Chiba": 0.445,
+     "J_SFIBO_alt": 0.405,
+     "J_KshatriyaBanshee": 0.47,
+     "J_EFFBanshee": 0.465,
+     "J_BGOYW": 0.495,
+     "J_JusticeAerial": 0.6,
+     "J_Wing_Omiya": 0.505,
+     "J_MF_Kichijoji": 0.665,
+     "J_BGOYW_Chelmo": 0.35,
+     "J_MF_Machida": 0.58
+    }
+   }
+  },
+  "OMNI_GB": {
+   "k4n6": {
+    "n": 200,
+    "B": 0.5615384615384614,
+    "A": 0.5724873919308359,
+    "min": 0.35,
+    "minOpp": "J_CharIBO",
+    "first": 0.6965384615384617,
+    "second": 0.42653846153846164,
+    "per": {
+     "W_DC_SF": 0.59,
+     "W_BRIS_RWAcademy": 0.605,
+     "W_LILLE_Nu": 0.5,
+     "W_MKE_ZGok": 0.42,
+     "W_DUS_Shining": 0.68,
+     "W_TKY1_BarbSF": 0.54,
+     "W_MNL_GPZeon": 0.55,
+     "W_JKT_Nu": 0.57,
+     "W_TOR_SF": 0.725,
+     "W_MEX_GPZeon": 0.38,
+     "W_MEL_SFVictory": 0.385,
+     "W_TKY3_Shining": 0.69,
+     "J_MobileFighter": 0.67,
+     "J_CharIBO": 0.35,
+     "J_NuAggro": 0.57,
+     "J_SFBlockers": 0.71,
+     "J_SFIBO_Chiba": 0.475,
+     "J_SFIBO_alt": 0.43,
+     "J_KshatriyaBanshee": 0.57,
+     "J_EFFBanshee": 0.46,
+     "J_BGOYW": 0.51,
+     "J_JusticeAerial": 0.73,
+     "J_Wing_Omiya": 0.62,
+     "J_MF_Kichijoji": 0.72,
+     "J_BGOYW_Chelmo": 0.485,
+     "J_MF_Machida": 0.665
+    }
+   },
+   "mlp2": {
+    "n": 200,
+    "B": 0.5894230769230769,
+    "A": 0.5985802113352546,
+    "min": 0.365,
+    "minOpp": "W_MEX_GPZeon",
+    "first": 0.7188461538461539,
+    "second": 0.46,
+    "per": {
+     "W_DC_SF": 0.665,
+     "W_BRIS_RWAcademy": 0.555,
+     "W_LILLE_Nu": 0.56,
+     "W_MKE_ZGok": 0.47,
+     "W_DUS_Shining": 0.665,
+     "W_TKY1_BarbSF": 0.63,
+     "W_MNL_GPZeon": 0.57,
+     "W_JKT_Nu": 0.61,
+     "W_TOR_SF": 0.7,
+     "W_MEX_GPZeon": 0.365,
+     "W_MEL_SFVictory": 0.435,
+     "W_TKY3_Shining": 0.7,
+     "J_MobileFighter": 0.695,
+     "J_CharIBO": 0.375,
+     "J_NuAggro": 0.62,
+     "J_SFBlockers": 0.72,
+     "J_SFIBO_Chiba": 0.51,
+     "J_SFIBO_alt": 0.495,
+     "J_KshatriyaBanshee": 0.61,
+     "J_EFFBanshee": 0.5,
+     "J_BGOYW": 0.555,
+     "J_JusticeAerial": 0.73,
+     "J_Wing_Omiya": 0.755,
+     "J_MF_Kichijoji": 0.71,
+     "J_BGOYW_Chelmo": 0.455,
+     "J_MF_Machida": 0.67
+    }
+   }
+  },
+  "OMNI_GR": {
+   "k4n6": {
+    "n": 200,
+    "B": 0.5636538461538461,
+    "A": 0.5693583093179635,
+    "min": 0.455,
+    "minOpp": "W_BRIS_RWAcademy",
+    "first": 0.7176923076923075,
+    "second": 0.40961538461538455,
+    "per": {
+     "W_DC_SF": 0.535,
+     "W_BRIS_RWAcademy": 0.455,
+     "W_LILLE_Nu": 0.62,
+     "W_MKE_ZGok": 0.485,
+     "W_DUS_Shining": 0.57,
+     "W_TKY1_BarbSF": 0.54,
+     "W_MNL_GPZeon": 0.515,
+     "W_JKT_Nu": 0.625,
+     "W_TOR_SF": 0.58,
+     "W_MEX_GPZeon": 0.515,
+     "W_MEL_SFVictory": 0.46,
+     "W_TKY3_Shining": 0.69,
+     "J_MobileFighter": 0.66,
+     "J_CharIBO": 0.475,
+     "J_NuAggro": 0.625,
+     "J_SFBlockers": 0.555,
+     "J_SFIBO_Chiba": 0.495,
+     "J_SFIBO_alt": 0.49,
+     "J_KshatriyaBanshee": 0.56,
+     "J_EFFBanshee": 0.565,
+     "J_BGOYW": 0.61,
+     "J_JusticeAerial": 0.605,
+     "J_Wing_Omiya": 0.575,
+     "J_MF_Kichijoji": 0.675,
+     "J_BGOYW_Chelmo": 0.53,
+     "J_MF_Machida": 0.645
+    }
+   },
+   "mlp2": {
+    "n": 200,
+    "B": 0.5605769230769231,
+    "A": 0.563429274735831,
+    "min": 0.375,
+    "minOpp": "W_BRIS_RWAcademy",
+    "first": 0.7184615384615383,
+    "second": 0.4026923076923078,
+    "per": {
+     "W_DC_SF": 0.525,
+     "W_BRIS_RWAcademy": 0.375,
+     "W_LILLE_Nu": 0.595,
+     "W_MKE_ZGok": 0.515,
+     "W_DUS_Shining": 0.565,
+     "W_TKY1_BarbSF": 0.555,
+     "W_MNL_GPZeon": 0.55,
+     "W_JKT_Nu": 0.63,
+     "W_TOR_SF": 0.585,
+     "W_MEX_GPZeon": 0.43,
+     "W_MEL_SFVictory": 0.48,
+     "W_TKY3_Shining": 0.695,
+     "J_MobileFighter": 0.655,
+     "J_CharIBO": 0.43,
+     "J_NuAggro": 0.615,
+     "J_SFBlockers": 0.58,
+     "J_SFIBO_Chiba": 0.5,
+     "J_SFIBO_alt": 0.46,
+     "J_KshatriyaBanshee": 0.63,
+     "J_EFFBanshee": 0.505,
+     "J_BGOYW": 0.645,
+     "J_JusticeAerial": 0.655,
+     "J_Wing_Omiya": 0.6,
+     "J_MF_Kichijoji": 0.69,
+     "J_BGOYW_Chelmo": 0.53,
+     "J_MF_Machida": 0.58
+    }
+   }
+  },
+  "PURE_GB_e1": {
+   "k4n6": {
+    "n": 200,
+    "B": 0.5921153846153846,
+    "A": 0.6062755763688762,
+    "min": 0.355,
+    "minOpp": "J_CharIBO",
+    "first": 0.7250000000000002,
+    "second": 0.45923076923076916,
+    "per": {
+     "W_DC_SF": 0.66,
+     "W_BRIS_RWAcademy": 0.57,
+     "W_LILLE_Nu": 0.525,
+     "W_MKE_ZGok": 0.425,
+     "W_DUS_Shining": 0.72,
+     "W_TKY1_BarbSF": 0.625,
+     "W_MNL_GPZeon": 0.695,
+     "W_JKT_Nu": 0.585,
+     "W_TOR_SF": 0.665,
+     "W_MEX_GPZeon": 0.365,
+     "W_MEL_SFVictory": 0.39,
+     "W_TKY3_Shining": 0.71,
+     "J_MobileFighter": 0.72,
+     "J_CharIBO": 0.355,
+     "J_NuAggro": 0.665,
+     "J_SFBlockers": 0.79,
+     "J_SFIBO_Chiba": 0.51,
+     "J_SFIBO_alt": 0.49,
+     "J_KshatriyaBanshee": 0.57,
+     "J_EFFBanshee": 0.485,
+     "J_BGOYW": 0.57,
+     "J_JusticeAerial": 0.735,
+     "J_Wing_Omiya": 0.675,
+     "J_MF_Kichijoji": 0.745,
+     "J_BGOYW_Chelmo": 0.475,
+     "J_MF_Machida": 0.675
+    }
+   },
+   "mlp2": {
+    "n": 200,
+    "B": 0.611346153846154,
+    "A": 0.6264468059558117,
+    "min": 0.395,
+    "minOpp": "W_MEL_SFVictory",
+    "first": 0.74,
+    "second": 0.48269230769230764,
+    "per": {
+     "W_DC_SF": 0.655,
+     "W_BRIS_RWAcademy": 0.55,
+     "W_LILLE_Nu": 0.61,
+     "W_MKE_ZGok": 0.41,
+     "W_DUS_Shining": 0.7,
+     "W_TKY1_BarbSF": 0.62,
+     "W_MNL_GPZeon": 0.615,
+     "W_JKT_Nu": 0.715,
+     "W_TOR_SF": 0.745,
+     "W_MEX_GPZeon": 0.415,
+     "W_MEL_SFVictory": 0.395,
+     "W_TKY3_Shining": 0.72,
+     "J_MobileFighter": 0.76,
+     "J_CharIBO": 0.42,
+     "J_NuAggro": 0.705,
+     "J_SFBlockers": 0.775,
+     "J_SFIBO_Chiba": 0.54,
+     "J_SFIBO_alt": 0.55,
+     "J_KshatriyaBanshee": 0.595,
+     "J_EFFBanshee": 0.535,
+     "J_BGOYW": 0.575,
+     "J_JusticeAerial": 0.72,
+     "J_Wing_Omiya": 0.68,
+     "J_MF_Kichijoji": 0.705,
+     "J_BGOYW_Chelmo": 0.51,
+     "J_MF_Machida": 0.675
+    }
+   }
+  }
+ },
  "census": {
   "GB": {
    "chassis": "GB_GA2",
@@ -764,6 +1221,318 @@
     {
      "id": "GD03-109",
      "loss": -0.04062500000000005
+    }
+   ]
+  },
+  "GP": {
+   "chassis": "W_MEX_GPZeon",
+   "base": 0.6187500000000001,
+   "top": [
+    {
+     "id": "GD06-060",
+     "name": "Zaku Ⅱ F2",
+     "d": 0.017788461538461475
+    },
+    {
+     "id": "ST11-009",
+     "name": "Kapool",
+     "d": 0.01586538461538467
+    },
+    {
+     "id": "GD02-030",
+     "name": "Genoace",
+     "d": 0.012980769230769296
+    },
+    {
+     "id": "GD02-065",
+     "name": "Jenice Custom",
+     "d": 0.012980769230769296
+    },
+    {
+     "id": "GD06-023",
+     "name": "Galluss J",
+     "d": 0.012980769230769074
+    },
+    {
+     "id": "GD03-066",
+     "name": "Gundam Barbatos 5th Form (Ground Type)",
+     "d": 0.01009615384615381
+    },
+    {
+     "id": "GD01-036",
+     "name": "Gouf",
+     "d": 0.006249999999999867
+    },
+    {
+     "id": "GD04-031",
+     "name": "Heindree",
+     "d": 0.006249999999999867
+    },
+    {
+     "id": "GD06-031",
+     "name": "Zssan",
+     "d": 0.006249999999999867
+    },
+    {
+     "id": "ST02-005",
+     "name": "Maganac",
+     "d": 0.006249999999999867
+    }
+   ],
+   "bottom": [
+    {
+     "id": "GD01-026",
+     "loss": -0.008173076923076839
+    },
+    {
+     "id": "GD04-017",
+     "loss": -0.007932692307692168
+    },
+    {
+     "id": "GD02-054",
+     "loss": -0.006009615384615197
+    },
+    {
+     "id": "GD03-056",
+     "loss": -0.0009615384615384026
+    },
+    {
+     "id": "ST03-008",
+     "loss": -0.00024038461538455902
+    }
+   ]
+  },
+  "BP": {
+   "chassis": "W_MKE_ZGok",
+   "base": 0.6206730769230769,
+   "top": [
+    {
+     "id": "GD01-123",
+     "name": "Nahel Argama",
+     "d": 0.04663461538461544
+    },
+    {
+     "id": "ST05-014",
+     "name": "Fatal Strike",
+     "d": 0.044711538461538525
+    },
+    {
+     "id": "GD01-019",
+     "name": "Byarlant Custom",
+     "d": 0.04375000000000007
+    },
+    {
+     "id": "GD05-105",
+     "name": "Exclusively Defense-Oriented Policy",
+     "d": 0.04086538461538458
+    },
+    {
+     "id": "GD01-021",
+     "name": "Pisces",
+     "d": 0.03990384615384612
+    },
+    {
+     "id": "GD02-065",
+     "name": "Jenice Custom",
+     "d": 0.03990384615384612
+    },
+    {
+     "id": "GD06-013",
+     "name": "Zaku Ⅱ F2 (EFSF)",
+     "d": 0.03990384615384612
+    },
+    {
+     "id": "GD04-128",
+     "name": "Armory One",
+     "d": 0.038942307692307776
+    },
+    {
+     "id": "ST01-015",
+     "name": "White Base",
+     "d": 0.038942307692307665
+    },
+    {
+     "id": "GD06-014",
+     "name": "GM Type C",
+     "d": 0.03701923076923064
+    }
+   ],
+   "bottom": [
+    {
+     "id": "ST01-015",
+     "loss": -0.023076923076923106
+    },
+    {
+     "id": "GD03-056",
+     "loss": -0.019951923076923006
+    },
+    {
+     "id": "GD03-001",
+     "loss": -0.019711538461538503
+    },
+    {
+     "id": "GD01-100",
+     "loss": -0.01899038461538477
+    },
+    {
+     "id": "ST01-001",
+     "loss": -0.01874999999999999
+    }
+   ]
+  },
+  "BW": {
+   "chassis": "W_TOR_SF",
+   "base": 0.5355769230769231,
+   "top": [
+    {
+     "id": "ST01-005",
+     "name": "GM",
+     "d": 0.027884615384615397
+    },
+    {
+     "id": "GD01-085",
+     "name": "Demi Garrison",
+     "d": 0.027884615384615397
+    },
+    {
+     "id": "GD02-013",
+     "name": "Hizack",
+     "d": 0.027884615384615397
+    },
+    {
+     "id": "GD02-080",
+     "name": "Nemo",
+     "d": 0.027884615384615397
+    },
+    {
+     "id": "GD04-078",
+     "name": "Borjarnon",
+     "d": 0.027884615384615397
+    },
+    {
+     "id": "GD05-014",
+     "name": "Javelin",
+     "d": 0.027884615384615397
+    },
+    {
+     "id": "GD05-077",
+     "name": "Leo",
+     "d": 0.027884615384615397
+    },
+    {
+     "id": "ST05-009",
+     "name": "Graze",
+     "d": 0.027884615384615397
+    },
+    {
+     "id": "ST10-005",
+     "name": "Nemo",
+     "d": 0.027884615384615397
+    },
+    {
+     "id": "GD05-075",
+     "name": "Royal Gundam",
+     "d": 0.025000000000000022
+    }
+   ],
+   "bottom": [
+    {
+     "id": "GD05-002",
+     "loss": -0.01586538461538456
+    },
+    {
+     "id": "GD01-100",
+     "loss": -0.014663461538461486
+    },
+    {
+     "id": "GD01-118",
+     "loss": -0.009615384615384581
+    },
+    {
+     "id": "ST01-001",
+     "loss": -0.007932692307692335
+    },
+    {
+     "id": "GD01-073",
+     "loss": -0.007211538461538436
+    }
+   ]
+  },
+  "RW": {
+   "chassis": "W_BRIS_RWAcademy",
+   "base": 0.5677884615384617,
+   "top": [
+    {
+     "id": "GD06-064",
+     "name": "Altron Gundam (EW)",
+     "d": 0.0447115384615383
+    },
+    {
+     "id": "EB01-054",
+     "name": "Gaplant TR-5 \"Hrairoo\" Unit 1",
+     "d": 0.03701923076923064
+    },
+    {
+     "id": "GD06-077",
+     "name": "Cannon Illfuto",
+     "d": 0.03701923076923064
+    },
+    {
+     "id": "GD05-097",
+     "name": "Domon Kasshu",
+     "d": 0.028365384615384515
+    },
+    {
+     "id": "ST13-008",
+     "name": "Gundam Throne Zwei",
+     "d": 0.027403846153845945
+    },
+    {
+     "id": "EB01-056",
+     "name": "Gundam Geminass 01",
+     "d": 0.027403846153845945
+    },
+    {
+     "id": "GD06-075",
+     "name": "Serpent",
+     "d": 0.027403846153845945
+    },
+    {
+     "id": "ST08-005",
+     "name": "Messer Type-F02 Minelayer",
+     "d": 0.027403846153845945
+    },
+    {
+     "id": "GD01-060",
+     "name": "Zaku Mariner",
+     "d": 0.02451923076923057
+    },
+    {
+     "id": "GD01-085",
+     "name": "Demi Garrison",
+     "d": 0.02451923076923057
+    }
+   ],
+   "bottom": [
+    {
+     "id": "ST13-006",
+     "loss": -0.0076923076923076095
+    },
+    {
+     "id": "GD03-035",
+     "loss": -0.007211538461538325
+    },
+    {
+     "id": "GD01-118",
+     "loss": -0.00504807692307685
+    },
+    {
+     "id": "ST03-013",
+     "loss": -0.0043269230769229505
+    },
+    {
+     "id": "GD05-110",
+     "loss": -0.0024038461538461453
     }
    ]
   }
