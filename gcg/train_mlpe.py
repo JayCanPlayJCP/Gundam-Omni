@@ -43,7 +43,7 @@ def main():
         P[f'b{i}'] = np.zeros(dims[i + 1], np.float32)
     L = len(dims) - 1
     M = {k: np.zeros_like(p) for k, p in P.items()}; V = {k: np.zeros_like(p) for k, p in P.items()}
-    lr, b1, b2, eps, l2, l2e, bs = 1e-3, 0.9, 0.999, 1e-8, 1e-4, 1e-5, 512
+    lr, b1, b2, eps, l2, l2e, bs = 1e-3, 0.9, 0.999, 1e-8, 1e-4, (float(sys.argv[6]) if len(sys.argv) > 6 else 1e-5), 512
     sig = lambda z: 1 / (1 + np.exp(-z))
 
     def fwd(Zb, Sb):
