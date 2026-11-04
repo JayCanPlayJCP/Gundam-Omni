@@ -16,7 +16,7 @@ const PAIRS = [ // name, colours, chassis, extra seeds, needs White/Purple
 const MONO = ['Green', 'Blue', 'Red', 'White', 'Purple'];
 // Scale (session 2, 4-core machine): census 12->40 games/list, island GA gens15/pop12/n20 -> 40/20/40, checks 30->100,
 // pure stronger-AI GA gens8/sn16 -> 25/40, top 3 -> top 5. Units without White/Purple run first (they need no wp flag).
-const CENSUS_N = 40, GA_ARGS = '--gens 40 --pop 20 --n 40', CHECK_N = 100, PURE_ARGS = '--gens 25 --kids 14 --elite 6 --sn 40', TOP = 5;
+const CENSUS_N = 40, GA_ARGS = '--gens 40 --pop 20 --n 40', CHECK_N = 100, PURE_ARGS = '--gens 25 --kids 14 --elite 6 --sn 40', TOP = +(process.env.OMNI_TOP || 5); // OMNI_TOP=7: extension run (GR, MP)
 function addDeck(key, label, cards) { const D = JSON.parse(fs.readFileSync('decks.json')); D[key] = { label, cards }; fs.writeFileSync('decks.json', JSON.stringify(D, null, 1)); }
 function ensureMerged(key, cols) { const D = JSON.parse(fs.readFileSync('decks.json')); if (D[key]) return; const C = require('./cards.json'); const m = {};
   for (const k in D) { if (!(k.startsWith('W_') || k.startsWith('J_') || k.startsWith('PURE_') || k.startsWith('GB_GA') || k === 'GR_GA1')) continue; for (const { id, n } of D[k].cards) if (cols.includes(C[id].color)) m[id] = Math.max(m[id] || 0, n); }

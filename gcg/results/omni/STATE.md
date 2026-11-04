@@ -37,6 +37,12 @@ Session-1 Omni outputs are in results/omni_v1/ (decks OMNI0_GB, OMNI0_GR).
   first 79.1 / second 52.0, 8/26 lists >= 75%), K4N6+mlp2 67.8. The K2N2 island check ranked G/P only 2nd (58.5):
   the check ranking does not predict what the pure GA reaches -> consider pure GAs for GR / MP after the top 5.
   Fresh-seed re-test (seed 9494000) -> results/final/GP_S4_g14_k4n6s2_200.json.
+- G/P final elites (K4N6 / mlp2, 200/list): OMNIP_GP_e0 63.1 / 67.9, OMNIP_GP_e1 65.1 / 69.0. Reference: the tournament list
+  J_CharIBO itself 63.9 / 66.5 -> the G/P finalists are refined CharIBO (86-88% card overlap), +1.5 pts (within noise).
+  Fresh seed GP_S4_g14 65.3 -> pooled 65.4 over 400/list. Working finalist: GP_S4_g14.
+- Counter-deck GA vs GP_S4_g14, re-tests K4N6 200 (seed 8282000): BP 62.5 [56-69], RW 58.5 [52-65], GP 54.5, BW 52.5,
+  GB 40.5 (PR/BR/GW re-tests running). The BP counter is an SFIBO-style list + 4 Widespread Annihilation.
+- Extension (results/omni/run_extra.sh): after COMPLETE, OMNI_TOP=7 reruns the driver -> pure GA for GR and MP too.
 - Validation queue: results/final/val_queue.sh reads results/final/queue.txt (one deck per line; STOP ends it).
 - Reference decks, K4N6 both sides, 200/list, seed 9393000 (results/final/*_k4n6_200.json; *_mlp2_200.json = K4N6+mlp2):
   GB_S2_e1 60.6 / 59.8, PURE_GB_e1 59.2 / 61.1, GB_GA2 56.3 / 58.7, OMNI_GB 56.2 / 58.9, OMNI_GR 56.4 / 56.1, GR_GA1 50.4 / 49.9.
