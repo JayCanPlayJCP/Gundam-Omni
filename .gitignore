@@ -1,0 +1,4 @@
+# large self-play tensors (regenerate with gcg/selfplay.js; meta.json kept)
+gcg/results/learn/*.f32
+gcg/results/learn/*.i32
+*.cpuprofile

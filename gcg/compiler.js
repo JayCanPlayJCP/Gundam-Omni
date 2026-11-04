@@ -114,7 +114,7 @@ function parseAction(sent, TOKEN) {
     if (/^Rest/.test(act)) return { run: (g, p) => { for (const t of pickN(g, p, c => p.ai.pickRestTarget(g, p, c))) g.restUnit(t); }, val: (g, p) => p.ai.restScore(g, p, x => f(g, x)) * (two ? 1.5 : 1) };
     if (/^Return/.test(act)) return { run: (g, p) => { for (const t of pickN(g, p, c => p.ai.pickRemovalTarget(g, p, c, 'hand'))) g.bounce(t); }, val: (g, p) => Math.max(0, ...p.opp.units.filter(x => f(g, x)).map(x => p.ai.removalValue(g, p, x, 'hand'))), removal: { kind: 'hand', f } };
     if (/^Destroy/.test(act)) return { run: (g, p) => { for (const t of pickN(g, p, c => p.ai.pickRemovalTarget(g, p, c, 'destroy'))) g.destroy(t, { effect: true, by: p }); }, val: (g, p) => Math.max(0, ...p.opp.units.filter(x => f(g, x)).map(x => p.ai.removalValue(g, p, x, 'destroy'))), removal: { kind: 'destroy', f } };
-    if (/AP-/.test(act)) { const n = +tm[5]; const battle = tm[6] === 'battle'; return { run: (g, p) => { for (const t of pickN(g, p, c => p.ai.pickApDownTarget(g, p, c, n, null))) { if (battle) t.bAP -= n; else t.tAP -= n; } }, val: () => 0.3, apDown: n }; }
+    if (/AP-/.test(act)) { const n = +tm[5]; const battle = tm[6] === 'battle'; return { run: (g, p) => { for (const t of pickN(g, p, c => p.ai.pickApDownTarget(g, p, c, n, null))) { if (battle) t.bAP -= n; else t.tAP -= n; } }, val: () => 0.3, apDown: n, apDownF: f }; }
   }
   if ((m = s.match(/^Choose 1 of your Units\. It gets AP\+(\d+) during this turn$/))) { const n = +m[1]; return { run: (g, p) => { if (p.units.length) p.ai.pickBestAttacker(g, p, p.units).tAP += n; }, val: () => 0.4 }; }
   if ((m = s.match(/^Choose 1 (?:of your|friendly) Units?\. It recovers (\d+) HP$/))) { const n = +m[1]; return { run: (g, p) => { const d = p.units.filter(x => x.dmg > 0); if (d.length) g.heal(p.ai.pickBestUnit(g, p, d), n); }, val: (g, p) => p.units.some(x => x.dmg > 0) ? 0.3 * n : 0 }; }
@@ -188,7 +188,9 @@ function parseBody(body, TOKEN) {
   }
   return { run: (g, p, u, b) => { for (const { cond, a } of parts) { if (cond && !cond(g, p, u, b)) continue; a.run(g, p, u, b); } },
     val: (g, p, u, b) => parts.reduce((s, { cond, a }) => s + ((!cond || cond(g, p, u, b)) ? a.val(g, p, u, b) : 0), 0),
-    removal: parts.length === 1 && !parts[0].cond ? parts[0].a.removal : null, apDown: parts.length === 1 ? parts[0].a.apDown : null };
+    removal: parts.length === 1 && !parts[0].cond ? parts[0].a.removal : null, apDown: parts.length === 1 ? parts[0].a.apDown : null,
+    // apDownOk(g,p,x,b): the single AP-down clause may target enemy x now (its "If ..." condition and target filter)
+    apDownOk: parts.length === 1 && parts[0].a.apDown ? (g, p, x, b) => (!parts[0].cond || !!parts[0].cond(g, p, null, b)) && (!parts[0].a.apDownF || !!parts[0].a.apDownF(g, x)) : null };
 }
 function compileCard(def, TOKEN) {
   const segs = def.text.split(' / ').map(x => x.trim()).filter(Boolean);
@@ -211,7 +213,7 @@ function compileCard(def, TOKEN) {
     if ((m = seg.match(/^【(Main】\/【Action|Main|Action)】(.+)$/)) && def.type === 'COMMAND') {
       const b = parseBody(m[2], TOKEN); if (!b) { ok = false; failed.push(seg); continue; }
       e.cmd = true; e.main = (g, p) => b.run(g, p, null); e.canMain = (g, p) => b.val(g, p, null) > 0 || !b.removal; e.score = (g, p) => b.val(g, p, null) - 0.8;
-      if (b.removal) e.removal = b.removal; if (b.apDown) e.apDown = b.apDown;
+      if (b.removal) e.removal = b.removal; if (b.apDown) { e.apDown = b.apDown; e.apDownOk = b.apDownOk; if (m[1].includes('Action')) e.action = (g, p, bb) => b.run(g, p, null, bb); } // action: runs the parsed body (condition, filter, turn/battle duration)
       if (m[1] === 'Action') { e.actionOnly = true; e.canMain = () => false; } if (m[1].includes('Action')) e.actionToo = true; continue; }
     const trig = { Deploy: 'deploy', Attack: 'attack', Destroyed: 'destroyed', 'When Paired': 'whenPaired', 'When Linked': 'whenLinked' };
     if ((m = seg.match(/^【(Deploy|Attack|Destroyed|When Paired|When Linked)】(.+)$/))) {

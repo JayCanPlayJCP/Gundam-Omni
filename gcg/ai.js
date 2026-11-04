@@ -120,9 +120,9 @@ class AI {
   // ---------------- combat sim helpers ----------------
   fight(g, a, t, attacking) {
     const fs = attacking && g.kw(a, 'First Strike'); const apA = g.ap(a), apT = g.ap(t);
-    const er = EFX[a.def.id] && EFX[a.def.id].battleDestroyRule && EFX[a.def.id].battleDestroyRule(g, a, t);
-    const erT = EFX[t.def.id] && EFX[t.def.id].battleDestroyRule && EFX[t.def.id].battleDestroyRule(g, t, a);
-    const dmg = (v, src, n) => { if (n <= 0) return 0; if (v.flags.noBattleFrom2 && g.ap(src) <= 2) return 0; if (g.noBattleDmg && g.noBattleDmg(v, src, g.inBattle)) return 0; return Math.max(0, n - (v.flags.reduceNext || 0)); };
+    const er = (EFX[a.def.id] && EFX[a.def.id].battleDestroyRule && EFX[a.def.id].battleDestroyRule(g, a, t)) || (g.bdrExtra && g.bdrExtra(a, t));
+    const erT = (EFX[t.def.id] && EFX[t.def.id].battleDestroyRule && EFX[t.def.id].battleDestroyRule(g, t, a)) || (g.bdrExtra && g.bdrExtra(t, a));
+    const dmg = (v, src, n) => { if (n <= 0) return 0; if (v.flags.noBattleFrom2 && g.ap(src) <= 2) return 0; if (g.noBattleDmg && g.noBattleDmg(v, src, g.inBattle)) return 0; if (v.flags.redB) n = v.flags.redB(g, v, n, src, true); return Math.max(0, n - (v.flags.reduceNext || 0)); };
     const dT = dmg(t, a, apA), dA = dmg(a, t, apT);
     const killT = dT >= g.hpLeft(t) || (er && dT > 0);
     const killA = (fs && killT) ? false : (dA >= g.hpLeft(a) || (erT && dA > 0));
@@ -199,7 +199,7 @@ class AI {
     const out = []; if (g.canAttackPlayer(a) && !(a.sick && !a.linked && a.flags.hasteUnitsOnly && !a.flags.hasteThisTurn)) out.push('player');
     for (const t of p.opp.units) {
       const e = EFX[t.def.id]; if (e && e.untargetable && e.untargetable(g, t)) continue;
-      if (t.rested || (a.attackActiveFilter && a.attackActiveFilter(t)) || (a.def.id === 'ST02-001' && t.def.lv <= 4) || (EFX[a.def.id] && EFX[a.def.id].permActive && EFX[a.def.id].permActive(g, t))) out.push(t);
+      if (t.rested || (a.attackActiveFilter && a.attackActiveFilter(t)) || (a.def.id === 'ST02-001' && t.def.lv <= 4) || (EFX[a.def.id] && EFX[a.def.id].permActive && EFX[a.def.id].permActive(g, t, a))) out.push(t);
     }
     return out;
   }
@@ -238,7 +238,17 @@ class AI {
       if (gain) { p.hand.splice(p.hand.indexOf(c), 1); g.pay(p, g.costOf(p, c)); e.action(g, p, b, role, mine); p.trash.push(c); return true; } }
     return false;
   }
+  // optional Unit/Pilot 【Activate･Action】 in the battle action step: battleAct (Unit card) / p_battleAct (its Pilot)
+  // {cost, once, can(g,p,u,b,role), value(g,p,u,b,role) (~cards; used when > 0.3 + 0.4*cost), run(g,p,u,b,role)}; once = per turn.
+  battleActUse(g, p, b, role) {
+    for (const u of [...p.units]) for (const k of ['battleAct', 'p_battleAct']) {
+      const e = k === 'battleAct' ? EFX[u.def.id] : (u.pilot && EFX[u.pilot.id]); const A = e && e[k]; if (!A || !g.alive(u) || !g.alive(b.attacker) || g.winner !== null) continue;
+      if ((A.once && u.flags['ba_' + k] === g.turn) || g.avail(p) < (A.cost || 0) || !A.can(g, p, u, b, role) || !(A.value(g, p, u, b, role) > 0.3 + 0.4 * (A.cost || 0))) continue;
+      g.pay(p, A.cost || 0); if (A.once) u.flags['ba_' + k] = g.turn; A.run(g, p, u, b, role);
+    }
+  }
   actionStep(g, p, b, role) {
+    this.battleActUse(g, p, b, role);
     if (this.battlePumpUse(g, p, b, role)) return;
     if (role !== 'defend') return;
     const a = b.attacker; if (!g.alive(a)) return;
@@ -261,7 +271,7 @@ class AI {
         v = this.removalValue(g, p, a, k === 'damage' ? 'destroy' : k) + threat * 0.7;
       } else if (e.apDown && unitBattle) {
         const t = b.target; const f = this.fight(g, a, t, true); if (!f.killT) continue;
-        if (g.ap(a) - e.apDown >= g.hpLeft(t)) continue; v = this.unitValue(g, t) + (f.killA ? 0 : 0.3);
+        if (g.ap(a) - e.apDown >= g.hpLeft(t)) continue; if (e.apDownOk && !e.apDownOk(g, p, a, b)) continue; v = this.unitValue(g, t) + (f.killA ? 0 : 0.3); // optional apDownOk(g,p,enemy,b): condition/filter
       } else if (e.defAction) { if (!e.defAction.can(g, p, b)) continue; v = e.defAction.value(g, p, b, threat, myLoss); }
       else continue;
       if (v > bv) { bv = v; best = c; }
@@ -360,7 +370,7 @@ class AI {
           else v = Math.max(...cands.map(u => this.removalValue(g, p, u, r.kind)));
           if (r.multi) v *= 1.5;
           v -= this.p.removalThreshold; if (e.actionToo && stage === 'pre') v -= 0.3; // prefer holding instant removal slightly
-        } else if (e.apDown || c.id === 'GD05-121') { const n = e.apDown || 2; const en = this.tradeEnable(g, p, n); v = en ? en.v : -1; if (c.id === 'GD05-121' && p.units.some(u => g.hasTrait(u, 'MF') && !u.pilot)) v = Math.max(v, 0) + 2.2; }
+        } else if (e.apDown || c.id === 'GD05-121') { const n = e.apDown || 2; const en = this.tradeEnable(g, p, n); v = (en && (!e.apDownOk || e.apDownOk(g, p, en.t, null))) ? en.v : -1; if (c.id === 'GD05-121' && p.units.some(u => g.hasTrait(u, 'MF') && !u.pilot)) v = Math.max(v, 0) + 2.2; }
         else v = e.score ? e.score(g, p) : 1.0;
         if (e.specialMove) v += p.units.some(u => u.def.id === 'GD05-068' || u.def.id === 'GD04-066') ? 0.6 : 0;
         if (e.specialMove && p.units.some(u => u.linked && u.pilot && u.pilot.id === 'GD05-089' && g.canAttackThisTurn(u))) v += 1.5;
@@ -378,6 +388,8 @@ class AI {
     }
     // activated abilities
     for (const u of p.units) { const e = EFX[u.def.id]; if (!e || !e.activate) continue; const A = e.activate; if (A.once && u.once.has('act')) continue; if (g.avail(p) < (A.cost || 0)) continue; if (!A.can(g, p, u)) continue; if (A.postCombat && stage === 'pre') continue; acts.push({ kind: 'act', u, A, cost: A.cost || 0, v: A.score(g, p, u) }); }
+    // optional Pilot 【Activate･Main】: p_activate {cost, once, postCombat, can(g,p,u), score(g,p,u), run(g,p,u)} (u = the paired Unit)
+    for (const u of p.units) { const pe = u.pilot && EFX[u.pilot.id]; const A = pe && pe.p_activate; if (!A || (A.once && u.once.has('pact')) || g.avail(p) < (A.cost || 0) || (A.postCombat && stage === 'pre') || !A.can(g, p, u)) continue; acts.push({ kind: 'pact', u, A, cost: A.cost || 0, v: A.score(g, p, u) }); }
     if (p.base && !p.base.ex) { const e = EFX[p.base.def.id]; if (e && e.activate) { const A = e.activate; const ok = (!A.once || !p.flags.turn.baseAct) && (!A.restBase || !p.base.rested) && g.avail(p) >= (A.cost || 0) && A.can(g, p); if (ok) acts.push({ kind: 'bact', A, cost: A.cost || 0, v: A.score(g, p) }); } }
     return acts;
   }
@@ -389,15 +401,17 @@ class AI {
     else if (a.kind === 'cmd') { this.castCommand(g, p, a.c, 'main'); }
     else if (a.kind === 'base') { rm(a.c); g.pay(p, a.cost); g.deployBase(p, a.c); }
     else if (a.kind === 'act') { g.pay(p, a.cost); a.u.once.add('act'); a.A.run(g, p, a.u); }
+    else if (a.kind === 'pact') { g.pay(p, a.cost); a.u.once.add('pact'); a.A.run(g, p, a.u); }
     else if (a.kind === 'bact') { g.pay(p, a.cost); if (a.A.once) p.flags.turn.baseAct = true; if (a.A.restBase) p.base.rested = true; a.A.run(g, p); }
   }
   castCommand(g, p, c, mode, b) {
     const i = p.hand.indexOf(c); if (i < 0) return; p.hand.splice(i, 1); g.pay(p, g.costOf(p, c));
-    const e = EFX[c.id]; g.L(`P${p.i} casts ${c.name} (${mode})`);
+    const e = EFX[c.id]; g.L(`P${p.i} casts ${c.name} (${mode})`); const pc = g.curCmd; g.curCmd = { c, p }; // curCmd: {c, p} of the Command whose effect is resolving
     if (mode === 'action' && e.defAction) e.defAction.run(g, p, b); else if (mode === 'action' && e.action) e.action(g, p, b, 'defend'); else if (mode === 'action') { // Main/Action removal used as action: target attacker if possible
       if (e.removal && b && g.alive(b.attacker) && e.removal.f(g, b.attacker)) { const k = e.removal.kind; if (k === 'damage') g.effectDamage(p, b.attacker, e.removal.n); else if (k === 'hand') g.bounce(b.attacker); else g.destroy(b.attacker, { effect: true, by: p }); if (c.id === 'GD05-110' && p.units.some(u => u.def.name.includes('Master Gundam'))) g.draw(p, 1); }
       else if (e.apDown && b) { b.attacker.tAP -= e.apDown; }
     } else e.main(g, p);
+    g.curCmd = pc;
     if (e.specialMove) p.specialMoveThisTurn = true;
     g.fireAllies(p, 'onCommand', c);
     if (c.id === 'GD05-121' && p.flags.cyclonePair) { const mf = p.flags.cyclonePair.filter(u => g.alive(u) && !u.pilot); p.flags.cyclonePair = null; if (mf.length) { const u = this.pickBestUnit(g, p, mf); g.pair(u, this.pilotObj(c, true)); return; } }

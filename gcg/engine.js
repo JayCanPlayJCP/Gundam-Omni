@@ -193,12 +193,15 @@ class Game {
   alive(u) { return u.owner.units.includes(u); }
   canAttackThisTurn(u) {
     if (u.rested) return false;
+    if (u.flags.noAtkT === this.turn) return false; // optional: "It can't attack during this turn" (White set-active effects)
     if (u.sick && !u.linked && !u.flags.hasteThisTurn && !u.flags.hasteUnitsOnly) return false;
     if (u.token && /or attack\./.test(u.def.text)) return false;
     const e = EFFECTS[u.def.id]; if (e && e.cannotAttack && e.cannotAttack(this, u)) return false;
     return true;
   }
-  canAttackPlayer(u) { const e = EFFECTS[u.def.id]; if (e && e.noAttackPlayer) return false; return !/can't choose the enemy player as its attack target/.test(u.def.text); }
+  canAttackPlayer(u) { const e = EFFECTS[u.def.id]; if (e && e.noAttackPlayer) return false; if (u.flags.noAtkPlayerT === this.turn) return false; // optional per-turn flag
+    if (e && e.playerTargetOk) return true; // optional: the text below only restricts conditionally (handled by hooks/flags)
+    return !/(^|\/ )This Unit can't choose the enemy player as its attack target/.test(u.def.text); } // only the card's own static clause (not token text / "during this turn" clauses)
 
   // ---------- removal ----------
   removeUnit(u, dest, destroyed, cause) {
@@ -212,6 +215,7 @@ class Game {
     if (pilot) { const pd = pilot.cmdPilot ? CARDS[pilot.id] : pilot; toZone(pd); }
     this.L(`P${p.i} ${u.def.name} -> ${dest}${destroyed ? ' (destroyed)' : ''}`);
     if (destroyed) {
+      u.destroyCause = cause; // read by onAllyDestroyed hooks that care how the Unit was destroyed (Purple GD05-054)
       const e = EFFECTS[u.def.id]; if (e && e.destroyed) e.destroyed(this, u, pilot, cause);
       if (pilot) { const pe = EFFECTS[pilot.id]; if (pe && pe.p_destroyed) pe.p_destroyed(this, u, pilot, cause); }
       this.fireAllies(p, 'onAllyDestroyed', u);
@@ -224,14 +228,24 @@ class Game {
     if (!this.alive(target) || n <= 0) return false;
     let d = n; const enemy = src && src.i !== target.owner.i;
     const e = EFFECTS[target.def.id];
-    if (enemy && e && e.reduceEffectDmg) d = e.reduceEffectDmg(this, target, d);
+    if (enemy && e && e.reduceEffectDmg) d = e.reduceEffectDmg(this, target, d, true); // 4th arg: real damage (AI previews omit it)
+    if (enemy && target.pilot) { const tpe = EFFECTS[target.pilot.id]; if (tpe && tpe.p_reduceEffectDmg) d = tpe.p_reduceEffectDmg(this, target, d, true); } // optional pilot reduction
     if (enemy && target.owner.base) { const be = EFFECTS[target.owner.base.def.id]; if (be && be.protectEffect) d = be.protectEffect(this, target, d); }
     if (target.flags.reduce1) d = Math.max(0, d - 1);
     if (enemy && target.flags.reduceNext > 0) { const r = Math.min(d, target.flags.reduceNext); d -= r; target.flags.reduceNext = 0; }
     if (d <= 0) return false;
     target.dmg += d;
+    this.effDamaged(target, src, d);
     if (this.hpLeft(target) <= 0) { this.destroy(target, { effect: true, by: src }); if (src && enemy) this.onEffectKill(src, target); return true; }
     return false;
+  }
+  // optional "when a Unit receives effect damage" hooks: unit onEffectDamaged(g,u,d,src), pilot p_onEffectDamaged(g,u,d,src),
+  // other friendly units onAllyEffectDamaged(g,self,u), friendly base onAllyEffectDamaged(g,ownerP,u). src = source player or null.
+  effDamaged(u, src, d) {
+    const p = u.owner; const e = EFFECTS[u.def.id]; if (e && e.onEffectDamaged) e.onEffectDamaged(this, u, d, src);
+    if (u.pilot) { const pe = EFFECTS[u.pilot.id]; if (pe && pe.p_onEffectDamaged) pe.p_onEffectDamaged(this, u, d, src); }
+    this.fireAllies(p, 'onAllyEffectDamaged', u);
+    if (p.base) { const be = EFFECTS[p.base.def.id]; if (be && be.onAllyEffectDamaged) be.onAllyEffectDamaged(this, p, u); }
   }
   onEffectKill(srcP, victim) {
     // Suletta Mercury: while a unit of srcP is attacking, enemy destroyed with effect damage -> draw
@@ -245,8 +259,11 @@ class Game {
   // ---------- shield area damage ----------
   damageShieldArea(attackerP, defP, n, opts = {}) {
     // deals n damage to first card in shield area. returns 'base'|'shield'|null
+    if (opts.effect || opts.breach) { // optional reductions of effect/Breach damage: base reduceShieldDmg(g,defP,n,srcP,opts), player flag shieldRed
+      const be0 = defP.base && EFFECTS[defP.base.def.id]; if (be0 && be0.reduceShieldDmg) n = be0.reduceShieldDmg(this, defP, n, attackerP, opts);
+      if (defP.flags.shieldRed) n = defP.flags.shieldRed(this, defP, n, attackerP, opts); if (n <= 0) return null; }
     if (defP.base) {
-      const be = EFFECTS[defP.base.def.id]; if (opts.effect && be && be.immuneEffect) return 'base';
+      const be = EFFECTS[defP.base.def.id]; if ((opts.effect || opts.breach) && be && be.immuneEffect) return 'base'; // <Breach> is effect damage too
       defP.base.dmg += n; if (defP.base.dmg >= (defP.base.def.hp)) this.destroyBase(defP);
       return 'base';
     }
@@ -264,7 +281,7 @@ class Game {
     this.L(`P${defP.i} shield broken: ${c.name}`);
     const e = EFFECTS[c.id];
     if (c.burst && defP.ai.useBurst(this, defP, c)) {
-      if (e && e.burst) { const kept = e.burst(this, defP, c); if (kept === 'kept') return; }
+      if (e && e.burst) { const pc = this.curCmd; if (c.type === 'COMMAND') this.curCmd = { c, p: defP }; let kept; try { kept = e.burst(this, defP, c); } finally { this.curCmd = pc; } if (kept === 'kept') return; } // curCmd: {c, p} of the Command whose effect is resolving
       else if (/【Burst】Add this card to your hand/.test(c.text)) { defP.hand.push(c); this.stats.p[defP.i].extraCards++; return; }
       else if (/【Burst】Deploy this card/.test(c.text)) { this.deployBase(defP, c); return; }
     }
@@ -294,7 +311,8 @@ class Game {
     // block step
     if (!this.kw(u, 'High-Maneuver')) {
       const blk = D.ai.chooseBlock(this, D, u, b.target);
-      if (blk) { blk.rested = true; b.target = blk; b.blocked = true; this.L(`P${D.i} blocks with ${blk.def.name}`); }
+      if (blk) { blk.rested = true; b.target = blk; b.blocked = true; this.L(`P${D.i} blocks with ${blk.def.name}`);
+        const bpe = blk.pilot && EFFECTS[blk.pilot.id]; if (bpe && bpe.p_onBlock) bpe.p_onBlock(this, blk, b); } // optional: "when this Unit activates <Blocker>"
     }
     // action step: standby player first, then attacker
     D.ai.actionStep(this, D, b, 'defend'); if (this.winner !== null) return this.endBattle(b);
@@ -312,7 +330,8 @@ class Game {
       if (D.base) hits.push('base'); for (let k = 0; k < D.shields.length; k++) hits.push('shield');
       const n = supp ? 2 : 1; const todo = hits.slice(0, n);
       let shieldHits = todo.filter(x => x === 'shield').length;
-      const bse = D.base && EFFECTS[D.base.def.id]; const baseImm = bse && bse.baseNoBattle && bse.baseNoBattle(this, D, u);
+      const bse = D.base && EFFECTS[D.base.def.id]; const baseImm = (D.base && this.areaGuard(D, u, 'base')) || (bse && bse.baseNoBattle && bse.baseNoBattle(this, D, u));
+      if (shieldHits && this.areaGuard(D, u, 'shield')) shieldHits = 0; // optional: defending Units/Pilots guardArea / p_guardArea
       if (todo[0] === 'base' && baseImm) { /* base can't receive this battle damage */ } else if (todo[0] === 'base') { D.base.dmg += ap; if (D.base.dmg >= D.base.def.hp) { this.destroyBase(D); if (this.alive(u)) this.onBattleDestroyCard(u, null); } }
       // shields hit simultaneously (top first)
       const broke = []; for (let k = 0; k < shieldHits; k++) broke.push(D.shields.shift());
@@ -324,7 +343,7 @@ class Game {
   }
   fightUnits(a, t, b) {
     const A = a.owner;
-    const fs = this.kw(a, 'First Strike');
+    const gfs = EFFECTS[t.def.id]; const fs = this.kw(a, 'First Strike') || !!(gfs && gfs.grantFirstStrike && gfs.grantFirstStrike(this, t, a)); // optional: target grants the attacker <First Strike>
     const apA = this.ap(a), apT = this.ap(t);
     // Exia Repair style: destroy on battle damage
     const eA = EFFECTS[a.def.id], eT = EFFECTS[t.def.id];
@@ -336,8 +355,9 @@ class Game {
       if (victim.flags.noBattleFrom2 && this.ap(src) <= 2) return false;
       if (this.noBattleDmg(victim, src, b)) return false;
       n = this.reduceBattleDmg(victim, n, src); if (n <= 0) return false;
-      victim.dmg += n; const se = EFFECTS[src.def.id];
+      victim.dmg += n; (b.dealt || (b.dealt = [])).push(src, victim); const se = EFFECTS[src.def.id];
       if (se && se.battleDestroyRule && se.battleDestroyRule(this, src, victim)) return true;
+      if (this.bdrExtra(src, victim)) return true;
       return this.hpLeft(victim) <= 0;
     };
     if (fs) {
@@ -347,8 +367,23 @@ class Game {
       killT = applyTo(t, a, apA); killA = applyTo(a, t, apT);
     }
     if (killT && this.alive(t)) { this.destroy(t, { battle: true, by: a }); this.onBattleKill(a, t); }
-    if (killA && this.alive(a)) { this.destroy(a, { battle: true, by: t }); }
+    if (killA && this.alive(a)) { this.destroy(a, { battle: true, by: t }); if (t.flags.onKill && this.alive(t)) t.flags.onKill(this, t, a); }
+    this.battleDamageEvents(b);
   }
+  // optional: unit onBattleDamage(g, self, src, victim) on every Unit of the damage source's owner, after the damage step
+  // (src dealt battle damage > 0 to victim; either may have left play).
+  battleDamageEvents(b) { const d = b.dealt; if (!d) return; b.dealt = null;
+    for (let i = 0; i < d.length; i += 2) for (const o of [...d[i].owner.units]) { const oe = EFFECTS[o.def.id]; if (oe && oe.onBattleDamage) oe.onBattleDamage(this, o, d[i], d[i + 1]); } }
+  // optional battle-destroy rules beyond the Unit card's own battleDestroyRule: pilot p_battleDestroyRule(g,src,victim) and a
+  // per-unit granted flag src.flags.bdr(g,src,victim) (the granting effect checks its own duration).
+  bdrExtra(src, victim) {
+    if (src.pilot) { const pe = EFFECTS[src.pilot.id]; if (pe && pe.p_battleDestroyRule && pe.p_battleDestroyRule(this, src, victim)) return true; }
+    return !!(src.flags.bdr && src.flags.bdr(this, src, victim));
+  }
+  // optional shield-area protection by the defender's Units: unit guardArea(g,self,attacker,kind) / pilot p_guardArea(g,self,attacker,kind),
+  // kind 'base' | 'shield' (battle damage from attacker). true = that card can't receive this battle damage.
+  areaGuard(D, a, kind) { for (const x of D.units) { const xe = EFFECTS[x.def.id], xp = x.pilot && EFFECTS[x.pilot.id];
+    if ((xe && xe.guardArea && xe.guardArea(this, x, a, kind)) || (xp && xp.p_guardArea && xp.p_guardArea(this, x, a, kind))) return true; } return false; }
   noBattleDmg(v, src, b) {
     const e = EFFECTS[v.def.id]; if (e && e.noBattleDmg && e.noBattleDmg(this, v, src, b)) return true;
     if (v.pilot) { const pe = EFFECTS[v.pilot.id]; if (pe && pe.p_noBattleDmg && pe.p_noBattleDmg(this, v, src, b)) return true; }
@@ -359,6 +394,7 @@ class Game {
   reduceBattleDmg(v, n, src) {
     const e = EFFECTS[v.def.id]; if (e && e.reduceBattleDmg) n = e.reduceBattleDmg(this, v, n, src);
     if (v.pilot) { const pe = EFFECTS[v.pilot.id]; if (pe && pe.p_reduceBattleDmg) n = pe.p_reduceBattleDmg(this, v, n, src); }
+    if (v.flags.redB) n = v.flags.redB(this, v, n, src, false); // optional granted reduction (5th arg: AI preview)
     if (v.flags.reduceNext > 0) { const r = Math.min(n, v.flags.reduceNext); n -= r; v.flags.reduceNext = 0; }
     return n;
   }
@@ -370,16 +406,19 @@ class Game {
     const A = a.owner;
     if (this.winner === null && this.turnPlayer === A) {
       const br = this.alive(a) ? this.kw(a, 'Breach') : (a.lastBreach || 0);
-      if (br > 0) this.damageShieldArea(A, A.opp, br);
+      if (br > 0) this.damageShieldArea(A, A.opp, br, { breach: true, src: a });
     }
     if (this.alive(a)) {
       const e = EFFECTS[a.def.id]; if (e && e.onBattleKill) e.onBattleKill(this, a, victim);
       if (a.pilot) { const pe = EFFECTS[a.pilot.id]; if (pe && pe.p_onBattleKill) pe.p_onBattleKill(this, a, victim); }
+      if (a.flags.onKill && this.alive(a)) a.flags.onKill(this, a, victim); // optional granted battle-kill trigger (any turn)
       this.onBattleDestroyCard(a, victim);
     }
     if (this.turnPlayer === A) this.fireAllies(A, 'onAllyBattleKill', a);
   }
-  onBattleDestroyCard(a, victim) { if (a.flags.sfDraw && this.turnPlayer === a.owner) this.draw(a.owner, 1); }
+  onBattleDestroyCard(a, victim) { if (a.flags.sfDraw && this.turnPlayer === a.owner) this.draw(a.owner, 1);
+    if (!victim) { const e = EFFECTS[a.def.id]; if (e && e.onDestroyShieldArea) e.onDestroyShieldArea(this, a);
+      const pe = a.pilot && EFFECTS[a.pilot.id]; if (pe && pe.p_onDestroyShieldArea && this.alive(a)) pe.p_onDestroyShieldArea(this, a); } } // optional: battle damage destroyed a shield area card
   // damage-step-only battle (Nu Gundam, Qubeley)
   damageOnlyBattle(a, t) {
     if (!this.alive(a) || !this.alive(t)) return;

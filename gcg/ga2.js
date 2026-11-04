@@ -9,7 +9,7 @@ const { W } = require('./evalfield');
 const args = Object.fromEntries(process.argv.slice(2).reduce((acc, x, i, arr) => (x.startsWith('--') ? acc.concat([[x.slice(2), arr[i + 1]]]) : acc), []));
 const COLORS = (args.colors || 'Green,Blue').split(','); const SEEDS = (args.seeds || '').split(',').filter(Boolean); const SEEDFILES = (args.seedfiles || '').split(',').filter(Boolean);
 const GENS = +(args.gens || 12), KIDS = +(args.kids || 20), KEEP = +(args.keep || 6), ELITE = +(args.elite || 4), HN = +(args.hn || 24), SNN = +(args.sn || 24), WS = +(args.ws || 0.65);
-const OUT = args.out || 'results/ga2.json', PROF = args.prof || 'hyper'; const PURE = !!+(args.pure || 0); const S = { K: +(args.k || 2), N: +(args.nr || 2) };
+const OUT = args.out || 'results/ga2.json', PROF = args.prof || 'hyper'; const PURE = !!+(args.pure || 0); const S = args.sopts ? JSON.parse(args.sopts) : { K: +(args.k || 2), N: +(args.nr || 2) };
 const LOCK = Object.fromEntries((args.lock || '').split(',').filter(Boolean).map(x => { const [id, n] = x.split(':'); return [id, +n]; }));
 let rs = +(args.rseed || 7); const rnd = () => { rs = (rs * 1103515245 + 12345) & 0x7fffffff; return rs / 0x7fffffff; }; const pick = (a) => a[Math.floor(rnd() * a.length)];
 const opps = Object.keys(D).filter(k => k.startsWith('W_') || k.startsWith('J_'));

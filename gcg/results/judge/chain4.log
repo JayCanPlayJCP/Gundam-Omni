@@ -1,1 +1,3 @@
 mcts60c08m6: X {"mcts":true,"I":60,"C":0.08,"scale":4,"M":6} vs Y {"K":4,"N":6}: X scores 50.1% [46.7-53.5] over 832 games (416W 2D) (103s)
+mcts60c15m6_832: X {"mcts":true,"I":60,"C":0.15,"scale":4,"M":6} vs Y {"K":4,"N":6}: X scores 51.1% [47.7-54.5] over 832 games (425W 0D) (141s)
+mcts60c25m6_832: X {"mcts":true,"I":60,"C":0.25,"scale":4,"M":6} vs Y {"K":4,"N":6}: X scores 51.0% [47.6-54.3] over 832 games (424W 0D) (158s)

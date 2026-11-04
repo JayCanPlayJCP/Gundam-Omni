@@ -62,3 +62,15 @@ onAllyLinked(g,p,u) activate:{cost, once, restBase, can(g,p), score(g,p), run(g,
 ## Rules reminders
 1v1: "enemy players" = 1. Shields have no HP: any damage to a shield destroys it. Tokens vanish when they leave play.
 Units can only attack the player or a RESTED enemy unit unless an effect allows active targets.
+
+## Optional hooks added for White (all default to the old behaviour when absent)
+engine: u.flags.noAtkT = g.turn ("It can't attack during this turn") and u.flags.noAtkPlayerT = g.turn ("can't choose the
+enemy player as its attack target during this turn"); unit playerTargetOk:true (its text's "can't choose the enemy player"
+clause is conditional, so canAttackPlayer skips the text regex); pilot p_reduceEffectDmg(g,u,d,real) (enemy effect damage);
+pilot p_onBlock(g,u,b) (this Unit activated <Blocker>); unit guardArea(g,self,attacker,kind) / pilot p_guardArea, kind
+'base'|'shield' -> true = that card can't receive this battle damage; unit grantFirstStrike(g,self,attacker) (the attacker
+fighting this Unit deals damage first); unit onBattleDamage(g,self,src,victim) on every Unit of src's owner after a damage
+step in which src dealt battle damage > 0; pilot p_onDestroyShieldArea(g,u) (battle damage destroyed a shield area card).
+ai: unit battleAct / pilot p_battleAct {cost, once, can(g,p,u,b,role), value(g,p,u,b,role), run(g,p,u,b,role)} =
+【Activate･Action】 used in the battle action step (both roles; once = per turn); pilot p_activate {cost, once, postCombat,
+can(g,p,u), score(g,p,u), run(g,p,u)} = Pilot 【Activate･Main】 (candidate kind 'pact', u = the paired Unit).

@@ -138,14 +138,13 @@ F('ST13-001', 'simplified', { note: 'Funnel trigger on pair; damage-step battle 
   activate: { cost: 1, once: true, can: (g, p, u) => p.units.some(x => x.token) && p.opp.units.length > 0, run(g, p, u) { const tok = p.units.filter(x => x.token).sort((a, b) => g.ap(b) - g.ap(a))[0]; const t = p.ai.pickFightTarget(g, p, tok, p.opp.units); if (t) g.damageOnlyBattle(tok, t); }, score: (g, p) => 1.2 } });
 
 // ======================= PURPLE =======================
-F('GD05-129', 'simplified', baseShield({ note: 'Activate (deploy Neo Zeon Lv3- from hand after own Neo Zeon effect destroyed a unit) not used' }));
 F('GD05-114', 'full', cmd({ canMain: (g, p) => true, main(g, p) { for (const pl of g.players) for (const u of [...pl.units]) if (u.def.lv <= 4 || u.token) { if (u.def.lv <= 4) g.destroy(u, { effect: true, by: p }); } },
   score: (g, p) => { const v = (pl) => pl.units.filter(u => u.def.lv <= 4).reduce((s, u) => s + p.ai.unitValue(g, u), 0); return (v(p.opp) - v(p)) / 2.5; } }));
 F('ST05-014', 'full', cmd({ burst(g, p) { dmgPick(g, p, 1, null); }, canMain: (g, p) => p.opp.units.some(u => u.def.lv <= 3), main(g, p) { destroyPick(g, p, u => u.def.lv <= 3); }, removal: { kind: 'destroy', f: (g, u) => u.def.lv <= 3 } }));
 F('GD05-093', 'full', { p_whenLinked(g, u) { const p = u.owner; const b = p.trash.filter(c => c.type === 'BASE' && c.traits.includes('Neo Zeon')); if (b.length) { const c = b[0]; p.trash.splice(p.trash.indexOf(c), 1); g.deployBase(p, c); } } });
 F('ST05-010', 'full', { p_whenPaired(g, u) { ownAndEnemyPing(g, u.owner, u); } });
 F('ST07-009', 'full', { p_attack(g, u) { const p = u.owner; if (p.trash.filter(c => c.traits.includes('CB')).length >= 7) { for (const x of p.units) if (tr(g, x, 'CB')) x.tAP += 1; } else u.tAP += 1; } });
-F('ST12-012', 'full', { alsoNamed: 'Marida Cruz', p_whenLinked(g, u) { const p = u.owner; const top = p.deck.splice(0, 2); if (!top.length) return; const keep = p.ai.pickBestCard(g, p, top); const other = top.find(c => c !== keep);
+F('ST12-012', 'full', { alsoNamed: 'Marida Cruz', p_whenLinked(g, u) { const p = u.owner; const top = p.deck.splice(0, 2); if (!top.length) return; const keep = p.ai.pickBestCard(g, p, top); const other = top.length > 1 ? top[1 - top.indexOf(keep)] : undefined;
   const low = g.players.some(pl => pl.shields.length <= 3); p.deck.unshift(keep); if (other) { if (low) { p.hand.push(other); g.stats.p[p.i].extraCards++; } else p.trash.push(other); } } });
 F('GD02-054', 'full', { attack(g, u) { if (u.dmg > 0) g.draw(u.owner, 1); } });
 F('GD02-055', 'full', { deploy(g, u) { ownAndEnemyPing(g, u.owner, u); } });
@@ -153,8 +152,6 @@ F('GD03-050', 'full', { activate: { cost: 0, can: (g, p) => p.trash.filter(c => 
   run(g, p) { for (let k = 0; k < 3; k++) { const c = p.ai.pickWorstCard(g, p, p.trash.filter(x => x.type === 'UNIT' && (x.traits.includes('Tekkadan') || x.traits.includes('Teiwaz')))); p.trash.splice(p.trash.indexOf(c), 1); p.exile.push(c); } dmgPick(g, p, 2, null); }, score: (g, p) => p.ai.bestDamageValue(g, p, 2, null) - 0.5 } });
 F('GD03-056', 'full', { deploy(g, u) { ownAndEnemyPing(g, u.owner, u); } });
 F('GD03-063', 'full', {});
-F('GD05-049', 'full', { attack(g, u) { const p = u.owner; const own = p.units.filter(x => x !== u); if (!own.length || !p.opp.units.length) return; const sac = p.ai.pickSacrifice(g, p, own); if (!sac) return; g.destroy(sac, { effect: true, by: p });
-  const nb = p.opp.units.filter(x => x !== (g.inBattle && g.inBattle.target)); if (nb.length) { const v = p.opp.ai.pickSelfDestroy(g, p.opp, nb); if (v) g.destroy(v, { effect: true, by: p }); } } });
 F('GD05-050', 'full', { battleDestroyRule: (g, src, victim) => victim.def.lv <= 4 && !victim.pilot && victim.owner !== src.owner, destroyed(g, u) { const p = u.owner; p.trash.push(...p.deck.splice(0, 2)); } });
 F('GD05-060', 'full', { deploy(g, u) { destroyPick(g, u.owner, x => x.def.lv <= 2); }, attack(g, u) { destroyPick(g, u.owner, x => x.def.lv <= 2); } });
 F('ST05-004', 'full', {}); F('ST05-006', 'full', {}); F('ST11-007', 'full', {}); F('ST11-008', 'full', {});
@@ -203,12 +200,13 @@ F('GD01-118', 'full', cmd({ canMain: () => true, main(g, p) { g.draw(p, 2); g.di
 F('GD04-117', 'full', cmd({ burst(g, p) { EFX['GD04-117'].action(g, p); }, actionOnly: true, canAction: (g, p) => p.opp.units.some(u => u.def.lv <= 3),
   action(g, p, b, role) { const t1 = (role === 'defend' && b && b.attacker && b.attacker.def.lv <= 3) ? b.attacker : null; if (t1) g.bounce(t1); else bouncePick(g, p, u => u.def.lv <= 3); bouncePick(g, p, u => u.def.lv <= 3); },
   canMain: (g, p) => p.opp.units.filter(u => u.def.lv <= 3).length >= 2, main(g, p) { EFX['GD04-117'].action(g, p); }, removal: { kind: 'hand', f: (g, u) => u.def.lv <= 3, multi: 2 } }));
-F('GD05-120', 'full', cmd({ specialMove: true, canMain: (g, p) => p.opp.units.some(u => !u.rested && g.hpLeft(u) <= 4), main(g, p) { restPick(g, p, u => g.hpLeft(u) <= 4); const s = p.units.filter(u => u.def.name.includes('Shining Gundam')); if (s.length) s[0].tKw['First Strike'] = 1; }, score: (g, p) => p.ai.restScore(g, p, u => g.hpLeft(u) <= 4), actionToo: false }));
+F('GD05-120', 'full', cmd({ specialMove: true, canMain: (g, p) => p.opp.units.some(u => !u.rested && g.hpLeft(u) <= 4), main(g, p) { restPick(g, p, u => g.hpLeft(u) <= 4); const s = p.units.filter(u => u.def.name.includes('Shining Gundam')); if (s.length) s[0].tKw['First Strike'] = 1; }, score: (g, p) => p.ai.restScore(g, p, u => g.hpLeft(u) <= 4), actionToo: true,
+  action(g, p) { EFX['GD05-120'].main(g, p); }, defAction: { can: (g, p) => g.turnPlayer !== p && p.opp.units.some(u => !u.rested && g.hpLeft(u) <= 4), value: (g, p) => Math.max(0, ...p.opp.units.filter(u => !u.rested && g.hpLeft(u) <= 4).map(u => (g.kw(u, 'Blocker') ? 1.0 : 0.3) + (p.units.some(x => g.ap(x) >= g.hpLeft(u)) ? p.ai.unitValue(g, u) * 0.5 : 0))), run(g, p) { EFX['GD05-120'].main(g, p); } } }));
 F('GD05-121', 'full', cmd({ specialMove: true, pilotName: 'Chibodee Crocket', canMain: (g, p) => p.opp.units.length > 0, main(g, p) { apDownPick(g, p, 2, null, null); const mf = p.units.filter(u => tr(g, u, 'MF') && !u.pilot); if (mf.length) { p.flags.cyclonePair = mf; } }, score: (g, p) => (p.units.some(u => tr(g, u, 'MF') && !u.pilot) ? 2.2 : 0.4) }));
 F('ST01-014', 'full', cmd({ burst(g, p) { if (p.opp.units.length) apDownPick(g, p, 3, null, null); }, canMain: (g, p) => p.opp.units.length > 0, main(g, p) { apDownPick(g, p, 3, null, null); }, actionToo: true, apDown: 3 }));
 F('ST04-012', 'full', cmd({ burst(g, p) { if (!p.units.some(u => u.token && tr(g, u, 'Earth Alliance'))) g.deployToken(p, 'Aile Strike Gundam'); },
   canMain: (g, p) => !p.units.some(u => u.token && tr(g, u, 'Earth Alliance')), main(g, p) { g.deployToken(p, p.opp.units.some(u => g.ap(u) >= 4) ? 'Launcher Strike Gundam' : 'Sword Strike Gundam'); }, score: (g, p) => p.units.length < 6 ? 3.0 : 0 }));
-F('ST14-014', 'full', cmd({ pilotName: 'Garrod Ran & Tiffa Adill', canMain: (g, p) => p.opp.units.length > 0, main(g, p) { const any = p.trash.filter(c => c.type === 'COMMAND').length >= 4; apDownPick(g, p, 3, any ? null : u => u.def.lv <= 5, null); }, actionToo: true, apDown: 3 }));
+F('ST14-014', 'full', cmd({ pilotName: 'Garrod Ran & Tiffa Adill', canMain: (g, p) => p.opp.units.length > 0, main(g, p) { const any = p.trash.filter(c => c.type === 'COMMAND').length >= 4; apDownPick(g, p, 3, any ? null : u => u.def.lv <= 5, null); }, actionToo: true, apDown: 3, apDownOk: (g, p, u) => u.def.lv <= 5 || p.trash.filter(c => c.type === 'COMMAND').length >= 4 }));
 F('GD05-097', 'full', { p_whenPaired(g, u) { const p = u.owner; g.draw(p, 1); if (!p.hand.length) return; const c = p.ai.pickDiscard(g, p, p.hand, true); p.hand.splice(p.hand.indexOf(c), 1); p.trash.push(c);
   const e = EFX[c.id]; if (c.type === 'COMMAND' && c.traits.includes('Special Move') && e && e.canMain && e.canMain(g, p)) { e.main(g, p); p.specialMoveThisTurn = true; g.fireAllies(p, 'onCommand', c); } } });
 F('ST04-010', 'full', { p_attack(g, u, b) { apDownPick(g, u.owner, 2, null, { battle: true, b }); } });
@@ -225,7 +223,7 @@ F('GD05-066', 'full', { deploy(g, u) { const p = u.owner; const mf = p.trash.fil
   attack(g, u) { if (!u.once.has('sg')) { u.once.add('sg'); const p = u.owner; if (p.resRested > 0) p.resRested--; } } });
 F('GD05-068', 'full', { onCommand(g, u, c) { if (c.traits.includes('Special Move')) u.tKw.Suppression = 1; }, attack(g, u) { if (u.linked) u.bAP += 2; } });
 F('GD05-069', 'full', { onBattleKill(g, u) { if (yourTurn(g, u.owner)) lookTop(g, u.owner, 4, c => c.type === 'COMMAND' && c.traits.includes('Special Move')); },
-  attack(g, u) { if (u.linked && u.pilot && u.pilot.cmdPilot) { const e = EFX[u.pilot.id]; if (e && e.canMain && e.canMain(g, u.owner)) { e.main(g, u.owner); if (CARDS[u.pilot.id].traits.includes('Special Move')) u.owner.specialMoveThisTurn = true; } } } });
+  attack(g, u) { if (u.linked && u.pilot && u.pilot.cmdPilot) { const c = CARDS[u.pilot.id]; const e = EFX[u.pilot.id]; if (e && e.canMain && e.canMain(g, u.owner)) { e.main(g, u.owner, { fromPair: true }); if (c.traits.includes('Special Move')) u.owner.specialMoveThisTurn = true; g.fireAllies(u.owner, 'onCommand', c); } } } });
 F('GD05-072', 'full', { whenLinked(g, u) { restPick(g, u.owner, x => g.hpLeft(x) <= 4); } });
 F('ST04-001', 'full', { whenPaired(g, u, pd) { if (pd.lv >= 4) bouncePick(g, u.owner, x => g.hpLeft(x) <= 4); } });
 F('ST14-001', 'full', { onOppStart(g, u, opp) { const r = opp.units.filter(x => x.rested); if (!r.length) return; const m = Math.min(...r.map(x => x.def.lv)); for (const x of r) if (x.def.lv === m) x.noReady = true; } });
@@ -323,7 +321,7 @@ F('GD04-031', 'full', {}); F('GD05-031', 'full', {});
 F('GD05-030', 'full', { deploy(g, u) { u.flags.hasteUnitsOnly = true; } });
 F('ST13-009', 'full', { attack(g, u) { const o = u.owner.opp; for (let k = 0; k < 2; k++) { const c = o.trash.find(x => x.type === 'UNIT'); if (c) { o.trash.splice(o.trash.indexOf(c), 1); o.exile.push(c); } } } });
 F('GD04-124', 'simplified', baseShield({ note: 'EX Resource AP trigger not modeled' }));
-F('ST02-015', 'full', baseShield({ baseDeploy(g, p) { const top = p.deck.splice(0, 2); if (!top.length) return; const keep = p.ai.pickBestCard(g, p, top); p.deck.unshift(keep); const o = top.find(c => c !== keep); if (o) p.deck.push(o); } }));
+F('ST02-015', 'full', baseShield({ baseDeploy(g, p) { const top = p.deck.splice(0, 2); if (!top.length) return; const keep = p.ai.pickBestCard(g, p, top); p.deck.unshift(keep); const o = top.length > 1 ? top[1 - top.indexOf(keep)] : undefined; if (o) p.deck.push(o); } }));
 F('GD04-008', 'full', { kw: (g, u, k) => (k === 'High-Maneuver' && u.linked) ? 1 : 0 });
 F('GD01-009', 'full', { deploy(g, u) { const p = u.owner; const c = p.units.filter(x => x !== u && tr(g, x, 'White Base Team') && !x.rested); if (c.length) { const t = p.ai.pickBestAttacker(g, p, c); t.tKw['High-Maneuver'] = 1; } } });
 F('GD01-103', 'full', cmd({ pilotName: 'Daguza Mackle', canMain: (g, p) => p.units.some(u => !u.rested && tr(g, u, 'Earth Federation')) && p.opp.units.some(u => !u.rested), main(g, p) { const own = p.units.filter(u => !u.rested && tr(g, u, 'Earth Federation')); const o = p.ai.pickRestOwn(g, p, own); o.rested = true; restPick(g, p, null); }, score: (g, p) => p.ai.restScore(g, p, null) - 0.6 }));
