@@ -4,3 +4,4 @@
 [147s] gen 2 best f 0.612 | heur B 0.0 (n0) | search B 60.0 A 60.0 b5 12.0 min 60.0 GB_S2_e1 (n40)
 [198s] gen 3 best f 0.771 | heur B 0.0 (n0) | search B 75.0 A 75.0 b5 15.0 min 75.0 GB_S2_e1 (n40)
 [244s] gen 4 best f 0.725 | heur B 0.0 (n0) | search B 70.0 A 70.0 b5 14.0 min 70.0 GB_S2_e1 (n80)
+[289s] gen 5 best f 0.702 | heur B 0.0 (n0) | search B 67.5 A 67.5 b5 13.5 min 67.5 GB_S2_e1 (n120)
