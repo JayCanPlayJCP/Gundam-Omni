@@ -4,10 +4,11 @@ const { playGame } = require('./sim'); const EFX = require('./effects'); const C
 const { rngFrom } = require('./engine');
 const r = rngFrom(+(process.argv[2] || 7)); const N = +(process.argv[3] || 300);
 const gl = Object.keys(D).filter(k => k.startsWith('W_') || k.startsWith('J_'));
-const pairs = [['Green', 'Blue'], ['Green', 'Red'], ['Blue', 'Red']];
+// optional 3rd arg: colour sets, e.g. White+Blue,Purple,White+Purple (default: the three Green/Blue/Red pairs)
+const pairs = process.argv[4] ? process.argv[4].split(',').map(s => s.split('+')) : [['Green', 'Blue'], ['Green', 'Red'], ['Blue', 'Red']];
 let errs = 0; const errById = {};
 for (let i = 0; i < N; i++) {
-  const cols = pairs[i % 3]; const pool = Object.keys(EFX).filter(id => C[id] && cols.includes(C[id].color) && C[id].type !== 'TOKEN' && C[id].legality !== 'banned' && id !== 'GD01-020' && (EFX[id].fidelity === 'auto' || r() < 0.3));
+  const cols = pairs[i % pairs.length]; const pool = Object.keys(EFX).filter(id => C[id] && cols.includes(C[id].color) && C[id].type !== 'TOKEN' && C[id].legality !== 'banned' && id !== 'GD01-020' && (EFX[id].fidelity === 'auto' || r() < 0.3));
   const deck = {}; let n = 0; while (n < 50) { const id = pool[Math.floor(r() * pool.length)]; const k = Math.min(4 - (deck[id] || 0), 50 - n, 1 + Math.floor(r() * 3)); if (k <= 0) continue; deck[id] = (deck[id] || 0) + k; n += k; }
   const list = Object.entries(deck).map(([id, n]) => ({ id, n }));
   try { playGame(list, gl[i % gl.length], 1000 + i, i % 2 === 0, { aiA: P.balanced, aiB: P.balanced }); }

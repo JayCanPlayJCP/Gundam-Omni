@@ -3,6 +3,7 @@
 const { CARDS } = require('./engine');
 const EFX = require('./effects');
 
+const UV_KW = ['Blocker', 'High-Maneuver', 'Suppression', 'Breach', 'Repair', 'First Strike'];
 const DEFAULT = { aggression: 1.0, removalThreshold: 1.4, exposureWeight: 0.45, holdDraw: false };
 
 class AI {
@@ -10,10 +11,17 @@ class AI {
 
   // ---------------- valuation ----------------
   unitValue(g, u) {
+    const m = g._m; let c; if (m) { c = m.get(u); if (c && c.uv !== undefined) return c.uv; }
+    const v = this.unitValue0(g, u);
+    if (m) { if (!c) m.set(u, c = {}); c.uv = v; }
+    return v;
+  }
+  unitValue0(g, u) {
     let v = 0.5 + g.ap(u) * 0.55 + Math.max(0, g.hpLeft(u)) * 0.45 + u.def.lv * 0.15;
     if (u.pilot) v += 1.2; if (u.linked) v += 0.5; if (u.token) v -= 0.4;
-    if (g.kw(u, 'Blocker')) v += 0.8; if (g.kw(u, 'High-Maneuver')) v += 0.8; if (g.kw(u, 'Suppression')) v += 0.8;
-    v += g.kw(u, 'Breach') * 0.25 + g.kw(u, 'Repair') * 0.3 + (g.kw(u, 'First Strike') ? 0.6 : 0);
+    const [kB, kH, kS, kBr, kR, kF] = g.kwVals(u, UV_KW);
+    if (kB) v += 0.8; if (kH) v += 0.8; if (kS) v += 0.8;
+    v += kBr * 0.25 + kR * 0.3 + (kF ? 0.6 : 0);
     if (EFX[u.def.id] && EFX[u.def.id].noAttackPlayer) v -= 0.6;
     return Math.max(0.3, v);
   }
@@ -200,7 +208,8 @@ class AI {
       const atk = p.units.filter(u => g.canAttackThisTurn(u)); if (!atk.length) return;
       let best = null, bv = 0.05;
       // lethal push: if opponent at 0 shields/no base, attack player with everything
-      for (const a of atk) for (const t of this.attackTargets(g, p, a)) { const v = this.scoreAttack(g, p, a, t); if (v > bv) { bv = v; best = [a, t]; } }
+      g._m = g.inBattle ? null : new Map(); // memo ap/hp/kw/unitValue while scoring on the frozen state
+      try { for (const a of atk) for (const t of this.attackTargets(g, p, a)) { const v = this.scoreAttack(g, p, a, t); if (v > bv) { bv = v; best = [a, t]; } } } finally { g._m = null; }
       if (!best) return;
       this.preAttack(g, p, best[0], best[1]);
       if (!g.alive(best[0]) || !g.canAttackThisTurn(best[0])) continue;

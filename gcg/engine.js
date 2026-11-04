@@ -1,4 +1,5 @@
 'use strict';
+const STATKEYS = { ap: ['ap', 'p_ap', 'aura_ap', 'p_aura_ap'], hp: ['hp', 'p_hp', 'aura_hp', 'p_aura_hp'] }; // constant keys (string concat in the hot path was ~30% of search time)
 // Gundam Card Game simulator — core rules engine.
 // Rules follow Comprehensive Rules v1.10.0 (16 Oct 2026). See README for simplifications.
 const CARDS = require('./cards.json');
@@ -96,22 +97,37 @@ class Game {
   lose(p, why) { if (this.winner === null) { this.winner = p.opp.i; this.reason = why; this.L(`P${p.i} loses: ${why}`); } }
 
   // ---------- stats ----------
+  // g._m: optional per-unit memo (Map unit -> {}) that the AI switches on only while it scores options on a frozen state
+  // (no battle in progress, nothing mutated between set and clear). Default null = no caching.
   ap(u) {
+    const m = this._m; let c; if (m) { c = m.get(u); if (c && c.ap !== undefined) return c.ap; }
     let v = u.def.ap + (u.pilot ? u.pilot.ap : 0) + u.tAP + u.bAP;
-    v += this.staticMod(u, 'ap');
-    return Math.max(0, v);
+    v += this.staticMod(u, 'ap'); v = Math.max(0, v);
+    if (m) { if (!c) m.set(u, c = {}); c.ap = v; }
+    return v;
   }
-  hp(u) { return u.def.hp + (u.pilot ? u.pilot.hp : 0) + u.tHP + this.staticMod(u, 'hp'); }
+  hp(u) {
+    const m = this._m; let c; if (m) { c = m.get(u); if (c && c.hp !== undefined) return c.hp; }
+    const v = u.def.hp + (u.pilot ? u.pilot.hp : 0) + u.tHP + this.staticMod(u, 'hp');
+    if (m) { if (!c) m.set(u, c = {}); c.hp = v; }
+    return v;
+  }
   hpLeft(u) { return this.hp(u) - u.dmg; }
   staticMod(u, stat) {
-    let v = 0; const g = this;
+    let v = 0; const g = this; const K = STATKEYS[stat] || [stat, 'p_' + stat, 'aura_' + stat, 'p_aura_' + stat]; const kP = K[1], kA = K[2], kPA = K[3];
     const e = EFFECTS[u.def.id]; if (e && e[stat]) v += e[stat](g, u);
-    if (u.pilot) { const pe = EFFECTS[u.pilot.id]; if (pe && pe['p_' + stat]) v += pe['p_' + stat](g, u); }
-    for (const o of u.owner.units) { const oe = EFFECTS[o.def.id]; if (o !== u && oe && oe['aura_' + stat]) v += oe['aura_' + stat](g, o, u); if (o.pilot) { const pe2 = EFFECTS[o.pilot.id]; if (pe2 && pe2['p_aura_' + stat]) v += pe2['p_aura_' + stat](g, o, u); } }
-    if (u.owner.base) { const be = EFFECTS[u.owner.base.def.id]; if (be && be['aura_' + stat]) v += be['aura_' + stat](g, u.owner.base, u); }
+    if (u.pilot) { const pe = EFFECTS[u.pilot.id]; if (pe && pe[kP]) v += pe[kP](g, u); }
+    for (const o of u.owner.units) { const oe = EFFECTS[o.def.id]; if (o !== u && oe && oe[kA]) v += oe[kA](g, o, u); if (o.pilot) { const pe2 = EFFECTS[o.pilot.id]; if (pe2 && pe2[kPA]) v += pe2[kPA](g, o, u); } }
+    if (u.owner.base) { const be = EFFECTS[u.owner.base.def.id]; if (be && be[kA]) v += be[kA](g, u.owner.base, u); }
     return v;
   }
   kw(u, k) {
+    const m = this._m; let c; if (m) { c = m.get(u); if (c && c.kw && c.kw[k] !== undefined) return c.kw[k]; }
+    const v = this.kw0(u, k);
+    if (m) { if (!c) m.set(u, c = {}); (c.kw || (c.kw = {}))[k] = v; }
+    return v;
+  }
+  kw0(u, k) {
     let v = u.def.skw[k] || 0;
     v = Math.max(v, u.tKw[k] || 0, u.bKw[k] || 0);
     if (k === 'Breach' || k === 'Repair') v = (u.def.skw[k] || 0) + (u.tKw[k] || 0) + (u.bKw[k] || 0);
@@ -119,6 +135,16 @@ class Game {
     for (const o of u.owner.units) { if (o === u) continue; const oe = EFFECTS[o.def.id]; if (oe && oe.aura_kw) v += oe.aura_kw(this, o, u, k) || 0; }
     if (u.pilot) { const pe = EFFECTS[u.pilot.id]; if (pe && pe.p_kw) v += pe.p_kw(this, u, k) || 0; }
     return v;
+  }
+  // kwVals(u, ks): same values as ks.map(k => this.kw0(u, k)) with one pass over the allies (hot path of AI unitValue)
+  kwVals(u, ks) {
+    const out = new Array(ks.length); const e = EFFECTS[u.def.id]; const ek = e && e.kw;
+    for (let i = 0; i < ks.length; i++) { const k = ks[i]; let v;
+      if (k === 'Breach' || k === 'Repair') v = (u.def.skw[k] || 0) + (u.tKw[k] || 0) + (u.bKw[k] || 0); else v = Math.max(u.def.skw[k] || 0, u.tKw[k] || 0, u.bKw[k] || 0);
+      if (ek) v += ek(this, u, k) || 0; out[i] = v; }
+    for (const o of u.owner.units) { if (o === u) continue; const oe = EFFECTS[o.def.id]; if (oe && oe.aura_kw) for (let i = 0; i < ks.length; i++) out[i] += oe.aura_kw(this, o, u, ks[i]) || 0; }
+    if (u.pilot) { const pe = EFFECTS[u.pilot.id]; if (pe && pe.p_kw) for (let i = 0; i < ks.length; i++) out[i] += pe.p_kw(this, u, ks[i]) || 0; }
+    return out;
   }
   traits(u) {
     const t = new Set(u.def.traits);

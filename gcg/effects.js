@@ -233,7 +233,7 @@ F('ST14-005', 'full', { deploy(g, u) { const p = u.owner; const t = restPick(g, 
 
 // ---------- per-colour hand implementations (Track 2 batch 2) ----------
 { const H = { dmgPick, restPick, bouncePick, destroyPick, apDownPick, lookTop, lookOneTopOrBottom, tr, yourTurn, cmd, baseShield, grantActive: require('./compiler').grantActive };
-  for (const f of ['effects_green', 'effects_blue', 'effects_red', 'effects_white']) { let mod = null; try { mod = require('./' + f); } catch (e) { if (!(e.code === 'MODULE_NOT_FOUND' && String(e.message).includes(f))) throw e; } if (mod) mod(F, H, EFX); } }
+  for (const f of ['effects_green', 'effects_blue', 'effects_red', 'effects_white', 'effects_purple']) { let mod = null; try { mod = require('./' + f); } catch (e) { if (!(e.code === 'MODULE_NOT_FOUND' && String(e.message).includes(f))) throw e; } if (mod) mod(F, H, EFX); } }
 // ---------- auto-compiled cards (strict templates; a card is added only if every clause parsed) ----------
 { const { compileCard } = require('./compiler'); const { TOKEN } = require('./engine');
   for (const id in CARDS) { if (EFX[id] || id.startsWith('T-')) continue; const r = compileCard(CARDS[id], TOKEN); if (!r.failed) { r.fidelity = r.fidelity || 'auto'; EFX[id] = r; } } }
