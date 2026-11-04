@@ -14,4 +14,6 @@ run RW Red,White W_BRIS_RWAcademy,W_DUS_Shining,W_TKY3_Shining,J_MobileFighter,J
 run BW Blue,White W_DC_SF,W_TOR_SF,J_SFBlockers
 run GB Green,Blue W_LILLE_Nu,W_JKT_Nu,J_NuAggro,J_BGOYW,J_BGOYW_Chelmo
 run PR Purple,Red J_KshatriyaBanshee
+run BR Blue,Red W_MEL_SFVictory
+run GW Green,White J_Wing_Omiya
 echo "[$(date +%T)] all done" >> results/counter/counter.log
