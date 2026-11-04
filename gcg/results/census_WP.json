@@ -1,0 +1,3497 @@
+{
+ "name": "WP",
+ "chassis": "MERGE_WP",
+ "cols": [
+  "White",
+  "Purple"
+ ],
+ "N": 40,
+ "base": 0.625,
+ "victims": [
+  [
+   "GD01-066",
+   3
+  ]
+ ],
+ "slots": [
+  {
+   "id": "GD01-066",
+   "loss": -0.011778846153846168
+  },
+  {
+   "id": "GD05-069",
+   "loss": -0.010817307692307598
+  },
+  {
+   "id": "GD01-118",
+   "loss": -0.010336538461538425
+  },
+  {
+   "id": "GD04-068",
+   "loss": -0.008894230769230738
+  },
+  {
+   "id": "GD01-086",
+   "loss": -0.008653846153846123
+  },
+  {
+   "id": "ST04-001",
+   "loss": -0.004807692307692291
+  },
+  {
+   "id": "ST04-010",
+   "loss": -0.0028846153846153744
+  },
+  {
+   "id": "ST11-009",
+   "loss": 0.0012019230769230727
+  },
+  {
+   "id": "GD03-056",
+   "loss": 0.003846153846153777
+  },
+  {
+   "id": "ST11-007",
+   "loss": 0.006490384615384703
+  },
+  {
+   "id": "GD05-050",
+   "loss": 0.008413461538461564
+  },
+  {
+   "id": "GD02-079",
+   "loss": 0.009134615384615352
+  }
+ ],
+ "res": [
+  {
+   "id": "GD06-064",
+   "name": "Altron Gundam (EW)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.6451923076923077,
+   "d": 0.02019230769230773
+  },
+  {
+   "id": "ST05-010",
+   "name": "Mikazuki Augus",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6384615384615384,
+   "d": 0.013461538461538414
+  },
+  {
+   "id": "GD06-050",
+   "name": "Legend Gundam",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.6365384615384614,
+   "d": 0.011538461538461386
+  },
+  {
+   "id": "GD03-094",
+   "name": "Zeheart Galette",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 5,
+   "wr": 0.6326923076923077,
+   "d": 0.007692307692307665
+  },
+  {
+   "id": "EB01-054",
+   "name": "Gaplant TR-5 \"Hrairoo\" Unit 1",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.6317307692307691,
+   "d": 0.006730769230769096
+  },
+  {
+   "id": "GD06-077",
+   "name": "Cannon Illfuto",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.6317307692307691,
+   "d": 0.006730769230769096
+  },
+  {
+   "id": "GD01-068",
+   "name": "Perfect Strike Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6307692307692309,
+   "d": 0.00576923076923086
+  },
+  {
+   "id": "GD05-093",
+   "name": "Char Aznable",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 5,
+   "wr": 0.6307692307692307,
+   "d": 0.005769230769230749
+  },
+  {
+   "id": "GD06-097",
+   "name": "Harry Ord",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 5,
+   "wr": 0.6307692307692307,
+   "d": 0.005769230769230749
+  },
+  {
+   "id": "EB01-053",
+   "name": "Gundam GP00",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6269230769230769,
+   "d": 0.0019230769230769162
+  },
+  {
+   "id": "GD06-079",
+   "name": "Muttowooo",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6269230769230769,
+   "d": 0.0019230769230769162
+  },
+  {
+   "id": "ST04-005",
+   "name": "Strike Dagger",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6269230769230769,
+   "d": 0.0019230769230769162
+  },
+  {
+   "id": "ST05-015",
+   "name": "Isaribi",
+   "color": "Purple",
+   "type": "BASE",
+   "lv": 3,
+   "wr": 0.6259615384615385,
+   "d": 0.0009615384615384581
+  },
+  {
+   "id": "GD05-067",
+   "name": "Wing Gundam Zero (EW)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.6259615384615385,
+   "d": 0.0009615384615384581
+  },
+  {
+   "id": "ST14-001",
+   "name": "The-O",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 9,
+   "wr": 0.625,
+   "d": 0
+  },
+  {
+   "id": "GD05-100",
+   "name": "Quatre Raberba Winner",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.625,
+   "d": 0
+  },
+  {
+   "id": "GD05-097",
+   "name": "Domon Kasshu",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6249999999999999,
+   "d": -1.1102230246251565e-16
+  },
+  {
+   "id": "GD02-097",
+   "name": "Kamille Bidan",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 5,
+   "wr": 0.6230769230769232,
+   "d": -0.0019230769230768052
+  },
+  {
+   "id": "ST01-011",
+   "name": "Suletta Mercury",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6230769230769231,
+   "d": -0.0019230769230769162
+  },
+  {
+   "id": "GD01-129",
+   "name": "Kusanagi",
+   "color": "White",
+   "type": "BASE",
+   "lv": 4,
+   "wr": 0.6230769230769229,
+   "d": -0.0019230769230771383
+  },
+  {
+   "id": "ST12-012",
+   "name": "Ple-Twelve",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6221153846153846,
+   "d": -0.0028846153846153744
+  },
+  {
+   "id": "GD02-098",
+   "name": "Quattro Bajeena",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6221153846153846,
+   "d": -0.0028846153846153744
+  },
+  {
+   "id": "GD04-098",
+   "name": "Riddhe Marcenas",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6221153846153846,
+   "d": -0.0028846153846153744
+  },
+  {
+   "id": "GD06-098",
+   "name": "Duo Maxwell",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6221153846153846,
+   "d": -0.0028846153846153744
+  },
+  {
+   "id": "GD06-119",
+   "name": "Sturm und Drang",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 5,
+   "wr": 0.6221153846153846,
+   "d": -0.0028846153846153744
+  },
+  {
+   "id": "GD03-097",
+   "name": "Wistario Afam",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6221153846153846,
+   "d": -0.0028846153846153744
+  },
+  {
+   "id": "GD04-093",
+   "name": "Rey Za Burrel",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6221153846153846,
+   "d": -0.0028846153846153744
+  },
+  {
+   "id": "GD04-096",
+   "name": "Ennil El",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6221153846153846,
+   "d": -0.0028846153846153744
+  },
+  {
+   "id": "GD06-053",
+   "name": "Xavier's Gyan Hakuji-Packs (GQ)",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6221153846153846,
+   "d": -0.0028846153846153744
+  },
+  {
+   "id": "GD06-054",
+   "name": "GFreD",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.6221153846153845,
+   "d": -0.0028846153846154854
+  },
+  {
+   "id": "ST11-012",
+   "name": "Loni Garvey",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6221153846153845,
+   "d": -0.0028846153846154854
+  },
+  {
+   "id": "GD05-119",
+   "name": "A Wind Against Fires",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 5,
+   "wr": 0.6211538461538463,
+   "d": -0.0038461538461537215
+  },
+  {
+   "id": "ST10-012",
+   "name": "Mark Guilder",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6211538461538463,
+   "d": -0.0038461538461537215
+  },
+  {
+   "id": "GD06-065",
+   "name": "SUMO Gold Type",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.6211538461538461,
+   "d": -0.0038461538461539435
+  },
+  {
+   "id": "EB01-041",
+   "name": "Strike Freedom Gundam (EX)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.6201923076923077,
+   "d": -0.004807692307692291
+  },
+  {
+   "id": "GD06-093",
+   "name": "Anavel Gato",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6201923076923077,
+   "d": -0.004807692307692291
+  },
+  {
+   "id": "ST05-014",
+   "name": "Fatal Strike",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.6182692307692308,
+   "d": -0.006730769230769207
+  },
+  {
+   "id": "GD02-072",
+   "name": "Hyaku-Shiki",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6182692307692308,
+   "d": -0.006730769230769207
+  },
+  {
+   "id": "GD02-074",
+   "name": "Gundam Aerial Rebuild",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.6182692307692308,
+   "d": -0.006730769230769207
+  },
+  {
+   "id": "GD05-099",
+   "name": "Trowa Barton",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6182692307692308,
+   "d": -0.006730769230769207
+  },
+  {
+   "id": "GD03-095",
+   "name": "Azee Gurumin",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6182692307692308,
+   "d": -0.006730769230769207
+  },
+  {
+   "id": "GD04-050",
+   "name": "Destiny Gundam",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.6182692307692308,
+   "d": -0.006730769230769207
+  },
+  {
+   "id": "GD05-075",
+   "name": "Royal Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6182692307692308,
+   "d": -0.006730769230769207
+  },
+  {
+   "id": "ST01-009",
+   "name": "Zowort",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6182692307692308,
+   "d": -0.006730769230769207
+  },
+  {
+   "id": "GD02-053",
+   "name": "Gundam X",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.6173076923076923,
+   "d": -0.007692307692307665
+  },
+  {
+   "id": "ST09-007",
+   "name": "Blast Impulse Gundam",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6173076923076923,
+   "d": -0.007692307692307665
+  },
+  {
+   "id": "EB01-050",
+   "name": "Saikoro Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.6173076923076922,
+   "d": -0.007692307692307776
+  },
+  {
+   "id": "GD01-098",
+   "name": "Elan Ceres (Enhanced Person Number 4)",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6163461538461538,
+   "d": -0.008653846153846234
+  },
+  {
+   "id": "ST14-011",
+   "name": "Paptimus Scirocco",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6163461538461538,
+   "d": -0.008653846153846234
+  },
+  {
+   "id": "GD02-095",
+   "name": "Lafter Frankland",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6163461538461538,
+   "d": -0.008653846153846234
+  },
+  {
+   "id": "GD06-099",
+   "name": "Chang Wufei",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6163461538461538,
+   "d": -0.008653846153846234
+  },
+  {
+   "id": "GD05-060",
+   "name": "Gundam Flauros (Ryusei-Go)",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6153846153846154,
+   "d": -0.009615384615384581
+  },
+  {
+   "id": "GD02-094",
+   "name": "Garrod Ran & Tiffa Adill",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6153846153846154,
+   "d": -0.009615384615384581
+  },
+  {
+   "id": "GD06-060",
+   "name": "Zaku Ⅱ F2",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6153846153846154,
+   "d": -0.009615384615384581
+  },
+  {
+   "id": "GD05-080",
+   "name": "Gavane's Borjarnon",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.6153846153846154,
+   "d": -0.009615384615384581
+  },
+  {
+   "id": "GD05-098",
+   "name": "Heero Yuy",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6153846153846153,
+   "d": -0.009615384615384692
+  },
+  {
+   "id": "GD02-078",
+   "name": "Gundam Pharact",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6153846153846153,
+   "d": -0.009615384615384692
+  },
+  {
+   "id": "GD03-066",
+   "name": "Gundam Barbatos 5th Form (Ground Type)",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6153846153846153,
+   "d": -0.009615384615384692
+  },
+  {
+   "id": "GD04-055",
+   "name": "Heine's Gouf Ignited",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6153846153846153,
+   "d": -0.009615384615384692
+  },
+  {
+   "id": "GD04-079",
+   "name": "Agrissa",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6153846153846153,
+   "d": -0.009615384615384692
+  },
+  {
+   "id": "ST07-003",
+   "name": "Gundam Virtue",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6153846153846153,
+   "d": -0.009615384615384692
+  },
+  {
+   "id": "EB01-070",
+   "name": "Daryl Lorenz",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6153846153846152,
+   "d": -0.009615384615384803
+  },
+  {
+   "id": "GD03-098",
+   "name": "Graham Aker",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6153846153846152,
+   "d": -0.009615384615384803
+  },
+  {
+   "id": "GD04-099",
+   "name": "Ali al-Saachez",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6153846153846152,
+   "d": -0.009615384615384803
+  },
+  {
+   "id": "GD02-096",
+   "name": "Desil Galette",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6153846153846152,
+   "d": -0.009615384615384803
+  },
+  {
+   "id": "GD03-096",
+   "name": "Jamil Neate",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6153846153846152,
+   "d": -0.009615384615384803
+  },
+  {
+   "id": "GD06-096",
+   "name": "Xavier Olivette",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6153846153846152,
+   "d": -0.009615384615384803
+  },
+  {
+   "id": "EB01-071",
+   "name": "Ittou Tsurugi",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6153846153846152,
+   "d": -0.009615384615384803
+  },
+  {
+   "id": "GD04-097",
+   "name": "Loran Cehack",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6153846153846152,
+   "d": -0.009615384615384803
+  },
+  {
+   "id": "GD05-095",
+   "name": "Gyunei Guss",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6153846153846152,
+   "d": -0.009615384615384803
+  },
+  {
+   "id": "GD01-117",
+   "name": "The Witch and the Bride",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 5,
+   "wr": 0.614423076923077,
+   "d": -0.01057692307692304
+  },
+  {
+   "id": "ST05-012",
+   "name": "McGillis Fareed",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6144230769230768,
+   "d": -0.01057692307692315
+  },
+  {
+   "id": "GD01-084",
+   "name": "Beguir-Pente",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6144230769230768,
+   "d": -0.01057692307692315
+  },
+  {
+   "id": "GD02-067",
+   "name": "Baqto",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6144230769230768,
+   "d": -0.01057692307692315
+  },
+  {
+   "id": "GD04-064",
+   "name": "Gundam Exia",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6144230769230768,
+   "d": -0.01057692307692315
+  },
+  {
+   "id": "GD03-078",
+   "name": "Tieren High Mobility Type",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6134615384615385,
+   "d": -0.011538461538461497
+  },
+  {
+   "id": "GD04-070",
+   "name": "Al-Saachez's AEU Enact Custom Moralia Development Experiment Type",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6134615384615385,
+   "d": -0.011538461538461497
+  },
+  {
+   "id": "GD04-073",
+   "name": "∀ Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.6134615384615385,
+   "d": -0.011538461538461497
+  },
+  {
+   "id": "GD05-074",
+   "name": "Noin's Taurus",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6134615384615385,
+   "d": -0.011538461538461497
+  },
+  {
+   "id": "ST12-007",
+   "name": "Gyan",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6134615384615385,
+   "d": -0.011538461538461497
+  },
+  {
+   "id": "EB01-051",
+   "name": "Ze'Gok",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 1,
+   "wr": 0.6125,
+   "d": -0.012499999999999956
+  },
+  {
+   "id": "GD02-065",
+   "name": "Jenice Custom",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 1,
+   "wr": 0.6125,
+   "d": -0.012499999999999956
+  },
+  {
+   "id": "GD04-076",
+   "name": "Hipheavy",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 1,
+   "wr": 0.6125,
+   "d": -0.012499999999999956
+  },
+  {
+   "id": "GD04-077",
+   "name": "Flat (Militia)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.6125,
+   "d": -0.012499999999999956
+  },
+  {
+   "id": "GD04-128",
+   "name": "Armory One",
+   "color": "Purple",
+   "type": "BASE",
+   "lv": 4,
+   "wr": 0.6124999999999999,
+   "d": -0.012500000000000067
+  },
+  {
+   "id": "GD01-065",
+   "name": "Freedom Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.6124999999999998,
+   "d": -0.012500000000000178
+  },
+  {
+   "id": "ST07-009",
+   "name": "Setsuna F. Seiei",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6115384615384616,
+   "d": -0.013461538461538414
+  },
+  {
+   "id": "GD06-073",
+   "name": "Wing Gundam Zero (EW)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.6115384615384616,
+   "d": -0.013461538461538414
+  },
+  {
+   "id": "GD03-116",
+   "name": "Towards Destiny",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.6115384615384616,
+   "d": -0.013461538461538414
+  },
+  {
+   "id": "ST14-004",
+   "name": "Geara Doga (Heavy Armed Type)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 1,
+   "wr": 0.6115384615384616,
+   "d": -0.013461538461538414
+  },
+  {
+   "id": "GD06-055",
+   "name": "Gundam GP02A",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.6115384615384615,
+   "d": -0.013461538461538525
+  },
+  {
+   "id": "GD06-066",
+   "name": "Shadow Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.6115384615384614,
+   "d": -0.013461538461538636
+  },
+  {
+   "id": "GD03-057",
+   "name": "GN Armor (Type-E)",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.6115384615384614,
+   "d": -0.013461538461538636
+  },
+  {
+   "id": "GD05-073",
+   "name": "Altron Gundam (EW)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.6115384615384614,
+   "d": -0.013461538461538636
+  },
+  {
+   "id": "GD02-129",
+   "name": "Argama",
+   "color": "White",
+   "type": "BASE",
+   "lv": 3,
+   "wr": 0.6105769230769232,
+   "d": -0.01442307692307676
+  },
+  {
+   "id": "EB01-082",
+   "name": "Warship Cruise",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.6105769230769232,
+   "d": -0.01442307692307676
+  },
+  {
+   "id": "EB01-045",
+   "name": "Psycho Zaku (EX)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.6105769230769231,
+   "d": -0.014423076923076872
+  },
+  {
+   "id": "GD05-076",
+   "name": "Bolt Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.6105769230769231,
+   "d": -0.014423076923076872
+  },
+  {
+   "id": "GD03-055",
+   "name": "Gundam Hajiroboshi (2nd Form)",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.6105769230769231,
+   "d": -0.014423076923076872
+  },
+  {
+   "id": "GD02-077",
+   "name": "Ein's Schwalbe Graze",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.6105769230769231,
+   "d": -0.014423076923076872
+  },
+  {
+   "id": "GD06-074",
+   "name": "Flat",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.6105769230769231,
+   "d": -0.014423076923076872
+  },
+  {
+   "id": "ST07-002",
+   "name": "Gundam Exia",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.6105769230769231,
+   "d": -0.014423076923076872
+  },
+  {
+   "id": "ST12-008",
+   "name": "Efreet Schneid",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.6105769230769231,
+   "d": -0.014423076923076872
+  },
+  {
+   "id": "GD06-078",
+   "name": "WaD",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 1,
+   "wr": 0.6096153846153847,
+   "d": -0.01538461538461533
+  },
+  {
+   "id": "GD03-117",
+   "name": "Orga's Order",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.6096153846153847,
+   "d": -0.01538461538461533
+  },
+  {
+   "id": "GD05-061",
+   "name": "Geara Doga",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6096153846153847,
+   "d": -0.01538461538461533
+  },
+  {
+   "id": "GD05-049",
+   "name": "Sazabi",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.6096153846153846,
+   "d": -0.015384615384615441
+  },
+  {
+   "id": "GD01-075",
+   "name": "Darilbalde",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.6096153846153846,
+   "d": -0.015384615384615441
+  },
+  {
+   "id": "GD02-055",
+   "name": "Gundam Gusion Rebake",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6086538461538462,
+   "d": -0.016346153846153788
+  },
+  {
+   "id": "GD04-066",
+   "name": "Unicorn Gundam (Awakened)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.6086538461538462,
+   "d": -0.016346153846153788
+  },
+  {
+   "id": "GD06-100",
+   "name": "Corin Nander",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6086538461538462,
+   "d": -0.016346153846153788
+  },
+  {
+   "id": "GD06-094",
+   "name": "Nyaan",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6086538461538462,
+   "d": -0.016346153846153788
+  },
+  {
+   "id": "ST09-008",
+   "name": "Shinn Asuka",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6086538461538462,
+   "d": -0.016346153846153788
+  },
+  {
+   "id": "GD03-054",
+   "name": "Zeydra",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.6086538461538461,
+   "d": -0.0163461538461539
+  },
+  {
+   "id": "GD06-115",
+   "name": "Teaching New Techniques",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.6086538461538461,
+   "d": -0.0163461538461539
+  },
+  {
+   "id": "GD01-096",
+   "name": "Cagalli Yula Athha",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6086538461538461,
+   "d": -0.0163461538461539
+  },
+  {
+   "id": "GD03-058",
+   "name": "Farsia",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6076923076923079,
+   "d": -0.017307692307692135
+  },
+  {
+   "id": "GD01-081",
+   "name": "M1 Astray",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6076923076923079,
+   "d": -0.017307692307692135
+  },
+  {
+   "id": "GD01-083",
+   "name": "Guel's Dilanza",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6076923076923079,
+   "d": -0.017307692307692135
+  },
+  {
+   "id": "GD04-059",
+   "name": "Daughtress High Mobility Command Wise Wallaby",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6076923076923079,
+   "d": -0.017307692307692135
+  },
+  {
+   "id": "GD06-130",
+   "name": "Soleil",
+   "color": "White",
+   "type": "BASE",
+   "lv": 5,
+   "wr": 0.6076923076923078,
+   "d": -0.017307692307692246
+  },
+  {
+   "id": "GD02-110",
+   "name": "Awakened Power",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 6,
+   "wr": 0.6076923076923078,
+   "d": -0.017307692307692246
+  },
+  {
+   "id": "GD03-083",
+   "name": "AEU Hellion",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 1,
+   "wr": 0.6076923076923078,
+   "d": -0.017307692307692246
+  },
+  {
+   "id": "ST01-008",
+   "name": "Demi Trainer",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 1,
+   "wr": 0.6076923076923078,
+   "d": -0.017307692307692246
+  },
+  {
+   "id": "ST04-004",
+   "name": "Moebius",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 1,
+   "wr": 0.6076923076923078,
+   "d": -0.017307692307692246
+  },
+  {
+   "id": "ST04-012",
+   "name": "Striker Pack",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.6076923076923076,
+   "d": -0.017307692307692357
+  },
+  {
+   "id": "GD03-070",
+   "name": "Freedom Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.6076923076923076,
+   "d": -0.017307692307692357
+  },
+  {
+   "id": "GD06-072",
+   "name": "Gundam Deathscythe Hell (EW)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6076923076923076,
+   "d": -0.017307692307692357
+  },
+  {
+   "id": "GD04-072",
+   "name": "Unicorn Gundam 02 Banshee Norn (Unicorn Mode)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6076923076923076,
+   "d": -0.017307692307692357
+  },
+  {
+   "id": "EB01-043",
+   "name": "Blue Destiny Unit-1 (EX)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6076923076923075,
+   "d": -0.017307692307692468
+  },
+  {
+   "id": "ST05-006",
+   "name": "Hyakuren",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.6067307692307694,
+   "d": -0.018269230769230593
+  },
+  {
+   "id": "EB01-056",
+   "name": "Gundam Geminass 01",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.6067307692307694,
+   "d": -0.018269230769230593
+  },
+  {
+   "id": "GD06-062",
+   "name": "Gyan Hakuji-Packs (GQ)",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.6067307692307694,
+   "d": -0.018269230769230593
+  },
+  {
+   "id": "GD06-075",
+   "name": "Serpent",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.6067307692307694,
+   "d": -0.018269230769230593
+  },
+  {
+   "id": "GD05-129",
+   "name": "Axis",
+   "color": "Purple",
+   "type": "BASE",
+   "lv": 4,
+   "wr": 0.6067307692307693,
+   "d": -0.018269230769230704
+  },
+  {
+   "id": "ST09-004",
+   "name": "Freedom Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.6067307692307691,
+   "d": -0.018269230769230926
+  },
+  {
+   "id": "GD02-057",
+   "name": "Zedas",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6067307692307691,
+   "d": -0.018269230769230926
+  },
+  {
+   "id": "GD06-061",
+   "name": "Dra-C",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 1,
+   "wr": 0.605769230769231,
+   "d": -0.01923076923076905
+  },
+  {
+   "id": "GD06-067",
+   "name": "Gundam Sandrock Custom (EW)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6057692307692307,
+   "d": -0.019230769230769273
+  },
+  {
+   "id": "ST14-014",
+   "name": "Blazing Mobile Suit Rider",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 5,
+   "wr": 0.6057692307692306,
+   "d": -0.019230769230769384
+  },
+  {
+   "id": "ST07-010",
+   "name": "Tieria Erde",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.6057692307692306,
+   "d": -0.019230769230769384
+  },
+  {
+   "id": "GD01-079",
+   "name": "Skygrasper",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6048076923076924,
+   "d": -0.02019230769230762
+  },
+  {
+   "id": "GD04-065",
+   "name": "Unicorn Gundam 02 Banshee Norn (Destroy Mode)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.6048076923076923,
+   "d": -0.02019230769230773
+  },
+  {
+   "id": "ST04-015",
+   "name": "Archangel",
+   "color": "White",
+   "type": "BASE",
+   "lv": 3,
+   "wr": 0.603846153846154,
+   "d": -0.021153846153845968
+  },
+  {
+   "id": "EB01-084",
+   "name": "30cm Cannon (APFSDS Round)",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.6038461538461538,
+   "d": -0.02115384615384619
+  },
+  {
+   "id": "GD06-070",
+   "name": "Eagail",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.6038461538461538,
+   "d": -0.02115384615384619
+  },
+  {
+   "id": "ST11-006",
+   "name": "Shamblo",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.6038461538461538,
+   "d": -0.02115384615384619
+  },
+  {
+   "id": "ST14-005",
+   "name": "G-Falcon DX",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.6038461538461537,
+   "d": -0.0211538461538463
+  },
+  {
+   "id": "GD04-069",
+   "name": "∀ Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6038461538461537,
+   "d": -0.0211538461538463
+  },
+  {
+   "id": "GD03-114",
+   "name": "Look of Determination",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 2,
+   "wr": 0.6038461538461537,
+   "d": -0.0211538461538463
+  },
+  {
+   "id": "ST14-002",
+   "name": "Gundam NT-1 Full Armor",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6028846153846155,
+   "d": -0.022115384615384537
+  },
+  {
+   "id": "GD01-078",
+   "name": "Mistral",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 1,
+   "wr": 0.6028846153846154,
+   "d": -0.022115384615384648
+  },
+  {
+   "id": "GD04-119",
+   "name": "Fighting Alone",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.6028846153846152,
+   "d": -0.02211538461538476
+  },
+  {
+   "id": "GD06-129",
+   "name": "5th Luna",
+   "color": "Purple",
+   "type": "BASE",
+   "lv": 4,
+   "wr": 0.6028846153846152,
+   "d": -0.02211538461538476
+  },
+  {
+   "id": "GD05-052",
+   "name": "Sazabi",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.601923076923077,
+   "d": -0.023076923076922995
+  },
+  {
+   "id": "ST09-002",
+   "name": "Force Impulse Gundam",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.601923076923077,
+   "d": -0.023076923076922995
+  },
+  {
+   "id": "GD06-069",
+   "name": "SUMO Silver Type",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.6019230769230769,
+   "d": -0.023076923076923106
+  },
+  {
+   "id": "ST04-013",
+   "name": "Hawk of Endymion",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 2,
+   "wr": 0.6019230769230769,
+   "d": -0.023076923076923106
+  },
+  {
+   "id": "ST09-009",
+   "name": "Giant Killing",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.6019230769230769,
+   "d": -0.023076923076923106
+  },
+  {
+   "id": "ST11-010",
+   "name": "Abyss Gundam",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.6019230769230769,
+   "d": -0.023076923076923106
+  },
+  {
+   "id": "GD06-076",
+   "name": "WaDom",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.6009615384615385,
+   "d": -0.024038461538461453
+  },
+  {
+   "id": "ST10-009",
+   "name": "Graze Duel Type",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.6009615384615384,
+   "d": -0.024038461538461564
+  },
+  {
+   "id": "EB01-089",
+   "name": "Lacus Clyne & Eternal",
+   "color": "White",
+   "type": "BASE",
+   "lv": 3,
+   "wr": 0.6000000000000001,
+   "d": -0.02499999999999991
+  },
+  {
+   "id": "GD01-074",
+   "name": "Chuchu's Demi Trainer",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6000000000000001,
+   "d": -0.02499999999999991
+  },
+  {
+   "id": "ST14-016",
+   "name": "Gryphios 2",
+   "color": "White",
+   "type": "BASE",
+   "lv": 3,
+   "wr": 0.6000000000000001,
+   "d": -0.02499999999999991
+  },
+  {
+   "id": "GD04-063",
+   "name": "GN Armor Type-E",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.6000000000000001,
+   "d": -0.02499999999999991
+  },
+  {
+   "id": "ST05-008",
+   "name": "Graze Commander Type",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.6000000000000001,
+   "d": -0.02499999999999991
+  },
+  {
+   "id": "GD03-129",
+   "name": "Hotarubi",
+   "color": "Purple",
+   "type": "BASE",
+   "lv": 4,
+   "wr": 0.6,
+   "d": -0.025000000000000022
+  },
+  {
+   "id": "EB01-048",
+   "name": "S Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.6,
+   "d": -0.025000000000000022
+  },
+  {
+   "id": "EB01-069",
+   "name": "Beside Pain",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 3,
+   "wr": 0.6,
+   "d": -0.025000000000000022
+  },
+  {
+   "id": "GD02-059",
+   "name": "Gundam Airmaster",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.6,
+   "d": -0.025000000000000022
+  },
+  {
+   "id": "GD05-058",
+   "name": "Shiden Custom (Ryusei-Go)",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.6,
+   "d": -0.025000000000000022
+  },
+  {
+   "id": "GD05-116",
+   "name": "Veteran's Pride",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 2,
+   "wr": 0.6,
+   "d": -0.025000000000000022
+  },
+  {
+   "id": "ST10-010",
+   "name": "Mobile Worker (Tekkadan)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.6,
+   "d": -0.025000000000000022
+  },
+  {
+   "id": "GD01-073",
+   "name": "Sword Strike Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5999999999999999,
+   "d": -0.025000000000000133
+  },
+  {
+   "id": "GD03-053",
+   "name": "Gundam Gusion Rebake Full City",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.5999999999999999,
+   "d": -0.025000000000000133
+  },
+  {
+   "id": "GD01-130",
+   "name": "13th Tactical Testing Sector",
+   "color": "White",
+   "type": "BASE",
+   "lv": 3,
+   "wr": 0.5990384615384616,
+   "d": -0.02596153846153837
+  },
+  {
+   "id": "GD04-067",
+   "name": "∀ Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5990384615384616,
+   "d": -0.02596153846153837
+  },
+  {
+   "id": "GD04-049",
+   "name": "Gundam DX",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 8,
+   "wr": 0.5990384615384616,
+   "d": -0.02596153846153837
+  },
+  {
+   "id": "GD06-128",
+   "name": "Gwaden",
+   "color": "Purple",
+   "type": "BASE",
+   "lv": 3,
+   "wr": 0.5990384615384616,
+   "d": -0.02596153846153837
+  },
+  {
+   "id": "ST05-001",
+   "name": "Gundam Barbatos 4th Form",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.5990384615384616,
+   "d": -0.02596153846153837
+  },
+  {
+   "id": "GD01-080",
+   "name": "Cagalli's Skygrasper",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.5990384615384616,
+   "d": -0.02596153846153837
+  },
+  {
+   "id": "GD03-071",
+   "name": "Z Gundam (Biosensor)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.5990384615384615,
+   "d": -0.02596153846153848
+  },
+  {
+   "id": "GD03-072",
+   "name": "Aile Strike Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5990384615384615,
+   "d": -0.02596153846153848
+  },
+  {
+   "id": "EB01-044",
+   "name": "Justice Gundam (EX)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.5990384615384614,
+   "d": -0.02596153846153859
+  },
+  {
+   "id": "GD04-051",
+   "name": "Gundam Airmaster Burst",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5980769230769233,
+   "d": -0.026923076923076716
+  },
+  {
+   "id": "GD04-100",
+   "name": "Sochie Heim",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 3,
+   "wr": 0.5980769230769232,
+   "d": -0.026923076923076827
+  },
+  {
+   "id": "GD02-113",
+   "name": "Sisterly Care",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.5980769230769231,
+   "d": -0.02692307692307694
+  },
+  {
+   "id": "GD05-096",
+   "name": "Chad Chadan",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 3,
+   "wr": 0.5971153846153847,
+   "d": -0.027884615384615286
+  },
+  {
+   "id": "GD02-073",
+   "name": "Carta's Graze Ritter (Ground Type)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5971153846153846,
+   "d": -0.027884615384615397
+  },
+  {
+   "id": "GD04-054",
+   "name": "Gundam Virtue (Trans-Am)",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.5971153846153846,
+   "d": -0.027884615384615397
+  },
+  {
+   "id": "GD05-051",
+   "name": "Gundam Barbatos Lupus Rex",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.5971153846153846,
+   "d": -0.027884615384615397
+  },
+  {
+   "id": "GD04-127",
+   "name": "Freeden Ⅱ",
+   "color": "Purple",
+   "type": "BASE",
+   "lv": 4,
+   "wr": 0.5971153846153846,
+   "d": -0.027884615384615397
+  },
+  {
+   "id": "GD06-127",
+   "name": "Yomagn'tho",
+   "color": "Purple",
+   "type": "BASE",
+   "lv": 4,
+   "wr": 0.5961538461538461,
+   "d": -0.028846153846153855
+  },
+  {
+   "id": "EB01-090",
+   "name": "Tiffa Adill & Freeden",
+   "color": "White",
+   "type": "BASE",
+   "lv": 2,
+   "wr": 0.596153846153846,
+   "d": -0.028846153846153966
+  },
+  {
+   "id": "GD04-080",
+   "name": "Alvatore",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.596153846153846,
+   "d": -0.028846153846153966
+  },
+  {
+   "id": "EB01-059",
+   "name": "Psycho Zaku",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5951923076923078,
+   "d": -0.029807692307692202
+  },
+  {
+   "id": "GD05-070",
+   "name": "Tallgeese Ⅲ",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5951923076923078,
+   "d": -0.029807692307692202
+  },
+  {
+   "id": "GD06-049",
+   "name": "Gundam GP02A",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5951923076923078,
+   "d": -0.029807692307692202
+  },
+  {
+   "id": "EB01-060",
+   "name": "Gundam Aquarius",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5951923076923077,
+   "d": -0.029807692307692313
+  },
+  {
+   "id": "GD02-070",
+   "name": "Gundam Kimaris",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5951923076923077,
+   "d": -0.029807692307692313
+  },
+  {
+   "id": "GD02-064",
+   "name": "Gundam Leopard",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5951923076923077,
+   "d": -0.029807692307692313
+  },
+  {
+   "id": "GD03-075",
+   "name": "Super Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5951923076923077,
+   "d": -0.029807692307692313
+  },
+  {
+   "id": "ST12-006",
+   "name": "Unicorn Gundam 02 Banshee (Destroy Mode)",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.5951923076923076,
+   "d": -0.029807692307692424
+  },
+  {
+   "id": "GD04-130",
+   "name": "Industrial 7",
+   "color": "White",
+   "type": "BASE",
+   "lv": 4,
+   "wr": 0.5942307692307693,
+   "d": -0.03076923076923066
+  },
+  {
+   "id": "GD03-049",
+   "name": "Gundam Exia (Trans-Am)",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.5942307692307692,
+   "d": -0.03076923076923077
+  },
+  {
+   "id": "ST07-001",
+   "name": "Gundam Exia",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5942307692307692,
+   "d": -0.03076923076923077
+  },
+  {
+   "id": "ST01-006",
+   "name": "Gundam Aerial (Permet Score Six)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5942307692307692,
+   "d": -0.03076923076923077
+  },
+  {
+   "id": "ST10-006",
+   "name": "Phoenix Gundam (Power Unleashed) (EX)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5942307692307692,
+   "d": -0.03076923076923077
+  },
+  {
+   "id": "GD03-118",
+   "name": "Awakened Potential",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.5942307692307691,
+   "d": -0.030769230769230882
+  },
+  {
+   "id": "GD04-117",
+   "name": "Graceful Demeanor",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.5932692307692309,
+   "d": -0.03173076923076912
+  },
+  {
+   "id": "GD02-130",
+   "name": "Sleipnir",
+   "color": "White",
+   "type": "BASE",
+   "lv": 4,
+   "wr": 0.5932692307692308,
+   "d": -0.03173076923076923
+  },
+  {
+   "id": "GD04-129",
+   "name": "Willgem",
+   "color": "White",
+   "type": "BASE",
+   "lv": 3,
+   "wr": 0.5932692307692308,
+   "d": -0.03173076923076923
+  },
+  {
+   "id": "GD02-128",
+   "name": "Hammerhead",
+   "color": "Purple",
+   "type": "BASE",
+   "lv": 4,
+   "wr": 0.5932692307692308,
+   "d": -0.03173076923076923
+  },
+  {
+   "id": "GD03-131",
+   "name": "Eternal",
+   "color": "White",
+   "type": "BASE",
+   "lv": 5,
+   "wr": 0.5932692307692308,
+   "d": -0.03173076923076923
+  },
+  {
+   "id": "EB01-057",
+   "name": "Gundam Geminass 02",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5923076923076924,
+   "d": -0.032692307692307576
+  },
+  {
+   "id": "GD02-111",
+   "name": "Decisive Last Resort",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 5,
+   "wr": 0.5923076923076924,
+   "d": -0.032692307692307576
+  },
+  {
+   "id": "GD04-116",
+   "name": "Reliable Big Brother",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.5923076923076924,
+   "d": -0.032692307692307576
+  },
+  {
+   "id": "GD01-097",
+   "name": "Guel Jeturk",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 3,
+   "wr": 0.5923076923076923,
+   "d": -0.03269230769230769
+  },
+  {
+   "id": "GD01-072",
+   "name": "Launcher Strike Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5923076923076922,
+   "d": -0.0326923076923078
+  },
+  {
+   "id": "GD04-113",
+   "name": "Damage Control",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5913461538461539,
+   "d": -0.033653846153846145
+  },
+  {
+   "id": "GD03-050",
+   "name": "Gundam Barbatos Lupus",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.5903846153846154,
+   "d": -0.0346153846153846
+  },
+  {
+   "id": "GD03-099",
+   "name": "Emma Sheen",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 3,
+   "wr": 0.5903846153846154,
+   "d": -0.0346153846153846
+  },
+  {
+   "id": "GD05-101",
+   "name": "Gavane Goonny",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 3,
+   "wr": 0.5903846153846154,
+   "d": -0.0346153846153846
+  },
+  {
+   "id": "GD03-051",
+   "name": "Gundam X Divider",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.5903846153846154,
+   "d": -0.0346153846153846
+  },
+  {
+   "id": "GD03-130",
+   "name": "Downes",
+   "color": "Purple",
+   "type": "BASE",
+   "lv": 5,
+   "wr": 0.5903846153846154,
+   "d": -0.0346153846153846
+  },
+  {
+   "id": "GD04-094",
+   "name": "Pala Sys",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 3,
+   "wr": 0.5903846153846154,
+   "d": -0.0346153846153846
+  },
+  {
+   "id": "GD04-095",
+   "name": "Lunamaria Hawke",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 3,
+   "wr": 0.5903846153846154,
+   "d": -0.0346153846153846
+  },
+  {
+   "id": "GD05-054",
+   "name": "Alpha Azieru",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 8,
+   "wr": 0.5903846153846154,
+   "d": -0.0346153846153846
+  },
+  {
+   "id": "GD05-094",
+   "name": "Quess Paraya",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 3,
+   "wr": 0.5903846153846154,
+   "d": -0.0346153846153846
+  },
+  {
+   "id": "GD06-095",
+   "name": "Kelley Layzner",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 3,
+   "wr": 0.5903846153846154,
+   "d": -0.0346153846153846
+  },
+  {
+   "id": "ST05-011",
+   "name": "Akihiro Altland",
+   "color": "Purple",
+   "type": "PILOT",
+   "lv": 3,
+   "wr": 0.5903846153846154,
+   "d": -0.0346153846153846
+  },
+  {
+   "id": "GD02-066",
+   "name": "Gafran",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.5903846153846154,
+   "d": -0.0346153846153846
+  },
+  {
+   "id": "GD02-084",
+   "name": "Lauda's Dilanza",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.5903846153846154,
+   "d": -0.0346153846153846
+  },
+  {
+   "id": "GD02-099",
+   "name": "Gaelio Bauduin",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 3,
+   "wr": 0.5903846153846154,
+   "d": -0.0346153846153846
+  },
+  {
+   "id": "GD03-100",
+   "name": "Soma Peries",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 3,
+   "wr": 0.5903846153846154,
+   "d": -0.0346153846153846
+  },
+  {
+   "id": "GD06-120",
+   "name": "Hoping for Peace",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.5903846153846153,
+   "d": -0.034615384615384714
+  },
+  {
+   "id": "GD05-068",
+   "name": "Shining Gundam (Super Mode)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.5894230769230769,
+   "d": -0.03557692307692306
+  },
+  {
+   "id": "ST10-007",
+   "name": "Gundam Barbatos 4th Form",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.5894230769230769,
+   "d": -0.03557692307692306
+  },
+  {
+   "id": "GD04-052",
+   "name": "Gundam Leopard Destroy",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.5894230769230769,
+   "d": -0.03557692307692306
+  },
+  {
+   "id": "GD02-060",
+   "name": "Gundam Leopard",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5894230769230768,
+   "d": -0.03557692307692317
+  },
+  {
+   "id": "EB01-049",
+   "name": "Pale Rider (Ground Heavy Equipment Type)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.5884615384615385,
+   "d": -0.03653846153846152
+  },
+  {
+   "id": "GD02-117",
+   "name": "A New Sign",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.5884615384615385,
+   "d": -0.03653846153846152
+  },
+  {
+   "id": "GD03-080",
+   "name": "Gundam Kimaris Trooper (Trooper Mode)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.5884615384615385,
+   "d": -0.03653846153846152
+  },
+  {
+   "id": "GD03-061",
+   "name": "Gundam Barbatos 6th Form",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.5884615384615385,
+   "d": -0.03653846153846152
+  },
+  {
+   "id": "GD04-061",
+   "name": "G-Falcon",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.5884615384615385,
+   "d": -0.03653846153846152
+  },
+  {
+   "id": "GD05-059",
+   "name": "Gundam Barbatos Lupus",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.5884615384615385,
+   "d": -0.03653846153846152
+  },
+  {
+   "id": "ST09-010",
+   "name": "Minerva",
+   "color": "Purple",
+   "type": "BASE",
+   "lv": 2,
+   "wr": 0.5884615384615385,
+   "d": -0.03653846153846152
+  },
+  {
+   "id": "GD01-067",
+   "name": "Gundam Aerial Rebuild",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.5884615384615385,
+   "d": -0.03653846153846152
+  },
+  {
+   "id": "GD03-073",
+   "name": "Graze Ein",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 7,
+   "wr": 0.5884615384615384,
+   "d": -0.03653846153846163
+  },
+  {
+   "id": "GD05-078",
+   "name": "Gundam Deathscythe Hell (EW)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5884615384615384,
+   "d": -0.03653846153846163
+  },
+  {
+   "id": "GD06-052",
+   "name": "Val Walo",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5884615384615384,
+   "d": -0.03653846153846163
+  },
+  {
+   "id": "GD06-058",
+   "name": "Blast Impulse Gundam",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5884615384615384,
+   "d": -0.03653846153846163
+  },
+  {
+   "id": "GD06-117",
+   "name": "Veterans Joining Forces",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5884615384615384,
+   "d": -0.03653846153846163
+  },
+  {
+   "id": "EB01-081",
+   "name": "MAP Weapon",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.5884615384615384,
+   "d": -0.03653846153846163
+  },
+  {
+   "id": "EB01-042",
+   "name": "Psycho Haro (EX)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 8,
+   "wr": 0.5875,
+   "d": -0.03749999999999998
+  },
+  {
+   "id": "GD02-069",
+   "name": "Zeta Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.5875,
+   "d": -0.03749999999999998
+  },
+  {
+   "id": "GD04-071",
+   "name": "Graham's Union Flag Custom Ⅱ (GN Flag)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5875,
+   "d": -0.03749999999999998
+  },
+  {
+   "id": "ST04-002",
+   "name": "Strike Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5875,
+   "d": -0.03749999999999998
+  },
+  {
+   "id": "GD05-055",
+   "name": "Destiny Gundam",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 8,
+   "wr": 0.5875,
+   "d": -0.03749999999999998
+  },
+  {
+   "id": "GD01-077",
+   "name": "Strike Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5875,
+   "d": -0.03749999999999998
+  },
+  {
+   "id": "GD05-121",
+   "name": "Cyclone Punch",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5874999999999999,
+   "d": -0.03750000000000009
+  },
+  {
+   "id": "GD03-121",
+   "name": "Unheralded Attack",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 1,
+   "wr": 0.5874999999999999,
+   "d": -0.03750000000000009
+  },
+  {
+   "id": "GD01-122",
+   "name": "Covert Operative",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5865384615384616,
+   "d": -0.038461538461538436
+  },
+  {
+   "id": "GD03-077",
+   "name": "Justice Gundam (METEOR)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 8,
+   "wr": 0.5865384615384616,
+   "d": -0.038461538461538436
+  },
+  {
+   "id": "GD06-051",
+   "name": "GFreD",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.5865384615384616,
+   "d": -0.038461538461538436
+  },
+  {
+   "id": "ST09-006",
+   "name": "Sword Impulse Gundam",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5865384615384616,
+   "d": -0.038461538461538436
+  },
+  {
+   "id": "ST11-015",
+   "name": "A Twinkle from the Abyss",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 5,
+   "wr": 0.5865384615384616,
+   "d": -0.038461538461538436
+  },
+  {
+   "id": "GD03-120",
+   "name": "Immortal Colasour",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 2,
+   "wr": 0.5855769230769231,
+   "d": -0.039423076923076894
+  },
+  {
+   "id": "GD02-127",
+   "name": "Freeden",
+   "color": "Purple",
+   "type": "BASE",
+   "lv": 2,
+   "wr": 0.5855769230769231,
+   "d": -0.039423076923076894
+  },
+  {
+   "id": "GD02-119",
+   "name": "Persistent and Fortudinous",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 2,
+   "wr": 0.5855769230769231,
+   "d": -0.039423076923076894
+  },
+  {
+   "id": "GD04-120",
+   "name": "Machine Doll Squad",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 2,
+   "wr": 0.5855769230769231,
+   "d": -0.039423076923076894
+  },
+  {
+   "id": "GD03-076",
+   "name": "Freedom Gundam (METEOR)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 8,
+   "wr": 0.5846153846153846,
+   "d": -0.04038461538461535
+  },
+  {
+   "id": "GD04-074",
+   "name": "Kapool",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5846153846153846,
+   "d": -0.04038461538461535
+  },
+  {
+   "id": "GD02-068",
+   "name": "Gundam Barbatos 3rd Form",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5846153846153845,
+   "d": -0.04038461538461546
+  },
+  {
+   "id": "GD02-114",
+   "name": "It's Name is Ryusei-Go",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 2,
+   "wr": 0.5846153846153845,
+   "d": -0.04038461538461546
+  },
+  {
+   "id": "GD03-068",
+   "name": "Gundam Hajiroboshi",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5846153846153845,
+   "d": -0.04038461538461546
+  },
+  {
+   "id": "GD05-065",
+   "name": "Landman Rodi",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.5836538461538463,
+   "d": -0.0413461538461537
+  },
+  {
+   "id": "GD05-115",
+   "name": "Newtype Labs Director",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 6,
+   "wr": 0.5836538461538462,
+   "d": -0.04134615384615381
+  },
+  {
+   "id": "GD03-059",
+   "name": "Zedas R",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5836538461538461,
+   "d": -0.04134615384615392
+  },
+  {
+   "id": "GD01-119",
+   "name": "Iron-Fisted Discipline",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 2,
+   "wr": 0.5836538461538461,
+   "d": -0.04134615384615392
+  },
+  {
+   "id": "ST01-014",
+   "name": "Unforeseen Incident",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5826923076923078,
+   "d": -0.04230769230769216
+  },
+  {
+   "id": "GD05-120",
+   "name": "Shining Finger",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.5826923076923077,
+   "d": -0.04230769230769227
+  },
+  {
+   "id": "GD04-075",
+   "name": "GN-X",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5826923076923077,
+   "d": -0.04230769230769227
+  },
+  {
+   "id": "EB01-058",
+   "name": "Extreme Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5826923076923076,
+   "d": -0.04230769230769238
+  },
+  {
+   "id": "GD02-062",
+   "name": "Amida's Hyakuren",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5826923076923076,
+   "d": -0.04230769230769238
+  },
+  {
+   "id": "GD05-056",
+   "name": "Rezin's Geara Doga",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5826923076923076,
+   "d": -0.04230769230769238
+  },
+  {
+   "id": "ST01-007",
+   "name": "Gundam Aerial (Bit on Form)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5826923076923076,
+   "d": -0.04230769230769238
+  },
+  {
+   "id": "GD01-082",
+   "name": "Gundam Aerial (Mirasoul Flight Unit)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5817307692307693,
+   "d": -0.043269230769230727
+  },
+  {
+   "id": "GD02-061",
+   "name": "Hyakuri",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5817307692307693,
+   "d": -0.043269230769230727
+  },
+  {
+   "id": "GD03-062",
+   "name": "GX-Bit",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5817307692307693,
+   "d": -0.043269230769230727
+  },
+  {
+   "id": "ST07-015",
+   "name": "Ptolemaios",
+   "color": "Purple",
+   "type": "BASE",
+   "lv": 2,
+   "wr": 0.5817307692307693,
+   "d": -0.043269230769230727
+  },
+  {
+   "id": "GD06-071",
+   "name": "Shining Gundam (Meikyo Shisui)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 6,
+   "wr": 0.581730769230769,
+   "d": -0.04326923076923095
+  },
+  {
+   "id": "GD06-121",
+   "name": "Crybaby Poe",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5807692307692309,
+   "d": -0.044230769230769074
+  },
+  {
+   "id": "ST10-015",
+   "name": "Diffuse Beam Cannon",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5807692307692309,
+   "d": -0.044230769230769074
+  },
+  {
+   "id": "GD03-115",
+   "name": "Distant Reunion",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5807692307692309,
+   "d": -0.044230769230769074
+  },
+  {
+   "id": "ST12-014",
+   "name": "Wise Leader's Pride",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5807692307692309,
+   "d": -0.044230769230769074
+  },
+  {
+   "id": "GD04-060",
+   "name": "Esperansa",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5807692307692308,
+   "d": -0.044230769230769185
+  },
+  {
+   "id": "GD02-081",
+   "name": "Methuss",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.5807692307692307,
+   "d": -0.044230769230769296
+  },
+  {
+   "id": "GD04-114",
+   "name": "Reformationist",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 2,
+   "wr": 0.5807692307692307,
+   "d": -0.044230769230769296
+  },
+  {
+   "id": "ST12-015",
+   "name": "Two Unicorns",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.5807692307692307,
+   "d": -0.044230769230769296
+  },
+  {
+   "id": "ST05-007",
+   "name": "McGillis' Schwalbe Graze",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5798076923076924,
+   "d": -0.04519230769230764
+  },
+  {
+   "id": "GD05-072",
+   "name": "Rising Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5798076923076922,
+   "d": -0.045192307692307754
+  },
+  {
+   "id": "GD05-122",
+   "name": "Graviton Hammer",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.5798076923076922,
+   "d": -0.045192307692307754
+  },
+  {
+   "id": "ST10-008",
+   "name": "Gundam Barbatos 1st Form",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5798076923076922,
+   "d": -0.045192307692307754
+  },
+  {
+   "id": "GD04-053",
+   "name": "Rey's Blaze Zaku Phantom",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5798076923076922,
+   "d": -0.045192307692307754
+  },
+  {
+   "id": "GD04-057",
+   "name": "Gundam Nadleeh",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5798076923076922,
+   "d": -0.045192307692307754
+  },
+  {
+   "id": "GD05-057",
+   "name": "Gyunei's Jagd Doga",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5798076923076922,
+   "d": -0.045192307692307754
+  },
+  {
+   "id": "GD02-075",
+   "name": "Rick Dias (Red)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5788461538461539,
+   "d": -0.0461538461538461
+  },
+  {
+   "id": "GD03-052",
+   "name": "Gundam Virtue",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5788461538461539,
+   "d": -0.0461538461538461
+  },
+  {
+   "id": "GD02-076",
+   "name": "Buster Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5788461538461538,
+   "d": -0.04615384615384621
+  },
+  {
+   "id": "GD03-069",
+   "name": "Graham's Union Flag Custom",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5788461538461538,
+   "d": -0.04615384615384621
+  },
+  {
+   "id": "GD06-114",
+   "name": "Alphaciders",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.5788461538461538,
+   "d": -0.04615384615384621
+  },
+  {
+   "id": "GD04-062",
+   "name": "Lunamaria's Gunner Zaku Warrior",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5788461538461538,
+   "d": -0.04615384615384621
+  },
+  {
+   "id": "ST04-003",
+   "name": "Moebius Zero",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5788461538461538,
+   "d": -0.04615384615384621
+  },
+  {
+   "id": "GD01-076",
+   "name": "Michaelis",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5778846153846154,
+   "d": -0.04711538461538456
+  },
+  {
+   "id": "GD02-082",
+   "name": "Gaelio's Schwalbe Graze",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5778846153846154,
+   "d": -0.04711538461538456
+  },
+  {
+   "id": "GD02-118",
+   "name": "Heart Set on Revenge",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5778846153846154,
+   "d": -0.04711538461538456
+  },
+  {
+   "id": "GD05-079",
+   "name": "Gundam Heavyarms Custom (EW)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5778846153846154,
+   "d": -0.04711538461538456
+  },
+  {
+   "id": "GD06-057",
+   "name": "Karius' Rick Dom Ⅱ",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5778846153846154,
+   "d": -0.04711538461538456
+  },
+  {
+   "id": "ST07-004",
+   "name": "Gundam Virtue",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5778846153846154,
+   "d": -0.04711538461538456
+  },
+  {
+   "id": "ST09-001",
+   "name": "Impulse Gundam",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5778846153846154,
+   "d": -0.04711538461538456
+  },
+  {
+   "id": "EB01-046",
+   "name": "Striker Custom (EX)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5778846153846154,
+   "d": -0.04711538461538456
+  },
+  {
+   "id": "GD02-063",
+   "name": "Gundam Airmaster (Fighter Mode)",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5778846153846154,
+   "d": -0.04711538461538456
+  },
+  {
+   "id": "GD03-065",
+   "name": "Zedas M",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5778846153846154,
+   "d": -0.04711538461538456
+  },
+  {
+   "id": "GD06-059",
+   "name": "Dom Tropen",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5778846153846154,
+   "d": -0.04711538461538456
+  },
+  {
+   "id": "GD06-118",
+   "name": "Infinite Variations",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 5,
+   "wr": 0.5769230769230771,
+   "d": -0.048076923076922906
+  },
+  {
+   "id": "GD04-118",
+   "name": "World Distortion",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.576923076923077,
+   "d": -0.04807692307692302
+  },
+  {
+   "id": "GD02-058",
+   "name": "Ryusei-Go (Graze Custom Ⅱ)",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5769230769230769,
+   "d": -0.04807692307692313
+  },
+  {
+   "id": "EB01-072",
+   "name": "Yuu Kajima",
+   "color": "White",
+   "type": "PILOT",
+   "lv": 4,
+   "wr": 0.5759615384615385,
+   "d": -0.049038461538461475
+  },
+  {
+   "id": "GD06-068",
+   "name": "Gundam Heavyarms Custom (EW)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5759615384615385,
+   "d": -0.049038461538461475
+  },
+  {
+   "id": "GD04-056",
+   "name": "Sword Impulse Gundam",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5759615384615384,
+   "d": -0.049038461538461586
+  },
+  {
+   "id": "ST05-002",
+   "name": "Gundam Barbatos 2nd Form",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5759615384615384,
+   "d": -0.049038461538461586
+  },
+  {
+   "id": "GD02-116",
+   "name": "Comrades Come First",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5759615384615384,
+   "d": -0.049038461538461586
+  },
+  {
+   "id": "ST05-005",
+   "name": "Gundam Gusion Rebake",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5759615384615384,
+   "d": -0.049038461538461586
+  },
+  {
+   "id": "GD03-064",
+   "name": "Defurse",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5750000000000001,
+   "d": -0.04999999999999993
+  },
+  {
+   "id": "GD05-114",
+   "name": "Widespread Annihilation",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 6,
+   "wr": 0.5740384615384616,
+   "d": -0.05096153846153839
+  },
+  {
+   "id": "GD05-130",
+   "name": "Presidential Office",
+   "color": "White",
+   "type": "BASE",
+   "lv": 2,
+   "wr": 0.5740384615384616,
+   "d": -0.05096153846153839
+  },
+  {
+   "id": "GD02-120",
+   "name": "Aspiring Pilot",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5740384615384615,
+   "d": -0.0509615384615385
+  },
+  {
+   "id": "GD06-056",
+   "name": "Xamel",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5740384615384615,
+   "d": -0.0509615384615385
+  },
+  {
+   "id": "GD02-054",
+   "name": "Gundam Barbatos 1st Form",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5730769230769232,
+   "d": -0.05192307692307685
+  },
+  {
+   "id": "EB01-055",
+   "name": "Dom Gross Beil",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.573076923076923,
+   "d": -0.05192307692307696
+  },
+  {
+   "id": "GD03-082",
+   "name": "Union Flag",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.573076923076923,
+   "d": -0.05192307692307696
+  },
+  {
+   "id": "ST14-003",
+   "name": "Palace Athene",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.573076923076923,
+   "d": -0.05192307692307696
+  },
+  {
+   "id": "GD05-117",
+   "name": "Become a Shield",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5721153846153847,
+   "d": -0.05288461538461531
+  },
+  {
+   "id": "EB01-083",
+   "name": "SP Conversion Chips",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5721153846153846,
+   "d": -0.05288461538461542
+  },
+  {
+   "id": "ST05-013",
+   "name": "With Iron and Blood",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 2,
+   "wr": 0.5721153846153846,
+   "d": -0.05288461538461542
+  },
+  {
+   "id": "GD01-069",
+   "name": "Strike Rouge",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5711538461538462,
+   "d": -0.053846153846153766
+  },
+  {
+   "id": "GD03-132",
+   "name": "Radish",
+   "color": "White",
+   "type": "BASE",
+   "lv": 2,
+   "wr": 0.5711538461538462,
+   "d": -0.053846153846153766
+  },
+  {
+   "id": "ST01-016",
+   "name": "Asticassia School of Technology, Earth House",
+   "color": "White",
+   "type": "BASE",
+   "lv": 2,
+   "wr": 0.5711538461538462,
+   "d": -0.053846153846153766
+  },
+  {
+   "id": "GD04-115",
+   "name": "Backup",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5711538461538462,
+   "d": -0.053846153846153766
+  },
+  {
+   "id": "GD06-116",
+   "name": "Afterglow of Zeon",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 5,
+   "wr": 0.5711538461538462,
+   "d": -0.053846153846153766
+  },
+  {
+   "id": "ST07-013",
+   "name": "Armed Intervention",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.5711538461538462,
+   "d": -0.053846153846153766
+  },
+  {
+   "id": "GD01-070",
+   "name": "Gundam Aerial",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 5,
+   "wr": 0.5692307692307692,
+   "d": -0.05576923076923079
+  },
+  {
+   "id": "GD02-112",
+   "name": "Momentary Respite",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.5692307692307692,
+   "d": -0.05576923076923079
+  },
+  {
+   "id": "EB01-047",
+   "name": "Casval's Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5682692307692307,
+   "d": -0.05673076923076925
+  },
+  {
+   "id": "GD02-115",
+   "name": "Familial Devotion",
+   "color": "Purple",
+   "type": "COMMAND",
+   "lv": 2,
+   "wr": 0.5682692307692307,
+   "d": -0.05673076923076925
+  },
+  {
+   "id": "GD02-083",
+   "name": "Graze Ritter (Ground Type)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5673076923076924,
+   "d": -0.0576923076923076
+  },
+  {
+   "id": "GD03-079",
+   "name": "G-Defenser",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5673076923076924,
+   "d": -0.0576923076923076
+  },
+  {
+   "id": "GD01-120",
+   "name": "Naval Bombardment",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 2,
+   "wr": 0.5673076923076924,
+   "d": -0.0576923076923076
+  },
+  {
+   "id": "GD05-053",
+   "name": "Quess's Jagd Doga",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5673076923076924,
+   "d": -0.0576923076923076
+  },
+  {
+   "id": "GD05-063",
+   "name": "Gyunei's Jagd Doga",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5673076923076924,
+   "d": -0.0576923076923076
+  },
+  {
+   "id": "GD05-071",
+   "name": "Gundam Sandrock Custom (EW)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5673076923076923,
+   "d": -0.05769230769230771
+  },
+  {
+   "id": "GD01-121",
+   "name": "Midair Modifications",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5663461538461539,
+   "d": -0.058653846153846056
+  },
+  {
+   "id": "GD03-074",
+   "name": "Tieren Taozi",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5663461538461539,
+   "d": -0.058653846153846056
+  },
+  {
+   "id": "GD02-071",
+   "name": "Gundam Mk-II (AEUG)",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5663461538461538,
+   "d": -0.05865384615384617
+  },
+  {
+   "id": "GD02-056",
+   "name": "Gundam X",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5663461538461538,
+   "d": -0.05865384615384617
+  },
+  {
+   "id": "GD05-064",
+   "name": "Force Impulse Gundam",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5663461538461538,
+   "d": -0.05865384615384617
+  },
+  {
+   "id": "ST12-009",
+   "name": "Unicorn Gundam 02 Banshee (Unicorn Mode)",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5663461538461538,
+   "d": -0.05865384615384617
+  },
+  {
+   "id": "GD01-071",
+   "name": "Gundam Pharact",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5663461538461538,
+   "d": -0.05865384615384617
+  },
+  {
+   "id": "GD03-067",
+   "name": "Rouei",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5653846153846154,
+   "d": -0.059615384615384626
+  },
+  {
+   "id": "GD05-066",
+   "name": "Shining Gundam",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 4,
+   "wr": 0.5644230769230769,
+   "d": -0.060576923076923084
+  },
+  {
+   "id": "GD04-058",
+   "name": "Jamil's Gundam X",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 3,
+   "wr": 0.5644230769230769,
+   "d": -0.060576923076923084
+  },
+  {
+   "id": "GD05-118",
+   "name": "Incendiary Spark",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5625,
+   "d": -0.0625
+  },
+  {
+   "id": "GD03-119",
+   "name": "Awkward Approach",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 3,
+   "wr": 0.5596153846153847,
+   "d": -0.06538461538461526
+  },
+  {
+   "id": "ST14-013",
+   "name": "Natural Talent",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 4,
+   "wr": 0.5586538461538462,
+   "d": -0.06634615384615383
+  },
+  {
+   "id": "GD03-122",
+   "name": "Veteran Tactics",
+   "color": "White",
+   "type": "COMMAND",
+   "lv": 2,
+   "wr": 0.5586538461538462,
+   "d": -0.06634615384615383
+  },
+  {
+   "id": "EB01-052",
+   "name": "Hildolfr",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.5567307692307693,
+   "d": -0.06826923076923075
+  },
+  {
+   "id": "GD03-060",
+   "name": "CGS Mobile Worker (Commander Type)",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.548076923076923,
+   "d": -0.07692307692307698
+  },
+  {
+   "id": "ST05-003",
+   "name": "CGS Mobile Worker",
+   "color": "Purple",
+   "type": "UNIT",
+   "lv": 1,
+   "wr": 0.5451923076923076,
+   "d": -0.07980769230769236
+  },
+  {
+   "id": "GD03-081",
+   "name": "AEU Enact Demonstration Color",
+   "color": "White",
+   "type": "UNIT",
+   "lv": 2,
+   "wr": 0.5375000000000001,
+   "d": -0.08749999999999991
+  }
+ ]
+}

@@ -21,6 +21,13 @@ Session-1 Omni outputs are in results/omni_v1/ (decks OMNI0_GB, OMNI0_GR).
 - GR: island heuristic B 64.4; K2N2 check B 56.6.
 - BR: island heuristic B 62.9; K2N2 check B 44.8.
 - GP: island 65.6, check 58.5. BP: 69.6 / 56.7. BW: 71.2 / 52.2. RW: 69.1 / 52.1.
+- GW: 71.9 / 51.2. PR: 66.2 / 53.5. WP: 75.5 / 57.8. MW: 67.2 / 47.9. MP: island 64.2 (check running 12:09).
+- S4 top 5 by K2N2 check: GB 62.8, GP 58.5, MG 58.4, WP 57.8, BP 56.7 (GR 56.6 just misses).
+- Counter-deck GA vs GB_S2_e1 (step 4.5, 15 gens, K2N2 in-search; re-test K4N6 200 games seed 8282000,
+  results/counter/retest_*.json): GP in-search 65.0 (n40) -> re-test 56.5 [50-63]; BP 57.1 (n240) -> 47.0 [40-54];
+  RW 50.0, BW 43.0, GB 55.0, PR 57.5 in-search (re-tests running). Field lists already beat GB_S2_e1 harder:
+  J_CharIBO 62.5, W_MEX_GPZeon 58.5 (K4N6 200).
+- Learned-judge GA (step 4.4) started 11:54: G/B, K2N2+mlp2 both sides, gens 12 kids 10 elite 4 sn 24 (~14 min/gen).
 - Reference decks, K4N6 both sides, 200/list, seed 9393000 (results/final/*_k4n6_200.json; *_mlp2_200.json = K4N6+mlp2):
   GB_S2_e1 60.6 / 59.8, PURE_GB_e1 59.2 / 61.1, GB_GA2 56.3 / 58.7, OMNI_GB 56.2 / 58.9, OMNI_GR 56.4 / 56.1, GR_GA1 50.4 / 49.9.
 - Spare-core queue (SIM_WORKERS=1): results/counter/run_counter.sh GB_S2_e1 (counter-deck GA per field colour pair, step 4.5,

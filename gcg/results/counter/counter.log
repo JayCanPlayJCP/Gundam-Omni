@@ -3,3 +3,11 @@
 [10:56:14] start BP
 [11:07:09] GB_S2_e1 vs BP counter: target loses 57.1% to best counter, n=240
 [11:07:09] start RW
+[11:19:17] GB_S2_e1 vs RW counter: target loses 50.0% to best counter, n=40
+[11:19:17] start BW
+[11:33:02] GB_S2_e1 vs BW counter: target loses 43.0% to best counter, n=200
+[11:33:02] start GB
+[11:44:18] GB_S2_e1 vs GB counter: target loses 55.0% to best counter, n=40
+[11:44:18] start PR
+[11:54:07] GB_S2_e1 vs PR counter: target loses 57.5% to best counter, n=40
+[11:54:07] all done
