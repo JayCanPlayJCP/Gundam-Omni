@@ -1,0 +1,5 @@
+GB_GA2 search(both) n=200/opp: B 56.3 A 57.6 min 36.0 W_MEX_GPZeon (560s)
+GB_GA2 search(both) n=200/opp: B 58.7 A 60.1 min 36.5 J_CharIBO (699s)
+OMNI_GB search(both) n=200/opp: B 56.2 A 57.2 min 35.0 J_CharIBO (547s)
+OMNI_GB search(both) n=200/opp: B 58.9 A 59.9 min 36.5 W_MEX_GPZeon (800s)
+PURE_GB_e1 search(both) n=200/opp: B 59.2 A 60.6 min 35.5 J_CharIBO (597s)

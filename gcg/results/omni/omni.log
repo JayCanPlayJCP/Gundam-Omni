@@ -10,3 +10,9 @@
 [08:10:16] check BR stronger-AI B 44.8
 [08:23:59] island MG heuristic B 64.3
 [08:25:15] check MG stronger-AI B 58.4
+[08:44:29] island MB heuristic B 62.9
+[08:46:24] check MB stronger-AI B 43.3
+[09:01:15] island MR heuristic B 57.5
+[09:02:49] check MR stronger-AI B 47.2
+[09:09:58] census GP done
+[09:27:09] island GP heuristic B 65.6
