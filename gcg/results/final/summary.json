@@ -7,7 +7,8 @@
    "checkMin": 0.38,
    "checkMinOpp": "J_CharIBO",
    "pureB": 0.6567307692307692,
-   "pureN": 80
+   "pureN": 80,
+   "screen": false
   },
   {
    "unit": "GR",
@@ -15,8 +16,9 @@
    "checkB": 0.5657692307692309,
    "checkMin": 0.33,
    "checkMinOpp": "W_BRIS_RWAcademy",
-   "pureB": null,
-   "pureN": null
+   "pureB": 0.5782967032967034,
+   "pureN": 168,
+   "screen": true
   },
   {
    "unit": "BR",
@@ -25,7 +27,8 @@
    "checkMin": 0.22,
    "checkMinOpp": "J_SFIBO_alt",
    "pureB": null,
-   "pureN": null
+   "pureN": null,
+   "screen": false
   },
   {
    "unit": "MG",
@@ -34,7 +37,8 @@
    "checkMin": 0.27,
    "checkMinOpp": "J_CharIBO",
    "pureB": 0.5759615384615385,
-   "pureN": 120
+   "pureN": 120,
+   "screen": false
   },
   {
    "unit": "MB",
@@ -43,7 +47,8 @@
    "checkMin": 0.28,
    "checkMinOpp": "W_MEL_SFVictory",
    "pureB": null,
-   "pureN": null
+   "pureN": null,
+   "screen": false
   },
   {
    "unit": "MR",
@@ -52,7 +57,8 @@
    "checkMin": 0.34,
    "checkMinOpp": "J_SFBlockers",
    "pureB": null,
-   "pureN": null
+   "pureN": null,
+   "screen": false
   },
   {
    "unit": "GP",
@@ -61,7 +67,8 @@
    "checkMin": 0.36,
    "checkMinOpp": "J_CharIBO",
    "pureB": 0.6884615384615386,
-   "pureN": 40
+   "pureN": 40,
+   "screen": false
   },
   {
    "unit": "BP",
@@ -69,8 +76,9 @@
    "checkB": 0.566923076923077,
    "checkMin": 0.41,
    "checkMinOpp": "W_BRIS_RWAcademy",
-   "pureB": null,
-   "pureN": null
+   "pureB": 0.6240384615384615,
+   "pureN": 40,
+   "screen": false
   },
   {
    "unit": "BW",
@@ -79,7 +87,8 @@
    "checkMin": 0.4,
    "checkMinOpp": "W_MNL_GPZeon",
    "pureB": null,
-   "pureN": null
+   "pureN": null,
+   "screen": false
   },
   {
    "unit": "RW",
@@ -88,7 +97,8 @@
    "checkMin": 0.36,
    "checkMinOpp": "J_SFBlockers",
    "pureB": null,
-   "pureN": null
+   "pureN": null,
+   "screen": false
   },
   {
    "unit": "GW",
@@ -97,7 +107,8 @@
    "checkMin": 0.34,
    "checkMinOpp": "W_MEX_GPZeon",
    "pureB": null,
-   "pureN": null
+   "pureN": null,
+   "screen": false
   },
   {
    "unit": "PR",
@@ -106,7 +117,8 @@
    "checkMin": 0.29,
    "checkMinOpp": "W_BRIS_RWAcademy",
    "pureB": null,
-   "pureN": null
+   "pureN": null,
+   "screen": false
   },
   {
    "unit": "WP",
@@ -115,7 +127,8 @@
    "checkMin": 0.38,
    "checkMinOpp": "W_BRIS_RWAcademy",
    "pureB": 0.6028846153846155,
-   "pureN": 40
+   "pureN": 40,
+   "screen": false
   },
   {
    "unit": "MW",
@@ -124,7 +137,8 @@
    "checkMin": 0.28,
    "checkMinOpp": "W_BRIS_RWAcademy",
    "pureB": null,
-   "pureN": null
+   "pureN": null,
+   "screen": false
   },
   {
    "unit": "MP",
@@ -132,8 +146,9 @@
    "checkB": 0.5607692307692307,
    "checkMin": 0.33,
    "checkMinOpp": "W_BRIS_RWAcademy",
-   "pureB": null,
-   "pureN": null
+   "pureB": 0.5547542735042735,
+   "pureN": 144,
+   "screen": true
   }
  ],
  "judges": {
@@ -532,6 +547,82 @@
   }
  },
  "finals": {
+  "CTR_GP_S4_g14_BP": {
+   "k4n6": {
+    "n": 200,
+    "B": 0.3798076923076923,
+    "A": 0.37434486071085493,
+    "min": 0.185,
+    "minOpp": "W_BRIS_RWAcademy",
+    "first": 0.4884615384615385,
+    "second": 0.27115384615384613,
+    "per": {
+     "W_DC_SF": 0.32,
+     "W_BRIS_RWAcademy": 0.185,
+     "W_LILLE_Nu": 0.34,
+     "W_MKE_ZGok": 0.55,
+     "W_DUS_Shining": 0.295,
+     "W_TKY1_BarbSF": 0.28,
+     "W_MNL_GPZeon": 0.19,
+     "W_JKT_Nu": 0.26,
+     "W_TOR_SF": 0.39,
+     "W_MEX_GPZeon": 0.475,
+     "W_MEL_SFVictory": 0.3,
+     "W_TKY3_Shining": 0.38,
+     "J_MobileFighter": 0.32,
+     "J_CharIBO": 0.705,
+     "J_NuAggro": 0.375,
+     "J_SFBlockers": 0.375,
+     "J_SFIBO_Chiba": 0.3,
+     "J_SFIBO_alt": 0.25,
+     "J_KshatriyaBanshee": 0.475,
+     "J_EFFBanshee": 0.625,
+     "J_BGOYW": 0.555,
+     "J_JusticeAerial": 0.36,
+     "J_Wing_Omiya": 0.35,
+     "J_MF_Kichijoji": 0.34,
+     "J_BGOYW_Chelmo": 0.605,
+     "J_MF_Machida": 0.275
+    }
+   },
+   "mlp2": {
+    "n": 200,
+    "B": 0.37211538461538457,
+    "A": 0.3689464457252643,
+    "min": 0.18,
+    "minOpp": "W_MNL_GPZeon",
+    "first": 0.49000000000000016,
+    "second": 0.25423076923076926,
+    "per": {
+     "W_DC_SF": 0.335,
+     "W_BRIS_RWAcademy": 0.225,
+     "W_LILLE_Nu": 0.44,
+     "W_MKE_ZGok": 0.53,
+     "W_DUS_Shining": 0.245,
+     "W_TKY1_BarbSF": 0.195,
+     "W_MNL_GPZeon": 0.18,
+     "W_JKT_Nu": 0.355,
+     "W_TOR_SF": 0.42,
+     "W_MEX_GPZeon": 0.45,
+     "W_MEL_SFVictory": 0.26,
+     "W_TKY3_Shining": 0.385,
+     "J_MobileFighter": 0.34,
+     "J_CharIBO": 0.64,
+     "J_NuAggro": 0.485,
+     "J_SFBlockers": 0.36,
+     "J_SFIBO_Chiba": 0.24,
+     "J_SFIBO_alt": 0.235,
+     "J_KshatriyaBanshee": 0.44,
+     "J_EFFBanshee": 0.53,
+     "J_BGOYW": 0.47,
+     "J_JusticeAerial": 0.365,
+     "J_Wing_Omiya": 0.36,
+     "J_MF_Kichijoji": 0.38,
+     "J_BGOYW_Chelmo": 0.52,
+     "J_MF_Machida": 0.29
+    }
+   }
+  },
   "GB_GA2": {
    "k4n6": {
     "n": 200,
@@ -1249,6 +1340,158 @@
     }
    }
   },
+  "OMNIP_BP_e0": {
+   "k4n6": {
+    "n": 200,
+    "B": 0.5736538461538463,
+    "A": 0.5785205331412104,
+    "min": 0.415,
+    "minOpp": "J_SFIBO_Chiba",
+    "first": 0.7369230769230768,
+    "second": 0.4103846153846154,
+    "per": {
+     "W_DC_SF": 0.535,
+     "W_BRIS_RWAcademy": 0.505,
+     "W_LILLE_Nu": 0.565,
+     "W_MKE_ZGok": 0.5,
+     "W_DUS_Shining": 0.525,
+     "W_TKY1_BarbSF": 0.575,
+     "W_MNL_GPZeon": 0.56,
+     "W_JKT_Nu": 0.65,
+     "W_TOR_SF": 0.655,
+     "W_MEX_GPZeon": 0.525,
+     "W_MEL_SFVictory": 0.46,
+     "W_TKY3_Shining": 0.66,
+     "J_MobileFighter": 0.645,
+     "J_CharIBO": 0.495,
+     "J_NuAggro": 0.62,
+     "J_SFBlockers": 0.655,
+     "J_SFIBO_Chiba": 0.415,
+     "J_SFIBO_alt": 0.425,
+     "J_KshatriyaBanshee": 0.595,
+     "J_EFFBanshee": 0.545,
+     "J_BGOYW": 0.595,
+     "J_JusticeAerial": 0.71,
+     "J_Wing_Omiya": 0.655,
+     "J_MF_Kichijoji": 0.675,
+     "J_BGOYW_Chelmo": 0.54,
+     "J_MF_Machida": 0.63
+    }
+   },
+   "mlp2": {
+    "n": 200,
+    "B": 0.5976923076923076,
+    "A": 0.6073898895292988,
+    "min": 0.43,
+    "minOpp": "J_CharIBO",
+    "first": 0.7573076923076922,
+    "second": 0.43807692307692303,
+    "per": {
+     "W_DC_SF": 0.665,
+     "W_BRIS_RWAcademy": 0.46,
+     "W_LILLE_Nu": 0.62,
+     "W_MKE_ZGok": 0.47,
+     "W_DUS_Shining": 0.495,
+     "W_TKY1_BarbSF": 0.675,
+     "W_MNL_GPZeon": 0.645,
+     "W_JKT_Nu": 0.69,
+     "W_TOR_SF": 0.72,
+     "W_MEX_GPZeon": 0.46,
+     "W_MEL_SFVictory": 0.48,
+     "W_TKY3_Shining": 0.715,
+     "J_MobileFighter": 0.675,
+     "J_CharIBO": 0.43,
+     "J_NuAggro": 0.74,
+     "J_SFBlockers": 0.685,
+     "J_SFIBO_Chiba": 0.52,
+     "J_SFIBO_alt": 0.435,
+     "J_KshatriyaBanshee": 0.61,
+     "J_EFFBanshee": 0.54,
+     "J_BGOYW": 0.6,
+     "J_JusticeAerial": 0.71,
+     "J_Wing_Omiya": 0.67,
+     "J_MF_Kichijoji": 0.715,
+     "J_BGOYW_Chelmo": 0.495,
+     "J_MF_Machida": 0.62
+    }
+   }
+  },
+  "OMNIP_BP_e1": {
+   "k4n6": {
+    "n": 200,
+    "B": 0.5617307692307693,
+    "A": 0.5719073006724305,
+    "min": 0.41,
+    "minOpp": "J_SFIBO_alt",
+    "first": 0.7226923076923076,
+    "second": 0.40076923076923077,
+    "per": {
+     "W_DC_SF": 0.575,
+     "W_BRIS_RWAcademy": 0.415,
+     "W_LILLE_Nu": 0.55,
+     "W_MKE_ZGok": 0.465,
+     "W_DUS_Shining": 0.57,
+     "W_TKY1_BarbSF": 0.59,
+     "W_MNL_GPZeon": 0.635,
+     "W_JKT_Nu": 0.6,
+     "W_TOR_SF": 0.635,
+     "W_MEX_GPZeon": 0.52,
+     "W_MEL_SFVictory": 0.465,
+     "W_TKY3_Shining": 0.64,
+     "J_MobileFighter": 0.645,
+     "J_CharIBO": 0.46,
+     "J_NuAggro": 0.615,
+     "J_SFBlockers": 0.65,
+     "J_SFIBO_Chiba": 0.46,
+     "J_SFIBO_alt": 0.41,
+     "J_KshatriyaBanshee": 0.605,
+     "J_EFFBanshee": 0.52,
+     "J_BGOYW": 0.6,
+     "J_JusticeAerial": 0.615,
+     "J_Wing_Omiya": 0.6,
+     "J_MF_Kichijoji": 0.66,
+     "J_BGOYW_Chelmo": 0.51,
+     "J_MF_Machida": 0.595
+    }
+   },
+   "mlp2": {
+    "n": 200,
+    "B": 0.5896153846153845,
+    "A": 0.6000488712776176,
+    "min": 0.44,
+    "minOpp": "W_BRIS_RWAcademy",
+    "first": 0.7592307692307692,
+    "second": 0.42,
+    "per": {
+     "W_DC_SF": 0.575,
+     "W_BRIS_RWAcademy": 0.44,
+     "W_LILLE_Nu": 0.655,
+     "W_MKE_ZGok": 0.455,
+     "W_DUS_Shining": 0.545,
+     "W_TKY1_BarbSF": 0.625,
+     "W_MNL_GPZeon": 0.645,
+     "W_JKT_Nu": 0.67,
+     "W_TOR_SF": 0.69,
+     "W_MEX_GPZeon": 0.5,
+     "W_MEL_SFVictory": 0.49,
+     "W_TKY3_Shining": 0.7,
+     "J_MobileFighter": 0.645,
+     "J_CharIBO": 0.47,
+     "J_NuAggro": 0.71,
+     "J_SFBlockers": 0.66,
+     "J_SFIBO_Chiba": 0.49,
+     "J_SFIBO_alt": 0.52,
+     "J_KshatriyaBanshee": 0.655,
+     "J_EFFBanshee": 0.52,
+     "J_BGOYW": 0.575,
+     "J_JusticeAerial": 0.645,
+     "J_Wing_Omiya": 0.615,
+     "J_MF_Kichijoji": 0.67,
+     "J_BGOYW_Chelmo": 0.52,
+     "J_MF_Machida": 0.645
+    }
+   }
+  },
   "OMNIP_GB_e0": {
    "k4n6": {
     "n": 200,
@@ -1926,6 +2169,119 @@
      "J_MF_Kichijoji": 0.615,
      "J_BGOYW_Chelmo": 0.47,
      "J_MF_Machida": 0.59
+    }
+   },
+   "mlp2": {
+    "n": 200,
+    "B": 0.5692307692307691,
+    "A": 0.5689196685878963,
+    "min": 0.455,
+    "minOpp": "W_LILLE_Nu",
+    "first": 0.7242307692307691,
+    "second": 0.4142307692307693,
+    "per": {
+     "W_DC_SF": 0.59,
+     "W_BRIS_RWAcademy": 0.615,
+     "W_LILLE_Nu": 0.455,
+     "W_MKE_ZGok": 0.52,
+     "W_DUS_Shining": 0.54,
+     "W_TKY1_BarbSF": 0.615,
+     "W_MNL_GPZeon": 0.54,
+     "W_JKT_Nu": 0.51,
+     "W_TOR_SF": 0.635,
+     "W_MEX_GPZeon": 0.555,
+     "W_MEL_SFVictory": 0.625,
+     "W_TKY3_Shining": 0.585,
+     "J_MobileFighter": 0.6,
+     "J_CharIBO": 0.52,
+     "J_NuAggro": 0.555,
+     "J_SFBlockers": 0.62,
+     "J_SFIBO_Chiba": 0.57,
+     "J_SFIBO_alt": 0.55,
+     "J_KshatriyaBanshee": 0.57,
+     "J_EFFBanshee": 0.495,
+     "J_BGOYW": 0.62,
+     "J_JusticeAerial": 0.705,
+     "J_Wing_Omiya": 0.53,
+     "J_MF_Kichijoji": 0.63,
+     "J_BGOYW_Chelmo": 0.485,
+     "J_MF_Machida": 0.565
+    }
+   }
+  },
+  "OMNIP_WP_e1": {
+   "k4n6": {
+    "n": 200,
+    "B": 0.5659615384615383,
+    "A": 0.5673751200768492,
+    "min": 0.455,
+    "minOpp": "W_LILLE_Nu",
+    "first": 0.7396153846153847,
+    "second": 0.39230769230769236,
+    "per": {
+     "W_DC_SF": 0.53,
+     "W_BRIS_RWAcademy": 0.585,
+     "W_LILLE_Nu": 0.455,
+     "W_MKE_ZGok": 0.545,
+     "W_DUS_Shining": 0.59,
+     "W_TKY1_BarbSF": 0.575,
+     "W_MNL_GPZeon": 0.51,
+     "W_JKT_Nu": 0.54,
+     "W_TOR_SF": 0.595,
+     "W_MEX_GPZeon": 0.595,
+     "W_MEL_SFVictory": 0.545,
+     "W_TKY3_Shining": 0.64,
+     "J_MobileFighter": 0.57,
+     "J_CharIBO": 0.59,
+     "J_NuAggro": 0.565,
+     "J_SFBlockers": 0.525,
+     "J_SFIBO_Chiba": 0.52,
+     "J_SFIBO_alt": 0.53,
+     "J_KshatriyaBanshee": 0.635,
+     "J_EFFBanshee": 0.545,
+     "J_BGOYW": 0.565,
+     "J_JusticeAerial": 0.72,
+     "J_Wing_Omiya": 0.52,
+     "J_MF_Kichijoji": 0.665,
+     "J_BGOYW_Chelmo": 0.475,
+     "J_MF_Machida": 0.585
+    }
+   },
+   "mlp2": {
+    "n": 200,
+    "B": 0.5473076923076923,
+    "A": 0.5522110951008646,
+    "min": 0.465,
+    "minOpp": "J_BGOYW_Chelmo",
+    "first": 0.708076923076923,
+    "second": 0.38653846153846144,
+    "per": {
+     "W_DC_SF": 0.515,
+     "W_BRIS_RWAcademy": 0.5,
+     "W_LILLE_Nu": 0.535,
+     "W_MKE_ZGok": 0.52,
+     "W_DUS_Shining": 0.495,
+     "W_TKY1_BarbSF": 0.61,
+     "W_MNL_GPZeon": 0.585,
+     "W_JKT_Nu": 0.51,
+     "W_TOR_SF": 0.625,
+     "W_MEX_GPZeon": 0.545,
+     "W_MEL_SFVictory": 0.48,
+     "W_TKY3_Shining": 0.59,
+     "J_MobileFighter": 0.585,
+     "J_CharIBO": 0.525,
+     "J_NuAggro": 0.505,
+     "J_SFBlockers": 0.565,
+     "J_SFIBO_Chiba": 0.56,
+     "J_SFIBO_alt": 0.49,
+     "J_KshatriyaBanshee": 0.56,
+     "J_EFFBanshee": 0.535,
+     "J_BGOYW": 0.555,
+     "J_JusticeAerial": 0.68,
+     "J_Wing_Omiya": 0.505,
+     "J_MF_Kichijoji": 0.605,
+     "J_BGOYW_Chelmo": 0.465,
+     "J_MF_Machida": 0.585
     }
    }
   },

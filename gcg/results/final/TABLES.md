@@ -3,25 +3,27 @@
 | unit | heuristic B | K2N2 check B | check worst | pure-search elite B (n/list) |
 |---|---|---|---|---|
 | GB | 73.0 | 62.8 | 38.0 J_CharIBO | 65.7 (80) |
-| GR | 64.4 | 56.6 | 33.0 W_BRIS_RWAcademy | — |
+| GR | 64.4 | 56.6 | 33.0 W_BRIS_RWAcademy | 57.8 (168) |
 | BR | 62.9 | 44.8 | 22.0 J_SFIBO_alt | — |
 | MG | 64.3 | 58.4 | 27.0 J_CharIBO | 57.6 (120) |
 | MB | 62.9 | 43.3 | 28.0 W_MEL_SFVictory | — |
 | MR | 57.5 | 47.2 | 34.0 J_SFBlockers | — |
 | GP | 65.6 | 58.5 | 36.0 J_CharIBO | 68.8 (40) |
-| BP | 69.6 | 56.7 | 41.0 W_BRIS_RWAcademy | — |
+| BP | 69.6 | 56.7 | 41.0 W_BRIS_RWAcademy | 62.4 (40) |
 | BW | 71.2 | 52.2 | 40.0 W_MNL_GPZeon | — |
 | RW | 69.1 | 52.1 | 36.0 J_SFBlockers | — |
 | GW | 71.9 | 51.2 | 34.0 W_MEX_GPZeon | — |
 | PR | 66.2 | 53.5 | 29.0 W_BRIS_RWAcademy | — |
 | WP | 75.5 | 57.8 | 38.0 W_BRIS_RWAcademy | 60.3 (40) |
 | MW | 67.2 | 47.9 | 28.0 W_BRIS_RWAcademy | — |
-| MP | 64.2 | 56.1 | 33.0 W_BRIS_RWAcademy | — |
+| MP | 64.2 | 56.1 | 33.0 W_BRIS_RWAcademy | 55.5 (144) |
 
 ## Final validations (both sides searching; field = 26 lists)
 
 | deck | judge | games/list | field mean | Metric A | worst | first | second |
 |---|---|---|---|---|---|---|---|
+| CTR_GP_S4_g14_BP | k4n6 | 200 | 38.0 | 37.4 | 18.5 W_BRIS_RWAcademy | 48.8 | 27.1 |
+| CTR_GP_S4_g14_BP | mlp2 | 200 | 37.2 | 36.9 | 18.0 W_MNL_GPZeon | 49.0 | 25.4 |
 | GB_GA2 | k4n6 | 200 | 56.3 | 57.6 | 36.0 W_MEX_GPZeon | 71.2 | 41.4 |
 | GB_GA2 | mlp2 | 200 | 58.7 | 60.1 | 36.5 J_CharIBO | 72.6 | 44.9 |
 | GB_S2_e1 | k4n6 | 200 | 60.6 | 61.7 | 37.5 J_CharIBO | 73.1 | 48.1 |
@@ -41,6 +43,10 @@
 | LGA_GB_e0 | mlp2 | 200 | 63.0 | 64.1 | 40.0 W_MEX_GPZeon | 76.3 | 49.8 |
 | LGA_GB_e1 | k4n6 | 200 | 60.4 | 61.6 | 32.0 J_CharIBO | 74.1 | 46.7 |
 | LGA_GB_e1 | mlp2 | 200 | 60.8 | 62.3 | 37.5 W_MEX_GPZeon | 73.0 | 48.6 |
+| OMNIP_BP_e0 | k4n6 | 200 | 57.4 | 57.9 | 41.5 J_SFIBO_Chiba | 73.7 | 41.0 |
+| OMNIP_BP_e0 | mlp2 | 200 | 59.8 | 60.7 | 43.0 J_CharIBO | 75.7 | 43.8 |
+| OMNIP_BP_e1 | k4n6 | 200 | 56.2 | 57.2 | 41.0 J_SFIBO_alt | 72.3 | 40.1 |
+| OMNIP_BP_e1 | mlp2 | 200 | 59.0 | 60.0 | 44.0 W_BRIS_RWAcademy | 75.9 | 42.0 |
 | OMNIP_GB_e0 | k4n6 | 200 | 60.1 | 61.4 | 38.0 J_CharIBO | 73.3 | 47.0 |
 | OMNIP_GB_e0 | mlp2 | 200 | 62.1 | 63.6 | 38.5 W_MEL_SFVictory | 75.1 | 49.0 |
 | OMNIP_GB_e1 | k4n6 | 200 | 60.5 | 61.6 | 37.5 W_MEX_GPZeon | 73.2 | 47.8 |
@@ -59,6 +65,9 @@
 | OMNIP_MG_e1 | k4n6 | 200 | 56.6 | 57.3 | 27.5 J_CharIBO | 71.6 | 41.6 |
 | OMNIP_MG_e1 | mlp2 | 200 | 57.6 | 58.3 | 26.0 J_CharIBO | 72.8 | 42.4 |
 | OMNIP_WP_e0 | k4n6 | 200 | 58.2 | 58.0 | 47.0 W_JKT_Nu | 73.0 | 43.4 |
+| OMNIP_WP_e0 | mlp2 | 200 | 56.9 | 56.9 | 45.5 W_LILLE_Nu | 72.4 | 41.4 |
+| OMNIP_WP_e1 | k4n6 | 200 | 56.6 | 56.7 | 45.5 W_LILLE_Nu | 74.0 | 39.2 |
+| OMNIP_WP_e1 | mlp2 | 200 | 54.7 | 55.2 | 46.5 J_BGOYW_Chelmo | 70.8 | 38.7 |
 | OMNI_GB | k4n6 | 200 | 56.2 | 57.2 | 35.0 J_CharIBO | 69.7 | 42.7 |
 | OMNI_GB | mlp2 | 200 | 58.9 | 59.9 | 36.5 W_MEX_GPZeon | 71.9 | 46.0 |
 | OMNI_GR | k4n6 | 200 | 56.4 | 56.9 | 45.5 W_BRIS_RWAcademy | 71.8 | 41.0 |

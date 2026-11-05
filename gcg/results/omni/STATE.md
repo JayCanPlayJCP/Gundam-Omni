@@ -1,5 +1,8 @@
 # Operation Omni — run state (session 2, full scale)
 
+**FINISHED (2026-11-05 06:50).** Finalist GP_S4_g14, K4N6 64.8% over 600 games/list; no deck reaches 75% against every list.
+Final report: results/final/REPORT.md (+ report.html, published as a private artifact). Nothing is running.
+
 Machine: 4 cores, 15 GB RAM, no GPU. `export SIM_WORKERS=3` (nproc-1).
 Driver: `cd gcg && (setsid nohup node omni.js > results/omni_driver.out 2>&1 &)` — resumable via results/omni/*.done.
 Progress: `cat results/omni/omni.log; tail results/omni/census.log results/omni/check.log`.
@@ -52,6 +55,8 @@ Session-1 Omni outputs are in results/omni_v1/ (decks OMNI0_GB, OMNI0_GR).
   omni.js now does that on any resume), run_screen.sh and val_queue.sh.
 - 04:32 second container restart: relaunched driver (BP resumed from its gen-14 checkpoint, 10 generations left) and val_queue.
 - Screens: GR 57.8 (n168), MP 55.5 (n144) in-search -> not promoted. WP elites K4N6 58.2 / 56.6.
+- 05:46 OMNI COMPLETE. S4 BP: OMNIP_BP_e0/e1 K4N6 57.4 / 56.2 (mlp2 59.8 / 59.0). S5 (K3N3 100 + fast 1000) for all 10 OMNIP decks:
+  fast AI flatters W/P (74.5 / 75.0, worst 57-58) and G/B (70.6), not G/P (63). Final: finalist GP_S4_g14, verdict = no 75% deck.
 - Validation queue: results/final/val_queue.sh reads results/final/queue.txt (one deck per line; STOP ends it).
 - Reference decks, K4N6 both sides, 200/list, seed 9393000 (results/final/*_k4n6_200.json; *_mlp2_200.json = K4N6+mlp2):
   GB_S2_e1 60.6 / 59.8, PURE_GB_e1 59.2 / 61.1, GB_GA2 56.3 / 58.7, OMNI_GB 56.2 / 58.9, OMNI_GR 56.4 / 56.1, GR_GA1 50.4 / 49.9.

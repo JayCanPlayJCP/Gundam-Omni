@@ -9,11 +9,11 @@
 
 It beats only **6 of 26 lists at 75% or better**, and it is **below 50% against 4**: W_BRIS_RWAcademy 45.5, J_SFIBO_alt 46.2, J_SFIBO_Chiba 46.5 and W_MKE_ZGok 49.8. It is a seat-dependent deck: 79% going first and 51% going second.
 
-The evidence that 75% is out of reach, not just unfound:
-- **Every route converges below 66%.** The search covered 15 colour units (10 pairs, 5 mono) with census, island GA and a stronger-AI check, then a 25-generation pure search GA on the top five. Green/Red and mono Purple were screened as well. A separate GA judged by the learned evaluator was also run. Every deck re-tested under K4N6 lands between 50% and 65%: the Green/Purple decks at 63–65, Green/Blue at 59–61, White/Purple 58, mono Green 57.
-- **The ceiling, deck by deck.** Take the best result any of the 17 validated decks achieved against each list separately — a generous ceiling, since it picks the luckiest of 17 noisy estimates. Even that reaches 75% against only 8 of the 26 lists, and it tops out at **55%** against J_SFIBO_alt and J_CharIBO. A single deck would have to beat that ceiling everywhere.
+Four findings show that 75% is out of reach in this card pool:
+- **Every route converges below 66%.** The search covered 15 colour units (10 pairs, 5 mono) with census, island GA and a stronger-AI check. The top five (Green/Blue, Green/Purple, mono Green, White/Purple, Blue/Purple) then got a 25-generation pure search GA, and Green/Red and mono Purple were screened as well. A separate GA judged by the learned evaluator was also run. Every deck re-tested under K4N6 lands between 50% and 65%: Green/Purple 63–65, Green/Blue 59–61, White/Purple 56–58, Blue/Purple 56–57, mono Green 57.
+- **The ceiling, deck by deck.** Take the best result any of the 17 validated decks achieved against each list separately. That ceiling is generous, because it picks the luckiest of 17 noisy estimates. Even that reaches 75% against only 8 of the 26 lists, and it tops out at **55%** against J_SFIBO_alt and J_CharIBO. A single deck would have to beat that ceiling everywhere.
 - **The best deck has hard counters.** A counter-deck GA found a Blue/Purple list that beats it 62.5% and a Red/White list at 58.5% (fresh seeds, K4N6, 200 games). Three tournament lists already hold it to 45–47%. The counters are narrow: the Blue/Purple one scores only 38.0% against the whole field (K4N6, 200 games/list). They only pay off in a meta that is mostly Green/Purple.
-- **Stronger play compresses edges.** The same decks score 10–25 points higher with the fast AI than with search AIs. A stronger judge would most likely push win rates further toward 50%, not up toward 75%.
+- **Weak judges flatter.** Under the fast heuristic AI (the judge the earlier sessions relied on), the White/Purple finalist reaches a 75.0% field mean over 1000 games per list. Even there its worst list is at 58.3%, and only 16 of 26 lists are at 75% or better. With search AIs on both sides, the same deck falls to 56.6%. Green/Blue drops from 70.6% to 60%. Green/Purple is the only archetype that holds or gains under search (63% fast, 65% K4N6). A stronger judge than K4N6 would most likely push win rates further toward 50%, not up toward 75%.
 
 **What the search did find.** The best deck is a refined version of a real tournament list, J_CharIBO (86% the same cards). J_CharIBO itself scores 63.9% under K4N6 (200/list), so the search's improvement, about +1 point, is within noise. Green/Purple aggro is the strongest archetype in this field. Green/Blue (the session-1 favourite) is about 4 points behind once both sides search properly. The handoff's earlier ranking, based on the fast heuristic AI, put Green/Blue ahead. Under search AIs that does not hold.
 
@@ -178,36 +178,58 @@ Same plan as against J_SFIBO_Chiba, with more Axis (base: shield to hand, then r
 | J_CharIBO | K4N6 search, hand evaluator | 200 | 63.9 | 65.1 | 40.5 (J_SFIBO_Chiba) | 77.5 | 50.3 |
 | LGA_GB_e0 | K4N6 search + learned evaluator (mlp2) | 200 | 63.0 | 64.1 | 40.0 (W_MEX_GPZeon) | 76.3 | 49.8 |
 | LGA_GB_e0 | K4N6 search, hand evaluator | 200 | 61.4 | 62.5 | 39.0 (J_CharIBO) | 74.1 | 48.8 |
+| LGA_GB_e1 | K4N6 search + learned evaluator (mlp2) | 200 | 60.8 | 62.3 | 37.5 (W_MEX_GPZeon) | 73.0 | 48.6 |
+| LGA_GB_e1 | K4N6 search, hand evaluator | 200 | 60.4 | 61.6 | 32.0 (J_CharIBO) | 74.1 | 46.7 |
 | GB_S2_e1 | K4N6 search + learned evaluator (mlp2) | 200 | 59.8 | 60.9 | 31.5 (J_CharIBO) | 73.5 | 46.0 |
 | GB_S2_e1 | K4N6 search, hand evaluator | 200 | 60.6 | 61.7 | 37.5 (J_CharIBO) | 73.1 | 48.1 |
+| PURE_GB_e1 | K4N6 search + learned evaluator (mlp2) | 200 | 61.1 | 62.6 | 39.5 (W_MEL_SFVictory) | 74.0 | 48.3 |
+| PURE_GB_e1 | K4N6 search, hand evaluator | 200 | 59.2 | 60.6 | 35.5 (J_CharIBO) | 72.5 | 45.9 |
 | OMNIP_GB_e0 | K4N6 search + learned evaluator (mlp2) | 200 | 62.1 | 63.6 | 38.5 (W_MEL_SFVictory) | 75.1 | 49.0 |
 | OMNIP_GB_e0 | K4N6 search, hand evaluator | 200 | 60.1 | 61.4 | 38.0 (J_CharIBO) | 73.3 | 47.0 |
 | OMNIP_GB_e1 | K4N6 search + learned evaluator (mlp2) | 200 | 61.3 | 62.5 | 35.5 (W_MEX_GPZeon) | 73.9 | 48.6 |
 | OMNIP_GB_e1 | K4N6 search, hand evaluator | 200 | 60.5 | 61.6 | 37.5 (W_MEX_GPZeon) | 73.2 | 47.8 |
 | OMNIP_WP_e0 | K4N6 search + learned evaluator (mlp2) | 200 | 56.9 | 56.9 | 45.5 (W_LILLE_Nu) | 72.4 | 41.4 |
 | OMNIP_WP_e0 | K4N6 search, hand evaluator | 200 | 58.2 | 58.0 | 47.0 (W_JKT_Nu) | 73.0 | 43.4 |
+| OMNIP_WP_e1 | K4N6 search + learned evaluator (mlp2) | 200 | 54.7 | 55.2 | 46.5 (J_BGOYW_Chelmo) | 70.8 | 38.7 |
+| OMNIP_WP_e1 | K4N6 search, hand evaluator | 200 | 56.6 | 56.7 | 45.5 (W_LILLE_Nu) | 74.0 | 39.2 |
+| OMNIP_BP_e0 | K4N6 search + learned evaluator (mlp2) | 200 | 59.8 | 60.7 | 43.0 (J_CharIBO) | 75.7 | 43.8 |
+| OMNIP_BP_e0 | K4N6 search, hand evaluator | 200 | 57.4 | 57.9 | 41.5 (J_SFIBO_Chiba) | 73.7 | 41.0 |
+| OMNIP_BP_e1 | K4N6 search + learned evaluator (mlp2) | 200 | 59.0 | 60.0 | 44.0 (W_BRIS_RWAcademy) | 75.9 | 42.0 |
+| OMNIP_BP_e1 | K4N6 search, hand evaluator | 200 | 56.2 | 57.2 | 41.0 (J_SFIBO_alt) | 72.3 | 40.1 |
 | OMNIP_MG_e0 | K4N6 search + learned evaluator (mlp2) | 200 | 58.0 | 58.5 | 32.5 (W_MEX_GPZeon) | 73.3 | 42.7 |
 | OMNIP_MG_e0 | K4N6 search, hand evaluator | 200 | 57.0 | 58.0 | 30.5 (J_CharIBO) | 71.9 | 42.2 |
+| OMNIP_MG_e1 | K4N6 search + learned evaluator (mlp2) | 200 | 57.6 | 58.3 | 26.0 (J_CharIBO) | 72.8 | 42.4 |
+| OMNIP_MG_e1 | K4N6 search, hand evaluator | 200 | 56.6 | 57.3 | 27.5 (J_CharIBO) | 71.6 | 41.6 |
+| CTR_GP_S4_g14_BP | K4N6 search + learned evaluator (mlp2) | 200 | 37.2 | 36.9 | 18.0 (W_MNL_GPZeon) | 49.0 | 25.4 |
+| CTR_GP_S4_g14_BP | K4N6 search, hand evaluator | 200 | 38.0 | 37.4 | 18.5 (W_BRIS_RWAcademy) | 48.8 | 27.1 |
+| GB_GA2 | K4N6 search + learned evaluator (mlp2) | 200 | 58.7 | 60.1 | 36.5 (J_CharIBO) | 72.6 | 44.9 |
+| GB_GA2 | K4N6 search, hand evaluator | 200 | 56.3 | 57.6 | 36.0 (W_MEX_GPZeon) | 71.2 | 41.4 |
+| OMNI_GB | K4N6 search + learned evaluator (mlp2) | 200 | 58.9 | 59.9 | 36.5 (W_MEX_GPZeon) | 71.9 | 46.0 |
+| OMNI_GB | K4N6 search, hand evaluator | 200 | 56.2 | 57.2 | 35.0 (J_CharIBO) | 69.7 | 42.7 |
+| OMNI_GR | K4N6 search + learned evaluator (mlp2) | 200 | 56.1 | 56.3 | 37.5 (W_BRIS_RWAcademy) | 71.8 | 40.3 |
+| OMNI_GR | K4N6 search, hand evaluator | 200 | 56.4 | 56.9 | 45.5 (W_BRIS_RWAcademy) | 71.8 | 41.0 |
+| GR_GA1 | K4N6 search + learned evaluator (mlp2) | 200 | 49.9 | 50.8 | 29.5 (J_CharIBO) | 67.6 | 32.2 |
+| GR_GA1 | K4N6 search, hand evaluator | 200 | 50.4 | 51.2 | 34.5 (W_MKE_ZGok) | 67.6 | 33.2 |
 
 ## Search islands (one per colour pair / mono colour)
 
 | colour pair | heuristic GA best, fast AI % | K2N2 check % | check worst | pure-search GA elite % |
 |---|---|---|---|---|
 | GB | 73.0 | 62.8 | 38.0 J_CharIBO | 65.7 (80/list) |
-| GR | 64.4 | 56.6 | 33.0 W_BRIS_RWAcademy | — |
+| GR | 64.4 | 56.6 | 33.0 W_BRIS_RWAcademy | 57.8 (168/list, reduced-scale screen) |
 | BR | 62.9 | 44.8 | 22.0 J_SFIBO_alt | — |
 | MG | 64.3 | 58.4 | 27.0 J_CharIBO | 57.6 (120/list) |
 | MB | 62.9 | 43.3 | 28.0 W_MEL_SFVictory | — |
 | MR | 57.5 | 47.2 | 34.0 J_SFBlockers | — |
 | GP | 65.6 | 58.5 | 36.0 J_CharIBO | 68.8 (40/list) |
-| BP | 69.6 | 56.7 | 41.0 W_BRIS_RWAcademy | — |
+| BP | 69.6 | 56.7 | 41.0 W_BRIS_RWAcademy | 62.4 (40/list) |
 | BW | 71.2 | 52.2 | 40.0 W_MNL_GPZeon | — |
 | RW | 69.1 | 52.1 | 36.0 J_SFBlockers | — |
 | GW | 71.9 | 51.2 | 34.0 W_MEX_GPZeon | — |
 | PR | 66.2 | 53.5 | 29.0 W_BRIS_RWAcademy | — |
 | WP | 75.5 | 57.8 | 38.0 W_BRIS_RWAcademy | 60.3 (40/list) |
 | MW | 67.2 | 47.9 | 28.0 W_BRIS_RWAcademy | — |
-| MP | 64.2 | 56.1 | 33.0 W_BRIS_RWAcademy | — |
+| MP | 64.2 | 56.1 | 33.0 W_BRIS_RWAcademy | 55.5 (144/list, reduced-scale screen) |
 
 ## Convergence across islands and judges
 
@@ -225,15 +247,19 @@ Every deck that was validated under the strong judges, both sides searching, 200
 | LGA_GB_e1 | pure GA with learned judge (K2N2+mlp2), G/B elite 1 | Blue/Green | 60.4 (200) | 60.8 | 26% |
 | OMNIP_GB_e0 | Omni pure GA (K2N2 judge), GB elite 0 | Blue/Green | 60.1 (200) | 62.1 | 26% |
 | PURE_GB_e1 | session-1 pure GA (legacy judge), G/B | Blue/Green | 59.2 (200) | 61.1 | 26% |
-| OMNIP_WP_e0 | Omni pure GA (K2N2 judge), WP elite 0 | Purple/White | 58.2 (200) | — | 20% |
+| OMNIP_WP_e0 | Omni pure GA (K2N2 judge), WP elite 0 | Purple/White | 58.2 (200) | 56.9 | 20% |
+| OMNIP_BP_e0 | Omni pure GA (K2N2 judge), BP elite 0 | Blue/Purple | 57.4 (200) | 59.8 | 18% |
 | OMNIP_MG_e0 | Omni pure GA (K2N2 judge), MG elite 0 | Green | 57.0 (200) | 58.0 | 40% |
+| OMNIP_WP_e1 | Omni pure GA (K2N2 judge), WP elite 1 | Purple/White | 56.6 (200) | 54.7 | 22% |
 | OMNIP_MG_e1 | Omni pure GA (K2N2 judge), MG elite 1 | Green | 56.6 (200) | 57.6 | 40% |
 | OMNI_GR | Omni island GA (fast AI judge), GR | Green/Red | 56.4 (200) | 56.1 | 28% |
 | GB_GA2 | session-1 heuristic GA, G/B | Blue/Green | 56.3 (200) | 58.7 | 24% |
+| OMNIP_BP_e1 | Omni pure GA (K2N2 judge), BP elite 1 | Blue/Purple | 56.2 (200) | 59.0 | 18% |
 | OMNI_GB | Omni island GA (fast AI judge), GB | Blue/Green | 56.2 (200) | 58.9 | 28% |
 | GR_GA1 | session-1 heuristic GA, G/R | Green/Red | 50.4 (200) | 49.9 | 26% |
+| CTR_GP_S4_g14_BP | CTR_GP_S4_g14_BP | Blue/Purple | 38.0 (200) | 37.2 | 20% |
 
-The two strong judges agree on the order: Spearman rank correlation 0.90 over 16 decks. They put the same colour pair on top, and the learned evaluator's numbers run 1–4 points higher.
+The two strong judges agree on the order: Spearman rank correlation 0.87 over 21 decks. They put the same colour pair on top, and the learned evaluator's numbers run 1–4 points higher.
 
 
 ## Counter-deck search against the finalist

@@ -8,8 +8,8 @@ const pct = (x) => x == null ? '—' : (x * 100).toFixed(1);
 const out = { islands: [], judges: {}, finals: {}, census: {} };
 // islands / checks
 const UNITS = ['GB', 'GR', 'BR', 'MG', 'MB', 'MR', 'GP', 'BP', 'BW', 'RW', 'GW', 'PR', 'WP', 'MW', 'MP'];
-for (const u of UNITS) { const isl = rd(`results/omni/island_${u}.done`), ck = rd(`results/omni/check_${u}.done`), pu = fs.existsSync(`results/omni/pure_${u}.json`) ? rd(`results/omni/pure_${u}.json`) : null;
-  out.islands.push({ unit: u, heurB: isl && isl.B, checkB: ck && ck.B, checkMin: ck && ck.min, checkMinOpp: ck && ck.minOpp, pureB: pu && pu.elites && pu.elites[0].search && pu.elites[0].search.B, pureN: pu && pu.elites && pu.elites[0].search && pu.elites[0].search.n }); }
+for (const u of UNITS) { const isl = rd(`results/omni/island_${u}.done`), ck = rd(`results/omni/check_${u}.done`), pu0 = fs.existsSync(`results/omni/pure_${u}.json`) ? rd(`results/omni/pure_${u}.json`) : null; const sc = !pu0 && fs.existsSync(`results/omni/screen_${u}.json`); const pu = pu0 || (sc ? rd(`results/omni/screen_${u}.json`) : null);
+  out.islands.push({ unit: u, heurB: isl && isl.B, checkB: ck && ck.B, checkMin: ck && ck.min, checkMinOpp: ck && ck.minOpp, pureB: pu && pu.elites && pu.elites[0].search && pu.elites[0].search.B, pureN: pu && pu.elites && pu.elites[0].search && pu.elites[0].search.n, screen: sc }); }
 // final validations: results/final/<deck>_<judge>_<n>.json written by searchcheck.js (SOUT)
 for (const f of fs.readdirSync('results/final').filter(f => f.endsWith('.json') && f !== 'summary.json')) {
   const j = rd('results/final/' + f); if (!j || !j.per) continue; const m = f.replace(/\.json$/, '').match(/^(.*)_([a-z0-9]+)_(\d+)$/); if (!m) continue;
