@@ -2,7 +2,20 @@
 
 ## Verdict
 
-_pending: written when the pure-search GAs and the final validations finish._
+**No deck reaches 75% against every tournament-winning list, and nothing in the data suggests one exists in this card pool.** The strongest legal deck found is **GP_S4_g14**, a Green/Purple Zeon + Iron-Blooded Orphans aggro list. With the strongest verified judge (K4N6 search) playing both sides, it scores:
+- **64.8%** field mean (Metric B) over 600 games against each of the 26 lists (three seeds: 65.5 / 65.3 / 63.4)
+- **66.1%** weighted by real tournament share (Metric A)
+- **67.8%** with the learned evaluator added (K4N6 + mlp2, 200 games/list)
+
+It beats only **6 of 26 lists at 75% or better**, and it is **below 50% against 4**: W_BRIS_RWAcademy 45.5, J_SFIBO_alt 46.2, J_SFIBO_Chiba 46.5 and W_MKE_ZGok 49.8. It is a seat-dependent deck: 79% going first and 51% going second.
+
+The evidence that 75% is out of reach, not just unfound:
+- **Every route converges below 66%.** The search covered 15 colour units (10 pairs, 5 mono) with census, island GA and a stronger-AI check, then a 25-generation pure search GA on the top five. Green/Red and mono Purple were screened as well. A separate GA judged by the learned evaluator was also run. Every deck re-tested under K4N6 lands between 50% and 65%: the Green/Purple decks at 63–65, Green/Blue at 59–61, White/Purple 58, mono Green 57.
+- **The ceiling, deck by deck.** Take the best result any of the 17 validated decks achieved against each list separately — a generous ceiling, since it picks the luckiest of 17 noisy estimates. Even that reaches 75% against only 8 of the 26 lists, and it tops out at **55%** against J_SFIBO_alt and J_CharIBO. A single deck would have to beat that ceiling everywhere.
+- **The best deck has hard counters.** A counter-deck GA found a Blue/Purple list that beats it 62.5% and a Red/White list at 58.5% (fresh seeds, K4N6, 200 games). Three tournament lists already hold it to 45–47%.
+- **Stronger play compresses edges.** The same decks score 10–25 points higher with the fast AI than with search AIs. A stronger judge would most likely push win rates further toward 50%, not up toward 75%.
+
+**What the search did find.** The best deck is a refined version of a real tournament list, J_CharIBO (86% the same cards). J_CharIBO itself scores 63.9% under K4N6 (200/list), so the search's improvement, about +1 point, is within noise. Green/Purple aggro is the strongest archetype in this field. Green/Blue (the session-1 favourite) is about 4 points behind once both sides search properly. The handoff's earlier ranking, based on the fast heuristic AI, put Green/Blue ahead. Under search AIs that does not hold.
 
 ## Win rates of GP_S4_g14 under every judge
 
