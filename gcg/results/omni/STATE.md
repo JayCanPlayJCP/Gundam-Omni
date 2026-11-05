@@ -50,6 +50,8 @@ Session-1 Omni outputs are in results/omni_v1/ (decks OMNI0_GB, OMNI0_GR).
   GP_S4_g14 hit OMNIP_GP_e1 harder (BP 70.5 vs 62.5; avg of 8: 53.5 vs 51.5) -> **finalist GP_S4_g14**, alternative OMNIP_GP_e1.
 - 23:45 container restart: relaunched driver (WP pure GA resumed from its gen-14 checkpoint with only the 10 generations left;
   omni.js now does that on any resume), run_screen.sh and val_queue.sh.
+- 04:32 second container restart: relaunched driver (BP resumed from its gen-14 checkpoint, 10 generations left) and val_queue.
+- Screens: GR 57.8 (n168), MP 55.5 (n144) in-search -> not promoted. WP elites K4N6 58.2 / 56.6.
 - Validation queue: results/final/val_queue.sh reads results/final/queue.txt (one deck per line; STOP ends it).
 - Reference decks, K4N6 both sides, 200/list, seed 9393000 (results/final/*_k4n6_200.json; *_mlp2_200.json = K4N6+mlp2):
   GB_S2_e1 60.6 / 59.8, PURE_GB_e1 59.2 / 61.1, GB_GA2 56.3 / 58.7, OMNI_GB 56.2 / 58.9, OMNI_GR 56.4 / 56.1, GR_GA1 50.4 / 49.9.
