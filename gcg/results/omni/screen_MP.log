@@ -1,0 +1,14 @@
+[0s] colors Purple pool 178 seeds 1 lock {}
+[491s] gen 0 best f 0.670 | heur B 0.0 (n0) | search B 58.0 A 60.1 b5 40.0 min 33.3 W_BRIS_RWAcademy (n24)
+[1059s] gen 1 best f 0.650 | heur B 0.0 (n0) | search B 55.1 A 56.9 b5 40.0 min 35.4 W_BRIS_RWAcademy (n48)
+[1636s] gen 2 best f 0.694 | heur B 0.0 (n0) | search B 60.7 A 63.1 b5 39.2 min 20.8 W_BRIS_RWAcademy (n24)
+[2194s] gen 3 best f 0.679 | heur B 0.0 (n0) | search B 57.2 A 58.3 b5 42.9 min 29.2 W_BRIS_RWAcademy (n48)
+[2785s] gen 4 best f 0.675 | heur B 0.0 (n0) | search B 56.1 A 57.5 b5 43.6 min 31.9 W_BRIS_RWAcademy (n72)
+[3386s] gen 5 best f 0.709 | heur B 0.0 (n0) | search B 60.3 A 62.3 b5 45.8 min 29.2 W_BRIS_RWAcademy (n24)
+[3972s] gen 6 best f 0.694 | heur B 0.0 (n0) | search B 58.7 A 60.5 b5 42.9 min 31.3 W_BRIS_RWAcademy (n48)
+[4536s] gen 7 best f 0.700 | heur B 0.0 (n0) | search B 59.1 A 59.9 b5 43.8 min 33.3 W_BRIS_RWAcademy (n48)
+[5059s] gen 8 best f 0.728 | heur B 0.0 (n0) | search B 60.5 A 61.2 b5 46.7 min 36.1 W_BRIS_RWAcademy (n72)
+[5644s] gen 9 best f 0.724 | heur B 0.0 (n0) | search B 59.8 A 60.5 b5 47.1 min 38.5 J_SFIBO_alt (n96)
+[6249s] gen 10 best f 0.695 | heur B 0.0 (n0) | search B 57.1 A 57.9 b5 46.0 min 38.3 W_BRIS_RWAcademy (n120)
+[6829s] gen 11 best f 0.675 | heur B 0.0 (n0) | search B 55.5 A 56.3 b5 44.3 min 37.5 J_SFIBO_alt (n144)
+[6829s] done
