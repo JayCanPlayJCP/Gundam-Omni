@@ -27,3 +27,4 @@ OMNIP_GP_e1 search(both) n=200/opp: B 64.4 A 65.7 min 45.0 W_BRIS_RWAcademy (778
 OMNIP_MG_e0 search(both) n=200/opp: B 57.0 A 58.0 min 30.5 J_CharIBO (834s)
 OMNIP_MG_e0 search(both) n=200/opp: B 58.0 A 58.5 min 32.5 W_MEX_GPZeon (1112s)
 OMNIP_MG_e1 search(both) n=200/opp: B 56.6 A 57.3 min 27.5 J_CharIBO (796s)
+OMNIP_MG_e1 search(both) n=200/opp: B 57.6 A 58.3 min 26.0 J_CharIBO (1438s)

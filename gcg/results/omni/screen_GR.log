@@ -1,2 +1,7 @@
 [0s] colors Green,Red pool 447 seeds 4 lock {}
 [0s] colors Green,Red pool 447 seeds 4 lock {}
+[717s] gen 0 best f 0.712 | heur B 0.0 (n0) | search B 60.3 A 61.5 b5 46.7 min 41.7 W_MKE_ZGok (n24)
+[1268s] gen 1 best f 0.668 | heur B 0.0 (n0) | search B 55.7 A 56.1 b5 44.2 min 37.5 W_MEX_GPZeon (n48)
+[1822s] gen 2 best f 0.702 | heur B 0.0 (n0) | search B 59.0 A 60.0 b5 47.5 min 45.8 W_MNL_GPZeon (n24)
+[2366s] gen 3 best f 0.704 | heur B 0.0 (n0) | search B 58.2 A 59.0 b5 47.9 min 43.8 J_SFIBO_Chiba (n48)
+[2911s] gen 4 best f 0.668 | heur B 0.0 (n0) | search B 55.2 A 56.3 b5 44.4 min 41.7 W_MEX_GPZeon (n72)
