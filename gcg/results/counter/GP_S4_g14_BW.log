@@ -1,0 +1,17 @@
+[0s] colors Blue,White pool 460 seeds 3 lock {}
+[46s] gen 0 best f 0.394 | heur B 0.0 (n0) | search B 38.8 A 38.8 b5 7.8 min 38.8 GP_S4_g14 (n80)
+[87s] gen 1 best f 0.400 | heur B 0.0 (n0) | search B 40.0 A 40.0 b5 8.0 min 40.0 GP_S4_g14 (n40)
+[132s] gen 2 best f 0.400 | heur B 0.0 (n0) | search B 40.0 A 40.0 b5 8.0 min 40.0 GP_S4_g14 (n40)
+[174s] gen 3 best f 0.400 | heur B 0.0 (n0) | search B 40.0 A 40.0 b5 8.0 min 40.0 GP_S4_g14 (n40)
+[218s] gen 4 best f 0.434 | heur B 0.0 (n0) | search B 42.5 A 42.5 b5 8.5 min 42.5 GP_S4_g14 (n80)
+[266s] gen 5 best f 0.453 | heur B 0.0 (n0) | search B 45.0 A 45.0 b5 9.0 min 45.0 GP_S4_g14 (n40)
+[309s] gen 6 best f 0.506 | heur B 0.0 (n0) | search B 50.0 A 50.0 b5 10.0 min 50.0 GP_S4_g14 (n40)
+[356s] gen 7 best f 0.506 | heur B 0.0 (n0) | search B 50.0 A 50.0 b5 10.0 min 50.0 GP_S4_g14 (n40)
+[401s] gen 8 best f 0.472 | heur B 0.0 (n0) | search B 45.8 A 45.8 b5 9.2 min 45.8 GP_S4_g14 (n120)
+[444s] gen 9 best f 0.460 | heur B 0.0 (n0) | search B 45.0 A 45.0 b5 9.0 min 45.0 GP_S4_g14 (n80)
+[495s] gen 10 best f 0.533 | heur B 0.0 (n0) | search B 52.5 A 52.5 b5 10.5 min 52.5 GP_S4_g14 (n40)
+[558s] gen 11 best f 0.559 | heur B 0.0 (n0) | search B 55.0 A 55.0 b5 11.0 min 55.0 GP_S4_g14 (n40)
+[615s] gen 12 best f 0.612 | heur B 0.0 (n0) | search B 60.0 A 60.0 b5 12.0 min 60.0 GP_S4_g14 (n40)
+[665s] gen 13 best f 0.632 | heur B 0.0 (n0) | search B 61.3 A 61.3 b5 12.3 min 61.3 GP_S4_g14 (n80)
+[720s] gen 14 best f 0.658 | heur B 0.0 (n0) | search B 63.3 A 63.3 b5 12.7 min 63.3 GP_S4_g14 (n120)
+[720s] done

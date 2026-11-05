@@ -1,0 +1,49 @@
+gen 0 top f 0.853 B 62.8 A 64.4 b5 43.5 min 40.0 J_BGOYW_Chelmo (17s)
+gen 1 top f 0.811 B 61.1 A 62.6 b5 38.5 min 30.0 J_CharIBO (30s)
+gen 2 top f 0.798 B 60.3 A 61.7 b5 37.5 min 30.0 W_BRIS_RWAcademy (46s)
+gen 3 top f 0.861 B 63.3 A 65.4 b5 43.5 min 32.5 W_BRIS_RWAcademy (63s)
+gen 4 fresh: B 60.5 A 61.9 b5 36.8 | B 59.2 A 60.6 b5 39.0 | B 60.7 A 62.4 b5 35.6  best-so-far B 60.5 A 61.9
+gen 4 top f 0.858 B 62.7 A 64.3 b5 44.5 min 42.5 W_MEL_SFVictory (90s)
+gen 5 top f 0.843 B 63.4 A 65.2 b5 40.0 min 35.0 J_Wing_Omiya (106s)
+gen 6 top f 0.858 B 63.4 A 64.7 b5 43.5 min 35.0 J_CharIBO (123s)
+gen 7 top f 0.852 B 63.6 A 65.3 b5 41.5 min 37.5 W_MEL_SFVictory (139s)
+gen 8 top f 0.892 B 64.0 A 65.3 b5 49.0 min 47.5 J_CharIBO (154s)
+gen 9 fresh: B 62.3 A 63.4 b5 44.8 | B 61.9 A 63.2 b5 42.0 | B 62.2 A 63.6 b5 42.4  best-so-far B 62.3 A 63.4
+gen 9 top f 0.850 B 60.7 A 61.9 b5 47.5 min 42.5 W_MEX_GPZeon (179s)
+gen 10 top f 0.836 B 62.8 A 64.5 b5 40.0 min 22.5 W_MEX_GPZeon (194s)
+gen 11 top f 0.854 B 62.8 A 64.5 b5 43.5 min 35.0 J_Wing_Omiya (210s)
+gen 12 top f 0.877 B 65.0 A 65.9 b5 44.5 min 37.5 J_BGOYW (226s)
+gen 13 top f 0.869 B 65.1 A 66.3 b5 42.5 min 40.0 J_EFFBanshee (241s)
+gen 14 fresh: B 62.4 A 63.9 b5 46.0 | B 61.7 A 62.7 b5 45.8 | B 61.5 A 63.0 b5 43.2  best-so-far B 62.4 A 63.9
+gen 14 top f 0.860 B 62.4 A 63.5 b5 46.0 min 45.0 W_BRIS_RWAcademy (264s)
+gen 15 top f 0.837 B 61.0 A 61.5 b5 45.0 min 40.0 W_MEX_GPZeon (279s)
+gen 16 top f 0.843 B 61.0 A 62.1 b5 45.5 min 40.0 W_MEX_GPZeon (293s)
+gen 17 top f 0.914 B 67.2 A 68.7 b5 47.0 min 37.5 W_MEX_GPZeon (309s)
+gen 18 top f 0.869 B 63.7 A 65.0 b5 45.0 min 37.5 J_CharIBO (325s)
+gen 19 fresh: B 61.4 A 62.7 b5 44.6 | B 62.8 A 64.1 b5 45.8 | B 61.6 A 62.6 b5 47.4  best-so-far B 62.8 A 64.1
+gen 19 top f 0.852 B 62.8 A 64.2 b5 43.5 min 40.0 J_Wing_Omiya (350s)
+gen 20 top f 0.844 B 61.3 A 62.4 b5 45.0 min 40.0 J_Wing_Omiya (365s)
+gen 21 top f 0.863 B 62.1 A 63.5 b5 47.0 min 37.5 W_BRIS_RWAcademy (381s)
+gen 22 top f 0.856 B 63.0 A 64.7 b5 43.5 min 32.5 J_Wing_Omiya (398s)
+gen 23 top f 0.863 B 64.4 A 65.3 b5 43.0 min 40.0 W_BRIS_RWAcademy (412s)
+gen 24 fresh: B 65.0 A 66.3 b5 44.0 | B 64.2 A 64.9 b5 46.6 | B 63.8 A 64.8 b5 43.4  best-so-far B 64.2 A 64.9
+gen 24 top f 0.869 B 64.1 A 65.1 b5 44.5 min 40.0 J_EFFBanshee (437s)
+gen 25 top f 0.872 B 63.8 A 65.1 b5 45.5 min 40.0 J_Wing_Omiya (454s)
+gen 26 top f 0.843 B 61.3 A 61.8 b5 45.5 min 40.0 W_MEX_GPZeon (471s)
+gen 27 top f 0.832 B 62.1 A 63.4 b5 41.0 min 37.5 J_CharIBO (488s)
+gen 28 top f 0.872 B 64.0 A 65.3 b5 45.0 min 40.0 J_CharIBO (503s)
+gen 29 fresh: B 61.8 A 63.7 b5 41.0 | B 61.1 A 62.1 b5 34.6 | B 61.9 A 63.3 b5 43.0  best-so-far B 64.2 A 64.9
+gen 29 top f 0.875 B 66.5 A 67.5 b5 41.0 min 32.5 J_CharIBO (528s)
+gen 30 top f 0.908 B 67.0 A 68.0 b5 46.5 min 35.0 W_MEX_GPZeon (543s)
+gen 31 top f 0.857 B 62.7 A 63.6 b5 45.0 min 42.5 W_BRIS_RWAcademy (560s)
+gen 32 top f 0.834 B 60.8 A 62.1 b5 44.0 min 42.5 W_BRIS_RWAcademy (577s)
+gen 33 top f 0.880 B 64.7 A 65.7 b5 45.5 min 42.5 J_Wing_Omiya (595s)
+gen 34 fresh: B 61.7 A 62.8 b5 44.0 | B 61.6 A 62.9 b5 44.2 | B 60.7 A 61.9 b5 41.8  best-so-far B 64.2 A 64.9
+gen 34 top f 0.920 B 67.6 A 68.4 b5 48.0 min 35.0 J_CharIBO (619s)
+gen 35 top f 0.847 B 63.2 A 63.3 b5 43.0 min 27.5 J_CharIBO (636s)
+gen 36 top f 0.881 B 65.6 A 67.1 b5 43.5 min 30.0 J_CharIBO (651s)
+gen 37 top f 0.931 B 68.1 A 70.1 b5 48.0 min 40.0 W_BRIS_RWAcademy (667s)
+gen 38 top f 0.929 B 67.5 A 68.4 b5 50.0 min 42.5 W_MEX_GPZeon (682s)
+gen 39 fresh: B 60.4 A 61.5 b5 39.2 | B 62.5 A 63.8 b5 46.8 | B 60.8 A 62.0 b5 40.6  best-so-far B 64.2 A 64.9
+gen 39 top f 0.885 B 64.3 A 65.7 b5 47.0 min 42.5 W_MEL_SFVictory (705s)
+done 705 s
