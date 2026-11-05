@@ -118,7 +118,7 @@ if (J0) {
 // 10. census
 {
   const it = Object.entries(sum.census).map(([u, c]) => `**${u}** (chassis ${c.chassis}, base ${pct(c.base)}%): ` + c.top.slice(0, 6).map(t => `${t.name} (${t.id}) ${t.d >= 0 ? '+' : ''}${pct(t.d)}`).join('; '));
-  const t = '3 copies of each pool card swapped into the chassis\'s 3 weakest slots, fast AI, 40 games per list; points of field mean gained.\n\n' + it.map(x => '- ' + x).join('\n');
+  const t = '3 copies of each pool card swapped into the chassis\'s 3 weakest slots, fast AI, 40 games per list; points of field mean gained. A single swap measured this way has about ±3 points of noise, so only the larger gains are signals. The census run before the islands ranked which cards the island GAs should try. Mono-colour units were not censused.\n\n' + it.map(x => '- ' + x).join('\n');
   sec('census', 'Card census highlights per colour pair', md(t), t);
 }
 // 11. judges

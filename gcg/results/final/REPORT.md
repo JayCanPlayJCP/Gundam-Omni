@@ -159,6 +159,21 @@ Same plan as against J_SFIBO_Chiba, with more Axis (base: shield to hand, then r
 | OMNIP_GP_e1 | K3N3 search | 200 | 65.6 | 67.0 | 44.0 (W_BRIS_RWAcademy) | 78.8 | 52.4 |
 | OMNIP_GP_e1 | K2N2 search | 200 | 67.2 | 68.5 | 43.0 (W_BRIS_RWAcademy) | 78.2 | 56.1 |
 | OMNIP_GP_e1 | fast heuristic AI | 1000 | 62.9 | 64.2 | 23.9 (W_BRIS_RWAcademy) | 70.0 | 55.7 |
+| OMNIP_GP_e0 | K4N6 search + learned evaluator (mlp2) | 200 | 67.9 | 69.4 | 46.0 (W_BRIS_RWAcademy) | 79.8 | 55.9 |
+| OMNIP_GP_e0 | K4N6 search, hand evaluator | 200 | 63.1 | 64.8 | 41.0 (W_BRIS_RWAcademy) | 76.8 | 49.5 |
+| J_CharIBO | K4N6 search + learned evaluator (mlp2) | 200 | 66.5 | 67.6 | 42.5 (J_SFIBO_alt) | 80.6 | 52.4 |
+| J_CharIBO | K4N6 search, hand evaluator | 200 | 63.9 | 65.1 | 40.5 (J_SFIBO_Chiba) | 77.5 | 50.3 |
+| LGA_GB_e0 | K4N6 search + learned evaluator (mlp2) | 200 | 63.0 | 64.1 | 40.0 (W_MEX_GPZeon) | 76.3 | 49.8 |
+| LGA_GB_e0 | K4N6 search, hand evaluator | 200 | 61.4 | 62.5 | 39.0 (J_CharIBO) | 74.1 | 48.8 |
+| GB_S2_e1 | K4N6 search + learned evaluator (mlp2) | 200 | 59.8 | 60.9 | 31.5 (J_CharIBO) | 73.5 | 46.0 |
+| GB_S2_e1 | K4N6 search, hand evaluator | 200 | 60.6 | 61.7 | 37.5 (J_CharIBO) | 73.1 | 48.1 |
+| OMNIP_GB_e0 | K4N6 search + learned evaluator (mlp2) | 200 | 62.1 | 63.6 | 38.5 (W_MEL_SFVictory) | 75.1 | 49.0 |
+| OMNIP_GB_e0 | K4N6 search, hand evaluator | 200 | 60.1 | 61.4 | 38.0 (J_CharIBO) | 73.3 | 47.0 |
+| OMNIP_GB_e1 | K4N6 search + learned evaluator (mlp2) | 200 | 61.3 | 62.5 | 35.5 (W_MEX_GPZeon) | 73.9 | 48.6 |
+| OMNIP_GB_e1 | K4N6 search, hand evaluator | 200 | 60.5 | 61.6 | 37.5 (W_MEX_GPZeon) | 73.2 | 47.8 |
+| OMNIP_WP_e0 | K4N6 search, hand evaluator | 200 | 58.2 | 58.0 | 47.0 (W_JKT_Nu) | 73.0 | 43.4 |
+| OMNIP_MG_e0 | K4N6 search + learned evaluator (mlp2) | 200 | 58.0 | 58.5 | 32.5 (W_MEX_GPZeon) | 73.3 | 42.7 |
+| OMNIP_MG_e0 | K4N6 search, hand evaluator | 200 | 57.0 | 58.0 | 30.5 (J_CharIBO) | 71.9 | 42.2 |
 
 ## Search islands (one per colour pair / mono colour)
 
@@ -167,7 +182,7 @@ Same plan as against J_SFIBO_Chiba, with more Axis (base: shield to hand, then r
 | GB | 73.0 | 62.8 | 38.0 J_CharIBO | 65.7 (80/list) |
 | GR | 64.4 | 56.6 | 33.0 W_BRIS_RWAcademy | — |
 | BR | 62.9 | 44.8 | 22.0 J_SFIBO_alt | — |
-| MG | 64.3 | 58.4 | 27.0 J_CharIBO | — |
+| MG | 64.3 | 58.4 | 27.0 J_CharIBO | 57.6 (120/list) |
 | MB | 62.9 | 43.3 | 28.0 W_MEL_SFVictory | — |
 | MR | 57.5 | 47.2 | 34.0 J_SFBlockers | — |
 | GP | 65.6 | 58.5 | 36.0 J_CharIBO | 68.8 (40/list) |
@@ -176,42 +191,35 @@ Same plan as against J_SFIBO_Chiba, with more Axis (base: shield to hand, then r
 | RW | 69.1 | 52.1 | 36.0 J_SFBlockers | — |
 | GW | 71.9 | 51.2 | 34.0 W_MEX_GPZeon | — |
 | PR | 66.2 | 53.5 | 29.0 W_BRIS_RWAcademy | — |
-| WP | 75.5 | 57.8 | 38.0 W_BRIS_RWAcademy | — |
+| WP | 75.5 | 57.8 | 38.0 W_BRIS_RWAcademy | 60.3 (40/list) |
 | MW | 67.2 | 47.9 | 28.0 W_BRIS_RWAcademy | — |
 | MP | 64.2 | 56.1 | 33.0 W_BRIS_RWAcademy | — |
 
 ## Convergence across islands and judges
 
-### Card overlap (shared copies / 50)
+Every deck that was validated under the strong judges, both sides searching, 200 games per list per seed.
 
-| deck | colours | GP_S4_g14 | OMNIP_GP_e0 | OMNIP_GP_e1 | J_CharIBO | GB_S2_e1 | PURE_GB_e1 | OMNIP_GB_e0 | LGA_GB_e0 |
-|---|---|---|---|---|---|---|---|---|---|
-| GP_S4_g14 | Green/Purple | — | 90 | 92 | 86 | 24 | 26 | 26 | 24 |
-| OMNIP_GP_e0 | Green/Purple | 90 | — | 98 | 86 | 26 | 30 | 30 | 28 |
-| OMNIP_GP_e1 | Green/Purple | 92 | 98 | — | 88 | 26 | 30 | 30 | 28 |
-| J_CharIBO | Green/Purple | 86 | 86 | 88 | — | 20 | 22 | 22 | 20 |
-| GB_S2_e1 | Blue/Green | 24 | 26 | 26 | 20 | — | 92 | 90 | 92 |
-| PURE_GB_e1 | Blue/Green | 26 | 30 | 30 | 22 | 92 | — | 98 | 96 |
-| OMNIP_GB_e0 | Blue/Green | 26 | 30 | 30 | 22 | 90 | 98 | — | 94 |
-| LGA_GB_e0 | Blue/Green | 24 | 28 | 28 | 20 | 92 | 96 | 94 | — |
+| deck | produced by | colours | K4N6 field mean (games/list) | K4N6 + mlp2 | card overlap with finalist |
+|---|---|---|---|---|---|
+| OMNIP_GP_e1 | Omni pure GA (K2N2 judge), GP elite 1 | Green/Purple | 64.8 (600) | 69.0 | 92% |
+| **GP_S4_g14** | Omni pure GA (K2N2 judge), G/P, gen 14 | Green/Purple | 64.8 (600) | 67.8 | 100% |
+| J_CharIBO | tournament list (field) | Green/Purple | 63.9 (200) | 66.5 | 86% |
+| OMNIP_GP_e0 | Omni pure GA (K2N2 judge), GP elite 0 | Green/Purple | 63.1 (200) | 67.9 | 90% |
+| LGA_GB_e0 | pure GA with learned judge (K2N2+mlp2), G/B elite 0 | Blue/Green | 61.4 (200) | 63.0 | 24% |
+| GB_S2_e1 | session-1 stage-2 GA (legacy judge), G/B | Blue/Green | 60.6 (200) | 59.8 | 24% |
+| OMNIP_GB_e1 | Omni pure GA (K2N2 judge), GB elite 1 | Blue/Green | 60.5 (200) | 61.3 | 28% |
+| LGA_GB_e1 | pure GA with learned judge (K2N2+mlp2), G/B elite 1 | Blue/Green | 60.4 (200) | 60.8 | 26% |
+| OMNIP_GB_e0 | Omni pure GA (K2N2 judge), GB elite 0 | Blue/Green | 60.1 (200) | 62.1 | 26% |
+| PURE_GB_e1 | session-1 pure GA (legacy judge), G/B | Blue/Green | 59.2 (200) | 61.1 | 26% |
+| OMNIP_WP_e0 | Omni pure GA (K2N2 judge), WP elite 0 | Purple/White | 58.2 (200) | — | 20% |
+| OMNIP_MG_e0 | Omni pure GA (K2N2 judge), MG elite 0 | Green | 57.0 (200) | 58.0 | 40% |
+| OMNIP_MG_e1 | Omni pure GA (K2N2 judge), MG elite 1 | Green | 56.6 (200) | 57.6 | 40% |
+| OMNI_GR | Omni island GA (fast AI judge), GR | Green/Red | 56.4 (200) | 56.1 | 28% |
+| GB_GA2 | session-1 heuristic GA, G/B | Blue/Green | 56.3 (200) | 58.7 | 24% |
+| OMNI_GB | Omni island GA (fast AI judge), GB | Blue/Green | 56.2 (200) | 58.9 | 28% |
+| GR_GA1 | session-1 heuristic GA, G/R | Green/Red | 50.4 (200) | 49.9 | 26% |
 
-### Shared core (in >= 60% of the 8 decks; mean copies over all of them)
-
-| card | name | decks | mean copies |
-|---|---|---|---|
-| ST03-008 | Zaku Ⅱ | 8/8 | 4.0 |
-| GD01-030 | Rick Dom | 8/8 | 3.9 |
-| ST03-016 | Falmel | 8/8 | 3.3 |
-| ST03-007 | Zaku Ⅰ | 7/8 | 3.1 |
-| GD05-017 | Nu Gundam | 5/8 | 1.3 |
-
-Core copies: 15.5 of 50.
-
-### Ranking under each judge (field mean B, games/list)
-
-- **k4n6**: GP_S4_g14 65.5 (200) > OMNIP_GP_e1 65.1 (200) > J_CharIBO 63.9 (200) > OMNIP_GP_e0 63.1 (200) > LGA_GB_e0 61.4 (200) > GB_S2_e1 60.6 (200) > OMNIP_GB_e1 60.5 (200) > LGA_GB_e1 60.4 (200) > OMNIP_GB_e0 60.1 (200) > PURE_GB_e1 59.2 (200) > OMNI_GR 56.4 (200) > GB_GA2 56.3 (200) > OMNI_GB 56.2 (200) > GR_GA1 50.4 (200)
-- **mlp2**: OMNIP_GP_e1 69.0 (200) > OMNIP_GP_e0 67.9 (200) > GP_S4_g14 67.8 (200) > J_CharIBO 66.5 (200) > LGA_GB_e0 63.0 (200) > OMNIP_GB_e0 62.1 (200) > OMNIP_GB_e1 61.3 (200) > PURE_GB_e1 61.1 (200) > LGA_GB_e1 60.8 (200) > GB_S2_e1 59.8 (200) > OMNI_GB 58.9 (200) > GB_GA2 58.7 (200) > OMNI_GR 56.1 (200) > GR_GA1 49.9 (200)
-- **k4n6s2**: GP_S4_g14 65.3 (200)
+The two strong judges agree on the order: Spearman rank correlation 0.90 over 16 decks. They put the same colour pair on top, and the learned evaluator's numbers run 1–4 points higher.
 
 
 ## Counter-deck search against the finalist
@@ -219,6 +227,8 @@ Core copies: 15.5 of 50.
 The counter-deck GA evolves decks of one colour pair against a single target, seeded with the tournament lists of that pair. It uses K2N2 on both sides, 15 generations, 40 games per evaluation. The best counter of each pair was then re-tested on fresh seeds with K4N6 at 200 games. The GA's own estimate is inflated by selection (picking the luckiest of many kids), and the re-tests show it: 6 to 17 points high.
 
 Against the finalist, two counters clearly beat it after re-testing (K4N6, 200 games each): a **Blue/Purple** list wins 62.5% (95% CI 56–69) and a **Red/White** list 58.5% (52–65). The Blue/Purple one is a refined version of the SFIBO tournament lists (68–72% card overlap) that adds 4 Widespread Annihilation (destroy all Lv.4-or-lower Units, which is the whole Green/Purple deck). Blue/Red (57.0%) is next. The remaining pairs did not clearly beat it (Green/Purple 54.5, Blue/White 52.5, Green/White 45.5, Purple/Red 41.0, Green/Blue 40.5). So the finalist drops to 37.5% against its best counter-deck, and it already sits at 46–47% against three tournament lists. An opponent who expects Green/Purple can prepare a deck that beats it.
+
+**Finalist choice.** GP_S4_g14 and OMNIP_GP_e1 are tied on the field: 64.76% vs 64.79% over 600 games per list, K4N6, three seeds. OMNIP_GP_e1 is 1–2 points higher under each secondary judge (200 games per list each, none significant alone). The same eight counter-decks, re-tested against OMNIP_GP_e1, beat it harder: Blue/Purple 70.5% (CI 64–76) instead of 62.5%, and 2 points more on average. GP_S4_g14 is therefore the finalist, for robustness. OMNIP_GP_e1 is an equal-strength alternative against the current field.
 
 | target | counter colours | best counter win % (GA, biased up) | best counter re-tested vs target | same counter vs other decks |
 |---|---|---|---|---|
@@ -239,7 +249,7 @@ Against the finalist, two counters clearly beat it after re-testing (K4N6, 200 g
 
 ## Card census highlights per colour pair
 
-3 copies of each pool card swapped into the chassis's 3 weakest slots, fast AI, 40 games per list; points of field mean gained.
+3 copies of each pool card swapped into the chassis's 3 weakest slots, fast AI, 40 games per list; points of field mean gained. A single swap measured this way has about ±3 points of noise, so only the larger gains are signals. The census run before the islands ranked which cards the island GAs should try. Mono-colour units were not censused.
 
 - **GB** (chassis GB_GA2, base 66.0%): Gustav Karl Type-00 (ST08-008) +3.9; How Many Miles to the Battlefield? (GD03-108) +3.6; ReZEL (GD01-018) +3.3; Gundam Ez8 High Mobility Custom (EB01-032) +3.3; ZnO (ST11-004) +2.8; Oggo (EB01-031) +2.7
 - **GR** (chassis GR_GA1, base 59.6%): Gundam Exia (GD04-038) +0.6; Re-GZ (GD05-019) -0.6; Gundam Throne Zwei (ST13-008) -3.2; Gundam Ez8 High Mobility Custom (EB01-032) -3.2; Messer Type-F02 Minelayer (ST08-005) -3.2; Battle of Aces (GD01-111) -3.7

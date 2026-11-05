@@ -1,30 +1,23 @@
-### Card overlap (shared copies / 50)
+Every deck that was validated under the strong judges, both sides searching, 200 games per list per seed.
 
-| deck | colours | GP_S4_g14 | OMNIP_GP_e0 | OMNIP_GP_e1 | J_CharIBO | GB_S2_e1 | PURE_GB_e1 | OMNIP_GB_e0 | LGA_GB_e0 |
-|---|---|---|---|---|---|---|---|---|---|
-| GP_S4_g14 | Green/Purple | — | 90 | 92 | 86 | 24 | 26 | 26 | 24 |
-| OMNIP_GP_e0 | Green/Purple | 90 | — | 98 | 86 | 26 | 30 | 30 | 28 |
-| OMNIP_GP_e1 | Green/Purple | 92 | 98 | — | 88 | 26 | 30 | 30 | 28 |
-| J_CharIBO | Green/Purple | 86 | 86 | 88 | — | 20 | 22 | 22 | 20 |
-| GB_S2_e1 | Blue/Green | 24 | 26 | 26 | 20 | — | 92 | 90 | 92 |
-| PURE_GB_e1 | Blue/Green | 26 | 30 | 30 | 22 | 92 | — | 98 | 96 |
-| OMNIP_GB_e0 | Blue/Green | 26 | 30 | 30 | 22 | 90 | 98 | — | 94 |
-| LGA_GB_e0 | Blue/Green | 24 | 28 | 28 | 20 | 92 | 96 | 94 | — |
+| deck | produced by | colours | K4N6 field mean (games/list) | K4N6 + mlp2 | card overlap with finalist |
+|---|---|---|---|---|---|
+| OMNIP_GP_e1 | Omni pure GA (K2N2 judge), GP elite 1 | Green/Purple | 64.8 (600) | 69.0 | 92% |
+| **GP_S4_g14** | Omni pure GA (K2N2 judge), G/P, gen 14 | Green/Purple | 64.8 (600) | 67.8 | 100% |
+| J_CharIBO | tournament list (field) | Green/Purple | 63.9 (200) | 66.5 | 86% |
+| OMNIP_GP_e0 | Omni pure GA (K2N2 judge), GP elite 0 | Green/Purple | 63.1 (200) | 67.9 | 90% |
+| LGA_GB_e0 | pure GA with learned judge (K2N2+mlp2), G/B elite 0 | Blue/Green | 61.4 (200) | 63.0 | 24% |
+| GB_S2_e1 | session-1 stage-2 GA (legacy judge), G/B | Blue/Green | 60.6 (200) | 59.8 | 24% |
+| OMNIP_GB_e1 | Omni pure GA (K2N2 judge), GB elite 1 | Blue/Green | 60.5 (200) | 61.3 | 28% |
+| LGA_GB_e1 | pure GA with learned judge (K2N2+mlp2), G/B elite 1 | Blue/Green | 60.4 (200) | 60.8 | 26% |
+| OMNIP_GB_e0 | Omni pure GA (K2N2 judge), GB elite 0 | Blue/Green | 60.1 (200) | 62.1 | 26% |
+| PURE_GB_e1 | session-1 pure GA (legacy judge), G/B | Blue/Green | 59.2 (200) | 61.1 | 26% |
+| OMNIP_WP_e0 | Omni pure GA (K2N2 judge), WP elite 0 | Purple/White | 58.2 (200) | — | 20% |
+| OMNIP_MG_e0 | Omni pure GA (K2N2 judge), MG elite 0 | Green | 57.0 (200) | 58.0 | 40% |
+| OMNIP_MG_e1 | Omni pure GA (K2N2 judge), MG elite 1 | Green | 56.6 (200) | 57.6 | 40% |
+| OMNI_GR | Omni island GA (fast AI judge), GR | Green/Red | 56.4 (200) | 56.1 | 28% |
+| GB_GA2 | session-1 heuristic GA, G/B | Blue/Green | 56.3 (200) | 58.7 | 24% |
+| OMNI_GB | Omni island GA (fast AI judge), GB | Blue/Green | 56.2 (200) | 58.9 | 28% |
+| GR_GA1 | session-1 heuristic GA, G/R | Green/Red | 50.4 (200) | 49.9 | 26% |
 
-### Shared core (in >= 60% of the 8 decks; mean copies over all of them)
-
-| card | name | decks | mean copies |
-|---|---|---|---|
-| ST03-008 | Zaku Ⅱ | 8/8 | 4.0 |
-| GD01-030 | Rick Dom | 8/8 | 3.9 |
-| ST03-016 | Falmel | 8/8 | 3.3 |
-| ST03-007 | Zaku Ⅰ | 7/8 | 3.1 |
-| GD05-017 | Nu Gundam | 5/8 | 1.3 |
-
-Core copies: 15.5 of 50.
-
-### Ranking under each judge (field mean B, games/list)
-
-- **k4n6**: GP_S4_g14 65.5 (200) > OMNIP_GP_e1 65.1 (200) > J_CharIBO 63.9 (200) > OMNIP_GP_e0 63.1 (200) > LGA_GB_e0 61.4 (200) > GB_S2_e1 60.6 (200) > OMNIP_GB_e1 60.5 (200) > LGA_GB_e1 60.4 (200) > OMNIP_GB_e0 60.1 (200) > PURE_GB_e1 59.2 (200) > OMNI_GR 56.4 (200) > GB_GA2 56.3 (200) > OMNI_GB 56.2 (200) > GR_GA1 50.4 (200)
-- **mlp2**: OMNIP_GP_e1 69.0 (200) > OMNIP_GP_e0 67.9 (200) > GP_S4_g14 67.8 (200) > J_CharIBO 66.5 (200) > LGA_GB_e0 63.0 (200) > OMNIP_GB_e0 62.1 (200) > OMNIP_GB_e1 61.3 (200) > PURE_GB_e1 61.1 (200) > LGA_GB_e1 60.8 (200) > GB_S2_e1 59.8 (200) > OMNI_GB 58.9 (200) > GB_GA2 58.7 (200) > OMNI_GR 56.1 (200) > GR_GA1 49.9 (200)
-- **k4n6s2**: GP_S4_g14 65.3 (200)
+The two strong judges agree on the order: Spearman rank correlation 0.90 over 16 decks. They put the same colour pair on top, and the learned evaluator's numbers run 1–4 points higher.
